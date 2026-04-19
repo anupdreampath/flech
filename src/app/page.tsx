@@ -1,65 +1,811 @@
+"use client";
+
+import Link from "next/link";
 import Image from "next/image";
+import {
+  ArrowRight,
+  Shield,
+  Ruler,
+  Layers,
+  Truck,
+  Factory,
+  Award,
+  Clock,
+  Users,
+  ChevronRight,
+  Scissors,
+  Frame,
+  Palette,
+  Grip,
+  Play,
+  ArrowUpRight,
+  Quote,
+  Star,
+} from "lucide-react";
+import {
+  AnimatedSection,
+  StaggerContainer,
+  StaggerItem,
+  HoverCard,
+} from "@/components/AnimatedSection";
+
+const stats = [
+  { value: "25+", label: "Years Manufacturing", icon: Clock },
+  { value: "1000+", label: "Custom Orders / Year", icon: Layers },
+  { value: "600+", label: "B2B Clients Served", icon: Users },
+  { value: "100%", label: "Made in USA", icon: Factory },
+];
+
+const products = [
+  {
+    name: "Easel Backs",
+    tagline: "Our Flagship Product",
+    description:
+      "Single-wing and double-wing display stands with self-stick adhesive for frames, signs, and POP displays.",
+    href: "/products/easel-backs",
+    icon: Grip,
+    image: "/images/products/easel-back.png",
+    featured: true,
+  },
+  {
+    name: "Fold Lines & Dielines",
+    tagline: "Precision Hinges",
+    description:
+      "Pre-creased score lines that bend accurately without cracking. The foundation of every reliable display.",
+    href: "/products/fold-lines",
+    icon: Scissors,
+    image: "/images/products/board-closeup-1.png",
+  },
+  {
+    name: "Contract Framing Backs",
+    tagline: "Protection & Support",
+    description:
+      "High-volume standardized backing boards for commercial framing operations. Consistent quality, every sheet.",
+    href: "/products/framing-backs",
+    icon: Frame,
+    image: "/images/framing/frame-samples.jpg",
+  },
+  {
+    name: "Matboards",
+    tagline: "Decorative & Archival",
+    description:
+      "Bevel-cut decorative borders in acid-free, archival quality. 50+ colors with white, cream, or black core.",
+    href: "/products/matboards",
+    icon: Palette,
+    image: "/images/products/matboard-colors-1.png",
+  },
+];
+
+const differentiators = [
+  {
+    title: "Precision Manufacturing",
+    description:
+      "CNC equipment ensures ±0.005\" tolerances. Consistency from piece #1 to piece #50,000.",
+    icon: Ruler,
+    image: "/images/products/board-closeup-2.jpg",
+  },
+  {
+    title: "Material Expertise",
+    description:
+      "25 years working with SBS, pulp, chip, and poly boards. We know which substrate works for your job.",
+    icon: Shield,
+    image: "/images/products/tuff-white-1.jpg",
+  },
+  {
+    title: "Vertically Integrated",
+    description:
+      "Die-cutting, laminating, scoring, finishing, all under one roof in Paterson, NJ. No middlemen.",
+    icon: Factory,
+    image: "/images/home/warehouse-boards.jpg",
+  },
+  {
+    title: "Custom Is Standard",
+    description:
+      "Custom sizes, angles, adhesives. We don't charge extra for thinking. We engineer solutions.",
+    icon: Award,
+    image: "/images/products/tuff-gloss.png",
+  },
+  {
+    title: "Reliable Fulfillment",
+    description:
+      "Drop-shipping, just-in-time delivery, and inventory programs. When you commit, we commit.",
+    icon: Truck,
+    image: "/images/products/board-stack.jpg",
+  },
+  {
+    title: "Industry Knowledge",
+    description:
+      "We serve sign, display, framing, POP, and packaging professionals. We've solved your constraints before.",
+    icon: Users,
+    image: "/images/framing/frame-collection.jpg",
+  },
+];
+
+const industries = [
+  {
+    name: "Sign & Display",
+    description: "Easel backs and display boards for retail, trade shows, and POP.",
+    image: "/images/products/consumer-display.jpg",
+  },
+  {
+    name: "Wholesale Framing",
+    description: "Matboards, framing backs, and easel stands for commercial operations.",
+    image: "/images/framing/frame-print.png",
+  },
+  {
+    name: "Packaging & POP",
+    description: "Custom die-cut boards for product packaging and retail displays.",
+    image: "/images/products/poly-tuff.jpg",
+  },
+  {
+    name: "Interior Design",
+    description: "Archival matboards and specialty boards for gallery installations.",
+    image: "/images/products/diy-art.jpg",
+  },
+];
+
+const testimonials = [
+  {
+    quote: "Flech has been our go-to for easel backs for over a decade. The consistency in quality and the ability to get custom sizes without minimums is unmatched in the industry.",
+    author: "Marcus Chen",
+    role: "Operations Director, FrameCraft Wholesale",
+    rating: 5,
+    avatar: "MC",
+    color: "from-red-500/20 to-rose-500/10",
+  },
+  {
+    quote: "We switched to Flech for all our matboard needs and saw an immediate 15% reduction in waste. Their precision cutting is exactly what high-volume operations need.",
+    author: "Sarah Williams",
+    role: "Production Manager, Gallery Direct",
+    rating: 5,
+    avatar: "SW",
+    color: "from-blue-500/20 to-cyan-500/10",
+  },
+  {
+    quote: "The custom die-line engineering saved us weeks on our last POP display rollout. Flech doesn't just manufacture—they solve problems.",
+    author: "David Park",
+    role: "Creative Director, Retail Concepts Inc",
+    rating: 5,
+    avatar: "DP",
+    color: "from-emerald-500/20 to-teal-500/10",
+  },
+  {
+    quote: "Fast turnaround, competitive pricing, and the rare ability to handle both small custom runs and bulk orders with equal precision. A true manufacturing partner.",
+    author: "Jennifer Torres",
+    role: "Procurement Lead, SignMax Solutions",
+    rating: 5,
+    avatar: "JT",
+    color: "from-violet-500/20 to-purple-500/10",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <>
+      {/* ═══ VIDEO HERO ═══ */}
+      <section className="relative h-[100dvh] max-h-[844px] flex items-center overflow-hidden">
+        {/* Background video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster="/images/home/warehouse-boards.jpg"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videos/manufacturing-process.mp4" type="video/mp4" />
+        </video>
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60" />
+
+        {/* Grid texture */}
+        <div className="absolute inset-0 opacity-[0.04]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px), repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px)",
+            }}
+          />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 lg:py-0 w-full">
+          <div className="max-w-3xl">
+            <div
+              className="inline-flex items-center gap-2 px-4 py-2 bg-white/15 rounded-full text-xs font-medium tracking-wider uppercase text-white/80 mb-6 border border-white/10 animate-[fadeUp_0.8s_0.3s_both]"
+            >
+              <span className="w-2 h-2 bg-accent-light rounded-full animate-pulse" />
+              Family-Owned Manufacturer, Paterson, NJ Since 1999
+            </div>
+
+            <h1
+              className="text-4xl sm:text-5xl lg:text-7xl font-serif font-bold leading-[1.05] tracking-tight mb-6 text-white animate-[fadeUp_0.9s_0.5s_both]"
+            >
+              The Backbone of
+              <br />
+              <span className="bg-gradient-to-r from-accent-light via-red-300 to-accent bg-clip-text text-transparent">
+                Every Great Display
+              </span>
+            </h1>
+
+            <p
+              className="text-base sm:text-lg text-white/85 leading-relaxed max-w-2xl mb-8 font-light animate-[fadeUp_0.8s_0.7s_both]"
+            >
+              From the easel back that holds your frame upright to the matboard
+              that frames your art, Flech manufactures the precision board
+              products that the framing, sign, and display industries depend on.
+            </p>
+
+            <div
+              className="flex flex-col sm:flex-row gap-4 animate-[fadeUp_0.8s_0.9s_both]"
+            >
+              <Link
+                href="/contact"
+                className="group inline-flex items-center justify-center gap-3 bg-cta hover:bg-cta-hover text-white px-8 py-4 text-sm font-semibold rounded-sm transition-[transform,color,background-color,border-color] duration-300 cursor-pointer hover:shadow-lg hover:shadow-accent/20"
+              >
+                Request a Quote
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+              <Link
+                href="/products/easel-backs"
+                className="group inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 text-sm font-semibold rounded-sm transition-[transform,color,background-color,border-color] duration-300 cursor-pointer border border-white/20"
+              >
+                <Play className="w-4 h-4" />
+                Explore Easel Backs
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 hidden sm:block animate-[fadeUp_0.6s_1.5s_both]">
+          <div className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center p-1.5 animate-bounce">
+            <div className="w-1.5 h-2.5 bg-white/60 rounded-full" />
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ STATS BAR ═══ */}
+      <section className="relative bg-charcoal border-b border-white/10 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat) => {
+              const Icon = stat.icon;
+              return (
+                <StaggerItem key={stat.label}>
+                  <div className="flex items-center gap-4 group">
+                    <div className="w-14 h-14 bg-white/5 rounded-lg flex items-center justify-center shrink-0 border border-white/10 group-hover:border-accent/30 group-hover:bg-accent/10 transition-[transform,color,background-color,border-color] duration-300">
+                      <Icon className="w-6 h-6 text-accent-light" />
+                    </div>
+                    <div>
+                      <p className="text-3xl sm:text-4xl font-serif font-bold text-white leading-none">
+                        {stat.value}
+                      </p>
+                      <p className="text-xs text-white/50 mt-1.5 uppercase tracking-wider">
+                        {stat.label}
+                      </p>
+                    </div>
+                  </div>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ═══ PRODUCTS — Bento Grid ═══ */}
+      <section className="py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
+              <div className="max-w-2xl">
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-3">
+                  Our Product Lines
+                </p>
+                <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal leading-tight">
+                  Four Pillars of
+                  <span className="text-accent"> Precision</span>
+                </h2>
+              </div>
+              <Link
+                href="/products/easel-backs"
+                className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-dark transition-colors cursor-pointer group"
+              >
+                View all products
+                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+              </Link>
+            </div>
+          </AnimatedSection>
+
+          {/* Balanced 2x2 grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {products.map((product, idx) => {
+              const Icon = product.icon;
+              const isLarge = product.featured;
+              return (
+                <AnimatedSection
+                  key={product.name}
+                  delay={idx * 0.1}
+                  className="h-full"
+                >
+                  <HoverCard className="h-full">
+                    <Link
+                      href={product.href}
+                      className={`group relative flex flex-col overflow-hidden rounded-2xl border transition-[transform,box-shadow,border-color] duration-500 cursor-pointer h-full min-h-[380px] ${
+                        isLarge
+                          ? "bg-charcoal text-white border-charcoal hover:shadow-2xl hover:shadow-charcoal/20"
+                          : "bg-surface border-border hover:border-accent/30 hover:shadow-xl"
+                      }`}
+                    >
+                      {/* Product image */}
+                      <div
+                        className={`absolute inset-0 ${
+                          isLarge ? "opacity-20" : "opacity-10"
+                        } group-hover:opacity-30 transition-opacity duration-500`}
+                      >
+                        <img
+                          src={product.image}
+                          alt={product.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+
+                      {/* Gradient overlay */}
+                      <div
+                        className={`absolute inset-0 ${
+                          isLarge
+                            ? "bg-gradient-to-t from-charcoal via-charcoal/80 to-charcoal/40"
+                            : "bg-gradient-to-t from-white via-white/95 to-white/60"
+                        }`}
+                      />
+
+                      {/* Content */}
+                      <div className="relative z-10 flex flex-col justify-end h-full p-8">
+                        <div
+                          className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${
+                            isLarge
+                              ? "bg-accent/20 border border-accent/30"
+                              : "bg-cream border border-border"
+                          }`}
+                        >
+                          <Icon
+                            className={`w-6 h-6 ${
+                              isLarge ? "text-accent-light" : "text-accent"
+                            }`}
+                          />
+                        </div>
+
+                        <div className="flex items-center gap-3 mb-2">
+                          <h3
+                            className={`text-2xl font-serif font-bold ${
+                              isLarge ? "text-white" : "text-charcoal"
+                            }`}
+                          >
+                            {product.name}
+                          </h3>
+                          {isLarge && (
+                            <span className="text-[10px] font-bold uppercase tracking-wider bg-accent/20 text-accent-light px-3 py-1 rounded-full border border-accent/30">
+                              Flagship
+                            </span>
+                          )}
+                        </div>
+
+                        <p
+                          className={`text-xs font-semibold uppercase tracking-wider mb-3 ${
+                            isLarge ? "text-accent-light" : "text-accent"
+                          }`}
+                        >
+                          {product.tagline}
+                        </p>
+
+                        <p
+                          className={`text-sm leading-relaxed mb-6 max-w-md ${
+                            isLarge ? "text-white/60" : "text-muted"
+                          }`}
+                        >
+                          {product.description}
+                        </p>
+
+                        <div
+                          className={`inline-flex items-center gap-2 text-sm font-semibold ${
+                            isLarge
+                              ? "text-accent-light"
+                              : "text-accent group-hover:text-accent-dark"
+                          }`}
+                        >
+                          Explore Product
+                          <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+                        </div>
+                      </div>
+
+                      {/* Floating product image for featured */}
+                      {isLarge && (
+                        <div className="hidden lg:block absolute top-8 right-8 w-48 h-48">
+                          <div className="transition-transform duration-300 hover:rotate-3 hover:scale-105">
+                            <img
+                              src={product.image}
+                              alt=""
+                              className="w-full h-full object-contain drop-shadow-2xl"
+                              loading="lazy"
+                            />
+                          </div>
+                        </div>
+                      )}
+                    </Link>
+                  </HoverCard>
+                </AnimatedSection>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* ═══ WHY FLECH — Image Grid ═══ */}
+      <section className="bg-charcoal text-white py-24 sm:py-32 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[0.02]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(45deg, #fff 0px, #fff 1px, transparent 1px, transparent 50px)",
+            }}
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="max-w-2xl mb-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light mb-3">
+                Why Flech
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold leading-tight mb-4">
+                Built Different,
+                <br />
+                <span className="text-accent-light">Not Just Better</span>
+              </h2>
+              <p className="text-white/50 leading-relaxed text-lg">
+                Anyone can cut board. The difference is precision, material
+                science, and 25 years of knowing what works.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            {differentiators.map((item, idx) => {
+              const Icon = item.icon;
+              return (
+                <StaggerItem key={item.title} index={idx} className="h-full">
+                  <HoverCard className="h-full">
+                    <div className="group relative h-full flex flex-col bg-white/[0.07] border border-white/10 rounded-2xl overflow-hidden hover:border-accent/30 transition-[transform,box-shadow,border-color] duration-500">
+                      {/* Image strip at top */}
+                      <div className="h-32 overflow-hidden shrink-0">
+                        <img
+                          src={item.image}
+                          alt={item.title}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-transparent to-charcoal/90" />
+                      </div>
+
+                      <div className="p-6 -mt-6 relative z-10 flex flex-col flex-1">
+                        <div className="w-12 h-12 bg-accent/20 rounded-xl flex items-center justify-center mb-4 border border-accent/30">
+                          <Icon className="w-5 h-5 text-accent-light" />
+                        </div>
+                        <h3 className="text-lg font-serif font-bold text-white mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-sm text-white/50 leading-relaxed flex-1">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </HoverCard>
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ═══ GALLERY STRIP ═══ */}
+      <section className="py-4 bg-warm-white overflow-hidden">
+        <div className="flex gap-4 animate-[marquee_40s_linear_infinite] will-change-transform">
+          {[
+            "/images/home/stacked-boards.jpg",
+            "/images/products/matboard-display.jpg",
+            "/images/framing/frame-samples.jpg",
+            "/images/products/consumer-display.jpg",
+            "/images/products/tuff-white-2.jpg",
+            "/images/framing/gallery-frame.jpg",
+            "/images/products/ebony-board.png",
+            "/images/home/warehouse-boards.jpg",
+            "/images/products/iframe-product.jpg",
+            "/images/home/stacked-boards.jpg",
+            "/images/products/matboard-display.jpg",
+            "/images/framing/frame-samples.jpg",
+            "/images/products/consumer-display.jpg",
+          ].map((src, idx) => (
+            <div
+              key={idx}
+              className="w-56 h-36 sm:w-64 sm:h-44 rounded-xl overflow-hidden shrink-0"
+            >
+              <img
+                src={src}
+                alt=""
+                className="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ═══ INDUSTRIES ═══ */}
+      <section className="py-24 sm:py-32 bg-warm-white">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-3">
+                Industries We Serve
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal leading-tight">
+                Your Industry,{" "}
+                <span className="text-accent">Our Expertise</span>
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {industries.map((industry, idx) => (
+              <StaggerItem key={industry.name}>
+                <HoverCard>
+                  <div className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer">
+                    <img
+                      src={industry.image}
+                      alt={industry.name}
+                      className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                    <div className="absolute inset-x-0 bottom-0 p-6">
+                      <h3 className="text-lg font-serif font-bold text-white mb-1">
+                        {industry.name}
+                      </h3>
+                      <p className="text-sm text-white/80 leading-relaxed">
+                        {industry.description}
+                      </p>
+                    </div>
+                  </div>
+                </HoverCard>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ═══ PROCESS ═══ */}
+      <section className="py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center max-w-2xl mx-auto mb-20">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-3">
+                How We Work
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal">
+                From Spec to <span className="text-accent">Shipment</span>
+              </h2>
+            </div>
+          </AnimatedSection>
+
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                step: "01",
+                title: "Consult",
+                desc: "Tell us what you need. Upload dielines or artwork if you have them.",
+                color: "from-accent/20 to-red-50/50",
+              },
+              {
+                step: "02",
+                title: "Engineer",
+                desc: "We recommend substrate, adhesive, and finishing for your application.",
+                color: "from-blue-100/50 to-slate-100/50",
+              },
+              {
+                step: "03",
+                title: "Manufacture",
+                desc: "CNC die-cutting, scoring, laminating, quality inspected at every stage.",
+                color: "from-green-100/50 to-emerald-50/50",
+              },
+              {
+                step: "04",
+                title: "Deliver",
+                desc: "On-time to your door or direct to your client. Drop-shipping available.",
+                color: "from-purple-100/50 to-violet-50/50",
+              },
+            ].map((item) => (
+              <StaggerItem key={item.step} className="h-full">
+                <HoverCard className="h-full">
+                  <div
+                    className={`relative p-8 rounded-2xl bg-gradient-to-br ${item.color} border border-border h-full`}
+                  >
+                    <span className="text-7xl font-serif font-black text-charcoal/5 absolute top-4 right-4">
+                      {item.step}
+                    </span>
+                    <div className="relative z-10">
+                      <div className="text-sm font-mono font-bold text-accent mb-4">
+                        Step {item.step}
+                      </div>
+                      <h3 className="text-2xl font-serif font-bold text-charcoal mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-sm text-muted leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                </HoverCard>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
+      </section>
+
+      {/* ═══ TESTIMONIALS — 21st Dev Style ═══ */}
+      <section className="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-paper-white to-warm-white">
+        {/* Background decorative elements */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `radial-gradient(circle at 20% 80%, #C41E3A 0%, transparent 40%),
+                              radial-gradient(circle at 80% 20%, #1A1A2E 0%, transparent 40%)`,
+            }}
+          />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-6">
+          <AnimatedSection>
+            <div className="text-center max-w-2xl mx-auto mb-16">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-3">
+                Client Stories
+              </p>
+              <h2 className="text-4xl sm:text-5xl font-serif font-bold text-charcoal leading-tight mb-4">
+                Trusted by{" "}
+                <span className="bg-gradient-to-r from-accent to-accent-dark bg-clip-text text-transparent">
+                  Industry Leaders
+                </span>
+              </h2>
+              <p className="text-muted leading-relaxed">
+                600+ B2B partners rely on Flech for precision manufacturing. Here&apos;s what they say.
+              </p>
+            </div>
+          </AnimatedSection>
+
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+            {testimonials.map((testimonial, idx) => (
+              <StaggerItem key={testimonial.author} index={idx} className="h-full">
+                <HoverCard className="h-full">
+                  <div className="group relative h-full flex flex-col bg-white/60 backdrop-blur-xl rounded-3xl border border-white/50 shadow-lg shadow-charcoal/5 overflow-hidden hover:shadow-xl hover:shadow-charcoal/10 transition-all duration-500">
+                    {/* Gradient accent */}
+                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${testimonial.color}`} />
+
+                    {/* Decorative quote */}
+                    <div className="absolute top-6 right-6 opacity-10">
+                      <Quote className="w-16 h-16 text-accent" />
+                    </div>
+
+                    <div className="relative p-8 flex flex-col flex-1">
+                      {/* Star rating */}
+                      <div className="flex gap-1 mb-6">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="w-4 h-4 fill-accent text-accent"
+                          />
+                        ))}
+                      </div>
+
+                      {/* Quote text */}
+                      <blockquote className="text-charcoal/90 text-lg leading-relaxed font-light mb-8">
+                        &ldquo;{testimonial.quote}&rdquo;
+                      </blockquote>
+
+                      {/* Author info */}
+                      <div className="flex items-center gap-4 mt-auto">
+                        {/* Avatar */}
+                        <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${testimonial.color} flex items-center justify-center border border-white/50 shadow-sm`}>
+                          <span className="text-sm font-bold text-charcoal/80">
+                            {testimonial.avatar}
+                          </span>
+                        </div>
+                        <div>
+                          <p className="font-serif font-semibold text-charcoal">
+                            {testimonial.author}
+                          </p>
+                          <p className="text-xs text-muted">
+                            {testimonial.role}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Hover gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${testimonial.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none`} />
+                  </div>
+                </HoverCard>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+
+          {/* Trust badges */}
+          <AnimatedSection delay={0.4}>
+            <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-sm text-muted/60">
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full" />
+                ISO 9001 Certified
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full" />
+                25+ Years Experience
+              </span>
+              <span className="flex items-center gap-2">
+                <span className="w-2 h-2 bg-accent rounded-full" />
+                100% Made in USA
+              </span>
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* ═══ BRAND IMAGE + CTA ═══ */}
+      <section className="relative overflow-hidden">
+        <div className="grid lg:grid-cols-2 min-h-[500px]">
+          {/* Image side */}
+          <div className="relative h-64 lg:h-auto overflow-hidden">
+            <img
+              src="/images/brand/flech-product-box.jpg"
+              alt="Flech Paper Products"
+              className="absolute inset-0 w-full h-full object-cover"
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20 lg:bg-gradient-to-r lg:from-transparent lg:to-charcoal" />
+          </div>
+
+          {/* CTA side */}
+          <div className="bg-charcoal text-white flex items-center">
+            <AnimatedSection className="max-w-lg mx-auto px-8 py-16 lg:px-12 lg:py-20">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light mb-4">
+                Get Started
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-6">
+                Ready to Build
+                <br />
+                Something?
+              </h2>
+              <p className="text-white/50 leading-relaxed mb-10 text-lg">
+                Whether you need 100 easel backs or 100,000, tell us what
+                you need and we&apos;ll have a quote to you within 24 hours.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Link
+                  href="/contact"
+                  className="group inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 text-sm font-semibold rounded-sm transition-[transform,color,background-color,border-color] duration-300 cursor-pointer hover:shadow-lg hover:shadow-accent/20"
+                >
+                  Request a Quote
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </Link>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white px-8 py-4 text-sm font-semibold rounded-sm transition-colors cursor-pointer border border-white/20"
+                >
+                  Request Samples
+                </Link>
+              </div>
+            </AnimatedSection>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
