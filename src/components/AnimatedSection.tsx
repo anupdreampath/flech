@@ -61,12 +61,13 @@ export function AnimatedSection({
   preset = "fadeUp",
   delay = 0,
   className,
+  ...rest
 }: {
   children: ReactNode;
   preset?: keyof typeof presetStyles;
   delay?: number;
   className?: string;
-}) {
+} & React.HTMLAttributes<HTMLDivElement>) {
   const { ref, visible } = useInView();
   const p = presetStyles[preset] || presetStyles.fadeUp;
 
@@ -77,6 +78,7 @@ export function AnimatedSection({
         visible ? p.to : p.from
       } ${className || ""}`}
       style={delay > 0 ? { transitionDelay: `${delay * 1000}ms` } : undefined}
+      {...rest}
     >
       {children}
     </div>

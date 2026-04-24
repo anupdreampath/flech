@@ -1,0 +1,215 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Flech
+          - heading "Admin" [level=1] [ref=e8]
+        - navigation [ref=e9]:
+          - link "Dashboard" [ref=e10] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e11]
+            - text: Dashboard
+          - link "Submissions" [ref=e16] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e17]
+            - text: Submissions
+          - link "Analytics" [ref=e20] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e21]
+            - text: Analytics
+          - link "Content (CMS)" [ref=e23] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e24]
+            - text: Content (CMS)
+          - link "Blogs" [ref=e27] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e28]
+            - text: Blogs
+          - link "Visual Editor" [ref=e30] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e31]
+            - text: Visual Editor
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: admin@flech.test
+          - button "Log out" [ref=e35]:
+            - img [ref=e36]
+            - text: Log out
+      - main [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - heading "Visual Editor" [level=1] [ref=e43]
+              - combobox [ref=e44]:
+                - option "Home"
+                - option "Contact"
+                - option "About" [selected]
+                - option "Industries"
+                - option "Product · Easel Backs"
+                - option "Product · Fold Lines & Dielines"
+                - option "Product · Contract Framing Backs"
+                - option "Product · Matboards"
+                - option "Global (Nav/Footer)"
+            - generic [ref=e45]:
+              - button "desktop" [ref=e46]:
+                - img [ref=e47]
+              - button "tablet" [ref=e49]:
+                - img [ref=e50]
+              - button "mobile" [ref=e52]:
+                - img [ref=e53]
+            - generic [ref=e55]:
+              - button "Reload preview" [ref=e56]:
+                - img [ref=e57]
+              - link "Open live page" [ref=e62] [cursor=pointer]:
+                - /url: /about
+                - img [ref=e63]
+              - button "Save" [ref=e67]:
+                - img [ref=e68]
+                - text: Save
+          - generic [ref=e72]:
+            - complementary [ref=e73]:
+              - generic [ref=e74]:
+                - paragraph [ref=e75]: Sections
+                - generic [ref=e76]:
+                  - button "Hero Section" [ref=e77]
+                  - button "Stats Bar (4 items)" [ref=e78]
+                  - button "Our Story" [ref=e79]
+                  - button "What Drives Us (4 values)" [ref=e80]
+                  - button "Timeline · Heading" [ref=e81]
+                  - button "Timeline (6 milestones)" [ref=e82]
+                  - button "Founder Note" [ref=e83]
+                  - button "Final CTA" [ref=e84]
+            - main [ref=e85]:
+              - iframe [ref=e87]:
+                - generic [active] [ref=f67e1]:
+                  - navigation "Main navigation" [ref=f67e2]:
+                    - generic [ref=f67e3]:
+                      - link "Flech Paper Products" [ref=f67e4] [cursor=pointer]:
+                        - /url: /
+                        - img "Flech Paper Products" [ref=f67e5]
+                      - generic [ref=f67e6]:
+                        - link "Request a Quote" [ref=f67e7] [cursor=pointer]:
+                          - /url: /contact
+                        - button "Open menu" [ref=f67e8] [cursor=pointer]:
+                          - img [ref=f67e9]
+                  - main [ref=f67e10]:
+                    - paragraph [ref=f67e15]: Loading...
+                  - contentinfo [ref=f67e16]:
+                    - generic [ref=f67e18]:
+                      - generic [ref=f67e19]:
+                        - img "Flech Paper Products" [ref=f67e21]
+                        - paragraph [ref=f67e22]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                        - generic [ref=f67e23]:
+                          - link "(973) 357-8111" [ref=f67e24] [cursor=pointer]:
+                            - /url: tel:+19733578111
+                            - img [ref=f67e25]
+                            - text: (973) 357-8111
+                          - link "info@flech.com" [ref=f67e27] [cursor=pointer]:
+                            - /url: mailto:info@flech.com
+                            - img [ref=f67e28]
+                            - text: info@flech.com
+                          - generic [ref=f67e31]:
+                            - img [ref=f67e32]
+                            - generic [ref=f67e35]:
+                              - text: Paterson, NJ
+                              - text: United States
+                      - generic [ref=f67e36]:
+                        - heading "Products" [level=3] [ref=f67e37]
+                        - list [ref=f67e38]:
+                          - listitem [ref=f67e39]:
+                            - link "Easel Backs" [ref=f67e40] [cursor=pointer]:
+                              - /url: /products/easel-backs
+                              - text: Easel Backs
+                              - img [ref=f67e41]
+                          - listitem [ref=f67e44]:
+                            - link "Fold Lines & Dielines" [ref=f67e45] [cursor=pointer]:
+                              - /url: /products/fold-lines
+                              - text: Fold Lines & Dielines
+                              - img [ref=f67e46]
+                          - listitem [ref=f67e49]:
+                            - link "Contract Framing Backs" [ref=f67e50] [cursor=pointer]:
+                              - /url: /products/framing-backs
+                              - text: Contract Framing Backs
+                              - img [ref=f67e51]
+                          - listitem [ref=f67e54]:
+                            - link "Matboards" [ref=f67e55] [cursor=pointer]:
+                              - /url: /products/matboards
+                              - text: Matboards
+                              - img [ref=f67e56]
+                      - generic [ref=f67e59]:
+                        - heading "Company" [level=3] [ref=f67e60]
+                        - list [ref=f67e61]:
+                          - listitem [ref=f67e62]:
+                            - link "About Flech" [ref=f67e63] [cursor=pointer]:
+                              - /url: /about
+                              - text: About Flech
+                              - img [ref=f67e64]
+                          - listitem [ref=f67e67]:
+                            - link "Industries We Serve" [ref=f67e68] [cursor=pointer]:
+                              - /url: /industries
+                              - text: Industries We Serve
+                              - img [ref=f67e69]
+                          - listitem [ref=f67e72]:
+                            - link "Contact & RFQ" [ref=f67e73] [cursor=pointer]:
+                              - /url: /contact
+                              - text: Contact & RFQ
+                              - img [ref=f67e74]
+                        - heading "Industries" [level=3] [ref=f67e77]
+                        - list [ref=f67e78]:
+                          - listitem [ref=f67e79]:
+                            - link "Sign & Display" [ref=f67e80] [cursor=pointer]:
+                              - /url: /industries#signage
+                          - listitem [ref=f67e81]:
+                            - link "Wholesale Framing" [ref=f67e82] [cursor=pointer]:
+                              - /url: /industries#framing
+                          - listitem [ref=f67e83]:
+                            - link "Packaging & POP" [ref=f67e84] [cursor=pointer]:
+                              - /url: /industries#packaging
+                          - listitem [ref=f67e85]:
+                            - link "Interior Design" [ref=f67e86] [cursor=pointer]:
+                              - /url: /industries#interior
+                      - generic [ref=f67e87]:
+                        - heading "Get Started" [level=3] [ref=f67e88]
+                        - paragraph [ref=f67e89]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                        - link "Request a Quote" [ref=f67e90] [cursor=pointer]:
+                          - /url: /contact
+                          - text: Request a Quote
+                          - img [ref=f67e91]
+                        - generic [ref=f67e94]:
+                          - paragraph [ref=f67e95]: Certifications
+                          - paragraph [ref=f67e96]:
+                            - text: ISO 9001 Certified
+                            - text: FSC Chain of Custody
+                            - text: Acid-Free & Archival
+                    - generic [ref=f67e98]:
+                      - paragraph [ref=f67e99]: © 2026 Flech Paper Products. All rights reserved.
+                      - generic [ref=f67e100]:
+                        - generic [ref=f67e101]: Privacy Policy
+                        - generic [ref=f67e102]: Terms of Service
+                  - button "Open Next.js Dev Tools" [ref=f67e108] [cursor=pointer]:
+                    - img [ref=f67e109]
+            - complementary [ref=e88]:
+              - generic [ref=e89]:
+                - heading "Hero Section" [level=2] [ref=e90]
+                - paragraph [ref=e91]: about:hero
+                - generic [ref=e92]:
+                  - generic [ref=e93]:
+                    - generic [ref=e94]: Breadcrumb Label
+                    - textbox [ref=e95]: About
+                  - generic [ref=e96]:
+                    - generic [ref=e97]: Title (top line)
+                    - textbox [ref=e98]: 25 Years of Knowing
+                  - generic [ref=e99]:
+                    - generic [ref=e100]: Title (bottom line)
+                    - textbox [ref=e101]: What Works
+                  - generic [ref=e102]:
+                    - generic [ref=e103]: Hero Background Image
+                    - generic [ref=e106]:
+                      - textbox "https://… or upload" [ref=e107]: /images/home/warehouse-boards.jpg
+                      - button "Upload" [disabled] [ref=e108]:
+                        - img [ref=e109]
+                        - text: Upload
+                - paragraph [ref=e113]: "Tip: click any highlighted section in the preview to jump directly to its editor here."
+  - button "Open Next.js Dev Tools" [ref=e119] [cursor=pointer]:
+    - img [ref=e120]
+  - alert [ref=e123]

@@ -1,0 +1,239 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: Precision Board Manufacturing - Paterson, NJ since 1999
+    - generic [ref=e5]:
+      - link "(973) 357-8111" [ref=e6] [cursor=pointer]:
+        - /url: tel:+19733578111
+        - img [ref=e7]
+        - text: (973) 357-8111
+      - link "info@flech.com" [ref=e9] [cursor=pointer]:
+        - /url: mailto:info@flech.com
+        - img [ref=e10]
+        - text: info@flech.com
+  - navigation "Main navigation" [ref=e13]:
+    - generic [ref=e14]:
+      - link "Flech Paper Products" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - img "Flech Paper Products" [ref=e16]
+      - generic [ref=e17]:
+        - link "Home" [ref=e18] [cursor=pointer]:
+          - /url: /
+        - button "Products" [ref=e20] [cursor=pointer]:
+          - text: Products
+          - img [ref=e21]
+        - link "About" [ref=e23] [cursor=pointer]:
+          - /url: /about
+        - link "Industries" [ref=e24] [cursor=pointer]:
+          - /url: /industries
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /contact
+      - link "Request a Quote" [ref=e27] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - img "Flech Warehouse" [ref=e31]
+        - generic [ref=e33]:
+          - navigation "Breadcrumb" [ref=e34]:
+            - link "Home" [ref=e35] [cursor=pointer]:
+              - /url: /
+            - img [ref=e36]
+            - generic [ref=e38]: About
+          - heading "25 Years of Knowing What Works" [level=1] [ref=e39]:
+            - text: 25 Years of Knowing
+            - text: What Works
+      - generic [ref=e42]:
+        - generic [ref=e44]:
+          - img [ref=e46]
+          - generic [ref=e49]:
+            - paragraph [ref=e50]: 25+
+            - paragraph [ref=e51]: Years Manufacturing
+        - generic [ref=e53]:
+          - img [ref=e55]
+          - generic [ref=e60]:
+            - paragraph [ref=e61]: 600+
+            - paragraph [ref=e62]: B2B Clients
+        - generic [ref=e64]:
+          - img [ref=e66]
+          - generic [ref=e68]:
+            - paragraph [ref=e69]: "4"
+            - paragraph [ref=e70]: Product Lines
+        - generic [ref=e72]:
+          - img [ref=e74]
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: 100%
+            - paragraph [ref=e79]: Made in USA
+      - generic [ref=e82]:
+        - generic [ref=e84]:
+          - paragraph [ref=e85]: Our Story
+          - heading "From Local Converter to National Manufacturer" [level=2] [ref=e86]
+          - generic [ref=e87]:
+            - paragraph [ref=e88]: Flech Paper Products started as a small specialty board converting operation in Paterson, New Jersey, a city with deep roots in American manufacturing.
+            - paragraph [ref=e89]: "Over 25 years, we grew by doing one thing well: manufacturing precision board products that work exactly as specified, every single time."
+            - paragraph [ref=e90]: Today, we serve sign & display manufacturers, wholesale framers, POP designers, and commercial printers across the United States with four core product lines.
+          - generic [ref=e91]:
+            - img "Stacked boards" [ref=e93]
+            - img "Matboard" [ref=e95]
+        - generic [ref=e97]:
+          - paragraph [ref=e98]: What Drives Us
+          - generic [ref=e99]:
+            - generic [ref=e101]:
+              - img [ref=e103]
+              - generic [ref=e109]:
+                - heading "Precision First" [level=3] [ref=e110]
+                - paragraph [ref=e111]: Every measurement, cut, and fold line held to tolerances that matter.
+            - generic [ref=e113]:
+              - img [ref=e115]
+              - generic [ref=e117]:
+                - heading "Quality Without Shortcuts" [level=3] [ref=e118]
+                - paragraph [ref=e119]: Right substrate for each application, not the cheapest one.
+            - generic [ref=e121]:
+              - img [ref=e123]
+              - generic [ref=e128]:
+                - heading "Partnership, Not Transactions" [level=3] [ref=e129]
+                - paragraph [ref=e130]: We learn our clients' businesses to anticipate their needs.
+            - generic [ref=e132]:
+              - img [ref=e134]
+              - generic [ref=e137]:
+                - heading "Responsible Manufacturing" [level=3] [ref=e138]
+                - paragraph [ref=e139]: FSC certified, responsible sourcing, acid-free archival products.
+      - generic [ref=e141]:
+        - generic [ref=e143]:
+          - paragraph [ref=e144]: Milestones
+          - heading "Our Journey" [level=2] [ref=e145]
+        - generic [ref=e146]:
+          - generic [ref=e152]:
+            - text: "1999"
+            - heading "Founded in Paterson, NJ" [level=3] [ref=e153]
+            - paragraph [ref=e154]: Flech opens as a specialty board converter, serving local framing and sign shops.
+          - generic [ref=e160]:
+            - text: "2004"
+            - heading "CNC Equipment Investment" [level=3] [ref=e161]
+            - paragraph [ref=e162]: Major upgrade to CNC die-cutting and scoring, precision tolerances and high-volume capability.
+          - generic [ref=e168]:
+            - text: "2010"
+            - heading "National Distribution" [level=3] [ref=e169]
+            - paragraph [ref=e170]: Expanded to serve sign & display, framing, and packaging clients across the United States.
+          - generic [ref=e176]:
+            - text: "2015"
+            - heading "Custom Converting Division" [level=3] [ref=e177]
+            - paragraph [ref=e178]: Dedicated custom converting, laminating, die-cutting, and specialty finishing under one roof.
+          - generic [ref=e184]:
+            - text: "2020"
+            - heading "Archival Product Line" [level=3] [ref=e185]
+            - paragraph [ref=e186]: Acid-free, archival-quality matboards and framing backs for museum-grade preservation.
+          - generic [ref=e191]:
+            - text: Today
+            - heading "25+ Years of Precision" [level=3] [ref=e192]
+            - paragraph [ref=e193]: Four core product lines, 600+ B2B clients, same commitment to quality that started it all.
+      - generic [ref=e196]:
+        - generic:
+          - generic:
+            - img "Flech Paper Products"
+        - generic [ref=e197]:
+          - paragraph [ref=e198]: A Note From Our Founder
+          - heading "Joseph Kandel" [level=2] [ref=e199]
+          - blockquote [ref=e200]: "“After over 40 years in the paperboard industry, I decided to start my own company that could offer customers the benefits of BOTH: the competitive pricing of larger suppliers with the unbeatable service of smaller ones.”"
+          - paragraph [ref=e201]: Many customers have responded to this philosophy by making Flech a trusted partner, some even call us their "secret weapon." We would welcome the chance to prove to you that Flech could be your secret weapon too.
+      - generic [ref=e206]:
+        - heading "Let's Build Something Together" [level=2] [ref=e207]
+        - paragraph [ref=e208]: 25 years of precision. 600+ satisfied B2B clients. Your project is next.
+        - link "Request a Quote" [ref=e209] [cursor=pointer]:
+          - /url: /contact
+          - text: Request a Quote
+          - img [ref=e210]
+  - contentinfo [ref=e212]:
+    - generic [ref=e214]:
+      - generic [ref=e215]:
+        - img "Flech Paper Products" [ref=e217]
+        - paragraph [ref=e218]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+        - generic [ref=e219]:
+          - link "(973) 357-8111" [ref=e220] [cursor=pointer]:
+            - /url: tel:+19733578111
+            - img [ref=e221]
+            - text: (973) 357-8111
+          - link "info@flech.com" [ref=e223] [cursor=pointer]:
+            - /url: mailto:info@flech.com
+            - img [ref=e224]
+            - text: info@flech.com
+          - generic [ref=e227]:
+            - img [ref=e228]
+            - generic [ref=e231]:
+              - text: Paterson, NJ
+              - text: United States
+      - generic [ref=e232]:
+        - heading "Products" [level=3] [ref=e233]
+        - list [ref=e234]:
+          - listitem [ref=e235]:
+            - link "Easel Backs" [ref=e236] [cursor=pointer]:
+              - /url: /products/easel-backs
+              - text: Easel Backs
+              - img [ref=e237]
+          - listitem [ref=e240]:
+            - link "Fold Lines & Dielines" [ref=e241] [cursor=pointer]:
+              - /url: /products/fold-lines
+              - text: Fold Lines & Dielines
+              - img [ref=e242]
+          - listitem [ref=e245]:
+            - link "Contract Framing Backs" [ref=e246] [cursor=pointer]:
+              - /url: /products/framing-backs
+              - text: Contract Framing Backs
+              - img [ref=e247]
+          - listitem [ref=e250]:
+            - link "Matboards" [ref=e251] [cursor=pointer]:
+              - /url: /products/matboards
+              - text: Matboards
+              - img [ref=e252]
+      - generic [ref=e255]:
+        - heading "Company" [level=3] [ref=e256]
+        - list [ref=e257]:
+          - listitem [ref=e258]:
+            - link "About Flech" [ref=e259] [cursor=pointer]:
+              - /url: /about
+              - text: About Flech
+              - img [ref=e260]
+          - listitem [ref=e263]:
+            - link "Industries We Serve" [ref=e264] [cursor=pointer]:
+              - /url: /industries
+              - text: Industries We Serve
+              - img [ref=e265]
+          - listitem [ref=e268]:
+            - link "Contact & RFQ" [ref=e269] [cursor=pointer]:
+              - /url: /contact
+              - text: Contact & RFQ
+              - img [ref=e270]
+        - heading "Industries" [level=3] [ref=e273]
+        - list [ref=e274]:
+          - listitem [ref=e275]:
+            - link "Sign & Display" [ref=e276] [cursor=pointer]:
+              - /url: /industries#signage
+          - listitem [ref=e277]:
+            - link "Wholesale Framing" [ref=e278] [cursor=pointer]:
+              - /url: /industries#framing
+          - listitem [ref=e279]:
+            - link "Packaging & POP" [ref=e280] [cursor=pointer]:
+              - /url: /industries#packaging
+          - listitem [ref=e281]:
+            - link "Interior Design" [ref=e282] [cursor=pointer]:
+              - /url: /industries#interior
+      - generic [ref=e283]:
+        - heading "Get Started" [level=3] [ref=e284]
+        - paragraph [ref=e285]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+        - link "Request a Quote" [ref=e286] [cursor=pointer]:
+          - /url: /contact
+          - text: Request a Quote
+          - img [ref=e287]
+        - generic [ref=e290]:
+          - paragraph [ref=e291]: Certifications
+          - paragraph [ref=e292]:
+            - text: ISO 9001 Certified
+            - text: FSC Chain of Custody
+            - text: Acid-Free & Archival
+    - generic [ref=e294]:
+      - paragraph [ref=e295]: © 2026 Flech Paper Products. All rights reserved.
+      - generic [ref=e296]:
+        - generic [ref=e297]: Privacy Policy
+        - generic [ref=e298]: Terms of Service
+  - button "Open Next.js Dev Tools" [ref=e304] [cursor=pointer]:
+    - img [ref=e305]
+  - alert [ref=e308]

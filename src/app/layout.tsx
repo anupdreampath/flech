@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { SiteChrome } from "@/components/SiteChrome";
+import { AnalyticsTracker } from "@/components/AnalyticsTracker";
+import { EditModeBridge } from "@/components/EditModeBridge";
+import { Suspense } from "react";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair",
@@ -49,9 +51,11 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="min-h-dvh flex flex-col bg-paper-white text-foreground font-sans antialiased">
-        <Navbar />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
+        <Suspense fallback={null}>
+          <AnalyticsTracker />
+          <EditModeBridge />
+        </Suspense>
       </body>
     </html>
   );

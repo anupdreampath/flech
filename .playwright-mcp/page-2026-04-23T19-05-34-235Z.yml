@@ -1,0 +1,195 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: Precision Board Manufacturing - Paterson, NJ since 1999
+    - generic [ref=e5]:
+      - link "(973) 357-8111" [ref=e6] [cursor=pointer]:
+        - /url: tel:+19733578111
+        - img [ref=e7]
+        - text: (973) 357-8111
+      - link "info@flech.com" [ref=e9] [cursor=pointer]:
+        - /url: mailto:info@flech.com
+        - img [ref=e10]
+        - text: info@flech.com
+  - navigation "Main navigation" [ref=e13]:
+    - generic [ref=e14]:
+      - link "Flech Paper Products" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - img "Flech Paper Products" [ref=e16]
+      - generic [ref=e17]:
+        - link "Home" [ref=e18] [cursor=pointer]:
+          - /url: /
+        - button "Products" [ref=e20] [cursor=pointer]:
+          - text: Products
+          - img [ref=e21]
+        - link "About" [ref=e23] [cursor=pointer]:
+          - /url: /about
+        - link "Industries" [ref=e24] [cursor=pointer]:
+          - /url: /industries
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /contact
+      - link "Request a Quote" [ref=e27] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e28]:
+    - generic [ref=e145]:
+      - complementary [ref=e146]:
+        - generic [ref=e147]:
+          - paragraph [ref=e148]: Flech
+          - heading "Admin" [level=1] [ref=e149]
+        - navigation [ref=e150]:
+          - link "Dashboard" [ref=e151] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e152]
+            - text: Dashboard
+          - link "Submissions" [ref=e157] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e158]
+            - text: Submissions
+          - link "Analytics" [ref=e161] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e162]
+            - text: Analytics
+          - link "Content (CMS)" [ref=e164] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e165]
+            - text: Content (CMS)
+          - link "Blogs" [ref=e168] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e169]
+            - text: Blogs
+          - link "Visual Editor" [ref=e171] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e172]
+            - text: Visual Editor
+        - generic [ref=e174]:
+          - paragraph [ref=e175]: admin@flech.test
+          - button "Log out" [ref=e176]:
+            - img [ref=e177]
+            - text: Log out
+      - main [ref=e180]:
+        - generic [ref=e181]:
+          - heading "Dashboard" [level=1] [ref=e182]
+          - generic [ref=e183]:
+            - generic [ref=e184]:
+              - img [ref=e186]
+              - paragraph [ref=e189]: "0"
+              - paragraph [ref=e190]: Submissions (7d)
+            - generic [ref=e191]:
+              - img [ref=e193]
+              - paragraph [ref=e198]: "0"
+              - paragraph [ref=e199]: Sessions (7d)
+            - generic [ref=e200]:
+              - img [ref=e202]
+              - paragraph [ref=e204]: "51"
+              - paragraph [ref=e205]: Events (24h)
+            - generic [ref=e206]:
+              - img [ref=e208]
+              - paragraph [ref=e210]: "0"
+              - paragraph [ref=e211]: Blog posts
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e214]:
+                - heading "Recent Submissions" [level=2] [ref=e215]
+                - link "View all" [ref=e216] [cursor=pointer]:
+                  - /url: /admin/submissions
+              - paragraph [ref=e218]: No submissions yet.
+            - generic [ref=e219]:
+              - generic [ref=e220]:
+                - heading "Top Cities (7d)" [level=2] [ref=e221]
+                - link "Full analytics" [ref=e222] [cursor=pointer]:
+                  - /url: /admin/analytics
+              - paragraph [ref=e224]: No visits yet.
+  - contentinfo [ref=e34]:
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - img "Flech Paper Products" [ref=e39]
+        - paragraph [ref=e40]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+        - generic [ref=e41]:
+          - link "(973) 357-8111" [ref=e42] [cursor=pointer]:
+            - /url: tel:+19733578111
+            - img [ref=e43]
+            - text: (973) 357-8111
+          - link "info@flech.com" [ref=e45] [cursor=pointer]:
+            - /url: mailto:info@flech.com
+            - img [ref=e46]
+            - text: info@flech.com
+          - generic [ref=e49]:
+            - img [ref=e50]
+            - generic [ref=e53]:
+              - text: Paterson, NJ
+              - text: United States
+      - generic [ref=e54]:
+        - heading "Products" [level=3] [ref=e55]
+        - list [ref=e56]:
+          - listitem [ref=e57]:
+            - link "Easel Backs" [ref=e58] [cursor=pointer]:
+              - /url: /products/easel-backs
+              - text: Easel Backs
+              - img [ref=e59]
+          - listitem [ref=e62]:
+            - link "Fold Lines & Dielines" [ref=e63] [cursor=pointer]:
+              - /url: /products/fold-lines
+              - text: Fold Lines & Dielines
+              - img [ref=e64]
+          - listitem [ref=e67]:
+            - link "Contract Framing Backs" [ref=e68] [cursor=pointer]:
+              - /url: /products/framing-backs
+              - text: Contract Framing Backs
+              - img [ref=e69]
+          - listitem [ref=e72]:
+            - link "Matboards" [ref=e73] [cursor=pointer]:
+              - /url: /products/matboards
+              - text: Matboards
+              - img [ref=e74]
+      - generic [ref=e77]:
+        - heading "Company" [level=3] [ref=e78]
+        - list [ref=e79]:
+          - listitem [ref=e80]:
+            - link "About Flech" [ref=e81] [cursor=pointer]:
+              - /url: /about
+              - text: About Flech
+              - img [ref=e82]
+          - listitem [ref=e85]:
+            - link "Industries We Serve" [ref=e86] [cursor=pointer]:
+              - /url: /industries
+              - text: Industries We Serve
+              - img [ref=e87]
+          - listitem [ref=e90]:
+            - link "Contact & RFQ" [ref=e91] [cursor=pointer]:
+              - /url: /contact
+              - text: Contact & RFQ
+              - img [ref=e92]
+        - heading "Industries" [level=3] [ref=e95]
+        - list [ref=e96]:
+          - listitem [ref=e97]:
+            - link "Sign & Display" [ref=e98] [cursor=pointer]:
+              - /url: /industries#signage
+          - listitem [ref=e99]:
+            - link "Wholesale Framing" [ref=e100] [cursor=pointer]:
+              - /url: /industries#framing
+          - listitem [ref=e101]:
+            - link "Packaging & POP" [ref=e102] [cursor=pointer]:
+              - /url: /industries#packaging
+          - listitem [ref=e103]:
+            - link "Interior Design" [ref=e104] [cursor=pointer]:
+              - /url: /industries#interior
+      - generic [ref=e105]:
+        - heading "Get Started" [level=3] [ref=e106]
+        - paragraph [ref=e107]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+        - link "Request a Quote" [ref=e108] [cursor=pointer]:
+          - /url: /contact
+          - text: Request a Quote
+          - img [ref=e109]
+        - generic [ref=e112]:
+          - paragraph [ref=e113]: Certifications
+          - paragraph [ref=e114]:
+            - text: ISO 9001 Certified
+            - text: FSC Chain of Custody
+            - text: Acid-Free & Archival
+    - generic [ref=e116]:
+      - paragraph [ref=e117]: © 2026 Flech Paper Products. All rights reserved.
+      - generic [ref=e118]:
+        - generic [ref=e119]: Privacy Policy
+        - generic [ref=e120]: Terms of Service
+  - button "Open Next.js Dev Tools" [ref=e126] [cursor=pointer]:
+    - img [ref=e127]
+  - alert [ref=e130]

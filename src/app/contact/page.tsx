@@ -59,7 +59,26 @@ export default function ContactPage() {
     setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    // Save to database first
+    try {
+      await fetch("/api/contact", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          pageUrl: window.location.href,
+          referrer: document.referrer,
+          answers: {
+            product: formData.product,
+            industry: formData.industry,
+            quantity: formData.quantity,
+            customSize: formData.customSize,
+          },
+        }),
+      });
+    } catch {}
+
     // Build WhatsApp message
     const lines = [
       `*New Inquiry from Flech Website*`,
@@ -78,7 +97,6 @@ export default function ContactPage() {
       .filter(Boolean)
       .join("%0A");
 
-    // Open WhatsApp with pre-filled message (replace number with actual)
     const whatsappUrl = `https://wa.me/19733578111?text=${lines}`;
     window.open(whatsappUrl, "_blank");
     setSubmitted(true);

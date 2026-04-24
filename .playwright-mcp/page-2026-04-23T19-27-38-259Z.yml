@@ -1,0 +1,257 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e6]:
+          - paragraph [ref=e7]: Flech
+          - heading "Admin" [level=1] [ref=e8]
+        - navigation [ref=e9]:
+          - link "Dashboard" [ref=e10] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e11]
+            - text: Dashboard
+          - link "Submissions" [ref=e16] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e17]
+            - text: Submissions
+          - link "Analytics" [ref=e20] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e21]
+            - text: Analytics
+          - link "Content (CMS)" [ref=e23] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e24]
+            - text: Content (CMS)
+          - link "Blogs" [ref=e27] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e28]
+            - text: Blogs
+          - link "Visual Editor" [ref=e30] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e31]
+            - text: Visual Editor
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: admin@flech.test
+          - button "Log out" [ref=e35]:
+            - img [ref=e36]
+            - text: Log out
+      - main [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - generic [ref=e42]:
+              - heading "Visual Editor" [level=1] [ref=e43]
+              - combobox [ref=e44]:
+                - option "Home" [selected]
+                - option "Contact"
+                - option "About"
+                - option "Industries"
+                - option "Product · Easel Backs"
+                - option "Product · Fold Lines & Dielines"
+                - option "Product · Contract Framing Backs"
+                - option "Product · Matboards"
+                - option "Global (Nav/Footer)"
+            - generic [ref=e45]:
+              - button "desktop" [ref=e46]:
+                - img [ref=e47]
+              - button "tablet" [ref=e49]:
+                - img [ref=e50]
+              - button "mobile" [ref=e52]:
+                - img [ref=e53]
+            - generic [ref=e55]:
+              - button "Reload preview" [ref=e56]:
+                - img [ref=e57]
+              - link "Open live page" [ref=e62] [cursor=pointer]:
+                - /url: /
+                - img [ref=e63]
+              - button "Save" [ref=e67]:
+                - img [ref=e68]
+                - text: Save
+          - generic [ref=e72]:
+            - complementary [ref=e73]:
+              - generic [ref=e74]:
+                - paragraph [ref=e75]: Sections
+                - generic [ref=e76]:
+                  - button "Hero Section" [ref=e77]
+                  - button "Products Heading" [ref=e78]
+                  - button "Why Flech Heading" [ref=e79]
+                  - button "Stats Bar (4 items)" [ref=e80]
+                  - button "Products (4 cards)" [ref=e81]
+                  - button "Why Flech · Cards (6)" [ref=e82]
+                  - button "Industries Preview · Heading" [ref=e83]
+                  - button "Industries Preview (4 cards)" [ref=e84]
+                  - button "How We Work · Heading" [ref=e85]
+                  - button "How We Work · Steps (4)" [ref=e86]
+                  - button "Testimonials · Heading" [ref=e87]
+                  - button "Testimonials (4)" [ref=e88]
+                  - button "Final CTA" [ref=e89]
+            - main [ref=e90]:
+              - iframe [ref=e92]:
+                - generic [active] [ref=f35e1]:
+                  - generic [ref=f35e3]:
+                    - paragraph [ref=f35e4]: Precision Board Manufacturing - Paterson, NJ since 1999
+                    - generic [ref=f35e5]:
+                      - link "(973) 357-8111" [ref=f35e6] [cursor=pointer]:
+                        - /url: tel:+19733578111
+                        - img [ref=f35e7]
+                        - text: (973) 357-8111
+                      - link "info@flech.com" [ref=f35e9] [cursor=pointer]:
+                        - /url: mailto:info@flech.com
+                        - img [ref=f35e10]
+                        - text: info@flech.com
+                  - navigation "Main navigation" [ref=f35e13]:
+                    - generic [ref=f35e14]:
+                      - link "Flech Paper Products" [ref=f35e15] [cursor=pointer]:
+                        - /url: /
+                        - img "Flech Paper Products" [ref=f35e16]
+                      - generic [ref=f35e17]:
+                        - link "Home" [ref=f35e18] [cursor=pointer]:
+                          - /url: /
+                        - button "Products" [ref=f35e20]:
+                          - text: Products
+                          - img [ref=f35e21]
+                        - link "About" [ref=f35e23] [cursor=pointer]:
+                          - /url: /about
+                        - link "Industries" [ref=f35e24] [cursor=pointer]:
+                          - /url: /industries
+                        - link "Contact" [ref=f35e25] [cursor=pointer]:
+                          - /url: /contact
+                      - generic [ref=f35e26]:
+                        - link "Request a Quote" [ref=f35e27] [cursor=pointer]:
+                          - /url: /contact
+                        - button "Open menu" [ref=f35e28]:
+                          - img [ref=f35e29]
+                  - main [ref=f35e30]:
+                    - paragraph [ref=f35e34]: Loading...
+                  - contentinfo [ref=f35e35]:
+                    - generic [ref=f35e37]:
+                      - generic [ref=f35e38]:
+                        - img "Flech Paper Products" [ref=f35e40]
+                        - paragraph [ref=f35e41]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                        - generic [ref=f35e42]:
+                          - link "(973) 357-8111" [ref=f35e43] [cursor=pointer]:
+                            - /url: tel:+19733578111
+                            - img [ref=f35e44]
+                            - text: (973) 357-8111
+                          - link "info@flech.com" [ref=f35e46] [cursor=pointer]:
+                            - /url: mailto:info@flech.com
+                            - img [ref=f35e47]
+                            - text: info@flech.com
+                          - generic [ref=f35e50]:
+                            - img [ref=f35e51]
+                            - generic [ref=f35e54]:
+                              - text: Paterson, NJ
+                              - text: United States
+                      - generic [ref=f35e55]:
+                        - heading "Products" [level=3] [ref=f35e56]
+                        - list [ref=f35e57]:
+                          - listitem [ref=f35e58]:
+                            - link "Easel Backs" [ref=f35e59] [cursor=pointer]:
+                              - /url: /products/easel-backs
+                              - text: Easel Backs
+                              - img [ref=f35e60]
+                          - listitem [ref=f35e63]:
+                            - link "Fold Lines & Dielines" [ref=f35e64] [cursor=pointer]:
+                              - /url: /products/fold-lines
+                              - text: Fold Lines & Dielines
+                              - img [ref=f35e65]
+                          - listitem [ref=f35e68]:
+                            - link "Contract Framing Backs" [ref=f35e69] [cursor=pointer]:
+                              - /url: /products/framing-backs
+                              - text: Contract Framing Backs
+                              - img [ref=f35e70]
+                          - listitem [ref=f35e73]:
+                            - link "Matboards" [ref=f35e74] [cursor=pointer]:
+                              - /url: /products/matboards
+                              - text: Matboards
+                              - img [ref=f35e75]
+                      - generic [ref=f35e78]:
+                        - heading "Company" [level=3] [ref=f35e79]
+                        - list [ref=f35e80]:
+                          - listitem [ref=f35e81]:
+                            - link "About Flech" [ref=f35e82] [cursor=pointer]:
+                              - /url: /about
+                              - text: About Flech
+                              - img [ref=f35e83]
+                          - listitem [ref=f35e86]:
+                            - link "Industries We Serve" [ref=f35e87] [cursor=pointer]:
+                              - /url: /industries
+                              - text: Industries We Serve
+                              - img [ref=f35e88]
+                          - listitem [ref=f35e91]:
+                            - link "Contact & RFQ" [ref=f35e92] [cursor=pointer]:
+                              - /url: /contact
+                              - text: Contact & RFQ
+                              - img [ref=f35e93]
+                        - heading "Industries" [level=3] [ref=f35e96]
+                        - list [ref=f35e97]:
+                          - listitem [ref=f35e98]:
+                            - link "Sign & Display" [ref=f35e99] [cursor=pointer]:
+                              - /url: /industries#signage
+                          - listitem [ref=f35e100]:
+                            - link "Wholesale Framing" [ref=f35e101] [cursor=pointer]:
+                              - /url: /industries#framing
+                          - listitem [ref=f35e102]:
+                            - link "Packaging & POP" [ref=f35e103] [cursor=pointer]:
+                              - /url: /industries#packaging
+                          - listitem [ref=f35e104]:
+                            - link "Interior Design" [ref=f35e105] [cursor=pointer]:
+                              - /url: /industries#interior
+                      - generic [ref=f35e106]:
+                        - heading "Get Started" [level=3] [ref=f35e107]
+                        - paragraph [ref=f35e108]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                        - link "Request a Quote" [ref=f35e109] [cursor=pointer]:
+                          - /url: /contact
+                          - text: Request a Quote
+                          - img [ref=f35e110]
+                        - generic [ref=f35e113]:
+                          - paragraph [ref=f35e114]: Certifications
+                          - paragraph [ref=f35e115]:
+                            - text: ISO 9001 Certified
+                            - text: FSC Chain of Custody
+                            - text: Acid-Free & Archival
+                    - generic [ref=f35e117]:
+                      - paragraph [ref=f35e118]: © 2026 Flech Paper Products. All rights reserved.
+                      - generic [ref=f35e119]: Privacy PolicyTerms of Service
+            - complementary [ref=e93]:
+              - generic [ref=e94]:
+                - heading "Hero Section" [level=2] [ref=e95]
+                - paragraph [ref=e96]: home:hero
+                - generic [ref=e97]:
+                  - generic [ref=e98]:
+                    - generic [ref=e99]: Badge Text
+                    - textbox [ref=e100]: Family-Owned Manufacturer, Paterson, NJ Since 1999
+                  - generic [ref=e101]:
+                    - generic [ref=e102]: Title (top line)
+                    - textbox [ref=e103]: The Backbone of
+                  - generic [ref=e104]:
+                    - generic [ref=e105]: Title (bottom line)
+                    - textbox [ref=e106]: Every Great Display
+                  - generic [ref=e107]:
+                    - generic [ref=e108]: Subtitle
+                    - textbox [ref=e109]: From the easel back that holds your frame upright to the matboard that frames your art, Flech manufactures the precision board products that the framing, sign, and display industries depend on.
+                  - generic [ref=e110]:
+                    - generic [ref=e111]: Primary CTA Label
+                    - textbox [ref=e112]: Request a Quote
+                  - generic [ref=e113]:
+                    - generic [ref=e114]: Secondary CTA Label
+                    - textbox [ref=e115]: Watch Process
+                  - generic [ref=e116]:
+                    - generic [ref=e117]: Background Video (MP4)
+                    - paragraph [ref=e118]: This is the looping video shown in the hero. Paste an MP4 URL or upload a new clip.
+                    - generic [ref=e122]:
+                      - textbox "https://…/video.mp4 or upload" [ref=e123]: /videos/manufacturing-process.mp4
+                      - button "Upload" [disabled] [ref=e124]:
+                        - img [ref=e125]
+                        - text: Upload
+                  - generic [ref=e127]:
+                    - generic [ref=e128]: Video Thumbnail (poster)
+                    - paragraph [ref=e129]: Still frame shown before the video loads, or if the video can't be played. Not visible while the video is playing.
+                    - generic [ref=e132]:
+                      - textbox "https://… or upload" [ref=e133]: /images/home/warehouse-boards.jpg
+                      - button "Upload" [disabled] [ref=e134]:
+                        - img [ref=e135]
+                        - text: Upload
+                - paragraph [ref=e139]: "Tip: click any highlighted section in the preview to jump directly to its editor here."
+  - button "Open Next.js Dev Tools" [ref=e145] [cursor=pointer]:
+    - img [ref=e146]
+  - alert [ref=e149]
