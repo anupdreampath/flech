@@ -561,7 +561,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ PROCESS ═══ */}
-      <section className="py-24 sm:py-32" data-cms-section="home:how_we_work_steps">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16" data-cms-section="home:how_we_work_steps">
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-20" data-cms-section="home:how_we_work_heading">
@@ -604,7 +604,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ TESTIMONIALS — 21st Dev Style ═══ */}
-      <section className="py-24 sm:py-32 relative overflow-hidden bg-gradient-to-b from-paper-white to-warm-white">
+      <section className="pt-12 sm:pt-16 pb-24 sm:pb-32 relative overflow-hidden bg-gradient-to-b from-paper-white to-warm-white">
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div
