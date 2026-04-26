@@ -38,42 +38,42 @@ const usps = [
     title: "Archival Protection",
     description:
       "Our acid-free framing backs prevent the artwork they protect from yellowing or deteriorating over time. Archival quality for museum-grade applications.",
-    image: "/images/framing/gallery-frame.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC05195-Enhanced-NR.png?updatedAt=1777114595151",
   },
   {
     icon: Ruler,
     title: "Precision Cut to Size",
     description:
       "Every backing board is cut to exact dimensions with clean, square edges. No trimming required on your end. They fit the frame perfectly out of the box.",
-    image: "/images/framing/frame-samples.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04811.png?updatedAt=1777114599948",
   },
   {
     icon: Layers,
     title: "Consistent Caliper",
     description:
       "Sheet-to-sheet caliper consistency means your framing operation runs smoothly. No jamming, no fitting issues, no wasted time.",
-    image: "/images/framing/frame-collection.jpg",
+    image: "https://hard-black-tg68fklpa2.edgeone.app/DSC04474.png",
   },
   {
     icon: Package,
     title: "High-Volume Ready",
     description:
       "Contract framing means contract volume. We're equipped for runs of thousands with the same consistency as a run of ten.",
-    image: "/images/framing/frame-print.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04855-Enhanced-NR.png?updatedAt=1777114588617",
   },
   {
     icon: Award,
     title: "Multiple Board Options",
     description:
       "SBS for clean white finish, chip board for economy, corrugated for rigidity, poly board for moisture resistance. We match the substrate to your application.",
-    image: "/images/products/tuff-pulp.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04543.png?updatedAt=1777114536452",
   },
   {
     icon: Truck,
     title: "Inventory Programs",
     description:
       "Set up a standing order and we'll hold inventory for scheduled shipments. Reduce your warehousing costs and never run short on backing boards.",
-    image: "/images/framing/frame-hanging.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC05210-Enhanced-NR.png?updatedAt=1777114600662",
   },
 ];
 
@@ -82,28 +82,28 @@ const boardOptions = [
     name: "SBS (Solid Bleached Sulfate)",
     description:
       "The premium choice. Clean white surface on both sides with excellent rigidity. Ideal for applications where the back of the frame may be visible or where a professional finish matters.",
-    image: "/images/framing/frame-samples.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC05147-Enhanced-NR.png?updatedAt=1777114595483",
     best: "Gallery framing, retail, high-end applications",
   },
   {
     name: "Chip Board",
     description:
       "The industry workhorse. Gray recycled board that delivers solid rigidity at an economical price point. Perfect for high-volume contract work where cost efficiency is critical.",
-    image: "/images/framing/frame-collection.jpg",
+    image: "https://sick-bronze-qlywkamcqc.edgeone.app/DSC04478.png",
     best: "High-volume contracts, certificates, economy framing",
   },
   {
     name: "Corrugated Board",
     description:
       "Maximum rigidity for oversized frames. The fluted construction provides structural support that prevents bowing in large format applications.",
-    image: "/images/framing/frame-print.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04874-Enhanced-NR.png?updatedAt=1777114598763",
     best: "Large formats, heavy artwork, shipping protection",
   },
   {
     name: "Poly Board",
     description:
       "Moisture-resistant synthetic board that won't warp, swell, or degrade in humid environments. The modern solution for bathrooms, kitchens, and outdoor-adjacent displays.",
-    image: "/images/products/tuff-pulp.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04539-Enhanced-NR.png?updatedAt=1777114527017",
     best: "Humid environments, outdoor-adjacent, long-term stability",
   },
 ];
@@ -113,11 +113,12 @@ export default function FramingBacksPage() {
     <>
       {/* ═══ IMAGE HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-center overflow-hidden">
-        {/* Background image */}
-        <img
-          src="/images/framing/gallery-frame.jpg"
-          alt="Framed artwork with professional backing"
-          className="absolute inset-0 w-full h-full object-cover"
+        {/* Background video */}
+        <iframe
+          src="https://play.gumlet.io/embed/69ec65364779ed7c8b5cd9a7?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          allow="autoplay; fullscreen"
+          title="Factory worker handling stacked materials during cutting process"
         />
 
         {/* Dark overlay */}
@@ -202,8 +203,8 @@ export default function FramingBacksPage() {
             <AnimatedSection preset="slideLeft">
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/images/framing/frame-hanging.jpg"
-                  alt="Professional framing with backing board"
+                  src="https://ik.imagekit.io/l7qlh4sga/DSC05169-Enhanced-NR.png?updatedAt=1777114597584"
+                  alt="Handling framing back board in workshop"
                   className="w-full h-[480px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -350,8 +351,8 @@ export default function FramingBacksPage() {
             <AnimatedSection preset="slideRight">
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/images/framing/frame-print.png"
-                  alt="Framing assembly process"
+                  src="https://ik.imagekit.io/l7qlh4sga/DSC04876.png?updatedAt=1777114597405"
+                  alt="Factory cutting system trimming panel materials"
                   className="w-full h-[520px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -471,14 +472,45 @@ export default function FramingBacksPage() {
         </div>
       </section>
 
+
+      {/* ═══ FRAME WORKSHOP GALLERY ═══ */}
+      <section className="py-16 sm:py-20 bg-warm-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-charcoal">Our Framing Workshop</h2>
+          <p className="text-muted mt-2 max-w-xl">Frame moldings, wood samples, and the craftsmanship that goes into every backing board we pair with a frame.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 px-2">
+          {[
+            { src: "https://written-orange-bawezaktt9.edgeone.app/DSC04415-Enhanced-NR.png", alt: "Stacked wooden frame moldings wrapped and organized in workshop" },
+            { src: "https://familiar-olive-bocpixkjal.edgeone.app/DSC04431-Enhanced-NR.png", alt: "Workshop corner with framing machine and stacked molding strips" },
+            { src: "https://convinced-amaranth-ymc8mybfhb.edgeone.app/DSC04442-Enhanced-NR.png", alt: "Various picture frame moldings leaning in workshop storage area" },
+            { src: "https://unknown-bronze-za3rvjadl5.edgeone.app/DSC04451.png", alt: "Close-up of wooden frame edges with subtle grain patterns" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04556-Enhanced-NR.png?updatedAt=1777114530607", alt: "Stacked wooden frames in workshop storage area" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04562-Enhanced-NR.png?updatedAt=1777114523757", alt: "Industrial workshop process cutting shaping assembling frame components" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04564.png?updatedAt=1777114525120", alt: "Stacked wooden frames awaiting assembly in workshop" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04568.png?updatedAt=1777114536602", alt: "Assorted wooden frames stacked showcasing craftsmanship" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04572.png?updatedAt=1777114536882", alt: "Layered wooden frames in workshop varied tones and textures" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04575.png?updatedAt=1777114536863", alt: "Assorted wooden frames stacked diagonally with warm tones" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04579.png?updatedAt=1777114535643", alt: "Vertical arrangement of wooden frames showing varied textures" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04582-Enhanced-NR.png?updatedAt=1777114527481", alt: "Layered wooden frames stacked horizontally with contrasting finishes" },
+            { src: "https://ancient-scarlet-7fxploevcv.edgeone.app/DSC04579.png", alt: "Wood samples display shallow depth of field indoor lighting" },
+            { src: "https://developing-gray-5uv9apohe3.edgeone.app/DSC04582-Enhanced-NR.png", alt: "Stacked wood samples mixed finishes indoor workshop lighting" },
+          ].map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-lg bg-muted/10">
+              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ IMAGE + CTA SPLIT ═══ */}
       <section className="relative overflow-hidden">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
           {/* Image side */}
           <div className="relative h-64 lg:h-auto overflow-hidden">
             <img
-              src="/images/framing/frame-collection.jpg"
-              alt="Collection of framed artwork"
+              src="https://ik.imagekit.io/l7qlh4sga/DSC05182-Enhanced-NR.png?updatedAt=1777114600306"
+              alt="Material aligned on cutting guide"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20 lg:bg-gradient-to-r lg:from-transparent lg:to-charcoal" />

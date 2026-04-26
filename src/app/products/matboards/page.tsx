@@ -133,21 +133,21 @@ const coreTypes = [
     description:
       "The industry standard. A clean white bevel reveals a bright, crisp border that complements most artwork and frame finishes.",
     best: "General framing, certificates, photography",
-    image: "/images/products/matboard-colors-1.png",
+    image: "https://zippy-rose-omednw643j.edgeone.app/DSC04496.png",
   },
   {
     name: "Cream Core",
     description:
       "A warm, off-white bevel that softens the transition between mat and artwork. Preferred for traditional art, watercolors, and vintage photographs.",
     best: "Fine art, watercolors, vintage photography",
-    image: "/images/products/matboard-colors-2.png",
+    image: "https://medieval-red-61ox4fet6z.edgeone.app/DSC04503.png",
   },
   {
     name: "Black Core",
     description:
       "A dramatic black bevel that creates a bold, contemporary border. Makes colors pop and adds a gallery-quality finish to modern artwork and photography.",
     best: "Contemporary art, photography, high-end retail",
-    image: "/images/products/matboard-display.jpg",
+    image: "https://premier-plum-d5ebpkqk67.edgeone.app/DSC04507.png",
   },
 ];
 
@@ -197,42 +197,42 @@ const usps = [
     title: "True Archival Quality",
     description:
       "Our matboards are acid-free, pH neutral, and lignin-free. They will not yellow, fox, or transfer acids to the artwork they protect, even over decades.",
-    image: "/images/products/framed-art.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC05115-Enhanced-NR.png?updatedAt=1777114595065",
   },
   {
     icon: Scissors,
     title: "Precision Bevel Cuts",
     description:
       "Every bevel is cut at a consistent 45-degree angle with clean, sharp edges. No ragged fibers, no uneven reveals. The kind of finish that gallery clients expect.",
-    image: "/images/products/matboard-display.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04690-Enhanced-NR.png?updatedAt=1777114518390",
   },
   {
     icon: Palette,
     title: "75+ Standard Colors",
     description:
       "From classic museum whites and creams to bold contemporary colors. Color matching is also available for custom projects.",
-    image: "/images/products/matboard-colors-1.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04598.png?updatedAt=1777114536659",
   },
   {
     icon: Layers,
     title: "4-Ply and 7-Ply Options",
     description:
       "Standard 4-ply for most framing applications, premium 7-ply for added depth and presence. Both available in cotton rag and alpha-cellulose.",
-    image: "/images/products/matboard-colors-2.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04599.png?updatedAt=1777114537562",
   },
   {
     icon: Gem,
     title: "Creative & Industrial Appeal",
     description:
       "Whether you are framing a museum acquisition or producing 5,000 corporate awards, our matboards serve both the creative designer and the procurement manager.",
-    image: "/images/products/diy-art.jpg",
+    image: "https://promising-scarlet-knmjgy884c.edgeone.app/DSC04511.png",
   },
   {
     icon: Truck,
     title: "Volume Pricing, No Compromise",
     description:
       "Contract pricing for wholesale framers and volume buyers. High quantity does not mean lower quality. Every sheet meets the same archival standard.",
-    image: "/images/products/memorable-moments.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC05107-Enhanced-NR.png?updatedAt=1777114600329",
   },
 ];
 
@@ -241,25 +241,25 @@ const applications = [
     name: "Gallery & Museum Framing",
     description:
       "Archival matboards that protect artwork for decades. Museum-grade acid-free materials meet the highest preservation standards.",
-    image: "/images/products/framed-art.jpg",
+    image: "https://moral-cyan-eymrhx6wrb.edgeone.app/DSC05088-Enhanced-NR.png",
   },
   {
     name: "Corporate & Certificates",
     description:
       "Professional matting for diplomas, awards, and corporate photography. Clean lines and consistent quality at volume.",
-    image: "/images/products/memorable-moments.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC05136.png?updatedAt=1777114599044",
   },
   {
     name: "Creative Design & DIY",
     description:
       "A palette of 75+ colors for interior designers, artists, and crafters. Express creativity with professional-grade materials.",
-    image: "/images/products/diy-art.jpg",
+    image: "https://fine-gray-p9mxmkjsew.edgeone.app/DSC04830-Enhanced-NR.png",
   },
   {
     name: "Retail & Commercial Display",
     description:
       "Ready-made matboard sizes for retail framing and commercial display applications. Fast fulfillment, volume pricing.",
-    image: "/images/products/iframe-product.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04699.png?updatedAt=1777114518904",
   },
 ];
 
@@ -268,12 +268,12 @@ export default function MatboardsPage() {
     <>
       {/* ═══ 1. HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-center overflow-hidden">
-        <img
-          src="/images/products/matboard-colors-1.png"
-          alt="Colorful matboard spread"
-          loading="lazy"
-          decoding="async"
-          className="absolute inset-0 w-full h-full object-cover"
+        {/* Background video */}
+        <iframe
+          src="https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          allow="autoplay; fullscreen"
+          title="Worker positioning material sheets for precise industrial cutting process"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/55" />
         <div className="absolute inset-0 opacity-[0.04]">
@@ -355,8 +355,8 @@ export default function MatboardsPage() {
             <AnimatedSection preset="slideLeft">
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/images/products/matboard-colors-2.png"
-                  alt="Matboard color selection spread"
+                  src="https://premier-plum-d5ebpkqk67.edgeone.app/DSC04507.png"
+                  alt="Stacks of cut mat board pieces"
                   loading="lazy"
                   decoding="async"
                   className="w-full h-[480px] object-cover"
@@ -769,13 +769,45 @@ export default function MatboardsPage() {
         </div>
       </section>
 
+
+      {/* ═══ PROCESS GALLERY ═══ */}
+      <section className="py-16 sm:py-20 bg-warm-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-charcoal">Precision at Every Step</h2>
+          <p className="text-muted mt-2 max-w-xl">Inside our workshop — every matboard is finished by hand and inspected before it leaves.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 px-2">
+          {[
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04824-Enhanced-NR.png?updatedAt=1777114588381", alt: "Gloved worker handling framed artwork on workbench" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04839-Enhanced-NR.png?updatedAt=1777114586940", alt: "Worker securing frame in workshop" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04920-Enhanced-NR.png?updatedAt=1777114599638", alt: "Gloved hand folding frame corner with precise alignment" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04927-Enhanced-NR.png?updatedAt=1777114599165", alt: "Worker cleaning frame edge removing excess adhesive" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04939-Enhanced-NR.png?updatedAt=1777114599024", alt: "Precision finishing of frame edge using small hand tool" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04990-Enhanced-NR.png?updatedAt=1777114591641", alt: "Gloved hands finishing frame corner sanding" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04998-Enhanced-NR.png?updatedAt=1777114591597", alt: "Worker sanding corner of white frame" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05001-Enhanced-NR.png?updatedAt=1777114600239", alt: "Gloved hands smoothing frame edge with tool" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05003-Enhanced-NR.png?updatedAt=1777114599136", alt: "Craftsman sanding frame corner in workshop" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05005-Enhanced-NR.png?updatedAt=1777114600032", alt: "Gloved hands refining edge of white frame with sandpaper" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05007-Enhanced-NR.png?updatedAt=1777114592734", alt: "Sanding frame corner with protective gloves" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05011-Enhanced-NR.png?updatedAt=1777114597548", alt: "Applying adhesive along white frame edge carefully" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05019-Enhanced-NR.png?updatedAt=1777114591165", alt: "Trimming frame edge with handheld tool precision" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC05022-Enhanced-NR.png?updatedAt=1777114591896", alt: "Worker smoothing adhesive on frame corner" },
+            { src: "https://olympic-white-xebq8xczvr.edgeone.app/DSC05005-Enhanced-NR.png", alt: "Worker sanding edge, gloved hands, workshop background" },
+          ].map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-lg bg-muted/10">
+              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ 11. CTA SPLIT ═══ */}
       <section className="relative overflow-hidden">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
           <div className="relative h-64 lg:h-auto overflow-hidden">
             <img
-              src="/images/products/matboard-colors-1.png"
-              alt="Matboard color selection"
+              src="https://medieval-red-61ox4fet6z.edgeone.app/DSC04503.png"
+              alt="Stacked square mat boards"
               loading="lazy"
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover"

@@ -144,7 +144,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
           muted
           playsInline
           preload="auto"
-          poster={h.poster_url || "/images/home/warehouse-boards.jpg"}
+          poster={h.poster_url || "https://logical-blush-jna8rcxone.edgeone.app/DSC04491.png"}
           className="absolute inset-0 w-full h-full object-cover"
         >
           <source src={h.video_url || "/videos/manufacturing-process.mp4"} type="video/mp4" />
@@ -457,23 +457,52 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
         </div>
       </section>
 
+
+      {/* ═══ PROCESS VIDEOS ═══ */}
+      <section className="py-16 sm:py-20 bg-charcoal overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">Inside the Factory</h2>
+          <p className="text-white/60 mt-2 max-w-xl">A closer look at the machinery, precision, and people behind every product we ship.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-6">
+          {[
+            { id: "69ec60544779ed7c8b5c7bf2", title: "Industrial workshop machinery processing stacked materials" },
+            { id: "69ec658280df8787f2c17a1c", title: "Close-up industrial cutting process shaping stacked material sheets" },
+            { id: "69ec64bb51e0355695cb0733", title: "Worker aligning stacked sheets under industrial cutting machine" },
+            { id: "69ec63bc4779ed7c8b5cc114", title: "Industrial press machine operating on stacked materials" },
+            { id: "69ec63bb51e0355695caf68c", title: "Close-up of cutting machine processing stacked sheets" },
+            { id: "69ec639380df8787f2c15901", title: "Worker guiding stacked sheets through industrial cutting machine" },
+          ].map((v, i) => (
+            <div key={i} className="relative aspect-video rounded-xl overflow-hidden bg-black">
+              <iframe
+                src={`https://play.gumlet.io/embed/${v.id}?autoplay=false&loop=false&preload=none`}
+                className="absolute inset-0 w-full h-full border-0"
+                allow="autoplay; fullscreen"
+                title={v.title}
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ GALLERY STRIP ═══ */}
       <section className="py-4 bg-warm-white overflow-hidden">
         <div className="flex gap-4 animate-[marquee_40s_linear_infinite] will-change-transform">
           {[
-            "/images/home/stacked-boards.jpg",
-            "/images/products/matboard-display.jpg",
-            "/images/framing/frame-samples.jpg",
-            "/images/products/consumer-display.jpg",
-            "/images/products/tuff-white-2.jpg",
-            "/images/framing/gallery-frame.jpg",
-            "/images/products/ebony-board.png",
-            "/images/home/warehouse-boards.jpg",
-            "/images/products/iframe-product.jpg",
-            "/images/home/stacked-boards.jpg",
-            "/images/products/matboard-display.jpg",
-            "/images/framing/frame-samples.jpg",
-            "/images/products/consumer-display.jpg",
+            "https://minimum-amber-a4qmprk7vs.edgeone.app/DSC04395.png",
+            "https://fantastic-chocolate-zf9kjl0vke.edgeone.app/DSC04373.png",
+            "https://agreed-azure-zjezxiows0.edgeone.app/DSC04411-Enhanced-NR.png",
+            "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png",
+            "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png",
+            "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png",
+            "https://classical-cyan-xhuufplhds.edgeone.app/DSC04388.png",
+            "https://rapid-purple-slfeijomv1.edgeone.app/DSC04401.png",
+            "https://variable-indigo-1iauojgzig.edgeone.app/DSC04387.png",
+            "https://super-sapphire-76vas0mvon.edgeone.app/DSC04439-Enhanced-NR.png",
+            "https://everyday-lavender-afdj1v0ws7.edgeone.app/DSC04430-Enhanced-NR.png",
+            "https://precise-apricot-uv0yrjzron.edgeone.app/DSC04450-Enhanced-NR.png",
+            "https://simple-lavender-oofkk0bffl.edgeone.app/DSC04462-Enhanced-NR.png",
           ].map((src, idx) => (
             <div
               key={idx}
@@ -685,7 +714,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
           {/* Image side */}
           <div className="relative h-64 lg:h-auto overflow-hidden">
             <img
-              src="/images/brand/flech-product-box.jpg"
+              src="https://intact-magenta-uakn4vfhhr.edgeone.app/DSC04379.png"
               alt="Flech Paper Products"
               className="absolute inset-0 w-full h-full object-cover"
             />

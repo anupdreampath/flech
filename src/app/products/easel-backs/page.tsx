@@ -33,7 +33,7 @@ const easelTypes = [
     features: ["Items under 11×14\"", "Clean minimal profile", "Self-stick adhesive", "White, kraft & black"],
     sizes: "3\" to 14\"",
     weight: "Up to 2 lbs",
-    image: "/images/products/easel-back.png",
+    image: "https://excess-teal-sqkeb1lapu.edgeone.app/DSC04587.png",
   },
   {
     name: "Double-Wing",
@@ -41,7 +41,7 @@ const easelTypes = [
     features: ["Items 11×14\" and larger", "Superior stability", "Adhesive on both wings", "Custom colors available"],
     sizes: "8\" to 24\"",
     weight: "Up to 8 lbs",
-    image: "/images/products/board-closeup-1.png",
+    image: "https://economic-pink-kz1ihw7vxy.edgeone.app/DSC04591.png",
   },
   {
     name: "Locking Easel",
@@ -49,7 +49,7 @@ const easelTypes = [
     features: ["Tab-lock prevents collapse", "Ideal for retail & trade", "Heavy-duty stock", "Custom locking angles"],
     sizes: "5\" to 20\"",
     weight: "Up to 5 lbs",
-    image: "/images/products/board-closeup-3.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04959-Enhanced-NR.png?updatedAt=1777114589658",
   },
 ];
 
@@ -84,14 +84,12 @@ export default function EaselBacksPage() {
     <>
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-end overflow-hidden">
-        <video
-          autoPlay loop muted playsInline
-          preload="metadata"
-          poster="/images/home/warehouse-boards.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/manufacturing-process.mp4" type="video/mp4" />
-        </video>
+        <iframe
+          src="https://play.gumlet.io/embed/69ec653451e0355695cb0f3f?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          allow="autoplay; fullscreen"
+          title="Industrial machine pressing stacked materials during fabrication"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 sm:pb-24 pt-40 w-full">
@@ -158,7 +156,7 @@ export default function EaselBacksPage() {
             <AnimatedSection preset="slideRight">
               <div className="relative">
                 <div className="rounded-2xl overflow-hidden shadow-2xl">
-                  <img decoding="async" loading="lazy" src="/images/products/easel-back.png" alt="Easel Back Product" className="w-full h-auto"  />
+                  <img decoding="async" loading="lazy" src="https://ik.imagekit.io/l7qlh4sga/DSC04967-Enhanced-NR.png?updatedAt=1777114588032" alt="Easel back manufacturing process" className="w-full h-auto"  />
                 </div>
                 <div className="absolute -bottom-6 -left-6 bg-accent text-white rounded-xl p-4 shadow-lg">
                   <p className="text-3xl font-serif font-bold">25°</p>
@@ -253,8 +251,13 @@ export default function EaselBacksPage() {
 
       {/* ═══ USPs ═══ */}
       <section className="bg-charcoal text-white py-24 sm:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <img decoding="async" loading="lazy" src="/images/home/warehouse-boards.jpg" alt="" className="w-full h-full object-cover"  />
+        <div className="absolute inset-0 opacity-15 overflow-hidden">
+          <iframe
+            src="https://play.gumlet.io/embed/69ec63fb80df8787f2c15fb5?autoplay=true&loop=true&background=true&muted=true&preload=none"
+            className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+            allow="autoplay; fullscreen"
+            title="Industrial machine compressing stacked sheets"
+          />
         </div>
         <div className="absolute inset-0 bg-charcoal/90" />
 
@@ -308,8 +311,8 @@ export default function EaselBacksPage() {
 
           <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {[
-              { name: "Door Backs", description: "Window opening for photo insertion. The door swings open to allow easy loading and swapping of photos and artwork.", image: "/images/easels/door-back.png" },
-              { name: "Pad Backs", description: "Straight cut without opening. A clean, simple backing for frames where photo access from the rear is not required.", image: "/images/easels/pad-back.png" },
+              { name: "Door Backs", description: "Window opening for photo insertion. The door swings open to allow easy loading and swapping of photos and artwork.", image: "https://ik.imagekit.io/l7qlh4sga/DSC04886-Enhanced-NR.png?updatedAt=1777114595977" },
+              { name: "Pad Backs", description: "Straight cut without opening. A clean, simple backing for frames where photo access from the rear is not required.", image: "https://ik.imagekit.io/l7qlh4sga/DSC04887.png?updatedAt=1777114595719" },
             ].map((item) => (
               <AnimatedSection key={item.name} className="h-full">
                 <HoverCard className="h-full">
@@ -395,9 +398,9 @@ export default function EaselBacksPage() {
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {[
-              { name: "Straight Leg", image: "/images/easels/finish-straight-leg.png" },
-              { name: "Velour Door Back", image: "/images/easels/finish-velour-door.png" },
-              { name: "Wrapped Velour Door Back w/ Ribbon", image: "/images/easels/finish-wrapped-velour.png" },
+              { name: "Straight Leg", image: "https://ik.imagekit.io/l7qlh4sga/DSC04978-Enhanced-NR.png?updatedAt=1777114589491" },
+              { name: "Velour Door Back", image: "https://ik.imagekit.io/l7qlh4sga/DSC04850-Enhanced-NR.png?updatedAt=1777114586181" },
+              { name: "Wrapped Velour Door Back w/ Ribbon", image: "https://ik.imagekit.io/l7qlh4sga/DSC04894-Enhanced-NR.png?updatedAt=1777114590632" },
             ].map((finish) => (
               <StaggerItem key={finish.name} className="h-full">
                 <HoverCard className="h-full">
@@ -436,7 +439,7 @@ export default function EaselBacksPage() {
 
             <AnimatedSection preset="slideRight">
               <div className="relative rounded-2xl overflow-hidden">
-                <img decoding="async" loading="lazy" src="/images/products/consumer-display.jpg" alt="Products in use" className="w-full h-80 object-cover"  />
+                <img decoding="async" loading="lazy" src="https://ik.imagekit.io/l7qlh4sga/DSC05088-Enhanced-NR.png?updatedAt=1777114599811" alt="Quality inspection of finished products" className="w-full h-80 object-cover"  />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/60 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-8">
                   <Package className="w-10 h-10 text-accent-light mb-4" />
@@ -454,11 +457,38 @@ export default function EaselBacksPage() {
         </div>
       </section>
 
+
+      {/* ═══ PROCESS GALLERY ═══ */}
+      <section className="py-16 sm:py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-charcoal">Built to Perform</h2>
+          <p className="text-muted mt-2 max-w-xl">The machinery and hardware behind every easel back we produce.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 px-2">
+          {[
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04612.png?updatedAt=1777114536890", alt: "Close-up industrial machine wheel in workshop" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04615.png?updatedAt=1777114537022", alt: "Metal handwheel on heavy machinery in factory" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04623.png?updatedAt=1777114536167", alt: "Machine wheel with workshop background" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04631-Enhanced-NR.png?updatedAt=1777114523360", alt: "Industrial rollers and controls in manufacturing facility" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04639.png?updatedAt=1777114535979", alt: "Overhead cables and pulleys on industrial equipment" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04642.png?updatedAt=1777114535474", alt: "Overhead pulley system with steel cables in warehouse" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04647-Enhanced-NR.png?updatedAt=1777114536135", alt: "Vintage industrial wheel with worn metal and grease" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04651-Enhanced-NR.png?updatedAt=1777114537447", alt: "Old factory gear wheel with detailed mechanical texture" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04882.png?updatedAt=1777114595376", alt: "Metal screws piled inside small container" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04890.png?updatedAt=1777114594829", alt: "Screwdriver resting in container filled with metal screws" },
+          ].map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-lg bg-muted/10">
+              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ CTA ═══ */}
       <section className="relative overflow-hidden">
         <div className="grid lg:grid-cols-2 min-h-[400px]">
           <div className="relative h-48 lg:h-auto overflow-hidden">
-            <img decoding="async" loading="lazy" src="/images/home/stacked-boards.jpg" alt="Stacked boards" className="absolute inset-0 w-full h-full object-cover"  />
+            <img decoding="async" loading="lazy" src="https://ik.imagekit.io/l7qlh4sga/DSC05211-Enhanced-NR.png?updatedAt=1777114600730" alt="Manufacturing process" className="absolute inset-0 w-full h-full object-cover"  />
           </div>
           <div className="bg-charcoal text-white flex items-center">
             <AnimatedSection className="px-8 py-16 lg:px-16 lg:py-20">

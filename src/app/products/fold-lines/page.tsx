@@ -37,42 +37,42 @@ const usps = [
     title: "\u00b10.005\" Tolerance",
     description:
       "Our CNC scoring heads are calibrated daily. The fold line on piece #1 is identical to piece #50,000, guaranteed.",
-    image: "/images/products/board-closeup-1.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04518.png?updatedAt=1777114215904",
   },
   {
     icon: Shield,
     title: "No Cracking, No Breaking",
     description:
       "Score depth is calibrated to each substrate's caliper. We penetrate just enough to create a clean hinge without compromising the board's structural integrity.",
-    image: "/images/products/board-closeup-2.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04659.png?updatedAt=1777114533061",
   },
   {
     icon: Target,
     title: "Exact Angles, Every Time",
     description:
       "The placement of each score line determines the final standing angle. Our engineering ensures the geometry is right before a single sheet is scored.",
-    image: "/images/products/board-closeup-3.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04694.png?updatedAt=1777114518667",
   },
   {
     icon: Scissors,
     title: "Complex Dieline Capability",
     description:
       "Multi-fold patterns, compound angles, nested scores. We handle dielines that other converters turn down.",
-    image: "/images/products/tuff-white-1.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04523.png?updatedAt=1777114537032",
   },
   {
     icon: Zap,
     title: "Fast Prototyping",
     description:
       "Send us your dieline file and we'll produce physical prototypes within days. Test the fold, verify the angle, approve for production.",
-    image: "/images/products/tuff-white-2.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04711.png?updatedAt=1777114518688",
   },
   {
     icon: Settings,
     title: "Engineering Support",
     description:
       "Don't have a dieline? Tell us what the finished product needs to do and we'll engineer the fold pattern to achieve it.",
-    image: "/images/home/warehouse-boards.jpg",
+    image: "https://determined-blue-2jq01ybqoa.edgeone.app/DSC04467-Enhanced-NR.png",
   },
 ];
 
@@ -81,21 +81,21 @@ const scoreTypes = [
     name: "CNC Rotary Scoring",
     description:
       "High-speed rotary scoring wheels apply precise, consistent pressure across the full sheet. Ideal for long production runs where speed and repeatability matter.",
-    image: "/images/products/board-closeup-1.png",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04719.png?updatedAt=1777114520381",
     best: "High-volume runs, consistent caliper boards",
   },
   {
     name: "Flatbed Die-Cutting",
     description:
       "Steel-rule dies on flatbed presses create complex multi-fold patterns in a single pass. Perfect for intricate dielines with multiple score lines at varying angles.",
-    image: "/images/products/board-closeup-2.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04520.png?updatedAt=1777114528587",
     best: "Complex dielines, multi-fold patterns",
   },
   {
     name: "Custom Angle Engineering",
     description:
       "When the finished product must stand at a specific angle, we reverse-engineer the fold geometry. Score placement, depth, and spacing are all calculated before cutting begins.",
-    image: "/images/products/board-closeup-3.jpg",
+    image: "https://ik.imagekit.io/l7qlh4sga/DSC04524.png?updatedAt=1777114536299",
     best: "Display stands, easel backs, POP structures",
   },
 ];
@@ -106,17 +106,12 @@ export default function FoldLinesPage() {
       {/* ═══ VIDEO HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-center overflow-hidden">
         {/* Background video */}
-        <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="metadata"
-          poster="/images/home/warehouse-boards.jpg"
-          className="absolute inset-0 w-full h-full object-cover"
-        >
-          <source src="/videos/manufacturing-process.mp4" type="video/mp4" />
-        </video>
+        <iframe
+          src="https://play.gumlet.io/embed/69ec64784779ed7c8b5ccd98?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          allow="autoplay; fullscreen"
+          title="Industrial cutting machine slicing stacked material sheets"
+        />
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60" />
@@ -201,8 +196,8 @@ export default function FoldLinesPage() {
             <AnimatedSection preset="slideLeft">
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/images/products/board-closeup-1.png"
-                  alt="Precision fold line scoring on board"
+                  src="https://ik.imagekit.io/l7qlh4sga/DSC04552-Enhanced-NR.png?updatedAt=1777114535451"
+                  alt="Die-cut material cutouts showing precision fold lines"
                   className="w-full h-[480px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
@@ -356,8 +351,8 @@ export default function FoldLinesPage() {
             <AnimatedSection preset="slideRight">
               <div className="relative rounded-2xl overflow-hidden">
                 <img
-                  src="/images/products/tuff-white-1.jpg"
-                  alt="Flech scored board detail"
+                  src="https://ik.imagekit.io/l7qlh4sga/DSC04667.png?updatedAt=1777114533061"
+                  alt="White paper frames arranged showing geometric precision"
                   className="w-full h-[520px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
@@ -477,14 +472,44 @@ export default function FoldLinesPage() {
         </div>
       </section>
 
+
+      {/* ═══ CUTTING PROCESS GALLERY ═══ */}
+      <section className="py-16 sm:py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 mb-10">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-charcoal">The Cutting Floor</h2>
+          <p className="text-muted mt-2 max-w-xl">Our CNC and flatbed die-cutting machinery at work — delivering fold lines at scale.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 px-2">
+          {[
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04527-Enhanced-NR.png?updatedAt=1777114524702", alt: "Gloved hand pouring liquid onto industrial printing machine surface" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04554.png?updatedAt=1777114523552", alt: "Assorted black textured cut pieces piled in container" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04676-Enhanced-NR.png?updatedAt=1777114518390", alt: "Worker adjusting industrial cutting machine during production" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04708.png?updatedAt=1777114520370", alt: "Mechanical cutter processing sheet material" },
+            { src: "https://clear-bronze-fsy3srttsl.edgeone.app/DSC04734-Enhanced-NR.png", alt: "Industrial cutting machine operator hand shallow depth of field" },
+            { src: "https://continuing-turquoise-z8odcpshby.edgeone.app/DSC04746.png", alt: "Automated cutting machine industrial setting precision fabrication" },
+            { src: "https://living-aquamarine-c938cab05u.edgeone.app/DSC04786.png", alt: "Automated cutter head sheet material industrial production" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04734-Enhanced-NR.png?updatedAt=1777114511643", alt: "Cutting tool processing flat sheet material" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04746.png?updatedAt=1777114521320", alt: "Cutting head with operator hand guiding material" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04759.png?updatedAt=1777114521373", alt: "Industrial cutting machine head on flat material surface" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04786.png?updatedAt=1777114600722", alt: "Automated cutter tool shaping sheet material in workshop" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04863.png?updatedAt=1777114597933", alt: "Close-up of cutting head moving across sheet surface" },
+            { src: "https://ik.imagekit.io/l7qlh4sga/DSC04878.png?updatedAt=1777114601135", alt: "Industrial cutter head shaping and engraving panel surface" },
+          ].map((img, i) => (
+            <div key={i} className="aspect-square overflow-hidden rounded-lg bg-muted/10">
+              <img src={img.src} alt={img.alt} loading="lazy" decoding="async" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ═══ IMAGE + CTA SPLIT ═══ */}
       <section className="relative overflow-hidden">
         <div className="grid lg:grid-cols-2 min-h-[500px]">
           {/* Image side */}
           <div className="relative h-64 lg:h-auto overflow-hidden">
             <img
-              src="/images/home/warehouse-boards.jpg"
-              alt="Flech manufacturing facility"
+              src="https://ik.imagekit.io/l7qlh4sga/DSC04723.png?updatedAt=1777114518923"
+              alt="Factory cutter machine slicing material"
               className="absolute inset-0 w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20 lg:bg-gradient-to-r lg:from-transparent lg:to-charcoal" />
