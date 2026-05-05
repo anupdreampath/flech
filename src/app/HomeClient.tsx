@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { TypewriterText } from "@/components/TypewriterText";
-import { LazyVideoIframe } from "@/components/LazyVideoIframe";
+import { LazyVideo } from "@/components/LazyVideo";
 import {
   ArrowRight,
   Shield,
@@ -407,19 +407,18 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-6">
           {[
-            { id: "69ec60544779ed7c8b5c7bf2", title: "Industrial workshop machinery processing stacked materials" },
-            { id: "69ec658280df8787f2c17a1c", title: "Close-up industrial cutting process shaping stacked material sheets" },
-            { id: "69ec64bb51e0355695cb0733", title: "Worker aligning stacked sheets under industrial cutting machine" },
-            { id: "69ec63bc4779ed7c8b5cc114", title: "Industrial press machine operating on stacked materials" },
-            { id: "69ec63bb51e0355695caf68c", title: "Close-up of cutting machine processing stacked sheets" },
-            { id: "69ec639380df8787f2c15901", title: "Worker guiding stacked sheets through industrial cutting machine" },
-          ].map((v) => (
-            <LazyVideoIframe
-              key={v.id}
-              src={`https://play.gumlet.io/embed/${v.id}?autoplay=true&loop=true&muted=true&background=true&preload=metadata&disable_logo=true&disable_player_controls=true`}
-              title={v.title}
+            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6e/download.mp4",
+            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f000/download.mp4",
+            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f003/download.mp4",
+            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6c/download.mp4",
+            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c83/download.mp4",
+            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c88/download.mp4",
+          ].map((src) => (
+            <LazyVideo
+              key={src}
+              src={src}
               containerClassName="relative aspect-video rounded-xl overflow-hidden bg-black ring-1 ring-white/10"
-              iframeClassName="absolute inset-0 w-full h-full border-0 pointer-events-none"
+              videoClassName="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
           ))}
         </div>
@@ -653,11 +652,10 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
 
       {/* ═══ BRAND IMAGE + CTA ═══ */}
       <section className="relative isolate overflow-hidden bg-black">
-        <LazyVideoIframe
-          src="https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
-          title="Flech production floor"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4"
           containerClassName="absolute inset-0"
-          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
         <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[500px] items-center">

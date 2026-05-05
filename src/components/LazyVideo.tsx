@@ -4,34 +4,33 @@ import { useEffect, useRef, useState } from "react";
 
 type Props = {
   src: string;
-  title: string;
-  iframeClassName?: string;
+  poster?: string;
   containerClassName?: string;
+  videoClassName?: string;
+  priority?: boolean; // above-the-fold hero videos: load immediately
   rootMargin?: string;
 };
 
 /**
- * Mounts the iframe only when the wrapper enters the viewport (with a generous
- * pre-fetch margin). Until then, it renders a lightweight black placeholder.
- *
- * This eliminates concurrent video decoding for videos that aren't on screen,
- * which is what causes scroll jank and frame drops.
+ * Native HTML5 background video. Autoplay, muted, looped, no controls.
+ * Below-fold instances mount only when scrolled near the viewport so they
+ * don't fight for bandwidth / decode time on initial paint.
  */
-export function LazyVideoIframe({
+export function LazyVideo({
   src,
-  title,
-  iframeClassName,
+  poster,
   containerClassName,
+  videoClassName,
+  priority = false,
   rootMargin = "300px",
 }: Props) {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const [shouldLoad, setShouldLoad] = useState(false);
+  const [shouldLoad, setShouldLoad] = useState(priority);
 
   useEffect(() => {
     if (shouldLoad) return;
     const node = wrapperRef.current;
-    if (!node) return;
-    if (typeof IntersectionObserver === "undefined") {
+    if (!node || typeof IntersectionObserver === "undefined") {
       setShouldLoad(true);
       return;
     }
@@ -54,12 +53,16 @@ export function LazyVideoIframe({
   return (
     <div ref={wrapperRef} className={containerClassName}>
       {shouldLoad ? (
-        <iframe
+        <video
           src={src}
-          className={iframeClassName}
-          allow="autoplay; fullscreen; encrypted-media"
-          title={title}
-          loading="lazy"
+          poster={poster}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload={priority ? "auto" : "metadata"}
+          disablePictureInPicture
+          className={videoClassName}
         />
       ) : null}
     </div>

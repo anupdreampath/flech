@@ -20,7 +20,7 @@ import {
 } from "@/components/AnimatedSection";
 import { getContent, CMS_SCHEMA } from "@/lib/cms";
 import { ColorCatalog } from "./ColorCatalog";
-import { LazyVideoIframe } from "@/components/LazyVideoIframe";
+import { LazyVideo } from "@/components/LazyVideo";
 
 export const dynamic = "force-dynamic";
 
@@ -257,12 +257,11 @@ export default async function MatboardsPage() {
     <>
       {/* ═══ 1. HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-center overflow-hidden bg-black">
-        {/* Background video */}
-        <iframe
-          src="https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
-          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
-          allow="autoplay; fullscreen"
-          title="Worker positioning material sheets for precise industrial cutting process"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c17f65082997b52a553b/download.mp4"
+          priority
+          containerClassName="absolute inset-0"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/55" />
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
@@ -736,11 +735,10 @@ export default async function MatboardsPage() {
 
       {/* ═══ 11. CTA SPLIT ═══ */}
       <section className="relative isolate overflow-hidden bg-black">
-        <LazyVideoIframe
-          src="https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
-          title="Matboards production"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c17f6af59f257260d7d0/download.mp4"
           containerClassName="absolute inset-0"
-          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
         <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[500px] items-center">

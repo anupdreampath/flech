@@ -18,6 +18,7 @@ import {
   StaggerItem,
   HoverCard,
 } from "@/components/AnimatedSection";
+import { LazyVideo } from "@/components/LazyVideo";
 
 const VALUE_ICONS = [Ruler, Shield, Users, Leaf];
 const STAT_ICONS = [Clock, Users, Factory, MapPin];
@@ -67,11 +68,11 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
     <>
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[50dvh] flex items-end overflow-hidden bg-black" data-cms-section="about:hero">
-        <iframe
-          src="https://play.gumlet.io/embed/69ec633f4779ed7c8b5cb7de?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
-          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
-          allow="autoplay; fullscreen"
-          title="Inside the Flech factory"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260effb/download.mp4"
+          priority
+          containerClassName="absolute inset-0"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/50" />
 

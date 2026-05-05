@@ -19,7 +19,7 @@ import {
   StaggerItem,
   HoverCard,
 } from "@/components/AnimatedSection";
-import { LazyVideoIframe } from "@/components/LazyVideoIframe";
+import { LazyVideo } from "@/components/LazyVideo";
 
 const specs = [
   { label: "Score Method", value: "CNC rotary scoring, flatbed die-cutting" },
@@ -106,12 +106,11 @@ export default function FoldLinesPage() {
     <>
       {/* ═══ VIDEO HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-center overflow-hidden bg-black">
-        {/* Background video */}
-        <iframe
-          src="https://play.gumlet.io/embed/69ec64784779ed7c8b5ccd98?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
-          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
-          allow="autoplay; fullscreen"
-          title="Industrial cutting machine slicing stacked material sheets"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c1336af59f257260d004/download.mp4"
+          priority
+          containerClassName="absolute inset-0"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
 
         {/* Dark overlay */}
@@ -494,11 +493,10 @@ export default function FoldLinesPage() {
 
       {/* ═══ IMAGE + CTA SPLIT ═══ */}
       <section className="relative isolate overflow-hidden bg-black">
-        <LazyVideoIframe
-          src="https://play.gumlet.io/embed/69ec632a4779ed7c8b5cb616?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
-          title="Fold lines production"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c17f7f6233f570018072/download.mp4"
           containerClassName="absolute inset-0"
-          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
         <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[500px] items-center">

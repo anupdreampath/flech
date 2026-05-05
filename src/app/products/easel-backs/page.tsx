@@ -25,7 +25,7 @@ import {
   StaggerItem,
   HoverCard,
 } from "@/components/AnimatedSection";
-import { LazyVideoIframe } from "@/components/LazyVideoIframe";
+import { LazyVideo } from "@/components/LazyVideo";
 
 const easelTypes = [
   {
@@ -85,11 +85,11 @@ export default function EaselBacksPage() {
     <>
       {/* ═══ HERO ═══ */}
       <section className="relative min-h-[60dvh] flex items-end overflow-hidden bg-black">
-        <iframe
-          src="https://play.gumlet.io/embed/69ec653451e0355695cb0f3f?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
-          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
-          allow="autoplay; fullscreen"
-          title="Industrial machine pressing stacked materials during fabrication"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9bc1465082997b529c7b2/download.mp4"
+          priority
+          containerClassName="absolute inset-0"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/50" />
 
@@ -252,11 +252,10 @@ export default function EaselBacksPage() {
 
       {/* ═══ USPs ═══ */}
       <section className="bg-charcoal text-white py-24 sm:py-32 relative overflow-hidden">
-        <LazyVideoIframe
-          src="https://play.gumlet.io/embed/69ec63fb80df8787f2c15fb5?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
-          title="Industrial machine compressing stacked sheets"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9bd9b65082997b529ec79/download.mp4"
           containerClassName="absolute inset-0 opacity-15 overflow-hidden"
-          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-charcoal/90" />
 
@@ -485,11 +484,10 @@ export default function EaselBacksPage() {
 
       {/* ═══ CTA ═══ */}
       <section className="relative isolate overflow-hidden bg-black">
-        <LazyVideoIframe
-          src="https://play.gumlet.io/embed/69ec633d80df8787f2c1521d?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
-          title="Easel back production"
+        <LazyVideo
+          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c06265082997b52a3860/download.mp4"
           containerClassName="absolute inset-0"
-          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
         <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[420px] items-center">

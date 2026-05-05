@@ -243,7 +243,6 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://play.gumlet.io" crossOrigin="" />
         <link rel="preconnect" href="https://video.gumlet.io" crossOrigin="" />
         <link rel="dns-prefetch" href="https://ik.imagekit.io" />
         <link rel="dns-prefetch" href="https://res.cloudinary.com" />
