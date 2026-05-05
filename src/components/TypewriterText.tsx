@@ -9,6 +9,7 @@ type Props = {
   pauseAfterTypeMs?: number;
   pauseAfterDeleteMs?: number;
   className?: string;
+  style?: React.CSSProperties;
 };
 
 export function TypewriterText({
@@ -18,6 +19,7 @@ export function TypewriterText({
   pauseAfterTypeMs = 1600,
   pauseAfterDeleteMs = 250,
   className = "",
+  style,
 }: Props) {
   const cleaned = texts.filter((t) => typeof t === "string" && t.length > 0);
   const [index, setIndex] = useState(0);
@@ -57,7 +59,7 @@ export function TypewriterText({
   }, [phase, typed, index, cleaned, typeSpeedMs, deleteSpeedMs, pauseAfterTypeMs, pauseAfterDeleteMs]);
 
   return (
-    <span className={`whitespace-nowrap ${className}`}>
+    <span className={`whitespace-nowrap ${className}`} style={style}>
       {typed}
       <span
         aria-hidden="true"

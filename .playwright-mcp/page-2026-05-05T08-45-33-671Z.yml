@@ -1,0 +1,70 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: F
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: Flech
+            - heading "Admin Console" [level=1] [ref=e11]
+        - navigation [ref=e12]:
+          - paragraph [ref=e13]: Workspace
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e15]
+            - text: Dashboard
+          - link "Submissions" [ref=e20] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e21]
+            - text: Submissions
+          - link "Analytics" [ref=e24] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e25]
+            - text: Analytics
+          - link "Content" [ref=e27] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e28]
+            - text: Content
+          - link "Blogs" [ref=e31] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e32]
+            - text: Blogs
+          - link "Visual Editor" [ref=e34] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e35]
+            - text: Visual Editor
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: A
+            - generic [ref=e40]:
+              - paragraph [ref=e41]: admin@flech.test
+              - paragraph [ref=e42]: Administrator
+          - button "Sign out" [ref=e43]:
+            - img [ref=e44]
+            - text: Sign out
+      - main [ref=e47]:
+        - generic [ref=e48]:
+          - complementary [ref=e49]:
+            - generic [ref=e52]:
+              - generic [ref=e53]: F
+              - generic [ref=e54]:
+                - paragraph [ref=e55]: Flech
+                - paragraph [ref=e56]: Admin Console
+            - generic [ref=e57]:
+              - heading "Operate the Flech digital surface from a single console." [level=2] [ref=e58]
+              - paragraph [ref=e59]: Manage inbound enquiries, content, blogs, and visitor analytics for every Flech product line.
+            - generic [ref=e60]: © Flech Manufacturing
+          - generic [ref=e62]:
+            - generic [ref=e63]:
+              - img [ref=e65]
+              - heading "Sign in to Admin" [level=1] [ref=e68]
+              - paragraph [ref=e69]: Use your administrator credentials to continue.
+            - generic [ref=e70]: Email
+            - textbox [ref=e71]: admin@flech.test
+            - generic [ref=e72]: Password
+            - textbox [ref=e73]
+            - button "Sign in" [ref=e74]
+            - paragraph [ref=e75]: Authorized personnel only · Sessions are audited.
+  - button "Open Next.js Dev Tools" [ref=e81] [cursor=pointer]:
+    - img [ref=e82]
+  - alert [ref=e85]

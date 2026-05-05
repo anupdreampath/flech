@@ -1,0 +1,99 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: F
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: Flech
+            - heading "Admin Console" [level=1] [ref=e11]
+        - navigation [ref=e12]:
+          - paragraph [ref=e13]: Workspace
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e15]
+            - text: Dashboard
+          - link "Submissions" [ref=e20] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e21]
+            - text: Submissions
+          - link "Analytics" [ref=e24] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e25]
+            - text: Analytics
+          - link "Content" [ref=e27] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e28]
+            - text: Content
+          - link "Blogs" [ref=e31] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e32]
+            - text: Blogs
+          - link "Visual Editor" [ref=e34] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e35]
+            - text: Visual Editor
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: A
+            - generic [ref=e40]:
+              - paragraph [ref=e41]: admin@flech.test
+              - paragraph [ref=e42]: Administrator
+          - button "Sign out" [ref=e43]:
+            - img [ref=e44]
+            - text: Sign out
+      - main [ref=e47]:
+        - generic [ref=e48]:
+          - link "Back to CMS" [ref=e49] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e50]
+            - text: Back to CMS
+          - heading "Hero Section" [level=1] [ref=e52]
+          - paragraph [ref=e53]: Home · hero
+          - generic [ref=e54]:
+            - generic [ref=e55]:
+              - generic [ref=e56]: Badge Text
+              - textbox [ref=e57]: Family-Owned Manufacturer, Paterson, NJ Since 1999
+            - generic [ref=e58]:
+              - generic [ref=e59]: Title (top line)
+              - textbox [ref=e60]: The Backbone of
+            - generic [ref=e61]:
+              - generic [ref=e62]: Rotating Title 1 (bottom line)
+              - textbox [ref=e63]: Every Great Display
+            - generic [ref=e64]:
+              - generic [ref=e65]: Rotating Title 2
+              - textbox [ref=e66]: Art and Framing Industry
+            - generic [ref=e67]:
+              - generic [ref=e68]: Rotating Title 3
+              - textbox [ref=e69]: Sign and Packaging
+            - generic [ref=e70]:
+              - generic [ref=e71]: Subtitle
+              - textbox [ref=e72]: From the easel back that holds your frame upright to the matboard that frames your art, Flech manufactures the precision board products that the framing, sign, and display industries depend on.
+            - generic [ref=e73]:
+              - generic [ref=e74]: Primary CTA Label
+              - textbox [ref=e75]: Request a Quote
+            - generic [ref=e76]:
+              - generic [ref=e77]: Secondary CTA Label
+              - textbox [ref=e78]: Watch Process
+            - generic [ref=e79]:
+              - generic [ref=e80]: Background Video (MP4)
+              - paragraph [ref=e81]: This is the looping video shown in the hero. Paste an MP4 URL or upload a new clip.
+              - generic [ref=e85]:
+                - textbox "https://…/video.mp4 or upload" [ref=e86]: /videos/manufacturing-process.mp4
+                - button "Upload" [disabled] [ref=e87]:
+                  - img [ref=e88]
+                  - text: Upload
+            - generic [ref=e90]:
+              - generic [ref=e91]: Video Thumbnail (poster)
+              - paragraph [ref=e92]: Still frame shown before the video loads, or if the video can't be played. Not visible while the video is playing.
+              - generic [ref=e95]:
+                - textbox "https://… or upload" [ref=e96]: /images/home/warehouse-boards.jpg
+                - button "Upload" [disabled] [ref=e97]:
+                  - img [ref=e98]
+                  - text: Upload
+            - button "Save changes" [ref=e103]:
+              - img [ref=e104]
+              - text: Save changes
+  - button "Open Next.js Dev Tools" [ref=e113] [cursor=pointer]:
+    - img [ref=e114]
+  - alert [ref=e117]

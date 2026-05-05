@@ -176,6 +176,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
                   h.title_bottom_3 || "Sign and Packaging",
                 ]}
                 className="bg-gradient-to-r from-accent-light via-red-300 to-accent bg-clip-text text-transparent"
+                style={{ fontSize: "clamp(1.5rem, 6vw, 4.5rem)", lineHeight: 1.1 }}
               />
             </h1>
 
@@ -280,18 +281,10 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
                   <HoverCard className="h-full">
                     <Link
                       href={product.href}
-                      className={`group relative flex flex-col overflow-hidden rounded-2xl border transition-[transform,box-shadow,border-color] duration-500 cursor-pointer h-full min-h-[380px] ${
-                        isLarge
-                          ? "bg-charcoal text-white border-charcoal hover:shadow-2xl hover:shadow-charcoal/20"
-                          : "bg-surface border-border hover:border-accent/30 hover:shadow-xl"
-                      }`}
+                      className="group relative flex flex-col overflow-hidden rounded-2xl border bg-surface border-border hover:border-accent/30 hover:shadow-xl transition-[transform,box-shadow,border-color] duration-500 cursor-pointer h-full min-h-[380px]"
                     >
                       {/* Product image */}
-                      <div
-                        className={`absolute inset-0 ${
-                          isLarge ? "opacity-20" : "opacity-10"
-                        } group-hover:opacity-30 transition-opacity duration-500`}
-                      >
+                      <div className="absolute inset-0 opacity-10 group-hover:opacity-30 transition-opacity duration-500">
                         <img
                           src={product.image}
                           alt={product.name}
@@ -300,86 +293,38 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
                       </div>
 
                       {/* Gradient overlay */}
-                      <div
-                        className={`absolute inset-0 ${
-                          isLarge
-                            ? "bg-gradient-to-t from-charcoal via-charcoal/80 to-charcoal/40"
-                            : "bg-gradient-to-t from-white via-white/95 to-white/60"
-                        }`}
-                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-white via-white/95 to-white/60" />
 
                       {/* Content */}
                       <div className="relative z-10 flex flex-col justify-end h-full p-8">
-                        <div
-                          className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 ${
-                            isLarge
-                              ? "bg-accent/20 border border-accent/30"
-                              : "bg-cream border border-border"
-                          }`}
-                        >
-                          <Icon
-                            className={`w-6 h-6 ${
-                              isLarge ? "text-accent-light" : "text-accent"
-                            }`}
-                          />
+                        <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5 bg-cream border border-border">
+                          <Icon className="w-6 h-6 text-accent" />
                         </div>
 
                         <div className="flex items-center gap-3 mb-2">
-                          <h3
-                            className={`text-2xl font-serif font-bold ${
-                              isLarge ? "text-white" : "text-charcoal"
-                            }`}
-                          >
+                          <h3 className="text-2xl font-serif font-bold text-charcoal">
                             {product.name}
                           </h3>
                           {isLarge && (
-                            <span className="text-[10px] font-bold uppercase tracking-wider bg-accent/20 text-accent-light px-3 py-1 rounded-full border border-accent/30">
+                            <span className="text-[10px] font-bold uppercase tracking-wider bg-accent/10 text-accent px-3 py-1 rounded-full border border-accent/20">
                               Flagship
                             </span>
                           )}
                         </div>
 
-                        <p
-                          className={`text-xs font-semibold uppercase tracking-wider mb-3 ${
-                            isLarge ? "text-accent-light" : "text-accent"
-                          }`}
-                        >
+                        <p className="text-xs font-semibold uppercase tracking-wider mb-3 text-accent">
                           {product.tagline}
                         </p>
 
-                        <p
-                          className={`text-sm leading-relaxed mb-6 max-w-md ${
-                            isLarge ? "text-white/60" : "text-muted"
-                          }`}
-                        >
+                        <p className="text-sm leading-relaxed mb-6 max-w-md text-muted">
                           {product.description}
                         </p>
 
-                        <div
-                          className={`inline-flex items-center gap-2 text-sm font-semibold ${
-                            isLarge
-                              ? "text-accent-light"
-                              : "text-accent group-hover:text-accent-dark"
-                          }`}
-                        >
+                        <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent group-hover:text-accent-dark">
                           Explore Product
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
                         </div>
                       </div>
-
-                      {/* Floating product image for featured */}
-                      {isLarge && (
-                        <div className="hidden lg:block absolute top-8 right-8 w-48 h-48">
-                          <div className="transition-transform duration-300 hover:rotate-3 hover:scale-105">
-                            <img
-                              src={product.image}
-                              alt=""
-                              className="w-full h-full object-contain drop-shadow-2xl"
-                              loading="lazy"
-                            />
-                          </div>
-                        </div>
-                      )}
                     </Link>
                   </HoverCard>
                 </AnimatedSection>

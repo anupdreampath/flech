@@ -1,0 +1,551 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: F
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: Flech
+            - heading "Admin Console" [level=1] [ref=e11]
+        - navigation [ref=e12]:
+          - paragraph [ref=e13]: Workspace
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e15]
+            - text: Dashboard
+          - link "Submissions" [ref=e20] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e21]
+            - text: Submissions
+          - link "Analytics" [ref=e24] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e25]
+            - text: Analytics
+          - link "Content" [ref=e27] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e28]
+            - text: Content
+          - link "Blogs" [ref=e31] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e32]
+            - text: Blogs
+          - link "Visual Editor" [ref=e34] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e35]
+            - text: Visual Editor
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: A
+            - generic [ref=e40]:
+              - paragraph [ref=e41]: admin@flech.test
+              - paragraph [ref=e42]: Administrator
+          - button "Sign out" [ref=e43]:
+            - img [ref=e44]
+            - text: Sign out
+      - main [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: Product · Easel Backs
+              - heading "Hero Section" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - link "All sections" [ref=e54] [cursor=pointer]:
+                - /url: /admin/cms
+                - img [ref=e55]
+                - text: All sections
+              - paragraph [ref=e57]: hero
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - generic [ref=e60]: Badge Text
+                  - textbox [ref=e61]: Flagship Product
+                - generic [ref=e62]:
+                  - generic [ref=e63]: Title
+                  - textbox [ref=e64]: Easel Backs
+                - generic [ref=e65]:
+                  - generic [ref=e66]: Subtitle
+                  - textbox [ref=e67]: The invisible hero behind every freestanding display. Engineered for precise viewing angles, reliable adhesion, and the consistency that lets you promise your clients perfection.
+                - generic [ref=e68]:
+                  - generic [ref=e69]: Primary CTA Label
+                  - textbox [ref=e70]: Get a Quote
+                - generic [ref=e71]:
+                  - generic [ref=e72]: Secondary CTA Label
+                  - textbox [ref=e73]: View Specifications
+                - button "Save changes" [ref=e75]:
+                  - img [ref=e76]
+                  - text: Save changes
+          - generic [ref=e80]:
+            - generic [ref=e81]:
+              - generic [ref=e82]:
+                - button "Desktop" [ref=e83]:
+                  - img [ref=e84]
+                  - text: Desktop
+                - button "Mobile" [ref=e86]:
+                  - img [ref=e87]
+                  - text: Mobile
+              - generic [ref=e89]:
+                - generic [ref=e90]: /products/easel-backs
+                - button "Reload preview" [ref=e91]:
+                  - img [ref=e92]
+                - link "Open in new tab" [ref=e97] [cursor=pointer]:
+                  - /url: /products/easel-backs
+                  - img [ref=e98]
+            - iframe [ref=e104]:
+              - generic [active] [ref=f174e1]:
+                - generic [ref=f174e3]:
+                  - paragraph [ref=f174e4]: Family-Owned Manufacturer · Paterson, NJ since 1999
+                  - generic [ref=f174e5]:
+                    - link "(973) 357-8111" [ref=f174e6] [cursor=pointer]:
+                      - /url: tel:+19733578111
+                      - img [ref=f174e7]
+                      - text: (973) 357-8111
+                    - link "info@flech.com" [ref=f174e9] [cursor=pointer]:
+                      - /url: mailto:info@flech.com
+                      - img [ref=f174e10]
+                      - text: info@flech.com
+                - navigation "Main navigation" [ref=f174e13]:
+                  - generic [ref=f174e14]:
+                    - link "Flech Paper Products" [ref=f174e15] [cursor=pointer]:
+                      - /url: /
+                      - img "Flech Paper Products" [ref=f174e16]
+                    - generic [ref=f174e17]:
+                      - link "Home" [ref=f174e18] [cursor=pointer]:
+                        - /url: /
+                      - button "Products" [ref=f174e20] [cursor=pointer]:
+                        - text: Products
+                        - img [ref=f174e21]
+                      - link "About" [ref=f174e23] [cursor=pointer]:
+                        - /url: /about
+                      - link "Industries" [ref=f174e24] [cursor=pointer]:
+                        - /url: /industries
+                      - link "Contact" [ref=f174e25] [cursor=pointer]:
+                        - /url: /contact
+                      - link "Blog" [ref=f174e26] [cursor=pointer]:
+                        - /url: /blog
+                    - link "Get a Quote" [ref=f174e28] [cursor=pointer]:
+                      - /url: /contact
+                - main [ref=f174e29]:
+                  - generic [ref=f174e30]:
+                    - generic [ref=f174e31]:
+                      - iframe [ref=f174e32]:
+                        - generic [active] [ref=f176e1]:
+                          - region "video player" [ref=f176e2]:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Speed
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - img
+                                  - generic: Quality
+                                  - generic:
+                                    - generic:
+                                      - generic:
+                                        - img
+                          - alert [ref=f176e4]
+                      - generic [ref=f174e34]:
+                        - navigation "Breadcrumb" [ref=f174e35]:
+                          - link "Home" [ref=f174e36] [cursor=pointer]:
+                            - /url: /
+                          - img [ref=f174e37]
+                          - generic [ref=f174e39]: Products
+                          - img [ref=f174e40]
+                          - generic [ref=f174e42]: Easel Backs
+                        - generic [ref=f174e43]:
+                          - generic [ref=f174e44]:
+                            - img [ref=f174e45]
+                            - text: Flagship Product
+                          - heading "Easel Backs" [level=1] [ref=f174e55]
+                          - paragraph [ref=f174e56]: The invisible hero behind every freestanding display. Engineered for precise viewing angles, reliable adhesion, and the consistency that lets you promise your clients perfection.
+                          - generic [ref=f174e57]:
+                            - link "Get a Quote" [ref=f174e58] [cursor=pointer]:
+                              - /url: /contact
+                              - text: Get a Quote
+                              - img [ref=f174e59]
+                            - link "View Specifications" [ref=f174e61] [cursor=pointer]:
+                              - /url: "#specifications"
+                    - generic [ref=f174e64]:
+                      - generic [ref=f174e65]:
+                        - paragraph [ref=f174e66]: What Is an Easel Back?
+                        - heading "The Stand Behind the Display" [level=2] [ref=f174e67]
+                        - paragraph [ref=f174e68]: An easel back is a supportive flap attached to the back of a frame, sign, or display to make it stand upright. It's the component your customers never see, but the first thing they notice when it fails.
+                        - paragraph [ref=f174e69]: We manufacture easel backs in single-wing and double-wing configurations with self-stick adhesive for effortless assembly. Every fold line is precision-scored for exact viewing angles.
+                        - generic [ref=f174e70]:
+                          - generic [ref=f174e71]:
+                            - img [ref=f174e72]
+                            - text: Precision CNC scoring
+                          - generic [ref=f174e74]:
+                            - img [ref=f174e75]
+                            - text: Self-stick PSA adhesive
+                          - generic [ref=f174e77]:
+                            - img [ref=f174e78]
+                            - text: Custom sizes & angles
+                          - generic [ref=f174e80]:
+                            - img [ref=f174e81]
+                            - text: Multiple substrates
+                          - generic [ref=f174e83]:
+                            - img [ref=f174e84]
+                            - text: Volume pricing
+                          - generic [ref=f174e86]:
+                            - img [ref=f174e87]
+                            - text: Drop-ship capability
+                      - generic [ref=f174e90]:
+                        - img "Easel back manufacturing process" [ref=f174e92]
+                        - generic [ref=f174e93]:
+                          - paragraph [ref=f174e94]: 25°
+                          - paragraph [ref=f174e95]: Viewing Angle
+                        - generic [ref=f174e96]:
+                          - paragraph [ref=f174e97]: Tolerance
+                          - paragraph [ref=f174e98]: ±0.005"
+                    - generic [ref=f174e100]:
+                      - generic [ref=f174e102]:
+                        - paragraph [ref=f174e103]: Product Range
+                        - heading "Choose Your Configuration" [level=2] [ref=f174e104]
+                      - generic [ref=f174e105]:
+                        - generic [ref=f174e108]:
+                          - img "Single-Wing" [ref=f174e110]
+                          - generic [ref=f174e112]:
+                            - heading "Single-Wing" [level=3] [ref=f174e113]
+                            - paragraph [ref=f174e114]: A single hinged flap that props up smaller, lighter frames and signs.
+                            - generic [ref=f174e115]:
+                              - generic [ref=f174e116]:
+                                - img [ref=f174e117]
+                                - text: Items under 11×14"
+                              - generic [ref=f174e119]:
+                                - img [ref=f174e120]
+                                - text: Clean minimal profile
+                              - generic [ref=f174e122]:
+                                - img [ref=f174e123]
+                                - text: Self-stick adhesive
+                              - generic [ref=f174e125]:
+                                - img [ref=f174e126]
+                                - text: White, kraft & black
+                            - generic [ref=f174e128]:
+                              - generic [ref=f174e129]:
+                                - text: Sizes
+                                - text: 3" to 14"
+                              - generic [ref=f174e130]:
+                                - text: Capacity
+                                - text: Up to 2 lbs
+                        - generic [ref=f174e133]:
+                          - img "Double-Wing" [ref=f174e135]
+                          - generic [ref=f174e137]:
+                            - heading "Double-Wing" [level=3] [ref=f174e138]
+                            - paragraph [ref=f174e139]: Two hinged support flaps providing superior stability for larger displays.
+                            - generic [ref=f174e140]:
+                              - generic [ref=f174e141]:
+                                - img [ref=f174e142]
+                                - text: Items 11×14" and larger
+                              - generic [ref=f174e144]:
+                                - img [ref=f174e145]
+                                - text: Superior stability
+                              - generic [ref=f174e147]:
+                                - img [ref=f174e148]
+                                - text: Adhesive on both wings
+                              - generic [ref=f174e150]:
+                                - img [ref=f174e151]
+                                - text: Custom colors available
+                            - generic [ref=f174e153]:
+                              - generic [ref=f174e154]:
+                                - text: Sizes
+                                - text: 8" to 24"
+                              - generic [ref=f174e155]:
+                                - text: Capacity
+                                - text: Up to 8 lbs
+                        - generic [ref=f174e158]:
+                          - img "Locking Easel" [ref=f174e160]
+                          - generic [ref=f174e162]:
+                            - heading "Locking Easel" [level=3] [ref=f174e163]
+                            - paragraph [ref=f174e164]: Tab-lock mechanism prevents collapse during transport and retail display.
+                            - generic [ref=f174e165]:
+                              - generic [ref=f174e166]:
+                                - img [ref=f174e167]
+                                - text: Tab-lock prevents collapse
+                              - generic [ref=f174e169]:
+                                - img [ref=f174e170]
+                                - text: Ideal for retail & trade
+                              - generic [ref=f174e172]:
+                                - img [ref=f174e173]
+                                - text: Heavy-duty stock
+                              - generic [ref=f174e175]:
+                                - img [ref=f174e176]
+                                - text: Custom locking angles
+                            - generic [ref=f174e178]:
+                              - generic [ref=f174e179]:
+                                - text: Sizes
+                                - text: 5" to 20"
+                              - generic [ref=f174e180]:
+                                - text: Capacity
+                                - text: Up to 5 lbs
+                    - generic [ref=f174e182]:
+                      - generic [ref=f174e184]:
+                        - paragraph [ref=f174e185]: Technical Details
+                        - heading "Specifications" [level=2] [ref=f174e186]
+                      - table [ref=f174e189]:
+                        - rowgroup [ref=f174e190]:
+                          - row "Specification Details" [ref=f174e191]:
+                            - columnheader "Specification" [ref=f174e192]
+                            - columnheader "Details" [ref=f174e193]
+                        - rowgroup [ref=f174e194]:
+                          - row "Board Stock 14pt to 36pt SBS, Chip, or Poly board" [ref=f174e195]:
+                            - cell "Board Stock" [ref=f174e196]
+                            - cell "14pt to 36pt SBS, Chip, or Poly board" [ref=f174e197]
+                          - row "Adhesive Permanent PSA, hot melt, or custom" [ref=f174e198]:
+                            - cell "Adhesive" [ref=f174e199]
+                            - cell "Permanent PSA, hot melt, or custom" [ref=f174e200]
+                          - row "Finish Raw, clay-coated, laminated, or custom printed" [ref=f174e201]:
+                            - cell "Finish" [ref=f174e202]
+                            - cell "Raw, clay-coated, laminated, or custom printed" [ref=f174e203]
+                          - row "Colors White, Kraft, Black, or custom match" [ref=f174e204]:
+                            - cell "Colors" [ref=f174e205]
+                            - cell "White, Kraft, Black, or custom match" [ref=f174e206]
+                          - row "Sizes 3\" to 24\" (custom sizes available)" [ref=f174e207]:
+                            - cell "Sizes" [ref=f174e208]
+                            - cell "3\" to 24\" (custom sizes available)" [ref=f174e209]
+                          - row "Viewing Angles 15°, 20°, 25°, 30°, or custom" [ref=f174e210]:
+                            - cell "Viewing Angles" [ref=f174e211]
+                            - cell "15°, 20°, 25°, 30°, or custom" [ref=f174e212]
+                          - row "Packing Bulk, shrink-wrapped, or retail-ready" [ref=f174e213]:
+                            - cell "Packing" [ref=f174e214]
+                            - cell "Bulk, shrink-wrapped, or retail-ready" [ref=f174e215]
+                          - row "Minimum Order Contact for quote, all volumes welcome" [ref=f174e216]:
+                            - cell "Minimum Order" [ref=f174e217]
+                            - cell "Contact for quote, all volumes welcome" [ref=f174e218]
+                    - generic [ref=f174e222]:
+                      - generic [ref=f174e224]:
+                        - paragraph [ref=f174e225]: The Flech Difference
+                        - heading "Why Source Easel Backs From Flech?" [level=2] [ref=f174e226]
+                      - generic [ref=f174e227]:
+                        - generic [ref=f174e230]:
+                          - img [ref=f174e232]
+                          - heading "Precision Score Lines" [level=3] [ref=f174e238]
+                          - paragraph [ref=f174e239]: CNC scoring creates fold lines that bend cleanly at exact angles. No cracking, no variance.
+                        - generic [ref=f174e242]:
+                          - img [ref=f174e244]
+                          - heading "Substrate Expertise" [level=3] [ref=f174e246]
+                          - paragraph [ref=f174e247]: SBS for clean finish, chip for economy, poly for moisture resistance. We recommend the right one.
+                        - generic [ref=f174e250]:
+                          - img [ref=f174e252]
+                          - heading "Adhesive That Holds" [level=3] [ref=f174e254]
+                          - paragraph [ref=f174e255]: Permanent PSA tested to maintain bond strength over time. No peeling, no sliding.
+                        - generic [ref=f174e258]:
+                          - img [ref=f174e260]
+                          - heading "Custom Viewing Angles" [level=3] [ref=f174e264]
+                          - paragraph [ref=f174e265]: Standard or custom angles. We engineer score line placement to deliver the exact angle you need.
+                        - generic [ref=f174e268]:
+                          - img [ref=f174e270]
+                          - heading "All Under One Roof" [level=3] [ref=f174e272]
+                          - paragraph [ref=f174e273]: Die-cutting, scoring, adhesive, assembly, packing, single-source manufacturing in Paterson, NJ.
+                        - generic [ref=f174e276]:
+                          - img [ref=f174e278]
+                          - heading "Drop-Ship Ready" [level=3] [ref=f174e283]
+                          - paragraph [ref=f174e284]: We ship directly to your client. Retail-ready, bulk, or custom packing configurations.
+                    - generic [ref=f174e286]:
+                      - generic [ref=f174e288]:
+                        - paragraph [ref=f174e289]: Back Styles
+                        - heading "Door Backs & Pad Backs" [level=2] [ref=f174e290]
+                        - paragraph [ref=f174e291]: We can make any door back (window opening for photo insertion) or pad back (straight cut without opening) to meet your framing requirements.
+                      - generic [ref=f174e292]:
+                        - generic [ref=f174e295]:
+                          - img "Door Backs" [ref=f174e297]
+                          - generic [ref=f174e298]:
+                            - heading "Door Backs" [level=3] [ref=f174e299]
+                            - paragraph [ref=f174e300]: Window opening for photo insertion. The door swings open to allow easy loading and swapping of photos and artwork.
+                        - generic [ref=f174e303]:
+                          - img "Pad Backs" [ref=f174e305]
+                          - generic [ref=f174e306]:
+                            - heading "Pad Backs" [level=3] [ref=f174e307]
+                            - paragraph [ref=f174e308]: Straight cut without opening. A clean, simple backing for frames where photo access from the rear is not required.
+                      - generic [ref=f174e309]:
+                        - generic [ref=f174e312]:
+                          - img [ref=f174e314]
+                          - heading "Three Standard Finishes" [level=4] [ref=f174e317]
+                          - paragraph [ref=f174e318]: Black velour, spanish linen, and matte black paperboard finishes available as standard.
+                        - generic [ref=f174e321]:
+                          - img [ref=f174e323]
+                          - heading "Variety of Calipers" [level=4] [ref=f174e329]
+                          - paragraph [ref=f174e330]: 80 pt backs and 120 pt legs standard. Customization available for specific projects.
+                        - generic [ref=f174e333]:
+                          - img [ref=f174e335]
+                          - heading "Easel Configurations" [level=4] [ref=f174e345]
+                          - paragraph [ref=f174e346]: Two-way (corner, vertical/horizontal) and one-way (center, best support) designs.
+                        - generic [ref=f174e349]:
+                          - img [ref=f174e351]
+                          - heading "Hardware Options" [level=4] [ref=f174e355]
+                          - paragraph [ref=f174e356]: Saw tooth hangers, rings, turnbuttons and more for versatile hanging and display.
+                      - heading "Customization Options" [level=3] [ref=f174e358]
+                      - generic [ref=f174e359]:
+                        - generic [ref=f174e362]:
+                          - img [ref=f174e364]
+                          - heading "Custom Finishes" [level=4] [ref=f174e370]
+                          - paragraph [ref=f174e371]: Over 75 paper colors, foils and high-end suede finishes available.
+                        - generic [ref=f174e374]:
+                          - img [ref=f174e376]
+                          - heading "Die Cut Shapes" [level=4] [ref=f174e382]
+                          - paragraph [ref=f174e383]: Extensive die cutting operation for unique jobs and custom shapes.
+                        - generic [ref=f174e386]:
+                          - img [ref=f174e388]
+                          - heading "Full Size Sheets" [level=4] [ref=f174e398]
+                          - paragraph [ref=f174e399]: We supply full size sheets at excellent prices for your own fabrication.
+                    - generic [ref=f174e401]:
+                      - generic [ref=f174e403]:
+                        - paragraph [ref=f174e404]: Finish Options
+                        - heading "Stock Easel Finishes" [level=2] [ref=f174e405]
+                      - generic [ref=f174e406]:
+                        - generic [ref=f174e409]:
+                          - img "Straight Leg" [ref=f174e411]
+                          - heading "Straight Leg" [level=3] [ref=f174e413]
+                        - generic [ref=f174e416]:
+                          - img "Velour Door Back" [ref=f174e418]
+                          - heading "Velour Door Back" [level=3] [ref=f174e420]
+                        - generic [ref=f174e423]:
+                          - img "Wrapped Velour Door Back w/ Ribbon" [ref=f174e425]
+                          - heading "Wrapped Velour Door Back w/ Ribbon" [level=3] [ref=f174e427]
+                    - generic [ref=f174e430]:
+                      - generic [ref=f174e431]:
+                        - paragraph [ref=f174e432]: Applications
+                        - heading "Where Our Easel Backs Work" [level=2] [ref=f174e433]
+                        - generic [ref=f174e434]:
+                          - generic [ref=f174e435]: Picture frames & photo displays
+                          - generic [ref=f174e437]: Certificate & award frames
+                          - generic [ref=f174e439]: Retail POP displays
+                          - generic [ref=f174e441]: Trade show signage
+                          - generic [ref=f174e443]: Menu & table holders
+                          - generic [ref=f174e445]: Real estate signs
+                          - generic [ref=f174e447]: Promotional standees
+                          - generic [ref=f174e449]: Desktop calendars
+                      - generic [ref=f174e452]:
+                        - img "Quality inspection of finished products" [ref=f174e453]
+                        - generic [ref=f174e455]:
+                          - img [ref=f174e456]
+                          - heading "Need a Custom Solution?" [level=3] [ref=f174e460]
+                          - paragraph [ref=f174e461]: Non-standard size? Unusual substrate? We manufacture custom easel backs to your exact specifications.
+                          - link "Discuss Your Requirements" [ref=f174e462] [cursor=pointer]:
+                            - /url: /contact
+                            - text: Discuss Your Requirements
+                            - img [ref=f174e463]
+                    - generic [ref=f174e465]:
+                      - generic [ref=f174e466]:
+                        - heading "Built to Perform" [level=2] [ref=f174e467]
+                        - paragraph [ref=f174e468]: The machinery and hardware behind every easel back we produce.
+                      - generic [ref=f174e469]:
+                        - img "Close-up industrial machine wheel in workshop" [ref=f174e471]
+                        - img "Metal handwheel on heavy machinery in factory" [ref=f174e473]
+                        - img "Machine wheel with workshop background" [ref=f174e475]
+                        - img "Industrial rollers and controls in manufacturing facility" [ref=f174e477]
+                        - img "Overhead cables and pulleys on industrial equipment" [ref=f174e479]
+                        - img "Overhead pulley system with steel cables in warehouse" [ref=f174e481]
+                        - img "Vintage industrial wheel with worn metal and grease" [ref=f174e483]
+                        - img "Old factory gear wheel with detailed mechanical texture" [ref=f174e485]
+                        - img "Metal screws piled inside small container" [ref=f174e487]
+                        - img "Screwdriver resting in container filled with metal screws" [ref=f174e489]
+                    - generic [ref=f174e495]:
+                      - heading "Get Your Easel Back Quote" [level=2] [ref=f174e496]
+                      - paragraph [ref=f174e497]: Type, size, quantity, and custom requirements. We'll respond within 24 hours with pricing and lead time.
+                      - generic [ref=f174e498]:
+                        - link "Request a Quote" [ref=f174e499] [cursor=pointer]:
+                          - /url: /contact
+                          - text: Request a Quote
+                          - img [ref=f174e500]
+                        - link "Request Samples" [ref=f174e502] [cursor=pointer]:
+                          - /url: /contact
+                - contentinfo [ref=f174e503]:
+                  - generic [ref=f174e505]:
+                    - generic [ref=f174e506]:
+                      - img "Flech Paper Products" [ref=f174e508]
+                      - paragraph [ref=f174e509]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                      - generic [ref=f174e510]:
+                        - link "(973) 357-8111" [ref=f174e511] [cursor=pointer]:
+                          - /url: tel:+19733578111
+                          - img [ref=f174e512]
+                          - text: (973) 357-8111
+                        - link "info@flech.com" [ref=f174e514] [cursor=pointer]:
+                          - /url: mailto:info@flech.com
+                          - img [ref=f174e515]
+                          - text: info@flech.com
+                        - generic [ref=f174e518]:
+                          - img [ref=f174e519]
+                          - generic [ref=f174e522]:
+                            - text: Paterson, NJ
+                            - text: United States
+                    - generic [ref=f174e523]:
+                      - heading "Products" [level=3] [ref=f174e524]
+                      - list [ref=f174e525]:
+                        - listitem [ref=f174e526]:
+                          - link "Easel Backs" [ref=f174e527] [cursor=pointer]:
+                            - /url: /products/easel-backs
+                            - text: Easel Backs
+                            - img [ref=f174e528]
+                        - listitem [ref=f174e531]:
+                          - link "Fold Lines & Dielines" [ref=f174e532] [cursor=pointer]:
+                            - /url: /products/fold-lines
+                            - text: Fold Lines & Dielines
+                            - img [ref=f174e533]
+                        - listitem [ref=f174e536]:
+                          - link "Contract Framing Backs" [ref=f174e537] [cursor=pointer]:
+                            - /url: /products/framing-backs
+                            - text: Contract Framing Backs
+                            - img [ref=f174e538]
+                        - listitem [ref=f174e541]:
+                          - link "Matboards" [ref=f174e542] [cursor=pointer]:
+                            - /url: /products/matboards
+                            - text: Matboards
+                            - img [ref=f174e543]
+                    - generic [ref=f174e546]:
+                      - heading "Company" [level=3] [ref=f174e547]
+                      - list [ref=f174e548]:
+                        - listitem [ref=f174e549]:
+                          - link "About Flech" [ref=f174e550] [cursor=pointer]:
+                            - /url: /about
+                            - text: About Flech
+                            - img [ref=f174e551]
+                        - listitem [ref=f174e554]:
+                          - link "Industries We Serve" [ref=f174e555] [cursor=pointer]:
+                            - /url: /industries
+                            - text: Industries We Serve
+                            - img [ref=f174e556]
+                        - listitem [ref=f174e559]:
+                          - link "Contact & RFQ" [ref=f174e560] [cursor=pointer]:
+                            - /url: /contact
+                            - text: Contact & RFQ
+                            - img [ref=f174e561]
+                      - heading "Industries" [level=3] [ref=f174e564]
+                      - list [ref=f174e565]:
+                        - listitem [ref=f174e566]:
+                          - link "Sign & Display" [ref=f174e567] [cursor=pointer]:
+                            - /url: /industries#signage
+                        - listitem [ref=f174e568]:
+                          - link "Wholesale Framing" [ref=f174e569] [cursor=pointer]:
+                            - /url: /industries#framing
+                        - listitem [ref=f174e570]:
+                          - link "Packaging & POP" [ref=f174e571] [cursor=pointer]:
+                            - /url: /industries#packaging
+                        - listitem [ref=f174e572]:
+                          - link "Interior Design" [ref=f174e573] [cursor=pointer]:
+                            - /url: /industries#interior
+                    - generic [ref=f174e574]:
+                      - heading "Get Started" [level=3] [ref=f174e575]
+                      - paragraph [ref=f174e576]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                      - link "Get a Quote" [ref=f174e577] [cursor=pointer]:
+                        - /url: /contact
+                        - text: Get a Quote
+                        - img [ref=f174e578]
+                      - generic [ref=f174e581]:
+                        - paragraph [ref=f174e582]: Certifications
+                        - paragraph [ref=f174e583]:
+                          - text: ISO 9001 Certified
+                          - text: FSC Chain of Custody
+                          - text: Acid-Free & Archival
+                  - generic [ref=f174e585]:
+                    - paragraph [ref=f174e586]: © 2026 Flech Paper Products. All rights reserved.
+                    - generic [ref=f174e587]:
+                      - link "Privacy Policy" [ref=f174e588] [cursor=pointer]:
+                        - /url: /privacy
+                      - link "Terms of Service" [ref=f174e589] [cursor=pointer]:
+                        - /url: /terms
+                - button "Open Next.js Dev Tools" [ref=f174e595] [cursor=pointer]:
+                  - img [ref=f174e596]
+                - alert [ref=f174e599]
+  - button "Open Next.js Dev Tools" [ref=e110] [cursor=pointer]:
+    - img [ref=e111]
+  - alert [ref=e114]

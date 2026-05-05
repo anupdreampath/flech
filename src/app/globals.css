@@ -50,6 +50,17 @@ html {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Home hero rotating title — only the rotating bottom line gets a smaller
+   mobile size so the longest string ("Art and Framing Industry") fits on
+   one line. Above 640px the parent h1's text-5xl/text-7xl takes over. */
+.hero-rotating {
+  font-size: 1.6rem !important; /* 25.6px on mobile, beats Tailwind's text-4xl on parent */
+  line-height: 1.1 !important;
+}
+@media (min-width: 640px) {
+  .hero-rotating { font-size: inherit !important; line-height: inherit !important; }
+}
+
 /* Long page sections: skip render work when scrolled off-screen.
    Big perf win for pages with many heavy sections (matboards color grid, etc.). */
 section,

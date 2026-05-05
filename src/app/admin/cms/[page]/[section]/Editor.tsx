@@ -7,6 +7,9 @@ import type { Field, SubField } from "@/lib/cms";
 
 type ItemValue = Record<string, string>;
 
+const inputClass =
+  "w-full px-3 py-2 text-sm bg-white border border-slate-300 rounded-md text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1A1A2E]/10 focus:border-[#1A1A2E]";
+
 export function ContentEditor({
   page,
   section,
@@ -38,29 +41,30 @@ export function ContentEditor({
     if (res.ok) {
       setSaved(true);
       setTimeout(() => setSaved(false), 2500);
+      if (typeof window !== "undefined") {
+        window.dispatchEvent(new CustomEvent("cms:saved"));
+      }
     }
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-5">
       {fields.map((f) => (
         <div key={f.key}>
           {f.type !== "repeater" && (
-            <label className="block text-xs uppercase tracking-wider text-white/60 mb-1">
+            <label className="block text-[11px] uppercase tracking-wider font-semibold text-slate-600 mb-1">
               {f.label}
             </label>
           )}
           {f.type !== "repeater" && f.helper && (
-            <p className="text-xs text-white/45 mb-2 leading-snug">
-              {f.helper}
-            </p>
+            <p className="text-xs text-slate-500 mb-2 leading-snug">{f.helper}</p>
           )}
           {f.type === "textarea" ? (
             <textarea
               rows={4}
               value={values[f.key] || ""}
               onChange={(e) => set(f.key, e.target.value)}
-              className="w-full px-4 py-3 text-sm bg-white/5 border border-white/10 rounded-sm text-white focus:outline-none focus:border-accent"
+              className={inputClass}
             />
           ) : f.type === "image" ? (
             <CloudinaryUpload
@@ -85,24 +89,24 @@ export function ContentEditor({
               type="text"
               value={values[f.key] || ""}
               onChange={(e) => set(f.key, e.target.value)}
-              className="w-full px-4 py-3 text-sm bg-white/5 border border-white/10 rounded-sm text-white focus:outline-none focus:border-accent"
+              className={inputClass}
             />
           )}
         </div>
       ))}
 
-      <div className="flex items-center gap-3 pt-4 border-t border-white/10">
+      <div className="flex items-center gap-3 pt-4 border-t border-slate-200 sticky bottom-0 bg-white py-3 -mx-6 px-6">
         <button
           onClick={save}
           disabled={saving}
-          className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover disabled:opacity-50 text-white px-6 py-3 text-sm font-semibold rounded-sm transition-colors"
+          className="inline-flex items-center gap-2 bg-[#1A1A2E] hover:bg-[#0f0f1f] disabled:opacity-50 text-white px-4 py-2.5 text-sm font-semibold rounded-md transition-colors"
         >
           <Save className="w-4 h-4" />
           {saving ? "Saving…" : "Save changes"}
         </button>
         {saved && (
-          <span className="text-xs text-success flex items-center gap-1">
-            <Check className="w-4 h-4" /> Saved
+          <span className="text-xs text-emerald-700 inline-flex items-center gap-1">
+            <Check className="w-4 h-4" /> Saved & previewed
           </span>
         )}
       </div>
@@ -164,24 +168,24 @@ function RepeaterField({
   const itemLabel = field.itemLabel || "Item";
 
   return (
-    <div className="border border-white/10 rounded-md bg-white/[0.03]">
-      <div className="flex items-center justify-between px-4 py-3 border-b border-white/10">
+    <div className="border border-slate-200 rounded-md bg-slate-50/60">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-slate-200">
         <div>
-          <p className="text-sm font-semibold text-white">{field.label}</p>
+          <p className="text-sm font-semibold text-[#1A1A2E]">{field.label}</p>
           {field.helper && (
-            <p className="text-xs text-white/50 mt-0.5">{field.helper}</p>
+            <p className="text-xs text-slate-500 mt-0.5">{field.helper}</p>
           )}
         </div>
-        <span className="text-xs text-white/50">
+        <span className="text-xs text-slate-500">
           {items.length} {items.length === 1 ? itemLabel : `${itemLabel}s`}
         </span>
       </div>
 
-      <div className="divide-y divide-white/10 max-h-[70vh] overflow-y-auto">
+      <div className="divide-y divide-slate-200 max-h-[60vh] overflow-y-auto">
         {items.map((item, i) => (
-          <div key={i} className="p-4">
+          <div key={i} className="p-4 bg-white">
             <div className="flex items-center justify-between mb-3">
-              <p className="text-xs uppercase tracking-wider text-white/60">
+              <p className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
                 {itemLabel} #{i + 1}
                 {item.name ? ` · ${item.name}` : ""}
               </p>
@@ -190,7 +194,7 @@ function RepeaterField({
                   type="button"
                   onClick={() => move(i, -1)}
                   disabled={i === 0}
-                  className="p-1.5 text-white/60 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="p-1.5 text-slate-500 hover:text-[#1A1A2E] disabled:opacity-30 disabled:cursor-not-allowed"
                   title="Move up"
                 >
                   <ChevronUp className="w-4 h-4" />
@@ -199,7 +203,7 @@ function RepeaterField({
                   type="button"
                   onClick={() => move(i, 1)}
                   disabled={i === items.length - 1}
-                  className="p-1.5 text-white/60 hover:text-white disabled:opacity-30 disabled:cursor-not-allowed"
+                  className="p-1.5 text-slate-500 hover:text-[#1A1A2E] disabled:opacity-30 disabled:cursor-not-allowed"
                   title="Move down"
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -207,7 +211,7 @@ function RepeaterField({
                 <button
                   type="button"
                   onClick={() => remove(i)}
-                  className="p-1.5 text-accent-light hover:text-accent"
+                  className="p-1.5 text-[#C41E3A] hover:text-[#9B1527]"
                   title="Remove"
                 >
                   <Trash2 className="w-4 h-4" />
@@ -225,7 +229,7 @@ function RepeaterField({
                       : ""
                   }
                 >
-                  <label className="block text-[11px] uppercase tracking-wider text-white/50 mb-1">
+                  <label className="block text-[10px] uppercase tracking-wider text-slate-500 font-semibold mb-1">
                     {sf.label}
                   </label>
                   {sf.type === "textarea" ? (
@@ -233,7 +237,7 @@ function RepeaterField({
                       rows={2}
                       value={item[sf.key] || ""}
                       onChange={(e) => update(i, sf.key, e.target.value)}
-                      className="w-full px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-sm text-white focus:outline-none focus:border-accent"
+                      className={inputClass}
                     />
                   ) : sf.type === "image" ? (
                     <CloudinaryUpload
@@ -252,7 +256,7 @@ function RepeaterField({
                       type="text"
                       value={item[sf.key] || ""}
                       onChange={(e) => update(i, sf.key, e.target.value)}
-                      className="w-full px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-sm text-white focus:outline-none focus:border-accent"
+                      className={inputClass}
                     />
                   )}
                 </div>
@@ -262,11 +266,11 @@ function RepeaterField({
         ))}
       </div>
 
-      <div className="px-4 py-3 border-t border-white/10">
+      <div className="px-4 py-3 border-t border-slate-200">
         <button
           type="button"
           onClick={add}
-          className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/15 text-white px-4 py-2 text-xs font-semibold rounded-sm transition-colors"
+          className="inline-flex items-center gap-2 bg-white border border-slate-300 hover:border-[#1A1A2E] text-[#1A1A2E] px-3 py-2 text-xs font-semibold rounded-md transition-colors"
         >
           <Plus className="w-3.5 h-3.5" />
           Add {itemLabel}

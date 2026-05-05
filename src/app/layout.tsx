@@ -5,6 +5,7 @@ import { SiteChrome } from "@/components/SiteChrome";
 import { AnalyticsTracker } from "@/components/AnalyticsTracker";
 import { EditModeBridge } from "@/components/EditModeBridge";
 import { AnalyticsScripts } from "@/components/AnalyticsScripts";
+import { CmsEditOverlay } from "@/components/admin/CmsEditOverlay";
 import { getContent, getRepeaterItems } from "@/lib/cms";
 import type { NavLink, ProductLink } from "@/components/Navbar";
 import type { FooterLink } from "@/components/Footer";
@@ -266,6 +267,7 @@ export default async function RootLayout({
         <Suspense fallback={null}>
           <AnalyticsTracker />
           <EditModeBridge />
+          <CmsEditOverlay />
         </Suspense>
       </body>
     </html>

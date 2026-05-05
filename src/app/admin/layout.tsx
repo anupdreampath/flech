@@ -3,7 +3,6 @@ import {
   LayoutDashboard,
   Inbox,
   BarChart3,
-  FileText,
   BookOpen,
   Edit3,
 } from "lucide-react";
@@ -16,9 +15,8 @@ const nav = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard, exact: true },
   { href: "/admin/submissions", label: "Submissions", icon: Inbox },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
-  { href: "/admin/cms", label: "Content", icon: FileText },
+  { href: "/admin/cms", label: "Visual Editor", icon: Edit3 },
   { href: "/admin/blogs", label: "Blogs", icon: BookOpen },
-  { href: "/admin/editor", label: "Visual Editor", icon: Edit3 },
 ];
 
 export default async function AdminLayout({

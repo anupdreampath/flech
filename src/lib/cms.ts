@@ -1102,6 +1102,32 @@ export async function getRepeaterItems<T = Record<string, string>>(
   }
 }
 
+// Maps a CMS page key to the public URL where its content is rendered.
+export function previewUrlForPage(page: string): string {
+  switch (page) {
+    case "home":
+      return "/";
+    case "about":
+      return "/about";
+    case "contact":
+      return "/contact";
+    case "industries":
+      return "/industries";
+    case "product_easel":
+      return "/products/easel-backs";
+    case "product_foldlines":
+      return "/products/fold-lines";
+    case "product_framing":
+      return "/products/framing-backs";
+    case "product_matboards":
+      return "/products/matboards";
+    case "global":
+      return "/";
+    default:
+      return "/";
+  }
+}
+
 export function sectionDefaults(fields: Field[]): Record<string, string> {
   const out: Record<string, string> = {};
   for (const f of fields) {

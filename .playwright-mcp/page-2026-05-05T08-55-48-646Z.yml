@@ -1,0 +1,361 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: F
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: Flech
+            - heading "Admin Console" [level=1] [ref=e11]
+        - navigation [ref=e12]:
+          - paragraph [ref=e13]: Workspace
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e15]
+            - text: Dashboard
+          - link "Submissions" [ref=e20] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e21]
+            - text: Submissions
+          - link "Analytics" [ref=e24] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e25]
+            - text: Analytics
+          - link "Content" [ref=e27] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e28]
+            - text: Content
+          - link "Blogs" [ref=e31] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e32]
+            - text: Blogs
+          - link "Visual Editor" [ref=e34] [cursor=pointer]:
+            - /url: /admin/editor
+            - img [ref=e35]
+            - text: Visual Editor
+        - generic [ref=e37]:
+          - generic [ref=e38]:
+            - generic [ref=e39]: A
+            - generic [ref=e40]:
+              - paragraph [ref=e41]: admin@flech.test
+              - paragraph [ref=e42]: Administrator
+          - button "Sign out" [ref=e43]:
+            - img [ref=e44]
+            - text: Sign out
+      - main [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - paragraph [ref=e51]: About
+              - heading "What Drives Us (4 values)" [level=1] [ref=e52]
+            - generic [ref=e53]:
+              - link "All sections" [ref=e54] [cursor=pointer]:
+                - /url: /admin/cms
+                - img [ref=e55]
+                - text: All sections
+              - paragraph [ref=e57]: values
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - generic [ref=e60]: Section Heading
+                  - textbox [ref=e61]: What Drives Us
+                - generic [ref=e62]:
+                  - generic [ref=e63]: Value 1 · Title
+                  - textbox [ref=e64]: Precision First
+                - generic [ref=e65]:
+                  - generic [ref=e66]: Value 1 · Description
+                  - textbox [ref=e67]: Every measurement, cut, and fold line held to tolerances that matter.
+                - generic [ref=e68]:
+                  - generic [ref=e69]: Value 2 · Title
+                  - textbox [ref=e70]: Quality Without Shortcuts
+                - generic [ref=e71]:
+                  - generic [ref=e72]: Value 2 · Description
+                  - textbox [ref=e73]: Right substrate for each application, not the cheapest one.
+                - generic [ref=e74]:
+                  - generic [ref=e75]: Value 3 · Title
+                  - textbox [ref=e76]: Partnership, Not Transactions
+                - generic [ref=e77]:
+                  - generic [ref=e78]: Value 3 · Description
+                  - textbox [ref=e79]: We learn our clients' businesses to anticipate their needs.
+                - generic [ref=e80]:
+                  - generic [ref=e81]: Value 4 · Title
+                  - textbox [ref=e82]: Responsible Manufacturing
+                - generic [ref=e83]:
+                  - generic [ref=e84]: Value 4 · Description
+                  - textbox [ref=e85]: FSC certified, responsible sourcing, acid-free archival products.
+                - button "Save changes" [ref=e87]:
+                  - img [ref=e88]
+                  - text: Save changes
+          - generic [ref=e92]:
+            - generic [ref=e93]:
+              - generic [ref=e94]:
+                - button "Desktop" [ref=e95]:
+                  - img [ref=e96]
+                  - text: Desktop
+                - button "Mobile" [ref=e98]:
+                  - img [ref=e99]
+                  - text: Mobile
+              - generic [ref=e101]:
+                - generic [ref=e102]: /about
+                - button "Reload preview" [ref=e103]:
+                  - img [ref=e104]
+                - link "Open in new tab" [ref=e109] [cursor=pointer]:
+                  - /url: /about
+                  - img [ref=e110]
+            - iframe [ref=e116]:
+              - generic [active] [ref=f169e1]:
+                - generic [ref=f169e3]:
+                  - paragraph [ref=f169e4]: Family-Owned Manufacturer · Paterson, NJ since 1999
+                  - generic [ref=f169e5]:
+                    - link "(973) 357-8111" [ref=f169e6] [cursor=pointer]:
+                      - /url: tel:+19733578111
+                      - img [ref=f169e7]
+                      - text: (973) 357-8111
+                    - link "info@flech.com" [ref=f169e9] [cursor=pointer]:
+                      - /url: mailto:info@flech.com
+                      - img [ref=f169e10]
+                      - text: info@flech.com
+                - navigation "Main navigation" [ref=f169e13]:
+                  - generic [ref=f169e14]:
+                    - link "Flech Paper Products" [ref=f169e15] [cursor=pointer]:
+                      - /url: /
+                      - img "Flech Paper Products" [ref=f169e16]
+                    - generic [ref=f169e17]:
+                      - link "Home" [ref=f169e18] [cursor=pointer]:
+                        - /url: /
+                      - button "Products" [ref=f169e20] [cursor=pointer]:
+                        - text: Products
+                        - img [ref=f169e21]
+                      - link "About" [ref=f169e23] [cursor=pointer]:
+                        - /url: /about
+                      - link "Industries" [ref=f169e24] [cursor=pointer]:
+                        - /url: /industries
+                      - link "Contact" [ref=f169e25] [cursor=pointer]:
+                        - /url: /contact
+                      - link "Blog" [ref=f169e26] [cursor=pointer]:
+                        - /url: /blog
+                    - link "Get a Quote" [ref=f169e28] [cursor=pointer]:
+                      - /url: /contact
+                - main [ref=f169e29]:
+                  - generic [ref=f169e30]:
+                    - generic [ref=f169e31]:
+                      - iframe [ref=f169e32]:
+                        - generic [active] [ref=f172e1]:
+                          - img "Media Poster" [ref=f172e4]
+                          - generic [ref=f172e5]:
+                            - generic:
+                              - img "Poster image"
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - generic: Speed
+                                  - generic: Quality
+                                  - generic: Captions
+                      - generic [ref=f169e34]:
+                        - navigation "Breadcrumb" [ref=f169e35]:
+                          - link "Home" [ref=f169e36] [cursor=pointer]:
+                            - /url: /
+                          - img [ref=f169e37]
+                          - generic [ref=f169e39]: About
+                        - heading "25 Years of Knowing What Works" [level=1] [ref=f169e40]:
+                          - text: 25 Years of Knowing
+                          - text: What Works
+                    - generic [ref=f169e43]:
+                      - generic [ref=f169e45]:
+                        - img [ref=f169e47]
+                        - generic [ref=f169e50]:
+                          - paragraph [ref=f169e51]: 25+
+                          - paragraph [ref=f169e52]: Years Manufacturing
+                      - generic [ref=f169e54]:
+                        - img [ref=f169e56]
+                        - generic [ref=f169e61]:
+                          - paragraph [ref=f169e62]: 600+
+                          - paragraph [ref=f169e63]: B2B Clients
+                      - generic [ref=f169e65]:
+                        - img [ref=f169e67]
+                        - generic [ref=f169e69]:
+                          - paragraph [ref=f169e70]: "4"
+                          - paragraph [ref=f169e71]: Product Lines
+                      - generic [ref=f169e73]:
+                        - img [ref=f169e75]
+                        - generic [ref=f169e78]:
+                          - paragraph [ref=f169e79]: 100%
+                          - paragraph [ref=f169e80]: Made in USA
+                    - generic [ref=f169e83]:
+                      - generic [ref=f169e85]:
+                        - paragraph [ref=f169e86]: Our Story
+                        - heading "From Local Converter to National Manufacturer" [level=2] [ref=f169e87]
+                        - generic [ref=f169e88]:
+                          - paragraph [ref=f169e89]: Flech Paper Products started as a small specialty board converting operation in Paterson, New Jersey, a city with deep roots in American manufacturing.
+                          - paragraph [ref=f169e90]: "Over 25 years, we grew by doing one thing well: manufacturing precision board products that work exactly as specified, every single time."
+                          - paragraph [ref=f169e91]: Today, we serve sign & display manufacturers, wholesale framers, POP designers, and commercial printers across the United States with four core product lines.
+                        - generic [ref=f169e92]:
+                          - img "Stacked boards" [ref=f169e94]
+                          - img "Matboard" [ref=f169e96]
+                      - generic [ref=f169e98]:
+                        - paragraph [ref=f169e99]: What Drives Us
+                        - generic [ref=f169e100]:
+                          - generic [ref=f169e102]:
+                            - img [ref=f169e104]
+                            - generic [ref=f169e110]:
+                              - heading "Precision First" [level=3] [ref=f169e111]
+                              - paragraph [ref=f169e112]: Every measurement, cut, and fold line held to tolerances that matter.
+                          - generic [ref=f169e114]:
+                            - img [ref=f169e116]
+                            - generic [ref=f169e118]:
+                              - heading "Quality Without Shortcuts" [level=3] [ref=f169e119]
+                              - paragraph [ref=f169e120]: Right substrate for each application, not the cheapest one.
+                          - generic [ref=f169e122]:
+                            - img [ref=f169e124]
+                            - generic [ref=f169e129]:
+                              - heading "Partnership, Not Transactions" [level=3] [ref=f169e130]
+                              - paragraph [ref=f169e131]: We learn our clients' businesses to anticipate their needs.
+                          - generic [ref=f169e133]:
+                            - img [ref=f169e135]
+                            - generic [ref=f169e138]:
+                              - heading "Responsible Manufacturing" [level=3] [ref=f169e139]
+                              - paragraph [ref=f169e140]: FSC certified, responsible sourcing, acid-free archival products.
+                    - generic [ref=f169e142]:
+                      - generic [ref=f169e144]:
+                        - paragraph [ref=f169e145]: Milestones
+                        - heading "Our Journey" [level=2] [ref=f169e146]
+                      - generic [ref=f169e147]:
+                        - generic [ref=f169e153]:
+                          - text: "1999"
+                          - heading "Founded in Paterson, NJ" [level=3] [ref=f169e154]
+                          - paragraph [ref=f169e155]: Flech opens as a specialty board converter, serving local framing and sign shops.
+                        - generic [ref=f169e161]:
+                          - text: "2004"
+                          - heading "CNC Equipment Investment" [level=3] [ref=f169e162]
+                          - paragraph [ref=f169e163]: Major upgrade to CNC die-cutting and scoring, precision tolerances and high-volume capability.
+                        - generic [ref=f169e169]:
+                          - text: "2010"
+                          - heading "National Distribution" [level=3] [ref=f169e170]
+                          - paragraph [ref=f169e171]: Expanded to serve sign & display, framing, and packaging clients across the United States.
+                        - generic [ref=f169e177]:
+                          - text: "2015"
+                          - heading "Custom Converting Division" [level=3] [ref=f169e178]
+                          - paragraph [ref=f169e179]: Dedicated custom converting, laminating, die-cutting, and specialty finishing under one roof.
+                        - generic [ref=f169e185]:
+                          - text: "2020"
+                          - heading "Archival Product Line" [level=3] [ref=f169e186]
+                          - paragraph [ref=f169e187]: Acid-free, archival-quality matboards and framing backs for museum-grade preservation.
+                        - generic [ref=f169e192]:
+                          - text: Today
+                          - heading "25+ Years of Precision" [level=3] [ref=f169e193]
+                          - paragraph [ref=f169e194]: Four core product lines, 600+ B2B clients, same commitment to quality that started it all.
+                    - generic [ref=f169e197]:
+                      - generic:
+                        - generic:
+                          - img "Flech Paper Products"
+                      - generic [ref=f169e198]:
+                        - paragraph [ref=f169e199]: A Note From Our Founder
+                        - heading "Joseph Kandel" [level=2] [ref=f169e200]
+                        - blockquote [ref=f169e201]: "“After over 40 years in the paperboard industry, I decided to start my own company that could offer customers the benefits of BOTH: the competitive pricing of larger suppliers with the unbeatable service of smaller ones.”"
+                        - paragraph [ref=f169e202]: Many customers have responded to this philosophy by making Flech a trusted partner, some even call us their "secret weapon." We would welcome the chance to prove to you that Flech could be your secret weapon too.
+                    - generic [ref=f169e207]:
+                      - heading "Let's Build Something Together" [level=2] [ref=f169e208]
+                      - paragraph [ref=f169e209]: 25 years of precision. 600+ satisfied B2B clients. Your project is next.
+                      - link "Request a Quote" [ref=f169e210] [cursor=pointer]:
+                        - /url: /contact
+                        - text: Request a Quote
+                        - img [ref=f169e211]
+                - contentinfo [ref=f169e213]:
+                  - generic [ref=f169e215]:
+                    - generic [ref=f169e216]:
+                      - img "Flech Paper Products" [ref=f169e218]
+                      - paragraph [ref=f169e219]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                      - generic [ref=f169e220]:
+                        - link "(973) 357-8111" [ref=f169e221] [cursor=pointer]:
+                          - /url: tel:+19733578111
+                          - img [ref=f169e222]
+                          - text: (973) 357-8111
+                        - link "info@flech.com" [ref=f169e224] [cursor=pointer]:
+                          - /url: mailto:info@flech.com
+                          - img [ref=f169e225]
+                          - text: info@flech.com
+                        - generic [ref=f169e228]:
+                          - img [ref=f169e229]
+                          - generic [ref=f169e232]:
+                            - text: Paterson, NJ
+                            - text: United States
+                    - generic [ref=f169e233]:
+                      - heading "Products" [level=3] [ref=f169e234]
+                      - list [ref=f169e235]:
+                        - listitem [ref=f169e236]:
+                          - link "Easel Backs" [ref=f169e237] [cursor=pointer]:
+                            - /url: /products/easel-backs
+                            - text: Easel Backs
+                            - img [ref=f169e238]
+                        - listitem [ref=f169e241]:
+                          - link "Fold Lines & Dielines" [ref=f169e242] [cursor=pointer]:
+                            - /url: /products/fold-lines
+                            - text: Fold Lines & Dielines
+                            - img [ref=f169e243]
+                        - listitem [ref=f169e246]:
+                          - link "Contract Framing Backs" [ref=f169e247] [cursor=pointer]:
+                            - /url: /products/framing-backs
+                            - text: Contract Framing Backs
+                            - img [ref=f169e248]
+                        - listitem [ref=f169e251]:
+                          - link "Matboards" [ref=f169e252] [cursor=pointer]:
+                            - /url: /products/matboards
+                            - text: Matboards
+                            - img [ref=f169e253]
+                    - generic [ref=f169e256]:
+                      - heading "Company" [level=3] [ref=f169e257]
+                      - list [ref=f169e258]:
+                        - listitem [ref=f169e259]:
+                          - link "About Flech" [ref=f169e260] [cursor=pointer]:
+                            - /url: /about
+                            - text: About Flech
+                            - img [ref=f169e261]
+                        - listitem [ref=f169e264]:
+                          - link "Industries We Serve" [ref=f169e265] [cursor=pointer]:
+                            - /url: /industries
+                            - text: Industries We Serve
+                            - img [ref=f169e266]
+                        - listitem [ref=f169e269]:
+                          - link "Contact & RFQ" [ref=f169e270] [cursor=pointer]:
+                            - /url: /contact
+                            - text: Contact & RFQ
+                            - img [ref=f169e271]
+                      - heading "Industries" [level=3] [ref=f169e274]
+                      - list [ref=f169e275]:
+                        - listitem [ref=f169e276]:
+                          - link "Sign & Display" [ref=f169e277] [cursor=pointer]:
+                            - /url: /industries#signage
+                        - listitem [ref=f169e278]:
+                          - link "Wholesale Framing" [ref=f169e279] [cursor=pointer]:
+                            - /url: /industries#framing
+                        - listitem [ref=f169e280]:
+                          - link "Packaging & POP" [ref=f169e281] [cursor=pointer]:
+                            - /url: /industries#packaging
+                        - listitem [ref=f169e282]:
+                          - link "Interior Design" [ref=f169e283] [cursor=pointer]:
+                            - /url: /industries#interior
+                    - generic [ref=f169e284]:
+                      - heading "Get Started" [level=3] [ref=f169e285]
+                      - paragraph [ref=f169e286]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                      - link "Get a Quote" [ref=f169e287] [cursor=pointer]:
+                        - /url: /contact
+                        - text: Get a Quote
+                        - img [ref=f169e288]
+                      - generic [ref=f169e291]:
+                        - paragraph [ref=f169e292]: Certifications
+                        - paragraph [ref=f169e293]:
+                          - text: ISO 9001 Certified
+                          - text: FSC Chain of Custody
+                          - text: Acid-Free & Archival
+                  - generic [ref=f169e295]:
+                    - paragraph [ref=f169e296]: © 2026 Flech Paper Products. All rights reserved.
+                    - generic [ref=f169e297]:
+                      - link "Privacy Policy" [ref=f169e298] [cursor=pointer]:
+                        - /url: /privacy
+                      - link "Terms of Service" [ref=f169e299] [cursor=pointer]:
+                        - /url: /terms
+                - button "Open Next.js Dev Tools" [ref=f169e305] [cursor=pointer]:
+                  - img [ref=f169e306]
+                - alert [ref=f169e309]
+  - button "Open Next.js Dev Tools" [ref=e122] [cursor=pointer]:
+    - img [ref=e123]
+  - alert [ref=e126]

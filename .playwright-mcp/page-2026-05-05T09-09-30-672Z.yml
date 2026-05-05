@@ -1,0 +1,107 @@
+- generic [active] [ref=e1]:
+  - navigation "Main navigation" [ref=e2]:
+    - generic [ref=e3]:
+      - link "Flech Paper Products" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Flech Paper Products" [ref=e5]
+      - button "Open menu" [ref=e7] [cursor=pointer]:
+        - img [ref=e8]
+  - main [ref=e9]:
+    - paragraph [ref=e14]: Loading...
+  - contentinfo [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18]:
+        - img "Flech Paper Products" [ref=e20]
+        - paragraph [ref=e21]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+        - generic [ref=e22]:
+          - link "(973) 357-8111" [ref=e23] [cursor=pointer]:
+            - /url: tel:+19733578111
+            - img [ref=e24]
+            - text: (973) 357-8111
+          - link "info@flech.com" [ref=e26] [cursor=pointer]:
+            - /url: mailto:info@flech.com
+            - img [ref=e27]
+            - text: info@flech.com
+          - generic [ref=e30]:
+            - img [ref=e31]
+            - generic [ref=e34]:
+              - text: Paterson, NJ
+              - text: United States
+      - generic [ref=e35]:
+        - heading "Products" [level=3] [ref=e36]
+        - list [ref=e37]:
+          - listitem [ref=e38]:
+            - link "Easel Backs" [ref=e39] [cursor=pointer]:
+              - /url: /products/easel-backs
+              - text: Easel Backs
+              - img [ref=e40]
+          - listitem [ref=e43]:
+            - link "Fold Lines & Dielines" [ref=e44] [cursor=pointer]:
+              - /url: /products/fold-lines
+              - text: Fold Lines & Dielines
+              - img [ref=e45]
+          - listitem [ref=e48]:
+            - link "Contract Framing Backs" [ref=e49] [cursor=pointer]:
+              - /url: /products/framing-backs
+              - text: Contract Framing Backs
+              - img [ref=e50]
+          - listitem [ref=e53]:
+            - link "Matboards" [ref=e54] [cursor=pointer]:
+              - /url: /products/matboards
+              - text: Matboards
+              - img [ref=e55]
+      - generic [ref=e58]:
+        - heading "Company" [level=3] [ref=e59]
+        - list [ref=e60]:
+          - listitem [ref=e61]:
+            - link "About Flech" [ref=e62] [cursor=pointer]:
+              - /url: /about
+              - text: About Flech
+              - img [ref=e63]
+          - listitem [ref=e66]:
+            - link "Industries We Serve" [ref=e67] [cursor=pointer]:
+              - /url: /industries
+              - text: Industries We Serve
+              - img [ref=e68]
+          - listitem [ref=e71]:
+            - link "Contact & RFQ" [ref=e72] [cursor=pointer]:
+              - /url: /contact
+              - text: Contact & RFQ
+              - img [ref=e73]
+        - heading "Industries" [level=3] [ref=e76]
+        - list [ref=e77]:
+          - listitem [ref=e78]:
+            - link "Sign & Display" [ref=e79] [cursor=pointer]:
+              - /url: /industries#signage
+          - listitem [ref=e80]:
+            - link "Wholesale Framing" [ref=e81] [cursor=pointer]:
+              - /url: /industries#framing
+          - listitem [ref=e82]:
+            - link "Packaging & POP" [ref=e83] [cursor=pointer]:
+              - /url: /industries#packaging
+          - listitem [ref=e84]:
+            - link "Interior Design" [ref=e85] [cursor=pointer]:
+              - /url: /industries#interior
+      - generic [ref=e86]:
+        - heading "Get Started" [level=3] [ref=e87]
+        - paragraph [ref=e88]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+        - link "Get a Quote" [ref=e89] [cursor=pointer]:
+          - /url: /contact
+          - text: Get a Quote
+          - img [ref=e90]
+        - generic [ref=e93]:
+          - paragraph [ref=e94]: Certifications
+          - paragraph [ref=e95]:
+            - text: ISO 9001 Certified
+            - text: FSC Chain of Custody
+            - text: Acid-Free & Archival
+    - generic [ref=e97]:
+      - paragraph [ref=e98]: © 2026 Flech Paper Products. All rights reserved.
+      - generic [ref=e99]:
+        - link "Privacy Policy" [ref=e100] [cursor=pointer]:
+          - /url: /privacy
+        - link "Terms of Service" [ref=e101] [cursor=pointer]:
+          - /url: /terms
+  - button "Open Next.js Dev Tools" [ref=e107] [cursor=pointer]:
+    - img [ref=e108]
+  - alert [ref=e111]
