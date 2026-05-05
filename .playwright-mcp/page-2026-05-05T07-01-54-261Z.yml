@@ -1,0 +1,1019 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - paragraph [ref=e4]: Precision Board Manufacturing - Paterson, NJ since 1999
+    - generic [ref=e5]:
+      - link "(973) 357-8111" [ref=e6] [cursor=pointer]:
+        - /url: tel:+19733578111
+        - img [ref=e7]
+        - text: (973) 357-8111
+      - link "info@flech.com" [ref=e9] [cursor=pointer]:
+        - /url: mailto:info@flech.com
+        - img [ref=e10]
+        - text: info@flech.com
+  - navigation "Main navigation" [ref=e13]:
+    - generic [ref=e14]:
+      - link "Flech Paper Products" [ref=e15] [cursor=pointer]:
+        - /url: /
+        - img "Flech Paper Products" [ref=e16]
+      - generic [ref=e17]:
+        - link "Home" [ref=e18] [cursor=pointer]:
+          - /url: /
+        - button "Products" [ref=e20] [cursor=pointer]:
+          - text: Products
+          - img [ref=e21]
+        - link "About" [ref=e23] [cursor=pointer]:
+          - /url: /about
+        - link "Industries" [ref=e24] [cursor=pointer]:
+          - /url: /industries
+        - link "Contact" [ref=e25] [cursor=pointer]:
+          - /url: /contact
+      - link "Request a Quote" [ref=e27] [cursor=pointer]:
+        - /url: /contact
+  - main [ref=e28]:
+    - generic [ref=e29]:
+      - generic [ref=e30]:
+        - iframe [ref=e31]:
+          - generic [active] [ref=f77e1]:
+            - img "Media Poster" [ref=f77e4]
+            - region "video player" [ref=f77e5]:
+              - generic:
+                - img "Poster image"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Speed
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                    - generic: Quality
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                    - generic: Captions
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+            - alert [ref=f77e7]
+        - generic [ref=e35]:
+          - navigation "Breadcrumb" [ref=e36]:
+            - link "Home" [ref=e37] [cursor=pointer]:
+              - /url: /
+            - img [ref=e38]
+            - link "Products" [ref=e40] [cursor=pointer]:
+              - /url: /
+            - img [ref=e41]
+            - generic [ref=e43]: Matboards
+          - generic [ref=e44]:
+            - generic [ref=e45]: Decorative & Archival
+            - heading "Matboards in 75+ Colors" [level=1] [ref=e47]:
+              - text: Matboards
+              - text: in 75+ Colors
+            - paragraph [ref=e48]: A full line of matboard in sheets and precut to size. Available in an array of vibrant colors and core boards to fulfill all of your framing needs.
+            - generic [ref=e49]:
+              - link "Get a Quote" [ref=e50] [cursor=pointer]:
+                - /url: /contact
+                - text: Get a Quote
+                - img [ref=e51]
+              - link "View Colors" [ref=e53] [cursor=pointer]:
+                - /url: "#color-line"
+                - img [ref=e54]
+                - text: View Colors
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e64]:
+            - img "Stacks of cut mat board pieces" [ref=e65]
+            - generic [ref=e67]:
+              - generic [ref=e68]:
+                - img [ref=e69]
+                - text: 75+ Colors Available
+              - generic [ref=e75]:
+                - img [ref=e76]
+                - text: Acid-Free Archival
+          - generic [ref=e79]:
+            - paragraph [ref=e80]: Matboard & Precuts
+            - heading "Where Art Meets Craft" [level=2] [ref=e81]
+            - paragraph [ref=e82]: We proudly offer a full line of matboard in sheets and precut to size in an array of vibrant colors and core boards to fulfill all of your framing needs. With a selection of over 75 colors on cream, white and black core board, our top-quality mats meet all industry standards and provide limitless possibilities to beautifully accent any frame, photograph or framed art.
+            - paragraph [ref=e83]: Whatever your trade, we have the ability to design and cut mats for your needs.
+            - generic [ref=e84]:
+              - generic [ref=e85]:
+                - img [ref=e86]
+                - text: Acid-free archival
+              - generic [ref=e88]:
+                - img [ref=e89]
+                - text: 45-degree bevel cut
+              - generic [ref=e91]:
+                - img [ref=e92]
+                - text: White, cream & black core
+              - generic [ref=e94]:
+                - img [ref=e95]
+                - text: 4-ply and 7-ply
+              - generic [ref=e97]:
+                - img [ref=e98]
+                - text: Custom window cuts
+              - generic [ref=e100]:
+                - img [ref=e101]
+                - text: Volume pricing
+        - generic [ref=e104]:
+          - paragraph [ref=e105]: Capabilities
+          - heading "Built for Every Framing Need" [level=2] [ref=e106]
+        - generic [ref=e107]:
+          - generic [ref=e110]:
+            - img [ref=e112]
+            - heading "75+ Color Selection" [level=3] [ref=e118]
+            - paragraph [ref=e119]: Selection of over 75 colors on cream, white and black core pulp board.
+          - generic [ref=e122]:
+            - img [ref=e124]
+            - heading "7-Ply Extra Thick" [level=3] [ref=e128]
+            - paragraph [ref=e129]: Unique 7-ply Snowstorm (white), Blackout (black) and Heavy Cream (cream). The new standard in extra thick matboard.
+          - generic [ref=e132]:
+            - img [ref=e134]
+            - heading "Archival Quality" [level=3] [ref=e136]
+            - paragraph [ref=e137]: Calcium carbonate buffered, pH neutral. High fade and bleed resistant facing papers.
+          - generic [ref=e140]:
+            - img [ref=e142]
+            - heading "Multiple Formats" [level=3] [ref=e146]
+            - paragraph [ref=e147]: Available 4 and 7 ply, 32x40 and 40x60 carton packed or untrimmed bulk on pallets.
+          - generic [ref=e150]:
+            - img [ref=e152]
+            - heading "Precision Cutting" [level=3] [ref=e158]
+            - paragraph [ref=e159]: Bevel and straight cut mats produced on ten cutters (7 CNCs, 3 die presses).
+          - generic [ref=e162]:
+            - img [ref=e164]
+            - heading "Intricate Designs" [level=3] [ref=e167]
+            - paragraph [ref=e168]: V-grooves, channels and other techniques in any shape imaginable.
+          - generic [ref=e171]:
+            - img [ref=e173]
+            - heading "Double & Triple Glued" [level=3] [ref=e176]
+            - paragraph [ref=e177]: Double and triple glued mats for layered, dimensional presentation.
+      - generic [ref=e179]:
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - paragraph [ref=e182]: Color Catalog
+            - heading "Rainbow Plus™ Color Line" [level=2] [ref=e183]
+          - paragraph [ref=e184]: All the basics and then some. An array of vibrant, timeless colors available in stock. Color matching is available.
+        - heading "Primary Colors" [level=3] [ref=e186]
+        - generic [ref=e187]:
+          - complementary [ref=e188]:
+            - generic [ref=e189]:
+              - heading "Filter colors" [level=3] [ref=e191]
+              - generic [ref=e192]:
+                - img [ref=e193]
+                - textbox "Search by name or code…" [ref=e196]
+              - generic [ref=e197]:
+                - paragraph [ref=e198]: Sheet Size
+                - generic [ref=e200] [cursor=pointer]:
+                  - checkbox "32x40" [ref=e201]
+                  - generic [ref=e202]: 32x40
+              - generic [ref=e203]:
+                - paragraph [ref=e204]: Ply / Caliper
+                - generic [ref=e206] [cursor=pointer]:
+                  - checkbox "4-ply White Core" [ref=e207]
+                  - generic [ref=e208]: 4-ply White Core
+              - paragraph [ref=e209]: Showing 35 of 35
+          - generic [ref=e211]:
+            - generic [ref=e213]:
+              - generic "Tablet White" [ref=e214]
+              - generic [ref=e215]:
+                - generic [ref=e216]:
+                  - heading "Tablet White" [level=4] [ref=e217]
+                  - generic [ref=e218]: "#101"
+                - generic [ref=e219]:
+                  - generic [ref=e220]: 32x40
+                  - generic [ref=e221]: 4-ply White Core
+                - paragraph [ref=e222]: Bright neutral white. Our most-ordered shade for gallery framing.
+            - generic [ref=e224]:
+              - generic "Snow" [ref=e225]
+              - generic [ref=e226]:
+                - generic [ref=e227]:
+                  - heading "Snow" [level=4] [ref=e228]
+                  - generic [ref=e229]: "#108"
+                - generic [ref=e230]:
+                  - generic [ref=e231]: 32x40
+                  - generic [ref=e232]: 4-ply White Core
+                - paragraph [ref=e233]: Cool, clean white with a faint blue undertone.
+            - generic [ref=e235]:
+              - generic "Woven White" [ref=e236]
+              - generic [ref=e237]:
+                - generic [ref=e238]:
+                  - heading "Woven White" [level=4] [ref=e239]
+                  - generic [ref=e240]: "#106"
+                - generic [ref=e241]:
+                  - generic [ref=e242]: 32x40
+                  - generic [ref=e243]: 4-ply White Core
+                - paragraph [ref=e244]: Soft white with a subtle textured surface.
+            - generic [ref=e246]:
+              - generic "Buttermilk" [ref=e247]
+              - generic [ref=e248]:
+                - generic [ref=e249]:
+                  - heading "Buttermilk" [level=4] [ref=e250]
+                  - generic [ref=e251]: "#220"
+                - generic [ref=e252]:
+                  - generic [ref=e253]: 32x40
+                  - generic [ref=e254]: 4-ply White Core
+                - paragraph [ref=e255]: Warm cream that flatters photographs and prints.
+            - generic [ref=e257]:
+              - generic "C-Linen" [ref=e258]
+              - generic [ref=e259]:
+                - generic [ref=e260]:
+                  - heading "C-Linen" [level=4] [ref=e261]
+                  - generic [ref=e262]: "#102"
+                - generic [ref=e263]:
+                  - generic [ref=e264]: 32x40
+                  - generic [ref=e265]: 4-ply White Core
+                - paragraph [ref=e266]: Linen-textured natural shade.
+            - generic [ref=e268]:
+              - generic "Buff" [ref=e269]
+              - generic [ref=e270]:
+                - generic [ref=e271]:
+                  - heading "Buff" [level=4] [ref=e272]
+                  - generic [ref=e273]: "#203"
+                - generic [ref=e274]:
+                  - generic [ref=e275]: 32x40
+                  - generic [ref=e276]: 4-ply White Core
+                - paragraph [ref=e277]: Soft, neutral beige.
+            - generic [ref=e279]:
+              - generic "Straw" [ref=e280]
+              - generic [ref=e281]:
+                - generic [ref=e282]:
+                  - heading "Straw" [level=4] [ref=e283]
+                  - generic [ref=e284]: "#201"
+                - generic [ref=e285]:
+                  - generic [ref=e286]: 32x40
+                  - generic [ref=e287]: 4-ply White Core
+                - paragraph [ref=e288]: Warm, earthy yellow tone.
+            - generic [ref=e290]:
+              - generic "Pewter" [ref=e291]
+              - generic [ref=e292]:
+                - generic [ref=e293]:
+                  - heading "Pewter" [level=4] [ref=e294]
+                  - generic [ref=e295]: "#211"
+                - generic [ref=e296]:
+                  - generic [ref=e297]: 32x40
+                  - generic [ref=e298]: 4-ply White Core
+                - paragraph [ref=e299]: Cool mid-grey for contemporary work.
+            - generic [ref=e301]:
+              - generic "Sage" [ref=e302]
+              - generic [ref=e303]:
+                - generic [ref=e304]:
+                  - heading "Sage" [level=4] [ref=e305]
+                  - generic [ref=e306]: "#401"
+                - generic [ref=e307]:
+                  - generic [ref=e308]: 32x40
+                  - generic [ref=e309]: 4-ply White Core
+                - paragraph [ref=e310]: Muted herbal green.
+            - generic [ref=e312]:
+              - generic "Grey Flannel" [ref=e313]
+              - generic [ref=e314]:
+                - generic [ref=e315]:
+                  - heading "Grey Flannel" [level=4] [ref=e316]
+                  - generic [ref=e317]: "#210"
+                - generic [ref=e318]:
+                  - generic [ref=e319]: 32x40
+                  - generic [ref=e320]: 4-ply White Core
+                - paragraph [ref=e321]: Soft warm grey with a flannel finish.
+            - generic [ref=e323]:
+              - generic "Warm Grey" [ref=e324]
+              - generic [ref=e325]:
+                - generic [ref=e326]:
+                  - heading "Warm Grey" [level=4] [ref=e327]
+                  - generic [ref=e328]: "#212"
+                - generic [ref=e329]:
+                  - generic [ref=e330]: 32x40
+                  - generic [ref=e331]: 4-ply White Core
+                - paragraph [ref=e332]: Neutral warm grey.
+            - generic [ref=e334]:
+              - generic "Biscuit" [ref=e335]
+              - generic [ref=e336]:
+                - generic [ref=e337]:
+                  - heading "Biscuit" [level=4] [ref=e338]
+                  - generic [ref=e339]: "#213"
+                - generic [ref=e340]:
+                  - generic [ref=e341]: 32x40
+                  - generic [ref=e342]: 4-ply White Core
+                - paragraph [ref=e343]: Toasted neutral with subtle warmth.
+            - generic [ref=e345]:
+              - generic "Sienna" [ref=e346]
+              - generic [ref=e347]:
+                - generic [ref=e348]:
+                  - heading "Sienna" [level=4] [ref=e349]
+                  - generic [ref=e350]: "#501"
+                - generic [ref=e351]:
+                  - generic [ref=e352]: 32x40
+                  - generic [ref=e353]: 4-ply White Core
+                - paragraph [ref=e354]: Earthy reddish brown.
+            - generic [ref=e356]:
+              - generic "Crimson" [ref=e357]
+              - generic [ref=e358]:
+                - generic [ref=e359]:
+                  - heading "Crimson" [level=4] [ref=e360]
+                  - generic [ref=e361]: "#601"
+                - generic [ref=e362]:
+                  - generic [ref=e363]: 32x40
+                  - generic [ref=e364]: 4-ply White Core
+                - paragraph [ref=e365]: Deep, saturated red.
+            - generic [ref=e367]:
+              - generic "Maroon" [ref=e368]
+              - generic [ref=e369]:
+                - generic [ref=e370]:
+                  - heading "Maroon" [level=4] [ref=e371]
+                  - generic [ref=e372]: "#602"
+                - generic [ref=e373]:
+                  - generic [ref=e374]: 32x40
+                  - generic [ref=e375]: 4-ply White Core
+                - paragraph [ref=e376]: Rich oxblood red.
+            - generic [ref=e378]:
+              - generic "Tangerine" [ref=e379]
+              - generic [ref=e380]:
+                - generic [ref=e381]:
+                  - heading "Tangerine" [level=4] [ref=e382]
+                  - generic [ref=e383]: "#561"
+                - generic [ref=e384]:
+                  - generic [ref=e385]: 32x40
+                  - generic [ref=e386]: 4-ply White Core
+                - paragraph [ref=e387]: Vibrant orange.
+            - generic [ref=e389]:
+              - generic "Lemon" [ref=e390]
+              - generic [ref=e391]:
+                - generic [ref=e392]:
+                  - heading "Lemon" [level=4] [ref=e393]
+                  - generic [ref=e394]: "#306"
+                - generic [ref=e395]:
+                  - generic [ref=e396]: 32x40
+                  - generic [ref=e397]: 4-ply White Core
+                - paragraph [ref=e398]: Bright sunny yellow.
+            - generic [ref=e400]:
+              - generic "Saffron" [ref=e401]
+              - generic [ref=e402]:
+                - generic [ref=e403]:
+                  - heading "Saffron" [level=4] [ref=e404]
+                  - generic [ref=e405]: "#309"
+                - generic [ref=e406]:
+                  - generic [ref=e407]: 32x40
+                  - generic [ref=e408]: 4-ply White Core
+                - paragraph [ref=e409]: Warm golden yellow.
+            - generic [ref=e411]:
+              - generic "Olive" [ref=e412]
+              - generic [ref=e413]:
+                - generic [ref=e414]:
+                  - heading "Olive" [level=4] [ref=e415]
+                  - generic [ref=e416]: "#404"
+                - generic [ref=e417]:
+                  - generic [ref=e418]: 32x40
+                  - generic [ref=e419]: 4-ply White Core
+                - paragraph [ref=e420]: Earthy olive green.
+            - generic [ref=e422]:
+              - generic "Evergreen" [ref=e423]
+              - generic [ref=e424]:
+                - generic [ref=e425]:
+                  - heading "Evergreen" [level=4] [ref=e426]
+                  - generic [ref=e427]: "#405"
+                - generic [ref=e428]:
+                  - generic [ref=e429]: 32x40
+                  - generic [ref=e430]: 4-ply White Core
+                - paragraph [ref=e431]: Deep forest green.
+            - generic [ref=e433]:
+              - generic "Mocha" [ref=e434]
+              - generic [ref=e435]:
+                - generic [ref=e436]:
+                  - heading "Mocha" [level=4] [ref=e437]
+                  - generic [ref=e438]: "#502"
+                - generic [ref=e439]:
+                  - generic [ref=e440]: 32x40
+                  - generic [ref=e441]: 4-ply White Core
+                - paragraph [ref=e442]: Warm brown with coffee tones.
+            - generic [ref=e444]:
+              - generic "Espresso" [ref=e445]
+              - generic [ref=e446]:
+                - generic [ref=e447]:
+                  - heading "Espresso" [level=4] [ref=e448]
+                  - generic [ref=e449]: "#505"
+                - generic [ref=e450]:
+                  - generic [ref=e451]: 32x40
+                  - generic [ref=e452]: 4-ply White Core
+                - paragraph [ref=e453]: Dark roast brown.
+            - generic [ref=e455]:
+              - generic "Light Blue" [ref=e456]
+              - generic [ref=e457]:
+                - generic [ref=e458]:
+                  - heading "Light Blue" [level=4] [ref=e459]
+                  - generic [ref=e460]: "#621"
+                - generic [ref=e461]:
+                  - generic [ref=e462]: 32x40
+                  - generic [ref=e463]: 4-ply White Core
+                - paragraph [ref=e464]: Soft sky blue.
+            - generic [ref=e466]:
+              - generic "Icy Blue" [ref=e467]
+              - generic [ref=e468]:
+                - generic [ref=e469]:
+                  - heading "Icy Blue" [level=4] [ref=e470]
+                  - generic [ref=e471]: "#625"
+                - generic [ref=e472]:
+                  - generic [ref=e473]: 32x40
+                  - generic [ref=e474]: 4-ply White Core
+                - paragraph [ref=e475]: Cool, crisp blue.
+            - generic [ref=e477]:
+              - generic "Cobalt" [ref=e478]
+              - generic [ref=e479]:
+                - generic [ref=e480]:
+                  - heading "Cobalt" [level=4] [ref=e481]
+                  - generic [ref=e482]: "#629"
+                - generic [ref=e483]:
+                  - generic [ref=e484]: 32x40
+                  - generic [ref=e485]: 4-ply White Core
+                - paragraph [ref=e486]: Saturated mid-blue.
+            - generic [ref=e488]:
+              - generic "True Blue" [ref=e489]
+              - generic [ref=e490]:
+                - generic [ref=e491]:
+                  - heading "True Blue" [level=4] [ref=e492]
+                  - generic [ref=e493]: "#624"
+                - generic [ref=e494]:
+                  - generic [ref=e495]: 32x40
+                  - generic [ref=e496]: 4-ply White Core
+                - paragraph [ref=e497]: Classic primary blue.
+            - generic [ref=e499]:
+              - generic "Liberty" [ref=e500]
+              - generic [ref=e501]:
+                - generic [ref=e502]:
+                  - heading "Liberty" [level=4] [ref=e503]
+                  - generic [ref=e504]: "#628"
+                - generic [ref=e505]:
+                  - generic [ref=e506]: 32x40
+                  - generic [ref=e507]: 4-ply White Core
+                - paragraph [ref=e508]: Patriotic deep blue.
+            - generic [ref=e510]:
+              - generic "Blueberry" [ref=e511]
+              - generic [ref=e512]:
+                - generic [ref=e513]:
+                  - heading "Blueberry" [level=4] [ref=e514]
+                  - generic [ref=e515]: "#627"
+                - generic [ref=e516]:
+                  - generic [ref=e517]: 32x40
+                  - generic [ref=e518]: 4-ply White Core
+                - paragraph [ref=e519]: Rich blueberry purple-blue.
+            - generic [ref=e521]:
+              - generic "Eclipse" [ref=e522]
+              - generic [ref=e523]:
+                - generic [ref=e524]:
+                  - heading "Eclipse" [level=4] [ref=e525]
+                  - generic [ref=e526]: "#626"
+                - generic [ref=e527]:
+                  - generic [ref=e528]: 32x40
+                  - generic [ref=e529]: 4-ply White Core
+                - paragraph [ref=e530]: Deep midnight blue.
+            - generic [ref=e532]:
+              - generic "Purple" [ref=e533]
+              - generic [ref=e534]:
+                - generic [ref=e535]:
+                  - heading "Purple" [level=4] [ref=e536]
+                  - generic [ref=e537]: "#650"
+                - generic [ref=e538]:
+                  - generic [ref=e539]: 32x40
+                  - generic [ref=e540]: 4-ply White Core
+                - paragraph [ref=e541]: Royal violet.
+            - generic [ref=e543]:
+              - generic "Blackest Black" [ref=e544]
+              - generic [ref=e545]:
+                - generic [ref=e546]:
+                  - heading "Blackest Black" [level=4] [ref=e547]
+                  - generic [ref=e548]: "#701"
+                - generic [ref=e549]:
+                  - generic [ref=e550]: 32x40
+                  - generic [ref=e551]: 4-ply White Core
+                - paragraph [ref=e552]: Pure, rich black.
+            - generic [ref=e554]:
+              - generic "Midnight" [ref=e555]
+              - generic [ref=e556]:
+                - generic [ref=e557]:
+                  - heading "Midnight" [level=4] [ref=e558]
+                  - generic [ref=e559]: "#702"
+                - generic [ref=e560]:
+                  - generic [ref=e561]: 32x40
+                  - generic [ref=e562]: 4-ply White Core
+                - paragraph [ref=e563]: Soft black with a hint of blue.
+            - generic [ref=e565]:
+              - generic "Storm" [ref=e566]
+              - generic [ref=e567]:
+                - generic [ref=e568]:
+                  - heading "Storm" [level=4] [ref=e569]
+                  - generic [ref=e570]: "#710"
+                - generic [ref=e571]:
+                  - generic [ref=e572]: 32x40
+                  - generic [ref=e573]: 4-ply White Core
+                - paragraph [ref=e574]: Stormcloud grey-black.
+            - generic [ref=e576]:
+              - generic "Charcoal" [ref=e577]
+              - generic [ref=e578]:
+                - generic [ref=e579]:
+                  - heading "Charcoal" [level=4] [ref=e580]
+                  - generic [ref=e581]: "#711"
+                - generic [ref=e582]:
+                  - generic [ref=e583]: 32x40
+                  - generic [ref=e584]: 4-ply White Core
+                - paragraph [ref=e585]: Warm charcoal grey.
+            - generic [ref=e587]:
+              - generic "Graphite" [ref=e588]
+              - generic [ref=e589]:
+                - generic [ref=e590]:
+                  - heading "Graphite" [level=4] [ref=e591]
+                  - generic [ref=e592]: "#712"
+                - generic [ref=e593]:
+                  - generic [ref=e594]: 32x40
+                  - generic [ref=e595]: 4-ply White Core
+                - paragraph [ref=e596]: Cool dark grey.
+      - generic [ref=e598]:
+        - generic [ref=e599]:
+          - heading "Simply Suede & Premium Colors" [level=3] [ref=e600]
+          - paragraph [ref=e601]: A premium line of suede and specialty finishes for projects that demand a tactile, elevated presentation.
+        - generic [ref=e602]:
+          - complementary [ref=e603]:
+            - generic [ref=e604]:
+              - heading "Filter colors" [level=3] [ref=e606]
+              - generic [ref=e607]:
+                - img [ref=e608]
+                - textbox "Search by name or code…" [ref=e611]
+              - generic [ref=e612]:
+                - paragraph [ref=e613]: Sheet Size
+                - generic [ref=e615] [cursor=pointer]:
+                  - checkbox "32x40" [ref=e616]
+                  - generic [ref=e617]: 32x40
+              - generic [ref=e618]:
+                - paragraph [ref=e619]: Ply / Caliper
+                - generic [ref=e620]:
+                  - generic [ref=e621] [cursor=pointer]:
+                    - checkbox "4-ply Specialty" [ref=e622]
+                    - generic [ref=e623]: 4-ply Specialty
+                  - generic [ref=e624] [cursor=pointer]:
+                    - checkbox "4-ply Suede" [ref=e625]
+                    - generic [ref=e626]: 4-ply Suede
+              - paragraph [ref=e627]: Showing 18 of 18
+          - generic [ref=e629]:
+            - generic [ref=e631]:
+              - generic "Snowflake" [ref=e632]
+              - generic [ref=e633]:
+                - generic [ref=e634]:
+                  - heading "Snowflake" [level=4] [ref=e635]
+                  - generic [ref=e636]: "#S10"
+                - generic [ref=e637]:
+                  - generic [ref=e638]: 32x40
+                  - generic [ref=e639]: 4-ply Suede
+                - paragraph [ref=e640]: Clean snow-white suede with a soft tactile surface.
+            - generic [ref=e642]:
+              - generic "Coconut" [ref=e643]
+              - generic [ref=e644]:
+                - generic [ref=e645]:
+                  - heading "Coconut" [level=4] [ref=e646]
+                  - generic [ref=e647]: "#S12"
+                - generic [ref=e648]:
+                  - generic [ref=e649]: 32x40
+                  - generic [ref=e650]: 4-ply Suede
+                - paragraph [ref=e651]: Warm off-white suede.
+            - generic [ref=e653]:
+              - generic "Vanilla" [ref=e654]
+              - generic [ref=e655]:
+                - generic [ref=e656]:
+                  - heading "Vanilla" [level=4] [ref=e657]
+                  - generic [ref=e658]: "#S15"
+                - generic [ref=e659]:
+                  - generic [ref=e660]: 32x40
+                  - generic [ref=e661]: 4-ply Suede
+                - paragraph [ref=e662]: Creamy vanilla suede tone.
+            - generic [ref=e664]:
+              - generic "Dove" [ref=e665]
+              - generic [ref=e666]:
+                - generic [ref=e667]:
+                  - heading "Dove" [level=4] [ref=e668]
+                  - generic [ref=e669]: "#S20"
+                - generic [ref=e670]:
+                  - generic [ref=e671]: 32x40
+                  - generic [ref=e672]: 4-ply Suede
+                - paragraph [ref=e673]: Muted dove grey.
+            - generic [ref=e675]:
+              - generic "Sand" [ref=e676]
+              - generic [ref=e677]:
+                - generic [ref=e678]:
+                  - heading "Sand" [level=4] [ref=e679]
+                  - generic [ref=e680]: "#S22"
+                - generic [ref=e681]:
+                  - generic [ref=e682]: 32x40
+                  - generic [ref=e683]: 4-ply Suede
+                - paragraph [ref=e684]: Warm sand beige.
+            - generic [ref=e686]:
+              - generic "Mushroom" [ref=e687]
+              - generic [ref=e688]:
+                - generic [ref=e689]:
+                  - heading "Mushroom" [level=4] [ref=e690]
+                  - generic [ref=e691]: "#S25"
+                - generic [ref=e692]:
+                  - generic [ref=e693]: 32x40
+                  - generic [ref=e694]: 4-ply Suede
+                - paragraph [ref=e695]: Earthy mushroom taupe.
+            - generic [ref=e697]:
+              - generic "Rose" [ref=e698]
+              - generic [ref=e699]:
+                - generic [ref=e700]:
+                  - heading "Rose" [level=4] [ref=e701]
+                  - generic [ref=e702]: "#S30"
+                - generic [ref=e703]:
+                  - generic [ref=e704]: 32x40
+                  - generic [ref=e705]: 4-ply Suede
+                - paragraph [ref=e706]: Dusty rose with a velvety hand.
+            - generic [ref=e708]:
+              - generic "Royal" [ref=e709]
+              - generic [ref=e710]:
+                - generic [ref=e711]:
+                  - heading "Royal" [level=4] [ref=e712]
+                  - generic [ref=e713]: "#S35"
+                - generic [ref=e714]:
+                  - generic [ref=e715]: 32x40
+                  - generic [ref=e716]: 4-ply Suede
+                - paragraph [ref=e717]: Deep royal blue suede.
+            - generic [ref=e719]:
+              - generic "Alpine" [ref=e720]
+              - generic [ref=e721]:
+                - generic [ref=e722]:
+                  - heading "Alpine" [level=4] [ref=e723]
+                  - generic [ref=e724]: "#S40"
+                - generic [ref=e725]:
+                  - generic [ref=e726]: 32x40
+                  - generic [ref=e727]: 4-ply Suede
+                - paragraph [ref=e728]: Forest alpine green.
+            - generic [ref=e730]:
+              - generic "Snow" [ref=e731]
+              - generic [ref=e732]:
+                - generic [ref=e733]:
+                  - heading "Snow" [level=4] [ref=e734]
+                  - generic [ref=e735]: "#S50"
+                - generic [ref=e736]:
+                  - generic [ref=e737]: 32x40
+                  - generic [ref=e738]: 4-ply Suede
+                - paragraph [ref=e739]: Pure white suede with crisp fibre.
+            - generic [ref=e741]:
+              - generic "Faux Silver" [ref=e742]
+              - generic [ref=e743]:
+                - generic [ref=e744]:
+                  - heading "Faux Silver" [level=4] [ref=e745]
+                  - generic [ref=e746]: "#S972"
+                - generic [ref=e747]:
+                  - generic [ref=e748]: 32x40
+                  - generic [ref=e749]: 4-ply Specialty
+                - paragraph [ref=e750]: Brushed silver metallic finish.
+            - generic [ref=e752]:
+              - generic "Faux Gold" [ref=e753]
+              - generic [ref=e754]:
+                - generic [ref=e755]:
+                  - heading "Faux Gold" [level=4] [ref=e756]
+                  - generic [ref=e757]: "#S971"
+                - generic [ref=e758]:
+                  - generic [ref=e759]: 32x40
+                  - generic [ref=e760]: 4-ply Specialty
+                - paragraph [ref=e761]: Brushed gold metallic finish.
+            - generic [ref=e763]:
+              - generic "Silver Foil" [ref=e764]
+              - generic [ref=e765]:
+                - generic [ref=e766]:
+                  - heading "Silver Foil" [level=4] [ref=e767]
+                  - generic [ref=e768]: "#S973"
+                - generic [ref=e769]:
+                  - generic [ref=e770]: 32x40
+                  - generic [ref=e771]: 4-ply Specialty
+                - paragraph [ref=e772]: Reflective silver foil for premium presentation.
+            - generic [ref=e774]:
+              - generic "Midnight Suede" [ref=e775]
+              - generic [ref=e776]:
+                - generic [ref=e777]:
+                  - heading "Midnight Suede" [level=4] [ref=e778]
+                  - generic [ref=e779]: "#S60"
+                - generic [ref=e780]:
+                  - generic [ref=e781]: 32x40
+                  - generic [ref=e782]: 4-ply Suede
+                - paragraph [ref=e783]: Inky midnight suede.
+            - generic [ref=e785]:
+              - generic "Deep Red Suede" [ref=e786]
+              - generic [ref=e787]:
+                - generic [ref=e788]:
+                  - heading "Deep Red Suede" [level=4] [ref=e789]
+                  - generic [ref=e790]: "#S65"
+                - generic [ref=e791]:
+                  - generic [ref=e792]: 32x40
+                  - generic [ref=e793]: 4-ply Suede
+                - paragraph [ref=e794]: Theatre-curtain deep red.
+            - generic [ref=e796]:
+              - generic "Forest Suede" [ref=e797]
+              - generic [ref=e798]:
+                - generic [ref=e799]:
+                  - heading "Forest Suede" [level=4] [ref=e800]
+                  - generic [ref=e801]: "#S70"
+                - generic [ref=e802]:
+                  - generic [ref=e803]: 32x40
+                  - generic [ref=e804]: 4-ply Suede
+                - paragraph [ref=e805]: Velvety forest green.
+            - generic [ref=e807]:
+              - generic "Navy Suede" [ref=e808]
+              - generic [ref=e809]:
+                - generic [ref=e810]:
+                  - heading "Navy Suede" [level=4] [ref=e811]
+                  - generic [ref=e812]: "#S75"
+                - generic [ref=e813]:
+                  - generic [ref=e814]: 32x40
+                  - generic [ref=e815]: 4-ply Suede
+                - paragraph [ref=e816]: Rich navy with depth.
+            - generic [ref=e818]:
+              - generic "Espresso Suede" [ref=e819]
+              - generic [ref=e820]:
+                - generic [ref=e821]:
+                  - heading "Espresso Suede" [level=4] [ref=e822]
+                  - generic [ref=e823]: "#S80"
+                - generic [ref=e824]:
+                  - generic [ref=e825]: 32x40
+                  - generic [ref=e826]: 4-ply Suede
+                - paragraph [ref=e827]: Dark espresso brown suede.
+      - generic [ref=e829]:
+        - generic [ref=e831]:
+          - paragraph [ref=e832]: Core Options
+          - heading "Three Cores, Infinite Possibilities" [level=2] [ref=e833]
+        - generic [ref=e834]:
+          - generic [ref=e837]:
+            - img "White Core" [ref=e839]
+            - generic [ref=e841]:
+              - heading "White Core" [level=3] [ref=e842]
+              - paragraph [ref=e843]: The industry standard. A clean white bevel reveals a bright, crisp border that complements most artwork and frame finishes.
+              - generic [ref=e844]:
+                - text: Best For
+                - paragraph [ref=e845]: General framing, certificates, photography
+          - generic [ref=e848]:
+            - img "Cream Core" [ref=e850]
+            - generic [ref=e852]:
+              - heading "Cream Core" [level=3] [ref=e853]
+              - paragraph [ref=e854]: A warm, off-white bevel that softens the transition between mat and artwork. Preferred for traditional art, watercolors, and vintage photographs.
+              - generic [ref=e855]:
+                - text: Best For
+                - paragraph [ref=e856]: Fine art, watercolors, vintage photography
+          - generic [ref=e859]:
+            - img "Black Core" [ref=e861]
+            - generic [ref=e863]:
+              - heading "Black Core" [level=3] [ref=e864]
+              - paragraph [ref=e865]: A dramatic black bevel that creates a bold, contemporary border. Makes colors pop and adds a gallery-quality finish to modern artwork and photography.
+              - generic [ref=e866]:
+                - text: Best For
+                - paragraph [ref=e867]: Contemporary art, photography, high-end retail
+      - generic [ref=e871]:
+        - generic [ref=e873]:
+          - paragraph [ref=e874]: Technical Details
+          - heading "Specifications" [level=2] [ref=e875]
+        - table [ref=e878]:
+          - rowgroup [ref=e879]:
+            - row "Specification Details" [ref=e880]:
+              - columnheader "Specification" [ref=e881]
+              - columnheader "Details" [ref=e882]
+          - rowgroup [ref=e883]:
+            - row "Material 4-ply and 7-ply cotton rag and alpha-cellulose" [ref=e884]:
+              - cell "Material" [ref=e885]
+              - cell "4-ply and 7-ply cotton rag and alpha-cellulose" [ref=e886]
+            - row "Core Options White, Cream, Black" [ref=e887]:
+              - cell "Core Options" [ref=e888]
+              - cell "White, Cream, Black" [ref=e889]
+            - row "Surface Colors 75+ standard colors, custom colors available" [ref=e890]:
+              - cell "Surface Colors" [ref=e891]
+              - cell "75+ standard colors, custom colors available" [ref=e892]
+            - row "Acid-Free Yes, calcium carbonate buffered, pH neutral, high fade and bleed resistant" [ref=e893]:
+              - cell "Acid-Free" [ref=e894]
+              - cell "Yes, calcium carbonate buffered, pH neutral, high fade and bleed resistant" [ref=e895]
+            - row "Bevel Cut Standard 45-degree bevel, straight cut available" [ref=e896]:
+              - cell "Bevel Cut" [ref=e897]
+              - cell "Standard 45-degree bevel, straight cut available" [ref=e898]
+            - row "Sheet Sizes 32x40\" and 40x60\" (custom available)" [ref=e899]:
+              - cell "Sheet Sizes" [ref=e900]
+              - cell "32x40\" and 40x60\" (custom available)" [ref=e901]
+            - row "Thickness 4-ply (1/16\") and 7-ply (1/8\")" [ref=e902]:
+              - cell "Thickness" [ref=e903]
+              - cell "4-ply (1/16\") and 7-ply (1/8\")" [ref=e904]
+            - row "Window Cuts Rectangle, oval, v-grooves, channels, and custom shapes" [ref=e905]:
+              - cell "Window Cuts" [ref=e906]
+              - cell "Rectangle, oval, v-grooves, channels, and custom shapes" [ref=e907]
+            - row "Cutting Equipment 10 cutters (7 CNCs, 3 die presses)" [ref=e908]:
+              - cell "Cutting Equipment" [ref=e909]
+              - cell "10 cutters (7 CNCs, 3 die presses)" [ref=e910]
+            - row "Packaging Carton packed or untrimmed bulk on pallets" [ref=e911]:
+              - cell "Packaging" [ref=e912]
+              - cell "Carton packed or untrimmed bulk on pallets" [ref=e913]
+      - generic [ref=e915]:
+        - generic [ref=e917]:
+          - paragraph [ref=e918]: The Flech Difference
+          - heading "Why Source Matboards From Flech?" [level=2] [ref=e919]:
+            - text: Why Source Matboards
+            - text: From Flech?
+        - generic [ref=e920]:
+          - generic [ref=e923]:
+            - img "True Archival Quality" [ref=e925]
+            - generic [ref=e927]:
+              - img [ref=e929]
+              - heading "True Archival Quality" [level=3] [ref=e931]
+              - paragraph [ref=e932]: Our matboards are acid-free, pH neutral, and lignin-free. They will not yellow, fox, or transfer acids to the artwork they protect, even over decades.
+          - generic [ref=e935]:
+            - img "Precision Bevel Cuts" [ref=e937]
+            - generic [ref=e939]:
+              - img [ref=e941]
+              - heading "Precision Bevel Cuts" [level=3] [ref=e947]
+              - paragraph [ref=e948]: Every bevel is cut at a consistent 45-degree angle with clean, sharp edges. No ragged fibers, no uneven reveals. The kind of finish that gallery clients expect.
+          - generic [ref=e951]:
+            - img "75+ Standard Colors" [ref=e953]
+            - generic [ref=e955]:
+              - img [ref=e957]
+              - heading "75+ Standard Colors" [level=3] [ref=e963]
+              - paragraph [ref=e964]: From classic museum whites and creams to bold contemporary colors. Color matching is also available for custom projects.
+          - generic [ref=e967]:
+            - img "4-Ply and 7-Ply Options" [ref=e969]
+            - generic [ref=e971]:
+              - img [ref=e973]
+              - heading "4-Ply and 7-Ply Options" [level=3] [ref=e977]
+              - paragraph [ref=e978]: Standard 4-ply for most framing applications, premium 7-ply for added depth and presence. Both available in cotton rag and alpha-cellulose.
+          - generic [ref=e981]:
+            - img "Creative & Industrial Appeal" [ref=e983]
+            - generic [ref=e985]:
+              - img [ref=e987]
+              - heading "Creative & Industrial Appeal" [level=3] [ref=e990]
+              - paragraph [ref=e991]: Whether you are framing a museum acquisition or producing 5,000 corporate awards, our matboards serve both the creative designer and the procurement manager.
+          - generic [ref=e994]:
+            - img "Volume Pricing, No Compromise" [ref=e996]
+            - generic [ref=e998]:
+              - img [ref=e1000]
+              - heading "Volume Pricing, No Compromise" [level=3] [ref=e1005]
+              - paragraph [ref=e1006]: Contract pricing for wholesale framers and volume buyers. High quantity does not mean lower quality. Every sheet meets the same archival standard.
+      - generic [ref=e1008]:
+        - generic [ref=e1010]:
+          - paragraph [ref=e1011]: Applications
+          - heading "Your Vision, Our Matboard" [level=2] [ref=e1012]
+        - generic [ref=e1013]:
+          - generic [ref=e1016] [cursor=pointer]:
+            - img "Gallery & Museum Framing" [ref=e1017]
+            - generic [ref=e1019]:
+              - heading "Gallery & Museum Framing" [level=3] [ref=e1020]
+              - paragraph [ref=e1021]: Archival matboards that protect artwork for decades. Museum-grade acid-free materials meet the highest preservation standards.
+          - generic [ref=e1024] [cursor=pointer]:
+            - img "Corporate & Certificates" [ref=e1025]
+            - generic [ref=e1027]:
+              - heading "Corporate & Certificates" [level=3] [ref=e1028]
+              - paragraph [ref=e1029]: Professional matting for diplomas, awards, and corporate photography. Clean lines and consistent quality at volume.
+          - generic [ref=e1032] [cursor=pointer]:
+            - img "Creative Design & DIY" [ref=e1033]
+            - generic [ref=e1035]:
+              - heading "Creative Design & DIY" [level=3] [ref=e1036]
+              - paragraph [ref=e1037]: A palette of 75+ colors for interior designers, artists, and crafters. Express creativity with professional-grade materials.
+          - generic [ref=e1040] [cursor=pointer]:
+            - img "Retail & Commercial Display" [ref=e1041]
+            - generic [ref=e1043]:
+              - heading "Retail & Commercial Display" [level=3] [ref=e1044]
+              - paragraph [ref=e1045]: Ready-made matboard sizes for retail framing and commercial display applications. Fast fulfillment, volume pricing.
+      - generic [ref=e1046]:
+        - generic [ref=e1047]:
+          - heading "Precision at Every Step" [level=2] [ref=e1048]
+          - paragraph [ref=e1049]: Inside our workshop — every matboard is finished by hand and inspected before it leaves.
+        - generic [ref=e1050]:
+          - img "Gloved worker handling framed artwork on workbench" [ref=e1052]
+          - img "Worker securing frame in workshop" [ref=e1054]
+          - img "Gloved hand folding frame corner with precise alignment" [ref=e1056]
+          - img "Worker cleaning frame edge removing excess adhesive" [ref=e1058]
+          - img "Precision finishing of frame edge using small hand tool" [ref=e1060]
+          - img "Gloved hands finishing frame corner sanding" [ref=e1062]
+          - img "Worker sanding corner of white frame" [ref=e1064]
+          - img "Gloved hands smoothing frame edge with tool" [ref=e1066]
+          - img "Craftsman sanding frame corner in workshop" [ref=e1068]
+          - img "Gloved hands refining edge of white frame with sandpaper" [ref=e1070]
+          - img "Sanding frame corner with protective gloves" [ref=e1072]
+          - img "Applying adhesive along white frame edge carefully" [ref=e1074]
+          - img "Trimming frame edge with handheld tool precision" [ref=e1076]
+          - img "Worker smoothing adhesive on frame corner" [ref=e1078]
+          - img "Worker sanding edge, gloved hands, workshop background" [ref=e1080]
+      - generic [ref=e1081]:
+        - iframe [ref=e1082]:
+          - generic [active] [ref=f78e1]:
+            - img "Media Poster" [ref=f78e4]
+            - region "video player" [ref=f78e5]:
+              - generic:
+                - img "Poster image"
+              - generic:
+                - generic:
+                  - generic:
+                    - generic: Speed
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+                    - generic: Quality
+                    - generic:
+                      - generic:
+                        - generic:
+                          - img
+            - alert [ref=f78e7]
+        - generic [ref=e1086]:
+          - paragraph [ref=e1087]: Get Started
+          - heading "Ready to Order Matboards?" [level=2] [ref=e1088]:
+            - text: Ready to Order
+            - text: Matboards?
+          - paragraph [ref=e1089]: From sample swatches to volume orders, tell us your colors, sizes, and quantities. Quote within 24 hours.
+          - generic [ref=e1090]:
+            - link "Request a Quote" [ref=e1091] [cursor=pointer]:
+              - /url: /contact
+              - text: Request a Quote
+              - img [ref=e1092]
+            - link "Request Color Swatches" [ref=e1094] [cursor=pointer]:
+              - /url: /contact
+  - contentinfo [ref=e1095]:
+    - generic [ref=e1097]:
+      - generic [ref=e1098]:
+        - img "Flech Paper Products" [ref=e1100]
+        - paragraph [ref=e1101]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+        - generic [ref=e1102]:
+          - link "(973) 357-8111" [ref=e1103] [cursor=pointer]:
+            - /url: tel:+19733578111
+            - img [ref=e1104]
+            - text: (973) 357-8111
+          - link "info@flech.com" [ref=e1106] [cursor=pointer]:
+            - /url: mailto:info@flech.com
+            - img [ref=e1107]
+            - text: info@flech.com
+          - generic [ref=e1110]:
+            - img [ref=e1111]
+            - generic [ref=e1114]:
+              - text: Paterson, NJ
+              - text: United States
+      - generic [ref=e1115]:
+        - heading "Products" [level=3] [ref=e1116]
+        - list [ref=e1117]:
+          - listitem [ref=e1118]:
+            - link "Easel Backs" [ref=e1119] [cursor=pointer]:
+              - /url: /products/easel-backs
+              - text: Easel Backs
+              - img [ref=e1120]
+          - listitem [ref=e1123]:
+            - link "Fold Lines & Dielines" [ref=e1124] [cursor=pointer]:
+              - /url: /products/fold-lines
+              - text: Fold Lines & Dielines
+              - img [ref=e1125]
+          - listitem [ref=e1128]:
+            - link "Contract Framing Backs" [ref=e1129] [cursor=pointer]:
+              - /url: /products/framing-backs
+              - text: Contract Framing Backs
+              - img [ref=e1130]
+          - listitem [ref=e1133]:
+            - link "Matboards" [ref=e1134] [cursor=pointer]:
+              - /url: /products/matboards
+              - text: Matboards
+              - img [ref=e1135]
+      - generic [ref=e1138]:
+        - heading "Company" [level=3] [ref=e1139]
+        - list [ref=e1140]:
+          - listitem [ref=e1141]:
+            - link "About Flech" [ref=e1142] [cursor=pointer]:
+              - /url: /about
+              - text: About Flech
+              - img [ref=e1143]
+          - listitem [ref=e1146]:
+            - link "Industries We Serve" [ref=e1147] [cursor=pointer]:
+              - /url: /industries
+              - text: Industries We Serve
+              - img [ref=e1148]
+          - listitem [ref=e1151]:
+            - link "Contact & RFQ" [ref=e1152] [cursor=pointer]:
+              - /url: /contact
+              - text: Contact & RFQ
+              - img [ref=e1153]
+        - heading "Industries" [level=3] [ref=e1156]
+        - list [ref=e1157]:
+          - listitem [ref=e1158]:
+            - link "Sign & Display" [ref=e1159] [cursor=pointer]:
+              - /url: /industries#signage
+          - listitem [ref=e1160]:
+            - link "Wholesale Framing" [ref=e1161] [cursor=pointer]:
+              - /url: /industries#framing
+          - listitem [ref=e1162]:
+            - link "Packaging & POP" [ref=e1163] [cursor=pointer]:
+              - /url: /industries#packaging
+          - listitem [ref=e1164]:
+            - link "Interior Design" [ref=e1165] [cursor=pointer]:
+              - /url: /industries#interior
+      - generic [ref=e1166]:
+        - heading "Get Started" [level=3] [ref=e1167]
+        - paragraph [ref=e1168]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+        - link "Request a Quote" [ref=e1169] [cursor=pointer]:
+          - /url: /contact
+          - text: Request a Quote
+          - img [ref=e1170]
+        - generic [ref=e1173]:
+          - paragraph [ref=e1174]: Certifications
+          - paragraph [ref=e1175]:
+            - text: ISO 9001 Certified
+            - text: FSC Chain of Custody
+            - text: Acid-Free & Archival
+    - generic [ref=e1177]:
+      - paragraph [ref=e1178]: © 2026 Flech Paper Products. All rights reserved.
+      - generic [ref=e1179]:
+        - generic [ref=e1180]: Privacy Policy
+        - generic [ref=e1181]: Terms of Service
+  - button "Open Next.js Dev Tools" [ref=e1187] [cursor=pointer]:
+    - img [ref=e1188]
+  - alert [ref=e1191]

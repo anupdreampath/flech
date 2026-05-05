@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import {
   ArrowRight,
@@ -20,6 +18,34 @@ import {
   StaggerItem,
   HoverCard,
 } from "@/components/AnimatedSection";
+import { getContent, CMS_SCHEMA } from "@/lib/cms";
+import { ColorCatalog } from "./ColorCatalog";
+import { LazyVideoIframe } from "@/components/LazyVideoIframe";
+
+export const dynamic = "force-dynamic";
+
+type PrimaryColorCard = {
+  name?: string;
+  code?: string;
+  hex?: string;
+  image?: string;
+  size?: string;
+  ply?: string;
+  tags?: string;
+  description?: string;
+};
+
+function getDefaultPrimaryColorCards(): PrimaryColorCard[] {
+  const sec = CMS_SCHEMA.product_matboards?.sections?.primary_colors;
+  const field = sec?.fields.find((f) => f.key === "colors");
+  return (field?.defaultItems as PrimaryColorCard[]) || [];
+}
+
+function getDefaultPremiumColorCards(): PrimaryColorCard[] {
+  const sec = CMS_SCHEMA.product_matboards?.sections?.premium_colors;
+  const field = sec?.fields.find((f) => f.key === "colors");
+  return (field?.defaultItems as PrimaryColorCard[]) || [];
+}
 
 /* ─── DATA ─── */
 
@@ -66,65 +92,6 @@ const matboardFeatures = [
     description:
       "Double and triple glued mats for layered, dimensional presentation.",
   },
-];
-
-const primaryColors = [
-  { id: 1, name: "Tablet White #101" },
-  { id: 2, name: "Snow #108" },
-  { id: 3, name: "Woven White #106" },
-  { id: 4, name: "Buttermilk #220" },
-  { id: 5, name: "C-Linen #102" },
-  { id: 6, name: "Buff #203" },
-  { id: 7, name: "Straw #201" },
-  { id: 8, name: "Pewter #211" },
-  { id: 9, name: "Sage #401" },
-  { id: 10, name: "Grey Flannel #210" },
-  { id: 11, name: "Warm Grey #212" },
-  { id: 12, name: "Biscuit #213" },
-  { id: 13, name: "Sienna #501" },
-  { id: 14, name: "Crimson #601" },
-  { id: 15, name: "Maroon #602" },
-  { id: 16, name: "Tangerine #561" },
-  { id: 17, name: "Lemon #306" },
-  { id: 18, name: "Saffron #309" },
-  { id: 19, name: "Olive #404" },
-  { id: 20, name: "Evergreen #405" },
-  { id: 21, name: "Mocha #502" },
-  { id: 22, name: "Espresso #505" },
-  { id: 23, name: "Light Blue #621" },
-  { id: 24, name: "Icy Blue #625" },
-  { id: 25, name: "Cobalt #629" },
-  { id: 26, name: "True Blue #624" },
-  { id: 27, name: "Liberty #628" },
-  { id: 28, name: "Blueberry #627" },
-  { id: 29, name: "Eclipse #626" },
-  { id: 30, name: "Purple #650" },
-  { id: 31, name: "Blackest Black #701" },
-  { id: 32, name: "Midnight #702" },
-  { id: 33, name: "Storm #710" },
-  { id: 34, name: "Charcoal #711" },
-  { id: 36, name: "Graphite #712" },
-];
-
-const suedeColors = [
-  { id: 1, name: "Snowflake #S10" },
-  { id: 2, name: "Coconut #S12" },
-  { id: 3, name: "Vanilla #S15" },
-  { id: 4, name: "Dove #S20" },
-  { id: 5, name: "Sand #S22" },
-  { id: 6, name: "Mushroom #S25" },
-  { id: 7, name: "Rose #S30" },
-  { id: 8, name: "Royal #S35" },
-  { id: 9, name: "Alpine #S40" },
-  { id: 10, name: "Snow #S50" },
-  { id: 11, name: "Faux Silver #S972" },
-  { id: 12, name: "Faux Gold #S971" },
-  { id: 13, name: "Silver Foil #S973" },
-  { id: 14, name: "Midnight Suede #S60" },
-  { id: 15, name: "Deep Red Suede #S65" },
-  { id: 16, name: "Forest Suede #S70" },
-  { id: 17, name: "Navy Suede #S75" },
-  { id: 18, name: "Espresso Suede #S80" },
 ];
 
 const coreTypes = [
@@ -263,29 +230,41 @@ const applications = [
   },
 ];
 
-export default function MatboardsPage() {
+export default async function MatboardsPage() {
+  const colorsRaw = await getContent<{ colors: string }>(
+    "product_matboards",
+    "primary_colors",
+    { colors: JSON.stringify(getDefaultPrimaryColorCards()) }
+  );
+  let primaryColorCards: PrimaryColorCard[] = getDefaultPrimaryColorCards();
+  try {
+    const parsed = JSON.parse(colorsRaw.colors);
+    if (Array.isArray(parsed)) primaryColorCards = parsed;
+  } catch {}
+
+  const premiumRaw = await getContent<{ colors: string }>(
+    "product_matboards",
+    "premium_colors",
+    { colors: JSON.stringify(getDefaultPremiumColorCards()) }
+  );
+  let premiumColorCards: PrimaryColorCard[] = getDefaultPremiumColorCards();
+  try {
+    const parsed = JSON.parse(premiumRaw.colors);
+    if (Array.isArray(parsed)) premiumColorCards = parsed;
+  } catch {}
+
   return (
     <>
       {/* ═══ 1. HERO ═══ */}
-      <section className="relative min-h-[60dvh] flex items-center overflow-hidden">
+      <section className="relative min-h-[60dvh] flex items-center overflow-hidden bg-black">
         {/* Background video */}
         <iframe
-          src="https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          src="https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
           className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
           allow="autoplay; fullscreen"
           title="Worker positioning material sheets for precise industrial cutting process"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/55" />
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px), repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px)",
-            }}
-          />
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
           <nav
             className="flex items-center gap-2 text-sm text-white/50 mb-8"
@@ -486,30 +465,7 @@ export default function MatboardsPage() {
             </h3>
           </AnimatedSection>
 
-          <StaggerContainer className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4">
-            {primaryColors.map((color) => (
-              <StaggerItem key={color.id}>
-                <div className="group">
-                  <div className="rounded-xl overflow-hidden border border-border bg-surface hover:border-accent/40 hover:shadow-lg transition-[transform,box-shadow,border-color] duration-300">
-                    <div className="aspect-square overflow-hidden">
-                      <img
-                        src={`/images/colors/primary/c${color.id}.png`}
-                        alt={color.name}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="px-2 py-2">
-                      <p className="text-[10px] sm:text-xs text-muted leading-tight text-center truncate">
-                        {color.name}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          <ColorCatalog colors={primaryColorCards} idPrefix="primary" />
         </div>
       </section>
 
@@ -526,30 +482,7 @@ export default function MatboardsPage() {
             </p>
           </AnimatedSection>
 
-          <StaggerContainer className="grid grid-cols-4 sm:grid-cols-6 lg:grid-cols-8 gap-3 sm:gap-4">
-            {suedeColors.map((color) => (
-              <StaggerItem key={color.id}>
-                <div className="group">
-                  <div className="rounded-xl overflow-hidden border border-border bg-surface hover:border-accent/40 hover:shadow-lg transition-[transform,box-shadow,border-color] duration-300">
-                    <div className="aspect-square overflow-hidden">
-                      <img
-                        src={`/images/colors/suede/s${color.id}.png`}
-                        alt={color.name}
-                        loading="lazy"
-                        decoding="async"
-                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                    <div className="px-2 py-2">
-                      <p className="text-[10px] sm:text-xs text-muted leading-tight text-center truncate">
-                        {color.name}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+          <ColorCatalog colors={premiumColorCards} idPrefix="premium" />
         </div>
       </section>
 
@@ -802,21 +735,18 @@ export default function MatboardsPage() {
       </section>
 
       {/* ═══ 11. CTA SPLIT ═══ */}
-      <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-[500px]">
-          <div className="relative h-64 lg:h-auto overflow-hidden">
-            <img
-              src="https://medieval-red-61ox4fet6z.edgeone.app/DSC04503.png"
-              alt="Stacked square mat boards"
-              loading="lazy"
-              decoding="async"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20 lg:bg-gradient-to-r lg:from-transparent lg:to-charcoal" />
-          </div>
-
-          <div className="bg-charcoal text-white flex items-center">
-            <AnimatedSection className="max-w-lg mx-auto px-8 py-16 lg:px-12 lg:py-20">
+      <section className="relative isolate overflow-hidden bg-black">
+        <LazyVideoIframe
+          src="https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
+          title="Matboards production"
+          containerClassName="absolute inset-0"
+          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[500px] items-center">
+          <div className="hidden lg:block" aria-hidden="true" />
+          <div className="text-white flex items-center">
+            <AnimatedSection className="max-w-lg">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light mb-4">
                 Get Started
               </p>

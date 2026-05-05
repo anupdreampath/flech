@@ -60,9 +60,8 @@ export default function ContactPage() {
   };
 
   const handleSubmit = async () => {
-    // Save to database first
     try {
-      await fetch("/api/contact", {
+      const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
@@ -77,29 +76,13 @@ export default function ContactPage() {
           },
         }),
       });
-    } catch {}
-
-    // Build WhatsApp message
-    const lines = [
-      `*New Inquiry from Flech Website*`,
-      ``,
-      `*Name:* ${formData.name}`,
-      `*Company:* ${formData.company}`,
-      `*Email:* ${formData.email}`,
-      `*Phone:* ${formData.phone}`,
-      ``,
-      `*Product Interest:* ${formData.product}`,
-      `*Industry:* ${formData.industry}`,
-      `*Quantity:* ${formData.quantity}`,
-      formData.customSize ? `*Custom Size/Specs:* ${formData.customSize}` : "",
-      formData.message ? `*Additional Details:* ${formData.message}` : "",
-    ]
-      .filter(Boolean)
-      .join("%0A");
-
-    const whatsappUrl = `https://wa.me/19733578111?text=${lines}`;
-    window.open(whatsappUrl, "_blank");
-    setSubmitted(true);
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+    } catch {
+      alert(
+        "We couldn't submit your inquiry. Please try again or call us at (973) 357-8111."
+      );
+    }
   };
 
   const canProceedStep1 = formData.product !== "";
@@ -119,9 +102,9 @@ export default function ContactPage() {
               Inquiry Sent
             </h1>
             <p className="text-muted leading-relaxed mb-8">
-              Your message has been sent via WhatsApp. Our team typically
-              responds within 24 hours with a detailed quote and
-              specification recommendations.
+              Thanks — we&apos;ve received your inquiry. Our team typically
+              responds within 24 hours with a detailed quote and specification
+              recommendations.
             </p>
             <Link
               href="/"
@@ -346,8 +329,8 @@ export default function ContactPage() {
                     Your Contact Information
                   </h2>
                   <p className="text-sm text-muted mb-8">
-                    We&apos;ll send your inquiry via WhatsApp for the fastest
-                    response.
+                    Share your details and our sales team will respond within
+                    24 hours.
                   </p>
 
                   <div className="space-y-6">
@@ -497,8 +480,8 @@ export default function ContactPage() {
                       disabled={!canSubmit}
                       className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover disabled:opacity-40 disabled:cursor-not-allowed text-white px-8 py-3 text-sm font-semibold rounded-sm transition-colors duration-200 cursor-pointer"
                     >
-                      <MessageCircle className="w-4 h-4" />
-                      Send via WhatsApp
+                      <Send className="w-4 h-4" />
+                      Submit Inquiry
                     </button>
                   </div>
                 </div>
@@ -547,9 +530,9 @@ export default function ContactPage() {
                   Fast Response
                 </h3>
                 <p className="text-sm text-white/70 leading-relaxed">
-                  All inquiries are sent directly to our sales team via
-                  WhatsApp. Expect a detailed response with pricing and
-                  specifications within 24 hours.
+                  All inquiries land directly with our sales team. Expect a
+                  detailed response with pricing and specifications within 24
+                  hours.
                 </p>
               </div>
 

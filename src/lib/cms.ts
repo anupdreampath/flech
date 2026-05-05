@@ -31,12 +31,23 @@ export async function getAllContent(page: string) {
   return data || [];
 }
 
-export type Field = {
+export type SubField = {
   key: string;
   label: string;
   type: "text" | "textarea" | "image" | "url" | "video";
+  helper?: string;
+};
+
+export type Field = {
+  key: string;
+  label: string;
+  type: "text" | "textarea" | "image" | "url" | "video" | "repeater";
   default?: string;
   helper?: string;
+  // Repeater-specific
+  itemLabel?: string;
+  subFields?: SubField[];
+  defaultItems?: Array<Record<string, string>>;
 };
 
 // Registry: pages and editable sections. Defaults here mirror the live rendered copy
@@ -65,9 +76,21 @@ export const CMS_SCHEMA: Record<
           },
           {
             key: "title_bottom",
-            label: "Title (bottom line)",
+            label: "Rotating Title 1 (bottom line)",
             type: "text",
             default: "Every Great Display",
+          },
+          {
+            key: "title_bottom_2",
+            label: "Rotating Title 2",
+            type: "text",
+            default: "Art and Framing Industry",
+          },
+          {
+            key: "title_bottom_3",
+            label: "Rotating Title 3",
+            type: "text",
+            default: "Sign and Packaging",
           },
           {
             key: "subtitle",
@@ -686,6 +709,109 @@ export const CMS_SCHEMA: Record<
           },
         ],
       },
+      primary_colors: {
+        label: "Primary Colors (cards)",
+        fields: [
+          {
+            key: "colors",
+            label: "Color Cards",
+            type: "repeater",
+            itemLabel: "Color",
+            helper:
+              "Each card displays an image on the left and the name, code, size, ply, and a short description on the right. Add, remove, and reorder freely.",
+            subFields: [
+              { key: "name", label: "Name", type: "text" },
+              { key: "code", label: "Code", type: "text" },
+              { key: "hex", label: "Color (HEX)", type: "text", helper: "Used as the swatch background. e.g. #F8F8F4" },
+              { key: "image", label: "Swatch Image (optional)", type: "image", helper: "If uploaded, this image replaces the flat color block on the left." },
+              { key: "size", label: "Sheet Size", type: "text" },
+              { key: "ply", label: "Ply / Caliper", type: "text" },
+              { key: "tags", label: "Extra Badges", type: "text", helper: "Optional. Comma-separated, e.g. Acid-Free, Bevel-Cut, Archival" },
+              { key: "description", label: "Description", type: "textarea" },
+            ],
+            defaultItems: [
+              { name: "Tablet White", code: "#101", hex: "#F8F8F4", size: "32x40", ply: "4-ply White Core", description: "Bright neutral white. Our most-ordered shade for gallery framing." },
+              { name: "Snow", code: "#108", hex: "#F4F6F8", size: "32x40", ply: "4-ply White Core", description: "Cool, clean white with a faint blue undertone." },
+              { name: "Woven White", code: "#106", hex: "#F1EBE0", size: "32x40", ply: "4-ply White Core", description: "Soft white with a subtle textured surface." },
+              { name: "Buttermilk", code: "#220", hex: "#F4ECC9", size: "32x40", ply: "4-ply White Core", description: "Warm cream that flatters photographs and prints." },
+              { name: "C-Linen", code: "#102", hex: "#ECE6D2", size: "32x40", ply: "4-ply White Core", description: "Linen-textured natural shade." },
+              { name: "Buff", code: "#203", hex: "#E0CFA9", size: "32x40", ply: "4-ply White Core", description: "Soft, neutral beige." },
+              { name: "Straw", code: "#201", hex: "#D9C28A", size: "32x40", ply: "4-ply White Core", description: "Warm, earthy yellow tone." },
+              { name: "Pewter", code: "#211", hex: "#98989A", size: "32x40", ply: "4-ply White Core", description: "Cool mid-grey for contemporary work." },
+              { name: "Sage", code: "#401", hex: "#95A085", size: "32x40", ply: "4-ply White Core", description: "Muted herbal green." },
+              { name: "Grey Flannel", code: "#210", hex: "#B2ADA1", size: "32x40", ply: "4-ply White Core", description: "Soft warm grey with a flannel finish." },
+              { name: "Warm Grey", code: "#212", hex: "#ABA298", size: "32x40", ply: "4-ply White Core", description: "Neutral warm grey." },
+              { name: "Biscuit", code: "#213", hex: "#C7A47B", size: "32x40", ply: "4-ply White Core", description: "Toasted neutral with subtle warmth." },
+              { name: "Sienna", code: "#501", hex: "#8B4D2A", size: "32x40", ply: "4-ply White Core", description: "Earthy reddish brown." },
+              { name: "Crimson", code: "#601", hex: "#A01B26", size: "32x40", ply: "4-ply White Core", description: "Deep, saturated red." },
+              { name: "Maroon", code: "#602", hex: "#5C161D", size: "32x40", ply: "4-ply White Core", description: "Rich oxblood red." },
+              { name: "Tangerine", code: "#561", hex: "#E07429", size: "32x40", ply: "4-ply White Core", description: "Vibrant orange." },
+              { name: "Lemon", code: "#306", hex: "#F6D955", size: "32x40", ply: "4-ply White Core", description: "Bright sunny yellow." },
+              { name: "Saffron", code: "#309", hex: "#E0A93B", size: "32x40", ply: "4-ply White Core", description: "Warm golden yellow." },
+              { name: "Olive", code: "#404", hex: "#6E6A2D", size: "32x40", ply: "4-ply White Core", description: "Earthy olive green." },
+              { name: "Evergreen", code: "#405", hex: "#1F4D34", size: "32x40", ply: "4-ply White Core", description: "Deep forest green." },
+              { name: "Mocha", code: "#502", hex: "#6B4A30", size: "32x40", ply: "4-ply White Core", description: "Warm brown with coffee tones." },
+              { name: "Espresso", code: "#505", hex: "#3B2418", size: "32x40", ply: "4-ply White Core", description: "Dark roast brown." },
+              { name: "Light Blue", code: "#621", hex: "#B7CFE3", size: "32x40", ply: "4-ply White Core", description: "Soft sky blue." },
+              { name: "Icy Blue", code: "#625", hex: "#8FB3D6", size: "32x40", ply: "4-ply White Core", description: "Cool, crisp blue." },
+              { name: "Cobalt", code: "#629", hex: "#2858A6", size: "32x40", ply: "4-ply White Core", description: "Saturated mid-blue." },
+              { name: "True Blue", code: "#624", hex: "#285AB0", size: "32x40", ply: "4-ply White Core", description: "Classic primary blue." },
+              { name: "Liberty", code: "#628", hex: "#1A2D60", size: "32x40", ply: "4-ply White Core", description: "Patriotic deep blue." },
+              { name: "Blueberry", code: "#627", hex: "#3F3A7C", size: "32x40", ply: "4-ply White Core", description: "Rich blueberry purple-blue." },
+              { name: "Eclipse", code: "#626", hex: "#15203F", size: "32x40", ply: "4-ply White Core", description: "Deep midnight blue." },
+              { name: "Purple", code: "#650", hex: "#4B2A6F", size: "32x40", ply: "4-ply White Core", description: "Royal violet." },
+              { name: "Blackest Black", code: "#701", hex: "#0A0A0A", size: "32x40", ply: "4-ply White Core", description: "Pure, rich black." },
+              { name: "Midnight", code: "#702", hex: "#11131A", size: "32x40", ply: "4-ply White Core", description: "Soft black with a hint of blue." },
+              { name: "Storm", code: "#710", hex: "#2D2F33", size: "32x40", ply: "4-ply White Core", description: "Stormcloud grey-black." },
+              { name: "Charcoal", code: "#711", hex: "#3A3633", size: "32x40", ply: "4-ply White Core", description: "Warm charcoal grey." },
+              { name: "Graphite", code: "#712", hex: "#4A4A4D", size: "32x40", ply: "4-ply White Core", description: "Cool dark grey." },
+            ],
+          },
+        ],
+      },
+      premium_colors: {
+        label: "Simply Suede & Premium Colors (cards)",
+        fields: [
+          {
+            key: "colors",
+            label: "Suede / Premium Cards",
+            type: "repeater",
+            itemLabel: "Color",
+            helper:
+              "Tactile suede and specialty finishes. Each card shows a flat color swatch on the left and the name, code, size, ply, and description on the right.",
+            subFields: [
+              { key: "name", label: "Name", type: "text" },
+              { key: "code", label: "Code", type: "text" },
+              { key: "hex", label: "Color (HEX)", type: "text", helper: "Used as the swatch background. e.g. #B25C68" },
+              { key: "image", label: "Swatch Image (optional)", type: "image", helper: "If uploaded, this image replaces the flat color block on the left." },
+              { key: "size", label: "Sheet Size", type: "text" },
+              { key: "ply", label: "Ply / Caliper", type: "text" },
+              { key: "tags", label: "Extra Badges", type: "text", helper: "Optional. Comma-separated, e.g. Acid-Free, Bevel-Cut, Archival" },
+              { key: "description", label: "Description", type: "textarea" },
+            ],
+            defaultItems: [
+              { name: "Snowflake", code: "#S10", hex: "#F2F2F0", size: "32x40", ply: "4-ply Suede", description: "Clean snow-white suede with a soft tactile surface." },
+              { name: "Coconut", code: "#S12", hex: "#EDE8DC", size: "32x40", ply: "4-ply Suede", description: "Warm off-white suede." },
+              { name: "Vanilla", code: "#S15", hex: "#E5D7B6", size: "32x40", ply: "4-ply Suede", description: "Creamy vanilla suede tone." },
+              { name: "Dove", code: "#S20", hex: "#B8B0A4", size: "32x40", ply: "4-ply Suede", description: "Muted dove grey." },
+              { name: "Sand", code: "#S22", hex: "#C9B391", size: "32x40", ply: "4-ply Suede", description: "Warm sand beige." },
+              { name: "Mushroom", code: "#S25", hex: "#8E7E6A", size: "32x40", ply: "4-ply Suede", description: "Earthy mushroom taupe." },
+              { name: "Rose", code: "#S30", hex: "#B25C68", size: "32x40", ply: "4-ply Suede", description: "Dusty rose with a velvety hand." },
+              { name: "Royal", code: "#S35", hex: "#2A2F73", size: "32x40", ply: "4-ply Suede", description: "Deep royal blue suede." },
+              { name: "Alpine", code: "#S40", hex: "#2C5641", size: "32x40", ply: "4-ply Suede", description: "Forest alpine green." },
+              { name: "Snow", code: "#S50", hex: "#F8F7F2", size: "32x40", ply: "4-ply Suede", description: "Pure white suede with crisp fibre." },
+              { name: "Faux Silver", code: "#S972", hex: "#C2C2C4", size: "32x40", ply: "4-ply Specialty", description: "Brushed silver metallic finish." },
+              { name: "Faux Gold", code: "#S971", hex: "#C9A24A", size: "32x40", ply: "4-ply Specialty", description: "Brushed gold metallic finish." },
+              { name: "Silver Foil", code: "#S973", hex: "#BCBCBE", size: "32x40", ply: "4-ply Specialty", description: "Reflective silver foil for premium presentation." },
+              { name: "Midnight Suede", code: "#S60", hex: "#1A1F30", size: "32x40", ply: "4-ply Suede", description: "Inky midnight suede." },
+              { name: "Deep Red Suede", code: "#S65", hex: "#6E1A1A", size: "32x40", ply: "4-ply Suede", description: "Theatre-curtain deep red." },
+              { name: "Forest Suede", code: "#S70", hex: "#1F3D2A", size: "32x40", ply: "4-ply Suede", description: "Velvety forest green." },
+              { name: "Navy Suede", code: "#S75", hex: "#161D3A", size: "32x40", ply: "4-ply Suede", description: "Rich navy with depth." },
+              { name: "Espresso Suede", code: "#S80", hex: "#2E1B12", size: "32x40", ply: "4-ply Suede", description: "Dark espresso brown suede." },
+            ],
+          },
+        ],
+      },
     },
   },
   global: {
@@ -725,15 +851,265 @@ export const CMS_SCHEMA: Record<
           },
         ],
       },
+      header_menu: {
+        label: "Header — Main Menu",
+        fields: [
+          {
+            key: "items",
+            label: "Top-level Links",
+            type: "repeater",
+            itemLabel: "Link",
+            helper: "Top navigation entries shown on every page (excluding the Products dropdown).",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "href", label: "URL", type: "text", helper: "Internal path (e.g. /about) or full URL." },
+            ],
+            defaultItems: [
+              { label: "Home", href: "/" },
+              { label: "About", href: "/about" },
+              { label: "Industries", href: "/industries" },
+              { label: "Contact", href: "/contact" },
+            ],
+          },
+          {
+            key: "cta_label",
+            label: "CTA Button Label",
+            type: "text",
+            default: "Request a Quote",
+          },
+          {
+            key: "cta_href",
+            label: "CTA Button URL",
+            type: "text",
+            default: "/contact",
+          },
+          {
+            key: "topbar_phone",
+            label: "Top Bar Phone",
+            type: "text",
+            default: "(973) 357-8111",
+          },
+          {
+            key: "topbar_phone_href",
+            label: "Top Bar Phone Link (tel:…)",
+            type: "text",
+            default: "tel:+19733578111",
+          },
+          {
+            key: "topbar_email",
+            label: "Top Bar Email",
+            type: "text",
+            default: "info@flech.com",
+          },
+          {
+            key: "topbar_email_href",
+            label: "Top Bar Email Link (mailto:…)",
+            type: "text",
+            default: "mailto:info@flech.com",
+          },
+          {
+            key: "topbar_blurb",
+            label: "Top Bar Blurb",
+            type: "text",
+            default: "Precision Board Manufacturing - Paterson, NJ since 1999",
+          },
+        ],
+      },
+      header_products: {
+        label: "Header — Products Dropdown",
+        fields: [
+          {
+            key: "items",
+            label: "Products in Dropdown",
+            type: "repeater",
+            itemLabel: "Product",
+            helper: "Items shown when hovering / tapping the Products menu in the navbar.",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "href", label: "URL", type: "text" },
+              { key: "description", label: "Short Description", type: "text" },
+            ],
+            defaultItems: [
+              { label: "Easel Backs", href: "/products/easel-backs", description: "Self-stick & custom display stands" },
+              { label: "Fold Lines & Dielines", href: "/products/fold-lines", description: "Precision score lines for accurate bends" },
+              { label: "Contract Framing Backs", href: "/products/framing-backs", description: "Standardized backing boards for framing" },
+              { label: "Matboards", href: "/products/matboards", description: "Acid-free decorative borders & mats" },
+            ],
+          },
+          {
+            key: "flagship_label",
+            label: "Flagship Footer Label",
+            type: "text",
+            default: "View Our Flagship: Easel Backs",
+          },
+          {
+            key: "flagship_href",
+            label: "Flagship Footer URL",
+            type: "text",
+            default: "/products/easel-backs",
+          },
+        ],
+      },
+      footer_products: {
+        label: "Footer — Products Column",
+        fields: [
+          {
+            key: "items",
+            label: "Footer Product Links",
+            type: "repeater",
+            itemLabel: "Link",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "href", label: "URL", type: "text" },
+            ],
+            defaultItems: [
+              { label: "Easel Backs", href: "/products/easel-backs" },
+              { label: "Fold Lines & Dielines", href: "/products/fold-lines" },
+              { label: "Contract Framing Backs", href: "/products/framing-backs" },
+              { label: "Matboards", href: "/products/matboards" },
+            ],
+          },
+        ],
+      },
+      footer_company: {
+        label: "Footer — Company Column",
+        fields: [
+          {
+            key: "items",
+            label: "Footer Company Links",
+            type: "repeater",
+            itemLabel: "Link",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "href", label: "URL", type: "text" },
+            ],
+            defaultItems: [
+              { label: "About Flech", href: "/about" },
+              { label: "Industries We Serve", href: "/industries" },
+              { label: "Contact & RFQ", href: "/contact" },
+            ],
+          },
+        ],
+      },
+      footer_industries: {
+        label: "Footer — Industries Column",
+        fields: [
+          {
+            key: "items",
+            label: "Footer Industry Links",
+            type: "repeater",
+            itemLabel: "Link",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "href", label: "URL", type: "text" },
+            ],
+            defaultItems: [
+              { label: "Sign & Display", href: "/industries#signage" },
+              { label: "Wholesale Framing", href: "/industries#framing" },
+              { label: "Packaging & POP", href: "/industries#packaging" },
+              { label: "Interior Design", href: "/industries#interior" },
+            ],
+          },
+        ],
+      },
+      footer_legal: {
+        label: "Footer — Legal Links",
+        fields: [
+          {
+            key: "items",
+            label: "Bottom Bar Links",
+            type: "repeater",
+            itemLabel: "Link",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "href", label: "URL", type: "text" },
+            ],
+            defaultItems: [
+              { label: "Privacy Policy", href: "/privacy" },
+              { label: "Terms of Service", href: "/terms" },
+            ],
+          },
+        ],
+      },
+      contact_info: {
+        label: "Contact Info (shared)",
+        fields: [
+          { key: "phone", label: "Phone (display)", type: "text", default: "(973) 357-8111" },
+          { key: "phone_href", label: "Phone (tel: link)", type: "text", default: "tel:+19733578111" },
+          { key: "email", label: "Email", type: "text", default: "info@flech.com" },
+          { key: "email_href", label: "Email link (mailto:)", type: "text", default: "mailto:info@flech.com" },
+          { key: "address_line1", label: "Address Line 1", type: "text", default: "Paterson, NJ" },
+          { key: "address_line2", label: "Address Line 2", type: "text", default: "United States" },
+        ],
+      },
+      analytics: {
+        label: "Analytics & Tracking",
+        fields: [
+          {
+            key: "ga_id",
+            label: "Google Analytics 4 Measurement ID",
+            type: "text",
+            default: "",
+            helper: "Format: G-XXXXXXXXXX. Loads gtag.js and fires page_view on every route change.",
+          },
+          {
+            key: "gtm_id",
+            label: "Google Tag Manager Container ID",
+            type: "text",
+            default: "",
+            helper: "Format: GTM-XXXXXXX. If set, GTM is loaded; configure tags inside GTM.",
+          },
+          {
+            key: "fb_pixel_id",
+            label: "Meta (Facebook) Pixel ID",
+            type: "text",
+            default: "",
+            helper: "Numeric pixel ID. Loads fbevents.js and fires PageView on every route change.",
+          },
+          {
+            key: "extra_head_html",
+            label: "Additional Head Scripts (raw HTML)",
+            type: "textarea",
+            default: "",
+            helper: "Optional. Pasted verbatim into <head>. Use for custom verification meta tags or one-off scripts.",
+          },
+        ],
+      },
     },
   },
 };
 
 // Helper: given a section's fields, return an object of { key: default } for all fields with a default.
+// Helper: load a section's data and parse the repeater field at `key` into an array.
+// If parsing fails or the row is missing, returns the schema's defaultItems.
+export async function getRepeaterItems<T = Record<string, string>>(
+  page: string,
+  section: string,
+  key: string
+): Promise<T[]> {
+  const sec = CMS_SCHEMA[page]?.sections?.[section];
+  const field = sec?.fields.find((f) => f.key === key);
+  const fallback = (field?.defaultItems as T[] | undefined) || [];
+  if (!field) return fallback;
+  const data = await getContent<Record<string, string>>(page, section, {
+    [key]: JSON.stringify(fallback),
+  });
+  try {
+    const parsed = JSON.parse(data[key] || "[]");
+    return Array.isArray(parsed) ? (parsed as T[]) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
 export function sectionDefaults(fields: Field[]): Record<string, string> {
   const out: Record<string, string> = {};
   for (const f of fields) {
-    if (typeof f.default === "string") out[f.key] = f.default;
+    if (f.type === "repeater" && Array.isArray(f.defaultItems)) {
+      out[f.key] = JSON.stringify(f.defaultItems);
+    } else if (typeof f.default === "string") {
+      out[f.key] = f.default;
+    }
   }
   return out;
 }

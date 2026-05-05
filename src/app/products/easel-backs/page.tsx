@@ -25,6 +25,7 @@ import {
   StaggerItem,
   HoverCard,
 } from "@/components/AnimatedSection";
+import { LazyVideoIframe } from "@/components/LazyVideoIframe";
 
 const easelTypes = [
   {
@@ -83,9 +84,9 @@ export default function EaselBacksPage() {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-[60dvh] flex items-end overflow-hidden">
+      <section className="relative min-h-[60dvh] flex items-end overflow-hidden bg-black">
         <iframe
-          src="https://play.gumlet.io/embed/69ec653451e0355695cb0f3f?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          src="https://play.gumlet.io/embed/69ec653451e0355695cb0f3f?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
           className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
           allow="autoplay; fullscreen"
           title="Industrial machine pressing stacked materials during fabrication"
@@ -251,14 +252,12 @@ export default function EaselBacksPage() {
 
       {/* ═══ USPs ═══ */}
       <section className="bg-charcoal text-white py-24 sm:py-32 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-15 overflow-hidden">
-          <iframe
-            src="https://play.gumlet.io/embed/69ec63fb80df8787f2c15fb5?autoplay=true&loop=true&background=true&muted=true&preload=none"
-            className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
-            allow="autoplay; fullscreen"
-            title="Industrial machine compressing stacked sheets"
-          />
-        </div>
+        <LazyVideoIframe
+          src="https://play.gumlet.io/embed/69ec63fb80df8787f2c15fb5?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
+          title="Industrial machine compressing stacked sheets"
+          containerClassName="absolute inset-0 opacity-15 overflow-hidden"
+          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+        />
         <div className="absolute inset-0 bg-charcoal/90" />
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -485,15 +484,20 @@ export default function EaselBacksPage() {
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-[400px]">
-          <div className="relative h-48 lg:h-auto overflow-hidden">
-            <img decoding="async" loading="lazy" src="https://ik.imagekit.io/l7qlh4sga/DSC05211-Enhanced-NR.png?updatedAt=1777114600730" alt="Manufacturing process" className="absolute inset-0 w-full h-full object-cover"  />
-          </div>
-          <div className="bg-charcoal text-white flex items-center">
-            <AnimatedSection className="px-8 py-16 lg:px-16 lg:py-20">
+      <section className="relative isolate overflow-hidden bg-black">
+        <LazyVideoIframe
+          src="https://play.gumlet.io/embed/69ec633d80df8787f2c1521d?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
+          title="Easel back production"
+          containerClassName="absolute inset-0"
+          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[420px] items-center">
+          <div className="hidden lg:block" aria-hidden="true" />
+          <div className="text-white">
+            <AnimatedSection className="max-w-lg">
               <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">Get Your Easel Back Quote</h2>
-              <p className="text-white/50 leading-relaxed mb-8 text-lg">
+              <p className="text-white/70 leading-relaxed mb-8 text-lg">
                 Type, size, quantity, and custom requirements. We&apos;ll respond within 24 hours with pricing and lead time.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">

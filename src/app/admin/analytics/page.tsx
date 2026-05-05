@@ -25,14 +25,14 @@ function Bar({
 }) {
   const pct = max ? (count / max) * 100 : 0;
   return (
-    <div className="mb-2">
+    <div className="mb-2.5">
       <div className="flex justify-between text-xs mb-1">
-        <span className="text-white/80">{label}</span>
-        <span className="text-white/50">{count}</span>
+        <span className="text-slate-700 truncate pr-2">{label}</span>
+        <span className="text-slate-500 tabular-nums shrink-0">{count}</span>
       </div>
-      <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+      <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
         <div
-          className="h-full bg-gradient-to-r from-accent to-accent-light rounded-full"
+          className="h-full bg-[#1A1A2E] rounded-full"
           style={{ width: `${pct}%` }}
         />
       </div>
@@ -57,7 +57,6 @@ export default async function AnalyticsPage() {
   const browsers = bucket(s, "browser").slice(0, 8);
   const os = bucket(s, "os").slice(0, 8);
 
-  // Traffic sources: resolve "source" = utm_source || referrer host || "Direct"
   const sourceOf = (r: (typeof s)[number]): string => {
     if (r.utm_source) return String(r.utm_source);
     const ref = r.referrer ? String(r.referrer) : "";
@@ -69,8 +68,6 @@ export default async function AnalyticsPage() {
     }
   };
 
-  // Aggregate: count + total seconds per source so time-on-site is
-  // queryable by traffic source (utm / referrer).
   const sourceAgg = new Map<string, { count: number; totalSecs: number }>();
   s.forEach((r) => {
     const k = sourceOf(r);
@@ -104,10 +101,20 @@ export default async function AnalyticsPage() {
   const maxCampaign = Math.max(1, ...campaigns.map(([, c]) => c));
 
   return (
-    <div className="p-8">
-      <h1 className="text-3xl font-serif font-bold mb-8">Analytics</h1>
+    <div className="px-8 py-8">
+      <header className="mb-8 pb-6 border-b border-slate-200">
+        <p className="text-xs uppercase tracking-[0.16em] text-slate-400 mb-1">
+          Audience
+        </p>
+        <h1 className="text-2xl font-semibold text-[#1A1A2E] tracking-tight">
+          Analytics
+        </h1>
+        <p className="text-sm text-slate-500 mt-1">
+          Visitor behaviour, traffic sources, and device breakdown.
+        </p>
+      </header>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
         <Card label="Total Sessions" value={s.length} />
         <Card
           label="Avg Time on Site"
@@ -120,25 +127,24 @@ export default async function AnalyticsPage() {
         />
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
-        <Panel title="Traffic Sources · Time on Site">
-          <p className="text-xs text-white/40 mb-3">
-            How long visitors stay, grouped by UTM source / referrer host.
-          </p>
+      <div className="grid lg:grid-cols-2 gap-5 mb-5">
+        <Panel
+          title="Traffic Sources · Time on Site"
+          subtitle="How long visitors stay, grouped by UTM source / referrer host"
+        >
           {sources.map(([k, v]) => {
             const avg = v.count ? Math.round(v.totalSecs / v.count) : 0;
             return (
               <div key={k} className="mb-3">
-                <div className="flex justify-between text-xs mb-1">
-                  <span className="text-white/80">{k}</span>
-                  <span className="text-white/50">
-                    {v.count} sessions · avg {Math.floor(avg / 60)}m{" "}
-                    {avg % 60}s
+                <div className="flex justify-between text-xs mb-1 gap-2">
+                  <span className="text-slate-700 truncate">{k}</span>
+                  <span className="text-slate-500 shrink-0 tabular-nums">
+                    {v.count} · {Math.floor(avg / 60)}m {avg % 60}s
                   </span>
                 </div>
-                <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div className="h-1 bg-slate-100 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-accent to-accent-light rounded-full"
+                    className="h-full bg-[#C41E3A] rounded-full"
                     style={{ width: `${(v.count / maxSource) * 100}%` }}
                   />
                 </div>
@@ -147,7 +153,7 @@ export default async function AnalyticsPage() {
           })}
           {sources.length === 0 && <Empty />}
         </Panel>
-        <Panel title="Top Campaigns">
+        <Panel title="Top Campaigns" subtitle="Inbound UTM campaigns">
           {campaigns.map(([k, v]) => (
             <Bar key={k} label={k} count={v} max={maxCampaign} />
           ))}
@@ -155,7 +161,7 @@ export default async function AnalyticsPage() {
         </Panel>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
+      <div className="grid lg:grid-cols-2 gap-5 mb-5">
         <Panel title="Top Cities">
           {cities.map(([k, v]) => (
             <Bar key={k} label={k} count={v} max={maxCity} />
@@ -170,7 +176,7 @@ export default async function AnalyticsPage() {
         </Panel>
       </div>
 
-      <div className="grid md:grid-cols-3 gap-6 mb-6">
+      <div className="grid lg:grid-cols-3 gap-5 mb-5">
         <Panel title="Devices">
           {devices.map(([k, v]) => (
             <Bar key={k} label={k} count={v} max={maxDevice} />
@@ -191,44 +197,51 @@ export default async function AnalyticsPage() {
         </Panel>
       </div>
 
-      <Panel title="Recent Sessions">
-        <div className="overflow-x-auto -mx-6">
+      <Panel title="Recent Sessions" subtitle="Most recent 30 visits">
+        <div className="overflow-x-auto -mx-6 -mb-2">
           <table className="w-full text-sm">
-            <thead className="text-xs uppercase tracking-wider text-white/50">
+            <thead className="text-[11px] uppercase tracking-[0.12em] text-slate-500 bg-slate-50 border-y border-slate-200">
               <tr>
-                <th className="p-3 text-left">Time</th>
-                <th className="p-3 text-left">Location</th>
-                <th className="p-3 text-left">Device / Browser</th>
-                <th className="p-3 text-left">Source</th>
-                <th className="p-3 text-left">Landing</th>
-                <th className="p-3 text-right">Duration</th>
-                <th className="p-3 text-right">Pages</th>
+                <th className="px-4 py-2.5 text-left font-medium">Time</th>
+                <th className="px-4 py-2.5 text-left font-medium">Location</th>
+                <th className="px-4 py-2.5 text-left font-medium">
+                  Device / Browser
+                </th>
+                <th className="px-4 py-2.5 text-left font-medium">Source</th>
+                <th className="px-4 py-2.5 text-left font-medium">Landing</th>
+                <th className="px-4 py-2.5 text-right font-medium">Duration</th>
+                <th className="px-4 py-2.5 text-right font-medium">Pages</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody className="divide-y divide-slate-100">
               {s.slice(0, 30).map((r) => (
-                <tr key={r.id} className="border-t border-white/5">
-                  <td className="p-3 text-white/70 text-xs whitespace-nowrap">
-                    {new Date(r.started_at).toLocaleString()}
+                <tr key={r.id} className="hover:bg-slate-50/60">
+                  <td className="px-4 py-3 text-slate-600 text-xs whitespace-nowrap">
+                    {new Date(r.started_at).toLocaleString(undefined, {
+                      dateStyle: "short",
+                      timeStyle: "short",
+                    })}
                   </td>
-                  <td className="p-3 text-white/80 text-xs">
+                  <td className="px-4 py-3 text-slate-700 text-xs">
                     {[r.city, r.region, r.country].filter(Boolean).join(", ") ||
                       "—"}
                   </td>
-                  <td className="p-3 text-white/80 text-xs">
+                  <td className="px-4 py-3 text-slate-700 text-xs">
                     {[r.device_type, r.browser, r.os]
                       .filter(Boolean)
                       .join(" · ")}
                   </td>
-                  <td className="p-3 text-white/70 text-xs">{sourceOf(r)}</td>
-                  <td className="p-3 text-white/60 text-xs truncate max-w-[200px]">
+                  <td className="px-4 py-3 text-slate-600 text-xs">
+                    {sourceOf(r)}
+                  </td>
+                  <td className="px-4 py-3 text-slate-500 text-xs truncate max-w-[200px]">
                     {r.landing_page}
                   </td>
-                  <td className="p-3 text-right text-white/70 text-xs">
+                  <td className="px-4 py-3 text-right text-slate-600 text-xs tabular-nums">
                     {Math.floor((r.duration_seconds || 0) / 60)}m{" "}
                     {(r.duration_seconds || 0) % 60}s
                   </td>
-                  <td className="p-3 text-right text-white/70 text-xs">
+                  <td className="px-4 py-3 text-right text-slate-600 text-xs tabular-nums">
                     {r.page_views || 0}
                   </td>
                 </tr>
@@ -243,9 +256,11 @@ export default async function AnalyticsPage() {
 
 function Card({ label, value }: { label: string; value: string | number }) {
   return (
-    <div className="bg-white/[0.04] border border-white/10 rounded-xl p-5">
-      <p className="text-3xl font-serif font-bold">{value}</p>
-      <p className="text-xs text-white/50 uppercase tracking-wider mt-1">
+    <div className="bg-white border border-slate-200 rounded-lg p-5">
+      <p className="text-2xl font-semibold text-[#1A1A2E] tabular-nums">
+        {value}
+      </p>
+      <p className="text-xs text-slate-500 uppercase tracking-wider mt-2">
         {label}
       </p>
     </div>
@@ -254,19 +269,26 @@ function Card({ label, value }: { label: string; value: string | number }) {
 
 function Panel({
   title,
+  subtitle,
   children,
 }: {
   title: string;
+  subtitle?: string;
   children: React.ReactNode;
 }) {
   return (
-    <div className="bg-white/[0.04] border border-white/10 rounded-xl p-6">
-      <h2 className="font-serif font-semibold mb-4">{title}</h2>
-      {children}
+    <div className="bg-white border border-slate-200 rounded-lg">
+      <div className="px-6 py-4 border-b border-slate-100">
+        <h2 className="text-sm font-semibold text-[#1A1A2E]">{title}</h2>
+        {subtitle && (
+          <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>
+        )}
+      </div>
+      <div className="px-6 py-5">{children}</div>
     </div>
   );
 }
 
 function Empty() {
-  return <p className="text-sm text-white/40">No data yet.</p>;
+  return <p className="text-sm text-slate-400">No data yet.</p>;
 }

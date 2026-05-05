@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { createServerClient } from "@/lib/supabase/server";
-import { PlusCircle, Edit3 } from "lucide-react";
+import { PlusCircle, Edit3, BookOpen } from "lucide-react";
 
 export const dynamic = "force-dynamic";
 
@@ -14,55 +14,75 @@ export default async function BlogsAdmin() {
   const rows = data || [];
 
   return (
-    <div className="p-8 max-w-5xl">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="text-3xl font-serif font-bold">Blogs</h1>
+    <div className="px-8 py-8 max-w-6xl">
+      <header className="flex items-end justify-between mb-8 pb-6 border-b border-slate-200">
+        <div>
+          <p className="text-xs uppercase tracking-[0.16em] text-slate-400 mb-1">
+            Editorial
+          </p>
+          <h1 className="text-2xl font-semibold text-[#1A1A2E] tracking-tight">
+            Blogs
+          </h1>
+          <p className="text-sm text-slate-500 mt-1">
+            Author and publish long-form content for the Flech site.
+          </p>
+        </div>
         <Link
           href="/admin/blogs/new"
-          className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-4 py-2.5 text-sm font-semibold rounded-sm transition-colors"
+          className="inline-flex items-center gap-2 bg-[#1A1A2E] hover:bg-[#0f0f1f] text-white px-4 py-2.5 text-sm font-semibold rounded-md transition-colors"
         >
           <PlusCircle className="w-4 h-4" />
           New Post
         </Link>
-      </div>
+      </header>
 
-      <div className="bg-white/[0.04] border border-white/10 rounded-xl overflow-hidden">
+      <div className="bg-white border border-slate-200 rounded-lg overflow-hidden">
         <table className="w-full text-sm">
-          <thead className="text-xs uppercase tracking-wider text-white/50 border-b border-white/10">
+          <thead className="bg-slate-50 text-[11px] uppercase tracking-[0.12em] text-slate-500 border-b border-slate-200">
             <tr>
-              <th className="p-4 text-left">Title</th>
-              <th className="p-4 text-left">Status</th>
-              <th className="p-4 text-left">Author</th>
-              <th className="p-4 text-left">Updated</th>
-              <th className="p-4"></th>
+              <th className="px-4 py-3 text-left font-medium">Title</th>
+              <th className="px-4 py-3 text-left font-medium">Status</th>
+              <th className="px-4 py-3 text-left font-medium">Author</th>
+              <th className="px-4 py-3 text-left font-medium">Updated</th>
+              <th className="px-4 py-3"></th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="divide-y divide-slate-100">
             {rows.map((r) => (
-              <tr key={r.id} className="border-b border-white/5">
-                <td className="p-4">
-                  <p className="font-semibold">{r.title}</p>
-                  <p className="text-xs text-white/40 font-mono">/blog/{r.slug}</p>
+              <tr key={r.id} className="hover:bg-slate-50/60">
+                <td className="px-4 py-4">
+                  <p className="font-medium text-[#1A1A2E]">{r.title}</p>
+                  <p className="text-xs text-slate-400 font-mono">
+                    /blog/{r.slug}
+                  </p>
                 </td>
-                <td className="p-4">
+                <td className="px-4 py-4">
                   <span
-                    className={`text-xs px-2 py-1 rounded-full ${
+                    className={`inline-flex items-center gap-1.5 text-[11px] font-medium px-2 py-1 rounded-md ${
                       r.published
-                        ? "bg-success/15 text-success"
-                        : "bg-white/10 text-white/60"
+                        ? "bg-emerald-50 text-emerald-700 ring-1 ring-emerald-200"
+                        : "bg-slate-100 text-slate-600 ring-1 ring-slate-200"
                     }`}
                   >
+                    <span
+                      className={`w-1.5 h-1.5 rounded-full ${
+                        r.published ? "bg-emerald-500" : "bg-slate-400"
+                      }`}
+                    />
                     {r.published ? "Published" : "Draft"}
                   </span>
                 </td>
-                <td className="p-4 text-white/70">{r.author}</td>
-                <td className="p-4 text-white/50 text-xs">
-                  {new Date(r.updated_at).toLocaleString()}
+                <td className="px-4 py-4 text-sm text-slate-700">{r.author}</td>
+                <td className="px-4 py-4 text-xs text-slate-500">
+                  {new Date(r.updated_at).toLocaleString(undefined, {
+                    dateStyle: "medium",
+                    timeStyle: "short",
+                  })}
                 </td>
-                <td className="p-4 text-right">
+                <td className="px-4 py-4 text-right">
                   <Link
                     href={`/admin/blogs/${r.id}`}
-                    className="inline-flex items-center gap-1 text-accent-light hover:underline text-sm"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-[#C41E3A] hover:text-[#9B1527]"
                   >
                     <Edit3 className="w-3.5 h-3.5" />
                     Edit
@@ -72,8 +92,19 @@ export default async function BlogsAdmin() {
             ))}
             {rows.length === 0 && (
               <tr>
-                <td colSpan={5} className="p-10 text-center text-white/40">
-                  No blog posts yet. Click &ldquo;New Post&rdquo; to create one.
+                <td colSpan={5} className="py-16 text-center">
+                  <div className="inline-flex flex-col items-center gap-3 text-slate-400">
+                    <div className="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center">
+                      <BookOpen className="w-5 h-5" />
+                    </div>
+                    <p className="text-sm">
+                      No blog posts yet. Click{" "}
+                      <span className="font-medium text-slate-600">
+                        New Post
+                      </span>{" "}
+                      to create one.
+                    </p>
+                  </div>
                 </td>
               </tr>
             )}

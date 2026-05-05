@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { TypewriterText } from "@/components/TypewriterText";
+import { LazyVideoIframe } from "@/components/LazyVideoIframe";
 import {
   ArrowRight,
   Shield,
@@ -153,17 +155,6 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60" />
 
-        {/* Grid texture */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px), repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px)",
-            }}
-          />
-        </div>
-
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 lg:py-0 w-full">
           <div className="max-w-3xl">
             <div
@@ -178,9 +169,14 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
             >
               {h.title_top || "The Backbone of"}
               <br />
-              <span className="bg-gradient-to-r from-accent-light via-red-300 to-accent bg-clip-text text-transparent">
-                {h.title_bottom || "Every Great Display"}
-              </span>
+              <TypewriterText
+                texts={[
+                  h.title_bottom || "Every Great Display",
+                  h.title_bottom_2 || "Art and Framing Industry",
+                  h.title_bottom_3 || "Sign and Packaging",
+                ]}
+                className="bg-gradient-to-r from-accent-light via-red-300 to-accent bg-clip-text text-transparent"
+              />
             </h1>
 
             <p
@@ -472,16 +468,14 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
             { id: "69ec63bc4779ed7c8b5cc114", title: "Industrial press machine operating on stacked materials" },
             { id: "69ec63bb51e0355695caf68c", title: "Close-up of cutting machine processing stacked sheets" },
             { id: "69ec639380df8787f2c15901", title: "Worker guiding stacked sheets through industrial cutting machine" },
-          ].map((v, i) => (
-            <div key={i} className="relative aspect-video rounded-xl overflow-hidden bg-black">
-              <iframe
-                src={`https://play.gumlet.io/embed/${v.id}?autoplay=false&loop=false&preload=none`}
-                className="absolute inset-0 w-full h-full border-0"
-                allow="autoplay; fullscreen"
-                title={v.title}
-                loading="lazy"
-              />
-            </div>
+          ].map((v) => (
+            <LazyVideoIframe
+              key={v.id}
+              src={`https://play.gumlet.io/embed/${v.id}?autoplay=true&loop=true&muted=true&background=true&preload=metadata&disable_logo=true&disable_player_controls=true`}
+              title={v.title}
+              containerClassName="relative aspect-video rounded-xl overflow-hidden bg-black ring-1 ring-white/10"
+              iframeClassName="absolute inset-0 w-full h-full border-0 pointer-events-none"
+            />
           ))}
         </div>
       </section>
@@ -496,7 +490,6 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
             "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png",
             "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png",
             "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png",
-            "https://classical-cyan-xhuufplhds.edgeone.app/DSC04388.png",
             "https://rapid-purple-slfeijomv1.edgeone.app/DSC04401.png",
             "https://variable-indigo-1iauojgzig.edgeone.app/DSC04387.png",
             "https://super-sapphire-76vas0mvon.edgeone.app/DSC04439-Enhanced-NR.png",
@@ -506,13 +499,18 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
           ].map((src, idx) => (
             <div
               key={idx}
-              className="w-56 h-36 sm:w-64 sm:h-44 rounded-xl overflow-hidden shrink-0"
+              className="relative w-56 h-36 sm:w-64 sm:h-44 rounded-xl overflow-hidden shrink-0 bg-warm-white"
             >
-              <img
+              <Image
                 src={src}
                 alt=""
-                className="w-full h-full object-cover"
-                loading="lazy"
+                fill
+                sizes="(min-width:640px) 256px, 224px"
+                className="object-cover"
+                priority={idx < 6}
+                fetchPriority={idx < 6 ? "high" : "auto"}
+                loading={idx < 6 ? "eager" : "lazy"}
+                quality={70}
               />
             </div>
           ))}
@@ -709,21 +707,18 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ BRAND IMAGE + CTA ═══ */}
-      <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-[500px]">
-          {/* Image side */}
-          <div className="relative h-64 lg:h-auto overflow-hidden">
-            <img
-              src="https://intact-magenta-uakn4vfhhr.edgeone.app/DSC04379.png"
-              alt="Flech Paper Products"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20 lg:bg-gradient-to-r lg:from-transparent lg:to-charcoal" />
-          </div>
-
-          {/* CTA side */}
-          <div className="bg-charcoal text-white flex items-center">
-            <AnimatedSection className="max-w-lg mx-auto px-8 py-16 lg:px-12 lg:py-20" data-cms-section="home:cta">
+      <section className="relative isolate overflow-hidden bg-black">
+        <LazyVideoIframe
+          src="https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
+          title="Flech production floor"
+          containerClassName="absolute inset-0"
+          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[500px] items-center">
+          <div className="hidden lg:block" aria-hidden="true" />
+          <div className="text-white flex items-center">
+            <AnimatedSection className="max-w-lg" data-cms-section="home:cta">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light mb-4">
                 {ct.eyebrow || "Get Started"}
               </p>
@@ -755,3 +750,4 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
     </>
   );
 }
+

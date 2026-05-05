@@ -46,6 +46,22 @@
 
 html {
   scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Long page sections: skip render work when scrolled off-screen.
+   Big perf win for pages with many heavy sections (matboards color grid, etc.). */
+section,
+footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 800px;
+}
+
+/* Decode large media off the main thread to keep scroll smooth. */
+img,
+iframe {
+  content-visibility: auto;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -19,6 +19,7 @@ import {
   StaggerItem,
   HoverCard,
 } from "@/components/AnimatedSection";
+import { LazyVideoIframe } from "@/components/LazyVideoIframe";
 
 const specs = [
   { label: "Score Method", value: "CNC rotary scoring, flatbed die-cutting" },
@@ -104,10 +105,10 @@ export default function FoldLinesPage() {
   return (
     <>
       {/* ═══ VIDEO HERO ═══ */}
-      <section className="relative min-h-[60dvh] flex items-center overflow-hidden">
+      <section className="relative min-h-[60dvh] flex items-center overflow-hidden bg-black">
         {/* Background video */}
         <iframe
-          src="https://play.gumlet.io/embed/69ec64784779ed7c8b5ccd98?autoplay=true&loop=true&background=true&muted=true&preload=none"
+          src="https://play.gumlet.io/embed/69ec64784779ed7c8b5ccd98?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
           className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
           allow="autoplay; fullscreen"
           title="Industrial cutting machine slicing stacked material sheets"
@@ -115,17 +116,6 @@ export default function FoldLinesPage() {
 
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/60" />
-
-        {/* Grid texture */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div
-            className="absolute inset-0"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(90deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px), repeating-linear-gradient(0deg, #fff 0px, #fff 1px, transparent 1px, transparent 80px)",
-            }}
-          />
-        </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 py-32 w-full">
           {/* Breadcrumb */}
@@ -503,21 +493,18 @@ export default function FoldLinesPage() {
       </section>
 
       {/* ═══ IMAGE + CTA SPLIT ═══ */}
-      <section className="relative overflow-hidden">
-        <div className="grid lg:grid-cols-2 min-h-[500px]">
-          {/* Image side */}
-          <div className="relative h-64 lg:h-auto overflow-hidden">
-            <img
-              src="https://ik.imagekit.io/l7qlh4sga/DSC04723.png?updatedAt=1777114518923"
-              alt="Factory cutter machine slicing material"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-charcoal/20 lg:bg-gradient-to-r lg:from-transparent lg:to-charcoal" />
-          </div>
-
-          {/* CTA side */}
-          <div className="bg-charcoal text-white flex items-center">
-            <AnimatedSection className="max-w-lg mx-auto px-8 py-16 lg:px-12 lg:py-20">
+      <section className="relative isolate overflow-hidden bg-black">
+        <LazyVideoIframe
+          src="https://play.gumlet.io/embed/69ec632a4779ed7c8b5cb616?autoplay=true&loop=true&background=true&muted=true&preload=metadata&disable_logo=true"
+          title="Fold lines production"
+          containerClassName="absolute inset-0"
+          iframeClassName="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/55 via-charcoal/40 to-charcoal/95 lg:from-transparent lg:via-charcoal/30 lg:to-charcoal" />
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-28 grid lg:grid-cols-2 gap-12 min-h-[500px] items-center">
+          <div className="hidden lg:block" aria-hidden="true" />
+          <div className="text-white flex items-center">
+            <AnimatedSection className="max-w-lg">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent-light mb-4">
                 Get Started
               </p>

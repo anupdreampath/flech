@@ -1,10 +1,16 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
+import { Navbar, type NavbarProps } from "@/components/Navbar";
+import { Footer, type FooterProps } from "@/components/Footer";
 
-export function SiteChrome({ children }: { children: React.ReactNode }) {
+export type SiteChromeProps = {
+  navbar: NavbarProps;
+  footer: FooterProps;
+  children: React.ReactNode;
+};
+
+export function SiteChrome({ navbar, footer, children }: SiteChromeProps) {
   const pathname = usePathname() || "/";
   const hideChrome = pathname.startsWith("/admin");
 
@@ -14,9 +20,9 @@ export function SiteChrome({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      <Navbar />
+      <Navbar {...navbar} />
       <main className="flex-1">{children}</main>
-      <Footer />
+      <Footer {...footer} />
     </>
   );
 }

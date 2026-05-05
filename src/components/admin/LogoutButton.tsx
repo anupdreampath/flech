@@ -13,10 +13,10 @@ export function AdminLogoutButton() {
   return (
     <button
       onClick={logout}
-      className="flex items-center gap-2 text-sm text-white/60 hover:text-white transition-colors w-full px-3 py-2 rounded-md hover:bg-white/5"
+      className="flex items-center gap-2 text-xs font-medium text-white/70 hover:text-white transition-colors w-full px-3 py-2 rounded-md hover:bg-white/[0.06]"
     >
-      <LogOut className="w-4 h-4" />
-      Log out
+      <LogOut className="w-3.5 h-3.5" />
+      Sign out
     </button>
   );
 }

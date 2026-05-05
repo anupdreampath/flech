@@ -1,0 +1,292 @@
+[     450ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[     509ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[    1280ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[    1280ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[    1310ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[    1678ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/products/..." tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+            <SegmentViewNode type="page" pagePath="products/m...">
+              <SegmentTrieNode>
+              <MatboardsPage>
+                <section>
+                <section>
+                <section id="color-line" className="py-24 sm:p...">
+                  <div className="max-w-7xl ...">
+                    <AnimatedSection>
+                    <AnimatedSection>
+                    <ColorCatalog colors={[...]} idPrefix="primary">
+                      <div className="grid lg:gr...">
+                        <button>
+                        <aside className="hidden lg:...">
+                          <div className="bg-surface...">
+                            <div>
+                            <div className="relative mb-5">
+                              <Search>
+                              <input
+                                id="primary-search"
+                                type="text"
+                                value=""
+                                onChange={function onChange}
++                               placeholder="Search name, code…"
+-                               placeholder="Search by name or code…"
+                                className="w-full pl-9 pr-3 py-2 text-sm bg-warm-white border border-border rounded-md..."
+                              >
+                            ...
+                        ...
+                <section className="py-24 sm:p...">
+                  <div className="max-w-7xl ...">
+                    <AnimatedSection>
+                    <ColorCatalog colors={[...]} idPrefix="premium">
+                      <div className="grid lg:gr...">
+                        <button>
+                        <aside className="hidden lg:...">
+                          <div className="bg-surface...">
+                            <div>
+                            <div className="relative mb-5">
+                              <Search>
+                              <input
+                                id="premium-search"
+                                type="text"
+                                value=""
+                                onChange={function onChange}
++                               placeholder="Search name, code…"
+-                               placeholder="Search by name or code…"
+                                className="w-full pl-9 pr-3 py-2 text-sm bg-warm-white border border-border rounded-md..."
+                              >
+                            ...
+                        ...
+                ...
+            ...
+          ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[    7925ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[    7986ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   11943ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   12007ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   15961ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   16024ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   19982ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   20037ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   25949ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   28069ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   32083ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   32390ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   36151ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   38612ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   38668ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   39237ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   39237ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   39251ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   39262ms] [ERROR] A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HTTPAccessFallbackBoundary notFound={undefined} forbidden={undefined} unauthorized={undefined}>
+      <RedirectBoundary>
+        <RedirectErrorBoundary router={{...}}>
+          <InnerLayoutRouter url="/products/..." tree={[...]} params={{}} cacheNode={{rsc:{...}, ...}} ...>
+            <SegmentViewNode type="page" pagePath="products/m...">
+              <SegmentTrieNode>
+              <MatboardsPage>
+                <section>
+                <section>
+                <section id="color-line" className="py-24 sm:p...">
+                  <div className="max-w-7xl ...">
+                    <AnimatedSection>
+                    <AnimatedSection>
+                    <ColorCatalog colors={[...]} idPrefix="primary">
+                      <div className="grid lg:gr...">
+                        <button>
+                        <aside className="hidden lg:...">
+                          <div className="bg-surface...">
+                            <div>
+                            <div className="relative mb-5">
+                              <Search>
+                              <input
+                                id="primary-search"
+                                type="text"
+                                value=""
+                                onChange={function onChange}
++                               placeholder="Search name, code…"
+-                               placeholder="Search by name or code…"
+                                className="w-full pl-9 pr-3 py-2 text-sm bg-warm-white border border-border rounded-md..."
+                              >
+                            ...
+                        ...
+                <section className="py-24 sm:p...">
+                  <div className="max-w-7xl ...">
+                    <AnimatedSection>
+                    <ColorCatalog colors={[...]} idPrefix="premium">
+                      <div className="grid lg:gr...">
+                        <button>
+                        <aside className="hidden lg:...">
+                          <div className="bg-surface...">
+                            <div>
+                            <div className="relative mb-5">
+                              <Search>
+                              <input
+                                id="premium-search"
+                                type="text"
+                                value=""
+                                onChange={function onChange}
++                               placeholder="Search name, code…"
+-                               placeholder="Search by name or code…"
+                                className="w-full pl-9 pr-3 py-2 text-sm bg-warm-white border border-border rounded-md..."
+                              >
+                            ...
+                        ...
+                ...
+            ...
+          ...
+ @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:3272
+[   45471ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   45512ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   49483ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   49525ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   53497ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   53539ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   57512ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   57556ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   63451ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   65245ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   69278ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   69923ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   73546ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   77335ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   80014ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   85399ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   89430ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   90128ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   96598ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec631551e0355695caeb14/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   97492ms] [WARNING] The resource https://video.gumlet.io/69ec5f2680df8787f2c0fb79/69ec63fe4779ed7c8b5cc53b/thumbnail-1-0.png?format=auto&ar=1920%3A1080&mode=crop&w=160 was preloaded using link preload but not used within a few seconds from the window's load event. Please make sure it has an appropriate `as` value and it is preloaded intentionally. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   98101ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   98138ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[   98563ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   98563ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[   98575ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  103689ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104195ms] [LOG] [Fast Refresh] done in 606ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104241ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104939ms] [WARNING] Image with src "https://minimum-amber-a4qmprk7vs.edgeone.app/DSC04395.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104947ms] [WARNING] Image with src "https://fantastic-chocolate-zf9kjl0vke.edgeone.app/DSC04373.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104949ms] [WARNING] Image with src "https://agreed-azure-zjezxiows0.edgeone.app/DSC04411-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104953ms] [WARNING] Image with src "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104955ms] [WARNING] Image with src "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104959ms] [WARNING] Image with src "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104962ms] [WARNING] Image with src "https://classical-cyan-xhuufplhds.edgeone.app/DSC04388.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104964ms] [WARNING] Image with src "https://rapid-purple-slfeijomv1.edgeone.app/DSC04401.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104965ms] [WARNING] Image with src "https://variable-indigo-1iauojgzig.edgeone.app/DSC04387.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104967ms] [WARNING] Image with src "https://super-sapphire-76vas0mvon.edgeone.app/DSC04439-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104969ms] [WARNING] Image with src "https://everyday-lavender-afdj1v0ws7.edgeone.app/DSC04430-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104970ms] [WARNING] Image with src "https://precise-apricot-uv0yrjzron.edgeone.app/DSC04450-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  104972ms] [WARNING] Image with src "https://simple-lavender-oofkk0bffl.edgeone.app/DSC04462-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  105315ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  109631ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  109734ms] [LOG] [Fast Refresh] done in 203ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110660ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110743ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec60544779ed7c8b5c7bf2?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110762ms] [LOG] [HMR] connected @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110743ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec60544779ed7c8b5c7bf2?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110806ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec64bb51e0355695cb0733?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110743ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec60544779ed7c8b5c7bf2?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110806ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec64bb51e0355695cb0733?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110895ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bc4779ed7c8b5cc114?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110743ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec60544779ed7c8b5c7bf2?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110806ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec64bb51e0355695cb0733?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110895ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bc4779ed7c8b5cc114?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110918ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bb51e0355695caf68c?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110743ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec60544779ed7c8b5c7bf2?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110806ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec64bb51e0355695cb0733?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110895ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bc4779ed7c8b5cc114?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110918ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bb51e0355695caf68c?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110935ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec639380df8787f2c15901?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110440ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110734ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec633f80df8787f2c1524e?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  110743ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec60544779ed7c8b5c7bf2?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110806ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec64bb51e0355695cb0733?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110895ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bc4779ed7c8b5cc114?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110918ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63bb51e0355695caf68c?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110935ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec639380df8787f2c15901?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  110970ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec658280df8787f2c17a1c?autoplay=true&loop=true&muted=true&background=true&preload=true&disable_logo=true&disable_player_controls=true:0
+[  111471ms] [WARNING] Image with src "https://minimum-amber-a4qmprk7vs.edgeone.app/DSC04395.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111487ms] [WARNING] Image with src "https://fantastic-chocolate-zf9kjl0vke.edgeone.app/DSC04373.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111505ms] [WARNING] Image with src "https://agreed-azure-zjezxiows0.edgeone.app/DSC04411-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111517ms] [WARNING] Image with src "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111587ms] [WARNING] Image with src "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111590ms] [WARNING] Image with src "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111598ms] [WARNING] Image with src "https://classical-cyan-xhuufplhds.edgeone.app/DSC04388.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111601ms] [WARNING] Image with src "https://rapid-purple-slfeijomv1.edgeone.app/DSC04401.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111606ms] [WARNING] Image with src "https://variable-indigo-1iauojgzig.edgeone.app/DSC04387.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111610ms] [WARNING] Image with src "https://super-sapphire-76vas0mvon.edgeone.app/DSC04439-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111619ms] [WARNING] Image with src "https://everyday-lavender-afdj1v0ws7.edgeone.app/DSC04430-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111622ms] [WARNING] Image with src "https://precise-apricot-uv0yrjzron.edgeone.app/DSC04450-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  111632ms] [WARNING] Image with src "https://simple-lavender-oofkk0bffl.edgeone.app/DSC04462-Enhanced-NR.png" is using quality "70" which is not configured in images.qualities [75]. Please update your config to [70, 75].
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  113350ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  113350ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec63fe4779ed7c8b5cc53b?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  113360ms] [ERROR] The Content Security Policy directive 'upgrade-insecure-requests' is ignored when delivered in a report-only policy. @ https://play.gumlet.io/embed/69ec631551e0355695caeb14?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true:0
+[  113368ms] [WARNING] Detected `scroll-behavior: smooth` on the `<html>` element. To disable smooth scrolling during route transitions, add `data-scroll-behavior="smooth"` to your <html> element. Learn more: https://nextjs.org/docs/messages/missing-data-scroll-behavior @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  187303ms] [LOG] [Fast Refresh] rebuilding @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431
+[  187334ms] [LOG] [Fast Refresh] done in 71ms @ http://localhost:3000/_next/static/chunks/node_modules_next_dist_115brz8._.js:2431

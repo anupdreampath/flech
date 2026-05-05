@@ -66,8 +66,13 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
   return (
     <>
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-[50dvh] flex items-end overflow-hidden" data-cms-section="about:hero">
-        <img decoding="async" loading="lazy" src={h.poster_url || "/images/home/warehouse-boards.jpg"} alt="Flech Warehouse" className="absolute inset-0 w-full h-full object-cover"  />
+      <section className="relative min-h-[50dvh] flex items-end overflow-hidden bg-black" data-cms-section="about:hero">
+        <iframe
+          src="https://play.gumlet.io/embed/69ec633f4779ed7c8b5cb7de?autoplay=true&loop=true&background=true&muted=true&preload=true&disable_logo=true"
+          className="absolute border-0 pointer-events-none top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[177.78vh] h-[56.25vw] min-w-full min-h-full"
+          allow="autoplay; fullscreen"
+          title="Inside the Flech factory"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/75 to-black/50" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 pb-16 sm:pb-24 pt-40 w-full">
