@@ -31,7 +31,7 @@ export const revalidate = 0;
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://flech.com";
 
-export const metadata: Metadata = {
+const defaultMetadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: "Flech Paper Products | Precision Board Manufacturing Since 1999",
@@ -100,11 +100,43 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-  },
 };
+
+export async function generateMetadata(): Promise<Metadata> {
+  const branding = await getContent<Record<string, string>>("global", "branding", {
+    company: "Flech Paper Products",
+    tagline: "Precision Board Manufacturing - Paterson, NJ since 1999",
+    logo_url: "/images/brand/flech-logo.jpg",
+    logo_alt: "Flech Paper Products",
+    favicon_url: "/favicon.ico",
+    footer_description: "",
+  });
+  const faviconUrl = branding.favicon_url || "/favicon.ico";
+  const logoUrl = branding.logo_url || "/images/brand/flech-logo.jpg";
+
+  return {
+    ...defaultMetadata,
+    openGraph: {
+      ...defaultMetadata.openGraph,
+      images: [
+        {
+          url: logoUrl,
+          width: 1200,
+          height: 630,
+          alt: branding.logo_alt || "Flech Paper Products",
+        },
+      ],
+    },
+    twitter: {
+      ...defaultMetadata.twitter,
+      images: [logoUrl],
+    },
+    icons: {
+      icon: [{ url: faviconUrl }],
+      shortcut: [faviconUrl],
+    },
+  };
+}
 
 export const viewport = {
   themeColor: "#1A1A2E",
@@ -259,8 +291,6 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link key="cms-icon" rel="icon" href={branding.favicon_url || "/favicon.ico"} />
-        <link key="cms-shortcut-icon" rel="shortcut icon" href={branding.favicon_url || "/favicon.ico"} />
         <link key="preconnect-gumlet" rel="preconnect" href="https://video.gumlet.io" crossOrigin="" />
         <link key="dns-imagekit" rel="dns-prefetch" href="https://ik.imagekit.io" />
         <link key="dns-cloudinary" rel="dns-prefetch" href="https://res.cloudinary.com" />
