@@ -11,6 +11,7 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: projectRoot,
   images: {
     formats: ["image/avif", "image/webp"],
+    qualities: [70, 75],
     minimumCacheTTL: 60 * 60 * 24 * 365,
     remotePatterns: [
       { protocol: "https", hostname: "*.edgeone.app" },

@@ -28,6 +28,8 @@ export type NavbarProps = {
   };
   flagshipLabel: string;
   flagshipHref: string;
+  logoUrl: string;
+  logoAlt: string;
 };
 
 export function Navbar({
@@ -38,6 +40,8 @@ export function Navbar({
   topbar,
   flagshipLabel,
   flagshipHref,
+  logoUrl,
+  logoAlt,
 }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
@@ -101,8 +105,8 @@ export function Navbar({
           <Link href={homeLink.href} className="flex items-center gap-3 group">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/brand/flech-logo.jpg"
-              alt="Flech Paper Products"
+              src={logoUrl || "/images/brand/flech-logo.jpg"}
+              alt={logoAlt || "Flech Paper Products"}
               className="h-14 w-auto object-contain"
             />
           </Link>
@@ -189,12 +193,14 @@ export function Navbar({
 
           {/* CTA + mobile toggle */}
           <div className="flex items-center gap-3">
-            <Link
-              href={ctaHref}
-              className="hidden sm:inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-6 py-3 text-base font-semibold rounded-sm transition-colors duration-200 cursor-pointer"
-            >
-              {ctaLabel}
-            </Link>
+            {ctaLabel && ctaHref && (
+              <Link
+                href={ctaHref}
+                className="hidden sm:inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-6 py-3 text-base font-semibold rounded-sm transition-colors duration-200 cursor-pointer"
+              >
+                {ctaLabel}
+              </Link>
+            )}
 
             <button
               className="lg:hidden p-2 text-charcoal cursor-pointer"
@@ -251,13 +257,15 @@ export function Navbar({
               ))}
 
               <div className="pt-3 border-t border-border-light">
-                <Link
-                  href={ctaHref}
-                  onClick={() => setMobileOpen(false)}
-                  className="block w-full text-center bg-cta hover:bg-cta-hover text-white px-5 py-3 text-sm font-semibold rounded-sm transition-colors cursor-pointer"
-                >
-                  {ctaLabel}
-                </Link>
+                {ctaLabel && ctaHref && (
+                  <Link
+                    href={ctaHref}
+                    onClick={() => setMobileOpen(false)}
+                    className="block w-full text-center bg-cta hover:bg-cta-hover text-white px-5 py-3 text-sm font-semibold rounded-sm transition-colors cursor-pointer"
+                  >
+                    {ctaLabel}
+                  </Link>
+                )}
               </div>
             </div>
           </div>

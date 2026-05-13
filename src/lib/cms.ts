@@ -34,14 +34,14 @@ export async function getAllContent(page: string) {
 export type SubField = {
   key: string;
   label: string;
-  type: "text" | "textarea" | "image" | "url" | "video";
+  type: "text" | "textarea" | "image" | "url" | "video" | "checkbox";
   helper?: string;
 };
 
 export type Field = {
   key: string;
   label: string;
-  type: "text" | "textarea" | "image" | "url" | "video" | "repeater";
+  type: "text" | "textarea" | "image" | "url" | "video" | "checkbox" | "repeater";
   default?: string;
   helper?: string;
   // Repeater-specific
@@ -106,10 +106,34 @@ export const CMS_SCHEMA: Record<
             default: "Request a Quote",
           },
           {
+            key: "cta_primary_href",
+            label: "Primary CTA URL",
+            type: "text",
+            default: "/contact",
+          },
+          {
+            key: "cta_primary_hidden",
+            label: "Hide primary CTA",
+            type: "checkbox",
+            default: "false",
+          },
+          {
             key: "cta_secondary",
             label: "Secondary CTA Label",
             type: "text",
             default: "Watch Process",
+          },
+          {
+            key: "cta_secondary_href",
+            label: "Secondary CTA URL",
+            type: "text",
+            default: "/products/easel-backs",
+          },
+          {
+            key: "cta_secondary_hidden",
+            label: "Hide secondary CTA",
+            type: "checkbox",
+            default: "false",
           },
           {
             key: "video_url",
@@ -206,8 +230,10 @@ export const CMS_SCHEMA: Record<
           { key: "p4_description", label: "Card 4 · Description", type: "textarea", default: "Bevel-cut decorative borders in acid-free, archival quality. 50+ colors with white, cream, or black core." },
           { key: "p4_href", label: "Card 4 · Link", type: "text", default: "/products/matboards" },
           { key: "p4_image", label: "Card 4 · Image", type: "image", default: "/images/products/matboard-colors-1.png" },
+          { key: "card_cta_label", label: "Card Button Label", type: "text", default: "Explore Product" },
           { key: "view_all_label", label: "View All Button Label", type: "text", default: "View all products" },
           { key: "view_all_href", label: "View All Link", type: "text", default: "/products/easel-backs" },
+          { key: "view_all_hidden", label: "Hide View All Button", type: "checkbox", default: "false" },
         ],
       },
       differentiators: {
@@ -300,6 +326,60 @@ export const CMS_SCHEMA: Record<
           { key: "t4_quote", label: "T4 · Quote", type: "textarea", default: "Fast turnaround, competitive pricing, and the rare ability to handle both small custom runs and bulk orders with equal precision. A true manufacturing partner." },
           { key: "t4_author", label: "T4 · Author", type: "text", default: "Jennifer Torres" },
           { key: "t4_role", label: "T4 · Role", type: "text", default: "Procurement Lead, SignMax Solutions" },
+          { key: "badge_1", label: "Trust Badge 1", type: "text", default: "ISO 9001 Certified" },
+          { key: "badge_2", label: "Trust Badge 2", type: "text", default: "25+ Years Experience" },
+          { key: "badge_3", label: "Trust Badge 3", type: "text", default: "100% Made in USA" },
+        ],
+      },
+      factory_videos: {
+        label: "Factory Video Grid",
+        fields: [
+          { key: "title", label: "Heading", type: "text", default: "Inside the Factory" },
+          { key: "subtitle", label: "Subtitle", type: "textarea", default: "A closer look at the machinery, precision, and people behind every product we ship." },
+          {
+            key: "items",
+            label: "Videos",
+            type: "repeater",
+            itemLabel: "Video",
+            subFields: [{ key: "src", label: "Video URL", type: "video" }],
+            defaultItems: [
+              { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6e/download.mp4" },
+              { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f000/download.mp4" },
+              { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f003/download.mp4" },
+              { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6c/download.mp4" },
+              { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c83/download.mp4" },
+              { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c88/download.mp4" },
+            ],
+          },
+        ],
+      },
+      gallery_strip: {
+        label: "Scrolling Gallery Strip",
+        fields: [
+          {
+            key: "items",
+            label: "Gallery Images",
+            type: "repeater",
+            itemLabel: "Image",
+            subFields: [
+              { key: "src", label: "Image URL", type: "image" },
+              { key: "alt", label: "Alt Text", type: "text" },
+            ],
+            defaultItems: [
+              { src: "https://minimum-amber-a4qmprk7vs.edgeone.app/DSC04395.png", alt: "" },
+              { src: "https://fantastic-chocolate-zf9kjl0vke.edgeone.app/DSC04373.png", alt: "" },
+              { src: "https://agreed-azure-zjezxiows0.edgeone.app/DSC04411-Enhanced-NR.png", alt: "" },
+              { src: "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png", alt: "" },
+              { src: "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png", alt: "" },
+              { src: "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png", alt: "" },
+              { src: "https://rapid-purple-slfeijomv1.edgeone.app/DSC04401.png", alt: "" },
+              { src: "https://variable-indigo-1iauojgzig.edgeone.app/DSC04387.png", alt: "" },
+              { src: "https://super-sapphire-76vas0mvon.edgeone.app/DSC04439-Enhanced-NR.png", alt: "" },
+              { src: "https://everyday-lavender-afdj1v0ws7.edgeone.app/DSC04430-Enhanced-NR.png", alt: "" },
+              { src: "https://precise-apricot-uv0yrjzron.edgeone.app/DSC04450-Enhanced-NR.png", alt: "" },
+              { src: "https://simple-lavender-oofkk0bffl.edgeone.app/DSC04462-Enhanced-NR.png", alt: "" },
+            ],
+          },
         ],
       },
       cta: {
@@ -347,6 +427,24 @@ export const CMS_SCHEMA: Record<
             label: "Secondary Button Link",
             type: "text",
             default: "/contact",
+          },
+          {
+            key: "primary_hidden",
+            label: "Hide Primary Button",
+            type: "checkbox",
+            default: "false",
+          },
+          {
+            key: "secondary_hidden",
+            label: "Hide Secondary Button",
+            type: "checkbox",
+            default: "false",
+          },
+          {
+            key: "video_url",
+            label: "Background Video",
+            type: "video",
+            default: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4",
           },
         ],
       },
@@ -508,6 +606,7 @@ export const CMS_SCHEMA: Record<
           { key: "body", label: "Body", type: "textarea", default: "25 years of precision. 600+ satisfied B2B clients. Your project is next." },
           { key: "cta_label", label: "Button Label", type: "text", default: "Request a Quote" },
           { key: "cta_href", label: "Button Link", type: "text", default: "/contact" },
+          { key: "cta_hidden", label: "Hide Button", type: "checkbox", default: "false" },
           { key: "bg_image", label: "Background Image", type: "image", default: "/images/framing/frame-samples.jpg" },
         ],
       },
@@ -832,6 +931,32 @@ export const CMS_SCHEMA: Record<
             type: "text",
             default: "Precision Board Manufacturing - Paterson, NJ since 1999",
           },
+          {
+            key: "logo_url",
+            label: "Logo Image",
+            type: "image",
+            default: "/images/brand/flech-logo.jpg",
+          },
+          {
+            key: "logo_alt",
+            label: "Logo Alt Text",
+            type: "text",
+            default: "Flech Paper Products",
+          },
+          {
+            key: "favicon_url",
+            label: "Favicon URL",
+            type: "image",
+            default: "/favicon.ico",
+            helper: "Upload or paste a square icon. This is injected into the page head.",
+          },
+          {
+            key: "footer_description",
+            label: "Footer Brand Description",
+            type: "textarea",
+            default:
+              "Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.",
+          },
         ],
       },
       footer: {
@@ -882,6 +1007,12 @@ export const CMS_SCHEMA: Record<
             label: "CTA Button URL",
             type: "text",
             default: "/contact",
+          },
+          {
+            key: "cta_hidden",
+            label: "Hide Header CTA Button",
+            type: "checkbox",
+            default: "false",
           },
           {
             key: "topbar_phone",
@@ -1138,4 +1269,30 @@ export function sectionDefaults(fields: Field[]): Record<string, string> {
     }
   }
   return out;
+}
+
+export const LAYOUT_SECTION_KEY = "__layout";
+
+export function isHidden(content: Record<string, unknown> | undefined): boolean {
+  return content?._hidden === "true";
+}
+
+export function orderedSectionKeys(
+  page: string,
+  layout: Record<string, string> | undefined
+): string[] {
+  const fallback = Object.keys(CMS_SCHEMA[page]?.sections || {});
+  if (!layout?.order) return fallback;
+  try {
+    const parsed = JSON.parse(layout.order);
+    if (!Array.isArray(parsed)) return fallback;
+    const known = new Set(fallback);
+    const ordered = parsed.filter(
+      (key): key is string => typeof key === "string" && known.has(key)
+    );
+    const missing = fallback.filter((key) => !ordered.includes(key));
+    return [...ordered, ...missing];
+  } catch {
+    return fallback;
+  }
 }

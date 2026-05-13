@@ -1,0 +1,4 @@
+[  327771ms] [ERROR] WebSocket connection to 'ws://localhost:5175/_next/webpack-hmr?id=GgdtVtUJaSPsSFmVqo7au' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5175/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[  331149ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5175/api/analytics/track:0
+[  333027ms] [ERROR] WebSocket connection to 'ws://localhost:5175/_next/webpack-hmr?id=GgdtVtUJaSPsSFmVqo7au' failed: Error in connection establishment: net::ERR_CONNECTION_REFUSED @ http://localhost:5175/_next/static/chunks/node_modules_next_dist_client_0fhqo1d._.js:13299
+[  333047ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:5175/api/analytics/track:0

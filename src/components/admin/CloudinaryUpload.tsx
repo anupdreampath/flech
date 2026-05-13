@@ -28,14 +28,13 @@ export function CloudinaryUpload({
   kind?: Kind;
 }) {
   const widgetRef = useRef<{ open: () => void } | null>(null);
-  const [ready, setReady] = useState(false);
+  const [ready, setReady] = useState(
+    () => typeof window !== "undefined" && Boolean(window.cloudinary)
+  );
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    if (window.cloudinary) {
-      setReady(true);
-      return;
-    }
+    if (window.cloudinary) return;
     const script = document.createElement("script");
     script.src = "https://upload-widget.cloudinary.com/global/all.js";
     script.async = true;

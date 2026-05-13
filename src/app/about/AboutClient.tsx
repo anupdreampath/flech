@@ -34,7 +34,31 @@ type AboutCms = {
   timeline?: CmsMap;
   founder?: CmsMap;
   cta?: CmsMap;
+  layout?: CmsMap;
 };
+
+const ABOUT_SECTION_ORDER = [
+  "hero",
+  "stats",
+  "story",
+  "timeline",
+  "founder",
+  "cta",
+];
+
+function parseItems<T>(raw: string | undefined, fallback: T[]): T[] {
+  if (!raw) return fallback;
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? (parsed as T[]) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function isHidden(section: CmsMap | undefined) {
+  return section?._hidden === "true";
+}
 
 export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
   const h = cms.hero || {};
@@ -45,6 +69,15 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
   const tl = cms.timeline || {};
   const fo = cms.founder || {};
   const ct = cms.cta || {};
+  const orderedSections = parseItems<string>(cms.layout?.order, ABOUT_SECTION_ORDER);
+  const sectionOrder = (key: string) => {
+    const idx = orderedSections.indexOf(key);
+    return idx === -1 ? ABOUT_SECTION_ORDER.indexOf(key) : idx;
+  };
+  const sectionStyle = (key: string, hidden?: boolean) => ({
+    order: sectionOrder(key),
+    display: hidden ? "none" : undefined,
+  });
 
   const stats = [1, 2, 3, 4].map((n, i) => ({
     value: st[`stat_${n}_value`] || "",
@@ -65,9 +98,9 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
   }));
 
   return (
-    <>
+    <div className="flex flex-col">
       {/* ═══ HERO ═══ */}
-      <section className="relative min-h-[50dvh] flex items-end overflow-hidden bg-black" data-cms-section="about:hero">
+      <section className="relative min-h-[50dvh] flex items-end overflow-hidden bg-black" data-cms-section="about:hero" style={sectionStyle("hero", isHidden(h))}>
         <LazyVideo
           src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260effb/download.mp4"
           priority
@@ -94,7 +127,7 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
       </section>
 
       {/* ═══ STATS ═══ */}
-      <section className="bg-charcoal text-white" data-cms-section="about:stats">
+      <section className="bg-charcoal text-white" data-cms-section="about:stats" style={sectionStyle("stats", isHidden(st))}>
         <div className="max-w-7xl mx-auto px-6 py-12">
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => {
@@ -118,7 +151,7 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
       </section>
 
       {/* ═══ STORY + VALUES ═══ */}
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32" style={sectionStyle("story", isHidden(sy) && isHidden(va))}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16">
             <AnimatedSection preset="slideLeft">
@@ -171,7 +204,7 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
       </section>
 
       {/* ═══ TIMELINE ═══ */}
-      <section className="bg-warm-white py-24 sm:py-32" data-cms-section="about:timeline">
+      <section className="bg-warm-white py-24 sm:py-32" data-cms-section="about:timeline" style={sectionStyle("timeline", isHidden(tl))}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="max-w-2xl mb-16" data-cms-section="about:timeline_heading">
@@ -201,7 +234,7 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
       </section>
 
       {/* ═══ FOUNDER NOTE + IMAGE ═══ */}
-      <section className="py-24 sm:py-32" data-cms-section="about:founder">
+      <section className="py-24 sm:py-32" data-cms-section="about:founder" style={sectionStyle("founder", isHidden(fo))}>
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection preset="slideLeft">
@@ -224,7 +257,7 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
       </section>
 
       {/* ═══ CTA ═══ */}
-      <section className="bg-charcoal text-white py-20 sm:py-28 relative overflow-hidden" data-cms-section="about:cta">
+      <section className="bg-charcoal text-white py-20 sm:py-28 relative overflow-hidden" data-cms-section="about:cta" style={sectionStyle("cta", isHidden(ct))}>
         <div className="absolute inset-0 opacity-10">
           <img decoding="async" loading="lazy" src={ct.bg_image || "/images/framing/frame-samples.jpg"} alt="" className="w-full h-full object-cover"  />
         </div>
@@ -233,12 +266,12 @@ export default function AboutPage({ cms = {} }: { cms?: AboutCms }) {
           <AnimatedSection>
             <h2 className="text-3xl sm:text-4xl font-serif font-bold mb-4">{ct.title || "Let's Build Something Together"}</h2>
             <p className="text-white/50 leading-relaxed mb-10 text-lg">{ct.body || "25 years of precision. 600+ satisfied B2B clients. Your project is next."}</p>
-            <Link href={ct.cta_href || "/contact"} className="group inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 text-sm font-semibold rounded-sm transition-colors cursor-pointer">
+            <Link href={ct.cta_href || "/contact"} style={{ display: ct.cta_hidden === "true" ? "none" : undefined }} className="group inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 text-sm font-semibold rounded-sm transition-colors cursor-pointer">
               {ct.cta_label || "Request a Quote"} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </AnimatedSection>
         </div>
       </section>
-    </>
+    </div>
   );
 }

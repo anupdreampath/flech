@@ -66,6 +66,7 @@ export default function ContactPage() {
         headers: { "content-type": "application/json" },
         body: JSON.stringify({
           ...formData,
+          formType: "quote",
           pageUrl: window.location.href,
           referrer: document.referrer,
           answers: {

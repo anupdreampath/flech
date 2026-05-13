@@ -31,10 +31,13 @@ export async function POST(req: NextRequest) {
   const ua = req.headers.get("user-agent") || "";
 
   const sb = createServerClient();
+  const isCompleteLead = Boolean(
+    name && company && email && product && industry && quantity
+  );
   const { data, error } = await sb
     .from("form_submissions")
     .insert({
-      form_type: formType || "contact",
+      form_type: formType || "quote",
       name,
       company,
       email,
@@ -52,6 +55,7 @@ export async function POST(req: NextRequest) {
       region: geo.region,
       referrer,
       page_url: pageUrl,
+      is_complete: isCompleteLead,
     })
     .select("id")
     .single();
@@ -59,5 +63,31 @@ export async function POST(req: NextRequest) {
   if (error) {
     return NextResponse.json({ ok: false, error: error.message }, { status: 500 });
   }
+  if (isCompleteLead) {
+    notifyCompletedLead(data.id).catch((notifyError) => {
+      console.error("Lead email notification failed", notifyError);
+    });
+  }
+
   return NextResponse.json({ ok: true, id: data.id });
+}
+
+async function notifyCompletedLead(submissionId: string) {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+  const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!url || !serviceKey) return;
+
+  const res = await fetch(`${url}/functions/v1/send-lead-email`, {
+    method: "POST",
+    headers: {
+      "content-type": "application/json",
+      authorization: `Bearer ${serviceKey}`,
+    },
+    body: JSON.stringify({ submissionId }),
+  });
+
+  if (!res.ok) {
+    const text = await res.text().catch(() => "");
+    throw new Error(`send-lead-email failed: ${res.status} ${text}`);
+  }
 }

@@ -9,6 +9,8 @@ import {
   RefreshCw,
   ExternalLink,
   ArrowLeft,
+  ChevronUp,
+  EyeOff,
 } from "lucide-react";
 import { ContentEditor } from "./[page]/[section]/Editor";
 import type { Field } from "@/lib/cms";
@@ -30,10 +32,12 @@ const VIEWPORT_WIDTH: Record<Viewport, number | null> = {
 };
 
 export function VisualStudio({ sections }: { sections: StudioSection[] }) {
+  const [sectionList, setSectionList] = useState(sections);
+  const [layoutSaving, setLayoutSaving] = useState(false);
   // Group sections by page.
   const pages = useMemo(() => {
     const map = new Map<string, StudioSection[]>();
-    sections.forEach((s) => {
+    sectionList.forEach((s) => {
       if (!map.has(s.pageKey)) map.set(s.pageKey, []);
       map.get(s.pageKey)!.push(s);
     });
@@ -43,7 +47,7 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
       url: list[0].pageUrl,
       sections: list,
     }));
-  }, [sections]);
+  }, [sectionList]);
 
   const [activePageKey, setActivePageKey] = useState(pages[0]?.key || "home");
   const [activeSectionKey, setActiveSectionKey] = useState<string | null>(null);
@@ -77,14 +81,47 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
       // Find the section in our sections list — fall back to pageKey only.
       const matchPage = pages.find((p) => p.key === pageKey);
       if (matchPage) setActivePageKey(pageKey);
-      const found = sections.find(
+      const found = sectionList.find(
         (s) => s.pageKey === pageKey && s.sectionKey === sectionKey
       );
       if (found) setActiveSectionKey(sectionKey);
     }
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, [pages, sections]);
+  }, [pages, sectionList]);
+
+  async function persistOrder(pageKey: string, orderedSections: StudioSection[]) {
+    setLayoutSaving(true);
+    await fetch("/api/admin/content", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        page: pageKey,
+        section_key: "__layout",
+        content: { order: JSON.stringify(orderedSections.map((s) => s.sectionKey)) },
+      }),
+    });
+    setLayoutSaving(false);
+    setIframeKey((k) => k + 1);
+  }
+
+  function moveSection(sectionKey: string, dir: -1 | 1) {
+    if (!activePage) return;
+    const current = activePage.sections;
+    const i = current.findIndex((s) => s.sectionKey === sectionKey);
+    const j = i + dir;
+    if (i < 0 || j < 0 || j >= current.length) return;
+    const ordered = [...current];
+    [ordered[i], ordered[j]] = [ordered[j], ordered[i]];
+    setSectionList((list) => {
+      const index = new Map(ordered.map((s, idx) => [s.sectionKey, idx]));
+      return [...list].sort((a, b) => {
+        if (a.pageKey !== activePage.key || b.pageKey !== activePage.key) return 0;
+        return (index.get(a.sectionKey) ?? 0) - (index.get(b.sectionKey) ?? 0);
+      });
+    });
+    persistOrder(activePage.key, ordered);
+  }
 
   // Compose iframe URL: page URL + cmsEdit + cache-buster.
   const iframeSrc = useMemo(() => {
@@ -137,17 +174,47 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
               <p className="px-5 pt-4 pb-2 text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
                 Sections on this page
               </p>
+              {layoutSaving && (
+                <p className="px-5 pb-2 text-xs text-slate-500">Saving section order...</p>
+              )}
               <ul>
-                {activePage?.sections.map((s) => (
+                {activePage?.sections.map((s, idx) => (
                   <li key={s.sectionKey}>
-                    <button
-                      type="button"
-                      onClick={() => setActiveSectionKey(s.sectionKey)}
-                      className="group w-full flex items-center justify-between gap-2 px-5 py-2.5 text-left text-sm text-slate-700 hover:bg-slate-50 hover:text-[#1A1A2E] transition-colors"
-                    >
-                      <span className="truncate">{s.sectionLabel}</span>
-                      <ChevronRight className="w-4 h-4 text-slate-300 group-hover:text-[#C41E3A] group-hover:translate-x-0.5 transition-all" />
-                    </button>
+                    <div className="group flex items-center gap-1 px-3 py-1.5 hover:bg-slate-50">
+                      <div className="flex items-center">
+                        <button
+                          type="button"
+                          onClick={() => moveSection(s.sectionKey, -1)}
+                          disabled={idx === 0 || layoutSaving}
+                          className="p-1.5 text-slate-400 hover:text-[#1A1A2E] disabled:opacity-25"
+                          title="Move section up"
+                        >
+                          <ChevronUp className="w-4 h-4" />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => moveSection(s.sectionKey, 1)}
+                          disabled={idx === activePage.sections.length - 1 || layoutSaving}
+                          className="p-1.5 text-slate-400 hover:text-[#1A1A2E] disabled:opacity-25"
+                          title="Move section down"
+                        >
+                          <ChevronDown className="w-4 h-4" />
+                        </button>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setActiveSectionKey(s.sectionKey)}
+                        className="flex min-w-0 flex-1 items-center justify-between gap-2 rounded px-2 py-1.5 text-left text-sm text-slate-700 hover:text-[#1A1A2E] transition-colors"
+                      >
+                        <span className="flex min-w-0 items-center gap-2">
+                          {s.initial._hidden === "true" && (
+                            <EyeOff className="w-3.5 h-3.5 shrink-0 text-slate-400" />
+                          )}
+                          <span className="truncate">{s.sectionLabel}</span>
+                        </span>
+                        <ChevronRight className="w-4 h-4 shrink-0 text-slate-300 group-hover:text-[#C41E3A] group-hover:translate-x-0.5 transition-all" />
+                      </button>
+                    </div>
                   </li>
                 ))}
               </ul>

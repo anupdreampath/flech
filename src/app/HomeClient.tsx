@@ -14,7 +14,6 @@ import {
   Award,
   Clock,
   Users,
-  ChevronRight,
   Scissors,
   Frame,
   Palette,
@@ -56,8 +55,40 @@ type CmsContent = {
   how_we_work_steps?: CmsMap;
   testimonials_heading?: CmsMap;
   testimonials?: CmsMap;
+  factory_videos?: CmsMap;
+  gallery_strip?: CmsMap;
   cta?: CmsMap;
+  layout?: CmsMap;
 };
+
+type MediaItem = { src?: string; alt?: string };
+
+const HOME_SECTION_ORDER = [
+  "hero",
+  "stats",
+  "products_list",
+  "differentiators",
+  "factory_videos",
+  "gallery_strip",
+  "industries_preview",
+  "how_we_work_steps",
+  "testimonials",
+  "cta",
+];
+
+function parseItems<T>(raw: string | undefined, fallback: T[]): T[] {
+  if (!raw) return fallback;
+  try {
+    const parsed = JSON.parse(raw);
+    return Array.isArray(parsed) ? (parsed as T[]) : fallback;
+  } catch {
+    return fallback;
+  }
+}
+
+function isHidden(section: CmsMap | undefined) {
+  return section?._hidden === "true";
+}
 
 export default function Home({ cms = {} }: { cms?: CmsContent }) {
   const h = cms.hero || {};
@@ -72,7 +103,18 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
   const hs = cms.how_we_work_steps || {};
   const th = cms.testimonials_heading || {};
   const tl = cms.testimonials || {};
+  const fv = cms.factory_videos || {};
+  const gs = cms.gallery_strip || {};
   const ct = cms.cta || {};
+  const orderedSections = parseItems<string>(cms.layout?.order, HOME_SECTION_ORDER);
+  const sectionOrder = (key: string) => {
+    const idx = orderedSections.indexOf(key);
+    return idx === -1 ? HOME_SECTION_ORDER.indexOf(key) : idx;
+  };
+  const sectionStyle = (key: string, hidden?: boolean) => ({
+    order: sectionOrder(key),
+    display: hidden ? "none" : undefined,
+  });
 
   const stats = [1, 2, 3, 4].map((n, i) => ({
     value: st[`stat_${n}_value`] || "",
@@ -135,10 +177,27 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       color: TESTIMONIAL_COLORS[i],
     };
   });
+  const factoryVideos = parseItems<MediaItem>(fv.items, [
+    { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6e/download.mp4" },
+    { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f000/download.mp4" },
+    { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f003/download.mp4" },
+    { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6c/download.mp4" },
+    { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c83/download.mp4" },
+    { src: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c88/download.mp4" },
+  ]).filter((item) => item.src);
+  const galleryImages = parseItems<MediaItem>(gs.items, [
+    { src: "https://minimum-amber-a4qmprk7vs.edgeone.app/DSC04395.png", alt: "" },
+    { src: "https://fantastic-chocolate-zf9kjl0vke.edgeone.app/DSC04373.png", alt: "" },
+    { src: "https://agreed-azure-zjezxiows0.edgeone.app/DSC04411-Enhanced-NR.png", alt: "" },
+    { src: "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png", alt: "" },
+    { src: "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png", alt: "" },
+    { src: "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png", alt: "" },
+  ]).filter((item) => item.src);
+  const trustBadges = [tl.badge_1, tl.badge_2, tl.badge_3].filter(Boolean);
   return (
-    <>
+    <div className="flex flex-col">
       {/* ═══ VIDEO HERO ═══ */}
-      <section className="relative h-[100dvh] max-h-[844px] flex items-center overflow-hidden" data-cms-section="home:hero">
+      <section className="relative h-[100dvh] max-h-[844px] flex items-center overflow-hidden" data-cms-section="home:hero" style={sectionStyle("hero", isHidden(h))}>
         {/* Background video */}
         <video
           autoPlay
@@ -190,14 +249,16 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
               className="flex flex-col sm:flex-row gap-4 animate-[fadeUp_0.8s_0.9s_both]"
             >
               <Link
-                href="/contact"
+                href={h.cta_primary_href || "/contact"}
+                style={{ display: h.cta_primary_hidden === "true" ? "none" : undefined }}
                 className="group inline-flex items-center justify-center gap-3 bg-cta hover:bg-cta-hover text-white px-8 py-4 text-sm font-semibold rounded-sm transition-[transform,color,background-color,border-color] duration-300 cursor-pointer hover:shadow-lg hover:shadow-accent/20"
               >
                 {h.cta_primary || "Request a Quote"}
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/products/easel-backs"
+                href={h.cta_secondary_href || "/products/easel-backs"}
+                style={{ display: h.cta_secondary_hidden === "true" ? "none" : undefined }}
                 className="group inline-flex items-center justify-center gap-3 bg-white/10 hover:bg-white/20 text-white px-8 py-4 text-sm font-semibold rounded-sm transition-[transform,color,background-color,border-color] duration-300 cursor-pointer border border-white/20"
               >
                 <Play className="w-4 h-4" />
@@ -216,7 +277,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ STATS BAR ═══ */}
-      <section className="relative bg-charcoal border-b border-white/10 overflow-hidden" data-cms-section="home:stats">
+      <section className="relative bg-charcoal border-b border-white/10 overflow-hidden" data-cms-section="home:stats" style={sectionStyle("stats", isHidden(st))}>
         <div className="max-w-7xl mx-auto px-6 py-12 sm:py-16">
           <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat) => {
@@ -244,7 +305,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ PRODUCTS — Bento Grid ═══ */}
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32" data-cms-section="home:products_list" style={sectionStyle("products_list", isHidden(pl))}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16">
@@ -258,8 +319,8 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
               </div>
               <Link
                 href={pl.view_all_href || "/products/easel-backs"}
+                style={{ display: pl.view_all_hidden === "true" ? "none" : undefined }}
                 className="inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-dark transition-colors cursor-pointer group"
-                data-cms-section="home:products_list"
               >
                 {pl.view_all_label || "View all products"}
                 <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -321,7 +382,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
                         </p>
 
                         <div className="inline-flex items-center gap-2 text-sm font-semibold text-accent group-hover:text-accent-dark">
-                          Explore Product
+                          {pl.card_cta_label || "Explore Product"}
                           <ArrowRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform duration-300" />
                         </div>
                       </div>
@@ -335,7 +396,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ WHY FLECH — Image Grid ═══ */}
-      <section className="bg-charcoal text-white py-24 sm:py-32 relative overflow-hidden" data-cms-section="home:differentiators">
+      <section className="bg-charcoal text-white py-24 sm:py-32 relative overflow-hidden" data-cms-section="home:differentiators" style={sectionStyle("differentiators", isHidden(dif))}>
         <div className="absolute inset-0 opacity-[0.02]">
           <div
             className="absolute inset-0"
@@ -400,23 +461,20 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
 
 
       {/* ═══ PROCESS VIDEOS ═══ */}
-      <section className="py-16 sm:py-20 bg-charcoal overflow-hidden">
+      <section className="py-16 sm:py-20 bg-charcoal overflow-hidden" data-cms-section="home:factory_videos" style={sectionStyle("factory_videos", isHidden(fv))}>
         <div className="max-w-7xl mx-auto px-6 mb-10">
-          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">Inside the Factory</h2>
-          <p className="text-white/60 mt-2 max-w-xl">A closer look at the machinery, precision, and people behind every product we ship.</p>
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">
+            {fv.title || "Inside the Factory"}
+          </h2>
+          <p className="text-white/60 mt-2 max-w-xl">
+            {fv.subtitle || "A closer look at the machinery, precision, and people behind every product we ship."}
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-6">
-          {[
-            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6e/download.mp4",
-            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f000/download.mp4",
-            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c2686af59f257260f003/download.mp4",
-            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6c/download.mp4",
-            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c83/download.mp4",
-            "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c36a65082997b52a8c88/download.mp4",
-          ].map((src) => (
+          {factoryVideos.map(({ src }) => (
             <LazyVideo
               key={src}
-              src={src}
+              src={src || ""}
               containerClassName="relative aspect-video rounded-xl overflow-hidden bg-black ring-1 ring-white/10"
               videoClassName="absolute inset-0 w-full h-full object-cover pointer-events-none"
             />
@@ -425,29 +483,16 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ GALLERY STRIP ═══ */}
-      <section className="py-4 bg-warm-white overflow-hidden">
+      <section className="py-4 bg-warm-white overflow-hidden" data-cms-section="home:gallery_strip" style={sectionStyle("gallery_strip", isHidden(gs))}>
         <div className="flex gap-4 animate-[marquee_40s_linear_infinite] will-change-transform">
-          {[
-            "https://minimum-amber-a4qmprk7vs.edgeone.app/DSC04395.png",
-            "https://fantastic-chocolate-zf9kjl0vke.edgeone.app/DSC04373.png",
-            "https://agreed-azure-zjezxiows0.edgeone.app/DSC04411-Enhanced-NR.png",
-            "https://ugliest-lavender-csj1iqaayz.edgeone.app/DSC04404-2-Enhanced-NR.png",
-            "https://absolute-moccasin-prou3nhs4n.edgeone.app/DSC04456-Enhanced-NR.png",
-            "https://zygotic-turquoise-ytseh49sgl.edgeone.app/DSC04379.png",
-            "https://rapid-purple-slfeijomv1.edgeone.app/DSC04401.png",
-            "https://variable-indigo-1iauojgzig.edgeone.app/DSC04387.png",
-            "https://super-sapphire-76vas0mvon.edgeone.app/DSC04439-Enhanced-NR.png",
-            "https://everyday-lavender-afdj1v0ws7.edgeone.app/DSC04430-Enhanced-NR.png",
-            "https://precise-apricot-uv0yrjzron.edgeone.app/DSC04450-Enhanced-NR.png",
-            "https://simple-lavender-oofkk0bffl.edgeone.app/DSC04462-Enhanced-NR.png",
-          ].map((src, idx) => (
+          {galleryImages.map(({ src, alt }, idx) => (
             <div
               key={idx}
               className="relative w-56 h-36 sm:w-64 sm:h-44 rounded-xl overflow-hidden shrink-0 bg-warm-white"
             >
               <Image
-                src={src}
-                alt=""
+                src={src || ""}
+                alt={alt || ""}
                 fill
                 sizes="(min-width:640px) 256px, 224px"
                 className="object-cover"
@@ -462,7 +507,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ INDUSTRIES ═══ */}
-      <section className="py-24 sm:py-32 bg-warm-white" data-cms-section="home:industries_preview">
+      <section className="py-24 sm:py-32 bg-warm-white" data-cms-section="home:industries_preview" style={sectionStyle("industries_preview", isHidden(ip))}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-16" data-cms-section="home:industries_heading">
@@ -476,7 +521,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
           </AnimatedSection>
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {industries.map((industry, idx) => (
+            {industries.map((industry) => (
               <StaggerItem key={industry.name}>
                 <HoverCard>
                   <div className="group relative h-72 rounded-2xl overflow-hidden cursor-pointer">
@@ -503,7 +548,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ PROCESS ═══ */}
-      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16" data-cms-section="home:how_we_work_steps">
+      <section className="pt-24 sm:pt-32 pb-12 sm:pb-16" data-cms-section="home:how_we_work_steps" style={sectionStyle("how_we_work_steps", isHidden(hs))}>
         <div className="max-w-7xl mx-auto px-6">
           <AnimatedSection>
             <div className="text-center max-w-2xl mx-auto mb-20" data-cms-section="home:how_we_work_heading">
@@ -546,7 +591,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
       </section>
 
       {/* ═══ TESTIMONIALS — 21st Dev Style ═══ */}
-      <section className="pt-12 sm:pt-16 pb-24 sm:pb-32 relative overflow-hidden bg-gradient-to-b from-paper-white to-warm-white">
+      <section className="pt-12 sm:pt-16 pb-24 sm:pb-32 relative overflow-hidden bg-gradient-to-b from-paper-white to-warm-white" style={sectionStyle("testimonials", isHidden(tl))}>
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-[0.03]">
           <div
@@ -631,29 +676,25 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
           </StaggerContainer>
 
           {/* Trust badges */}
+          {trustBadges.length > 0 && (
           <AnimatedSection delay={0.4}>
             <div className="mt-16 flex flex-wrap justify-center items-center gap-8 text-sm text-muted/60">
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent rounded-full" />
-                ISO 9001 Certified
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent rounded-full" />
-                25+ Years Experience
-              </span>
-              <span className="flex items-center gap-2">
-                <span className="w-2 h-2 bg-accent rounded-full" />
-                100% Made in USA
-              </span>
+              {trustBadges.map((badge) => (
+                <span key={badge} className="flex items-center gap-2">
+                  <span className="w-2 h-2 bg-accent rounded-full" />
+                  {badge}
+                </span>
+              ))}
             </div>
           </AnimatedSection>
+          )}
         </div>
       </section>
 
       {/* ═══ BRAND IMAGE + CTA ═══ */}
-      <section className="relative isolate overflow-hidden bg-black">
+      <section className="relative isolate overflow-hidden bg-black" data-cms-section="home:cta" style={sectionStyle("cta", isHidden(ct))}>
         <LazyVideo
-          src="https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4"
+          src={ct.video_url || "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4"}
           containerClassName="absolute inset-0"
           videoClassName="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full object-cover pointer-events-none"
         />
@@ -674,6 +715,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={ct.primary_href || "/contact"}
+                  style={{ display: ct.primary_hidden === "true" ? "none" : undefined }}
                   className="group inline-flex items-center justify-center gap-2 bg-cta hover:bg-cta-hover text-white px-8 py-4 text-sm font-semibold rounded-sm transition-[transform,color,background-color,border-color] duration-300 cursor-pointer hover:shadow-lg hover:shadow-accent/20"
                 >
                   {ct.primary_label || "Request a Quote"}
@@ -681,6 +723,7 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
                 </Link>
                 <Link
                   href={ct.secondary_href || "/contact"}
+                  style={{ display: ct.secondary_hidden === "true" ? "none" : undefined }}
                   className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/15 text-white px-8 py-4 text-sm font-semibold rounded-sm transition-colors cursor-pointer border border-white/20"
                 >
                   {ct.secondary_label || "Request Samples"}
@@ -690,7 +733,6 @@ export default function Home({ cms = {} }: { cms?: CmsContent }) {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
-

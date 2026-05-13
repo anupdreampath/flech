@@ -19,6 +19,9 @@ export type FooterProps = {
   copyright?: string;
   ctaLabel: string;
   ctaHref: string;
+  logoUrl: string;
+  logoAlt: string;
+  description: string;
 };
 
 export function Footer({
@@ -30,6 +33,9 @@ export function Footer({
   copyright,
   ctaLabel,
   ctaHref,
+  logoUrl,
+  logoAlt,
+  description,
 }: FooterProps) {
   return (
     <footer className="bg-charcoal text-white/80" role="contentinfo">
@@ -39,15 +45,14 @@ export function Footer({
             <div className="mb-6">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/brand/flech-logo.jpg"
-                alt="Flech Paper Products"
+                src={logoUrl || "/images/brand/flech-logo.jpg"}
+                alt={logoAlt || "Flech Paper Products"}
                 className="h-10 w-auto object-contain brightness-200"
               />
             </div>
             <p className="text-sm leading-relaxed text-white/60 mb-6 max-w-xs">
-              Precision board manufacturing since 1999. Specialists in easel
-              backs, matboard, and specialty board products for the framing,
-              sign, and display industries.
+              {description ||
+                "Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries."}
             </p>
             <div className="space-y-3 text-sm">
               <a
@@ -141,13 +146,15 @@ export function Footer({
               Need custom board solutions? Our team responds within 24 hours
               with detailed quotes and specifications.
             </p>
-            <Link
-              href={ctaHref}
-              className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-6 py-3 text-sm font-semibold rounded-sm transition-colors cursor-pointer"
-            >
-              {ctaLabel}
-              <ArrowUpRight className="w-4 h-4" />
-            </Link>
+            {ctaLabel && ctaHref && (
+              <Link
+                href={ctaHref}
+                className="inline-flex items-center gap-2 bg-cta hover:bg-cta-hover text-white px-6 py-3 text-sm font-semibold rounded-sm transition-colors cursor-pointer"
+              >
+                {ctaLabel}
+                <ArrowUpRight className="w-4 h-4" />
+              </Link>
+            )}
             <div className="mt-8 p-4 bg-white/5 rounded-sm border border-white/10">
               <p className="text-xs text-white/40 uppercase tracking-wider mb-2">
                 Certifications

@@ -119,6 +119,7 @@ export default async function RootLayout({
 }>) {
   const [
     analytics,
+    branding,
     headerMeta,
     headerProductsMeta,
     contactInfo,
@@ -140,6 +141,15 @@ export default async function RootLayout({
       gtm_id: "",
       fb_pixel_id: "",
       extra_head_html: "",
+    }),
+    getContent<Record<string, string>>("global", "branding", {
+      company: "Flech Paper Products",
+      tagline: "Precision Board Manufacturing - Paterson, NJ since 1999",
+      logo_url: "/images/brand/flech-logo.jpg",
+      logo_alt: "Flech Paper Products",
+      favicon_url: "/favicon.ico",
+      footer_description:
+        "Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.",
     }),
     getContent<Record<string, string>>("global", "header_menu", {
       cta_label: "Request a Quote",
@@ -176,8 +186,8 @@ export default async function RootLayout({
   const navbarProps = {
     navLinks: headerLinks,
     productLinks: headerProducts,
-    ctaLabel: headerMeta.cta_label || "Request a Quote",
-    ctaHref: headerMeta.cta_href || "/contact",
+    ctaLabel: headerMeta.cta_hidden === "true" ? "" : headerMeta.cta_label || "Request a Quote",
+    ctaHref: headerMeta.cta_hidden === "true" ? "" : headerMeta.cta_href || "/contact",
     topbar: {
       blurb: headerMeta.topbar_blurb || "",
       phone: headerMeta.topbar_phone || "",
@@ -187,6 +197,8 @@ export default async function RootLayout({
     },
     flagshipLabel: headerProductsMeta.flagship_label || "",
     flagshipHref: headerProductsMeta.flagship_href || "",
+    logoUrl: branding.logo_url || "/images/brand/flech-logo.jpg",
+    logoAlt: branding.logo_alt || "Flech Paper Products",
   };
 
   const footerProps = {
@@ -203,8 +215,11 @@ export default async function RootLayout({
       addressLine2: contactInfo.address_line2 || "",
     },
     copyright: footerMeta.copyright || undefined,
-    ctaLabel: headerMeta.cta_label || "Request a Quote",
-    ctaHref: headerMeta.cta_href || "/contact",
+    ctaLabel: headerMeta.cta_hidden === "true" ? "" : headerMeta.cta_label || "Request a Quote",
+    ctaHref: headerMeta.cta_hidden === "true" ? "" : headerMeta.cta_href || "/contact",
+    logoUrl: branding.logo_url || "/images/brand/flech-logo.jpg",
+    logoAlt: branding.logo_alt || "Flech Paper Products",
+    description: branding.footer_description || "",
   };
   const organizationLd = {
     "@context": "https://schema.org",
@@ -239,14 +254,18 @@ export default async function RootLayout({
   return (
     <html
       lang="en"
+      data-scroll-behavior="smooth"
       className={`${playfair.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://video.gumlet.io" crossOrigin="" />
-        <link rel="dns-prefetch" href="https://ik.imagekit.io" />
-        <link rel="dns-prefetch" href="https://res.cloudinary.com" />
+        <link key="cms-icon" rel="icon" href={branding.favicon_url || "/favicon.ico"} />
+        <link key="cms-shortcut-icon" rel="shortcut icon" href={branding.favicon_url || "/favicon.ico"} />
+        <link key="preconnect-gumlet" rel="preconnect" href="https://video.gumlet.io" crossOrigin="" />
+        <link key="dns-imagekit" rel="dns-prefetch" href="https://ik.imagekit.io" />
+        <link key="dns-cloudinary" rel="dns-prefetch" href="https://res.cloudinary.com" />
         <script
+          key="organization-json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />

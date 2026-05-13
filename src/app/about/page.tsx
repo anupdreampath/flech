@@ -1,5 +1,5 @@
 import AboutClient from "./AboutClient";
-import { getContent, CMS_SCHEMA, sectionDefaults } from "@/lib/cms";
+import { getContent, CMS_SCHEMA, LAYOUT_SECTION_KEY, sectionDefaults } from "@/lib/cms";
 
 export const dynamic = "force-dynamic";
 
@@ -11,7 +11,7 @@ async function load(section: string) {
 }
 
 export default async function Page() {
-  const [hero, stats, story, values, timeline_heading, timeline, founder, cta] =
+  const [hero, stats, story, values, timeline_heading, timeline, founder, cta, layout] =
     await Promise.all([
       load("hero"),
       load("stats"),
@@ -21,6 +21,7 @@ export default async function Page() {
       load("timeline"),
       load("founder"),
       load("cta"),
+      getContent("about", LAYOUT_SECTION_KEY, { order: "" }),
     ]);
 
   return (
@@ -34,6 +35,7 @@ export default async function Page() {
         timeline,
         founder,
         cta,
+        layout,
       }}
     />
   );

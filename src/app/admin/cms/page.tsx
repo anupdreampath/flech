@@ -1,4 +1,11 @@
-import { CMS_SCHEMA, sectionDefaults, previewUrlForPage } from "@/lib/cms";
+import {
+  CMS_SCHEMA,
+  LAYOUT_SECTION_KEY,
+  orderedSectionKeys,
+  sectionDefaults,
+  previewUrlForPage,
+  type Field,
+} from "@/lib/cms";
 import { createServerClient } from "@/lib/supabase/server";
 import { VisualStudio, type StudioSection } from "./VisualStudio";
 
@@ -15,10 +22,23 @@ export default async function CmsHome() {
   });
 
   const sections: StudioSection[] = [];
+  const metaFields: Field[] = [
+    {
+      key: "_hidden",
+      label: "Remove this section from the website",
+      type: "checkbox",
+      default: "false",
+      helper:
+        "This hides the section in public pages and keeps its content saved so it can be restored later.",
+    },
+  ];
   for (const [pageKey, pageDef] of Object.entries(CMS_SCHEMA)) {
     const pageUrl = previewUrlForPage(pageKey);
-    for (const [sectionKey, sectionDef] of Object.entries(pageDef.sections)) {
+    const layout = saved.get(`${pageKey}:${LAYOUT_SECTION_KEY}`);
+    for (const sectionKey of orderedSectionKeys(pageKey, layout)) {
+      const sectionDef = pageDef.sections[sectionKey];
       const initial = {
+        ...sectionDefaults(metaFields),
         ...sectionDefaults(sectionDef.fields),
         ...(saved.get(`${pageKey}:${sectionKey}`) || {}),
       };
@@ -28,7 +48,7 @@ export default async function CmsHome() {
         pageUrl,
         sectionKey,
         sectionLabel: sectionDef.label,
-        fields: sectionDef.fields,
+        fields: [...metaFields, ...sectionDef.fields],
         initial,
       });
     }

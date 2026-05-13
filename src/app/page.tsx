@@ -1,5 +1,5 @@
 import HomeClient from "./HomeClient";
-import { getContent, CMS_SCHEMA, sectionDefaults } from "@/lib/cms";
+import { getContent, CMS_SCHEMA, LAYOUT_SECTION_KEY, sectionDefaults } from "@/lib/cms";
 
 export const dynamic = "force-dynamic";
 
@@ -24,7 +24,10 @@ export default async function Page() {
     how_we_work_steps,
     testimonials_heading,
     testimonials,
+    factory_videos,
+    gallery_strip,
     cta,
+    layout,
   ] = await Promise.all([
     load("hero"),
     load("stats"),
@@ -38,7 +41,10 @@ export default async function Page() {
     load("how_we_work_steps"),
     load("testimonials_heading"),
     load("testimonials"),
+    load("factory_videos"),
+    load("gallery_strip"),
     load("cta"),
+    getContent("home", LAYOUT_SECTION_KEY, { order: "" }),
   ]);
   return (
     <HomeClient
@@ -55,7 +61,10 @@ export default async function Page() {
         how_we_work_steps,
         testimonials_heading,
         testimonials,
+        factory_videos,
+        gallery_strip,
         cta,
+        layout,
       }}
     />
   );

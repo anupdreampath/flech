@@ -84,6 +84,16 @@ export function ContentEditor({
               raw={values[f.key]}
               onChange={(json) => set(f.key, json)}
             />
+          ) : f.type === "checkbox" ? (
+            <label className="flex items-start gap-3 rounded-md border border-slate-200 bg-slate-50 px-3 py-3 text-sm text-slate-700">
+              <input
+                type="checkbox"
+                checked={values[f.key] === "true"}
+                onChange={(e) => set(f.key, e.target.checked ? "true" : "false")}
+                className="mt-0.5 h-4 w-4 rounded border-slate-300 text-[#1A1A2E] focus:ring-[#1A1A2E]"
+              />
+              <span>{f.label}</span>
+            </label>
           ) : (
             <input
               type="text"
@@ -251,6 +261,18 @@ function RepeaterField({
                       onChange={(url) => update(i, sf.key, url)}
                       kind="video"
                     />
+                  ) : sf.type === "checkbox" ? (
+                    <label className="flex items-center gap-2 text-xs text-slate-700">
+                      <input
+                        type="checkbox"
+                        checked={item[sf.key] === "true"}
+                        onChange={(e) =>
+                          update(i, sf.key, e.target.checked ? "true" : "false")
+                        }
+                        className="h-4 w-4 rounded border-slate-300 text-[#1A1A2E] focus:ring-[#1A1A2E]"
+                      />
+                      Enabled
+                    </label>
                   ) : (
                     <input
                       type="text"
