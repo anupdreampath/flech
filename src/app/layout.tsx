@@ -29,7 +29,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.flech.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://flech.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

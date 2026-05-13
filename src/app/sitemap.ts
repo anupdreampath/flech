@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 import { createServerClient } from "@/lib/supabase/server";
 
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://www.flech.com";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://flech.com";
 
 const STATIC_ROUTES: Array<{
   path: string;

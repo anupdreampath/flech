@@ -249,7 +249,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
                   <div className="space-y-8">
                     <div>
                       <label className="block text-sm font-medium text-charcoal mb-3">
-                        Your Industry
+                        {text(form.industry_label, "Your Industry")}
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                         {industryOptions.map((option) => (
@@ -272,7 +272,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
 
                     <div>
                       <label className="block text-sm font-medium text-charcoal mb-3">
-                        Estimated Quantity
+                        {text(form.quantity_label, "Estimated Quantity")}
                       </label>
                       <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                         {quantityOptions.map((option) => (
@@ -300,7 +300,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
                       >
                         {text(form.custom_size_label, "Any size, spec, or deadline notes?")}{" "}
                         <span className="text-muted font-normal">
-                          (optional)
+                          {text(form.custom_size_optional_label, "(optional)")}
                         </span>
                       </label>
                       <textarea
@@ -310,7 +310,10 @@ export default function ContactClient({ content }: { content: PageContent }) {
                         onChange={(e) =>
                           updateField("customSize", e.target.value)
                         }
-                        placeholder="e.g., 9×12 inches, 25° viewing angle, white SBS board..."
+                        placeholder={text(
+                          form.custom_size_placeholder,
+                          "e.g., 9x12 inches, 25 degree viewing angle, white SBS board..."
+                        )}
                         className="w-full px-4 py-3 text-sm border border-border rounded-sm bg-surface text-charcoal placeholder:text-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
                       />
                     </div>
@@ -352,7 +355,8 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           htmlFor="name"
                           className="block text-sm font-medium text-charcoal mb-2"
                         >
-                          Full Name <span className="text-error">*</span>
+                          {text(form.name_label, "Full Name")}{" "}
+                          <span className="text-error">{text(form.required_marker, "*")}</span>
                         </label>
                         <input
                           id="name"
@@ -361,7 +365,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           onChange={(e) =>
                             updateField("name", e.target.value)
                           }
-                          placeholder="John Smith"
+                          placeholder={text(form.name_placeholder, "John Smith")}
                           className="w-full px-4 py-3 text-sm border border-border rounded-sm bg-surface text-charcoal placeholder:text-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
                           required
                         />
@@ -371,7 +375,8 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           htmlFor="company"
                           className="block text-sm font-medium text-charcoal mb-2"
                         >
-                          Company <span className="text-error">*</span>
+                          {text(form.company_label, "Company")}{" "}
+                          <span className="text-error">{text(form.required_marker, "*")}</span>
                         </label>
                         <input
                           id="company"
@@ -380,7 +385,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           onChange={(e) =>
                             updateField("company", e.target.value)
                           }
-                          placeholder="Your company name"
+                          placeholder={text(form.company_placeholder, "Your company name")}
                           className="w-full px-4 py-3 text-sm border border-border rounded-sm bg-surface text-charcoal placeholder:text-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
                           required
                         />
@@ -393,7 +398,8 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           htmlFor="email"
                           className="block text-sm font-medium text-charcoal mb-2"
                         >
-                          Email <span className="text-error">*</span>
+                          {text(form.email_label, "Email")}{" "}
+                          <span className="text-error">{text(form.required_marker, "*")}</span>
                         </label>
                         <input
                           id="email"
@@ -402,7 +408,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           onChange={(e) =>
                             updateField("email", e.target.value)
                           }
-                          placeholder="john@company.com"
+                          placeholder={text(form.email_placeholder, "john@company.com")}
                           className="w-full px-4 py-3 text-sm border border-border rounded-sm bg-surface text-charcoal placeholder:text-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
                           required
                         />
@@ -412,9 +418,9 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           htmlFor="phone"
                           className="block text-sm font-medium text-charcoal mb-2"
                         >
-                          Phone{" "}
+                          {text(form.phone_label, "Phone")}{" "}
                           <span className="text-muted font-normal">
-                            (optional)
+                            {text(form.phone_optional_label, "(optional)")}
                           </span>
                         </label>
                         <input
@@ -424,7 +430,7 @@ export default function ContactClient({ content }: { content: PageContent }) {
                           onChange={(e) =>
                             updateField("phone", e.target.value)
                           }
-                          placeholder="(555) 123-4567"
+                          placeholder={text(form.phone_placeholder, "(555) 123-4567")}
                           className="w-full px-4 py-3 text-sm border border-border rounded-sm bg-surface text-charcoal placeholder:text-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
                         />
                       </div>
@@ -435,9 +441,9 @@ export default function ContactClient({ content }: { content: PageContent }) {
                         htmlFor="message"
                         className="block text-sm font-medium text-charcoal mb-2"
                       >
-                        Additional Details{" "}
+                        {text(form.message_label, "Additional Details")}{" "}
                         <span className="text-muted font-normal">
-                          (optional)
+                          {text(form.message_optional_label, "(optional)")}
                         </span>
                       </label>
                       <textarea
@@ -447,7 +453,10 @@ export default function ContactClient({ content }: { content: PageContent }) {
                         onChange={(e) =>
                           updateField("message", e.target.value)
                         }
-                        placeholder="Tell us about your project, timeline, or any specific requirements..."
+                        placeholder={text(
+                          form.message_placeholder,
+                          "Tell us about your project, timeline, or any specific requirements..."
+                        )}
                         className="w-full px-4 py-3 text-sm border border-border rounded-sm bg-surface text-charcoal placeholder:text-muted-foreground focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent/20 transition-colors"
                       />
                     </div>
@@ -456,23 +465,29 @@ export default function ContactClient({ content }: { content: PageContent }) {
                   {/* Summary */}
                   <div className="mt-8 p-5 bg-warm-white rounded-sm border border-border">
                     <p className="text-xs font-semibold uppercase tracking-wider text-muted mb-3">
-                      Your Inquiry Summary
+                      {text(form.summary_title, "Your Inquiry Summary")}
                     </p>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm">
                       <div>
-                        <span className="text-muted block">Product</span>
+                        <span className="text-muted block">
+                          {text(form.summary_product_label, "Product")}
+                        </span>
                         <span className="font-medium text-charcoal">
                           {formData.product}
                         </span>
                       </div>
                       <div>
-                        <span className="text-muted block">Industry</span>
+                        <span className="text-muted block">
+                          {text(form.summary_industry_label, "Industry")}
+                        </span>
                         <span className="font-medium text-charcoal">
                           {formData.industry}
                         </span>
                       </div>
                       <div>
-                        <span className="text-muted block">Quantity</span>
+                        <span className="text-muted block">
+                          {text(form.summary_quantity_label, "Quantity")}
+                        </span>
                         <span className="font-medium text-charcoal">
                           {formData.quantity}
                         </span>

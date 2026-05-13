@@ -6,6 +6,7 @@ import {
   BookOpen,
   Edit3,
   Mail,
+  Settings,
 } from "lucide-react";
 import { getSession } from "@/lib/admin/session";
 import { AdminLogoutButton } from "@/components/admin/LogoutButton";
@@ -18,6 +19,7 @@ const nav = [
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/admin/cms", label: "Visual Editor", icon: Edit3 },
   { href: "/admin/email", label: "Email Settings", icon: Mail },
+  { href: "/admin/settings", label: "Settings", icon: Settings },
   { href: "/admin/blogs", label: "Blogs", icon: BookOpen },
 ];
 

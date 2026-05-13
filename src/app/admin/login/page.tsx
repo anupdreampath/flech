@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ShieldCheck } from "lucide-react";
 
@@ -124,6 +125,13 @@ export default function AdminLogin() {
           >
             {loading ? "Signing in…" : "Sign in"}
           </button>
+
+          <Link
+            href="/admin/forgot-password"
+            className="block text-center text-xs text-slate-500 hover:text-[#1A1A2E] mt-5"
+          >
+            Forgot password?
+          </Link>
 
           <p className="text-[11px] text-slate-400 mt-8 text-center">
             Authorized personnel only · Sessions are audited.
