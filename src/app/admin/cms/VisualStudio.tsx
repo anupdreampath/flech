@@ -34,20 +34,20 @@ const VIEWPORT_WIDTH: Record<Viewport, number | null> = {
 export function VisualStudio({ sections }: { sections: StudioSection[] }) {
   const [sectionList, setSectionList] = useState(sections);
   const [layoutSaving, setLayoutSaving] = useState(false);
-  // Group sections by page.
   const pages = useMemo(() => {
-    const map = new Map<string, StudioSection[]>();
-    sectionList.forEach((s) => {
-      if (!map.has(s.pageKey)) map.set(s.pageKey, []);
-      map.get(s.pageKey)!.push(s);
-    });
-    return [...map.entries()].map(([pageKey, list]) => ({
-      key: pageKey,
-      label: list[0].pageLabel,
-      url: list[0].pageUrl,
-      sections: list,
-    }));
-  }, [sectionList]);
+    const seen = new Set<string>();
+    return sections
+      .filter((s) => {
+        if (seen.has(s.pageKey)) return false;
+        seen.add(s.pageKey);
+        return true;
+      })
+      .map((s) => ({
+        key: s.pageKey,
+        label: s.pageLabel,
+        url: s.pageUrl,
+      }));
+  }, [sections]);
 
   const [activePageKey, setActivePageKey] = useState(pages[0]?.key || "home");
   const [activeSectionKey, setActiveSectionKey] = useState<string | null>(null);
@@ -55,8 +55,14 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
   const [iframeKey, setIframeKey] = useState(0);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
 
-  const activePage =
-    pages.find((p) => p.key === activePageKey) || pages[0];
+  const activePage = useMemo(() => {
+    const activePageMeta = pages.find((p) => p.key === activePageKey) || pages[0];
+    if (!activePageMeta) return null;
+    return {
+      ...activePageMeta,
+      sections: sectionList.filter((s) => s.pageKey === activePageMeta.key),
+    };
+  }, [activePageKey, pages, sectionList]);
 
   const activeSection =
     activePage?.sections.find((s) => s.sectionKey === activeSectionKey) || null;

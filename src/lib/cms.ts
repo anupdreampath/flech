@@ -31,6 +31,31 @@ export async function getAllContent(page: string) {
   return data || [];
 }
 
+export function defaultsForSection(page: string, sectionKey: string) {
+  const section = CMS_SCHEMA[page]?.sections?.[sectionKey];
+  if (!section) return {};
+
+  return section.fields.reduce<Record<string, unknown>>((acc, field) => {
+    if (field.type === "repeater") {
+      acc[field.key] = JSON.stringify(field.defaultItems || []);
+    } else {
+      acc[field.key] = field.default || "";
+    }
+    return acc;
+  }, {});
+}
+
+export async function getPageContent(page: string) {
+  const sectionKeys = Object.keys(CMS_SCHEMA[page]?.sections || {});
+  const entries = await Promise.all(
+    sectionKeys.map(async (sectionKey) => [
+      sectionKey,
+      await getContent(page, sectionKey, defaultsForSection(page, sectionKey)),
+    ] as const)
+  );
+  return Object.fromEntries(entries);
+}
+
 export type SubField = {
   key: string;
   label: string;
@@ -49,6 +74,210 @@ export type Field = {
   subFields?: SubField[];
   defaultItems?: Array<Record<string, string>>;
 };
+
+const contactProductOptions = [
+  "Easel Backs",
+  "Fold Lines & Dielines",
+  "Contract Framing Backs",
+  "Matboards",
+  "Custom / Other",
+].map((label) => ({ label }));
+
+const contactIndustryOptions = [
+  "Sign & Display Manufacturing",
+  "Wholesale Framing",
+  "POP / Retail Displays",
+  "Packaging & Print",
+  "Interior Design / Architecture",
+  "Other",
+].map((label) => ({ label }));
+
+const contactQuantityOptions = [
+  "Under 500 units",
+  "500 - 2,500 units",
+  "2,500 - 10,000 units",
+  "10,000 - 50,000 units",
+  "50,000+ units",
+  "Not sure yet",
+].map((label) => ({ label }));
+
+const defaultIndustries = [
+  {
+    id: "signage",
+    icon: "Monitor",
+    name: "Sign & Display Manufacturing",
+    tagline: "The backbone of retail displays and trade show graphics",
+    image: "/images/products/consumer-display.jpg",
+    description:
+      "Sign and display manufacturers need easel backs and display boards that perform reliably at scale. When your client orders 5,000 counter displays, every single easel back needs to stand at the right angle and maintain adhesion over time.",
+    needs:
+      "Self-stick easel backs in single and double-wing\nCustom die-cut display boards and standees\nPrecision score lines for folding displays\nHigh-volume production with consistent quality\nDrop-shipping directly to retail clients",
+    products: "Easel Backs, Fold Lines, Custom Die-Cutting",
+    cta_label: "Discuss Your Requirements",
+    cta_href: "/contact",
+    hidden: "false",
+  },
+  {
+    id: "framing",
+    icon: "Frame",
+    name: "Wholesale Framing",
+    tagline: "Contract-quality boards for commercial framing operations",
+    image: "/images/framing/frame-samples.jpg",
+    description:
+      "Wholesale framers running high-volume operations for certificates, corporate awards, and retail framed art need consistent materials and reliable supply. Our framing backs and matboards are manufactured to contract specifications.",
+    needs:
+      "Archival matboards in 50+ standard colors\nContract framing backs in standard and custom sizes\nEasel backs for freestanding frames\nConsistent caliper and edge quality sheet-to-sheet\nInventory programs for repeat orders",
+    products: "Matboards, Framing Backs, Easel Backs",
+    cta_label: "Discuss Your Requirements",
+    cta_href: "/contact",
+    hidden: "false",
+  },
+  {
+    id: "packaging",
+    icon: "Package",
+    name: "Packaging & POP Displays",
+    tagline: "Custom-cut boards for retail and promotional applications",
+    image: "/images/products/board-stack.jpg",
+    description:
+      "Point-of-purchase designers and packaging companies need custom board solutions that integrate with creative concepts. We provide structural components, die-cut boards, scored fold patterns, and easel mechanisms.",
+    needs:
+      "Custom die-cut boards from your dieline files\nComplex fold patterns and multi-score configs\nSelf-stick easel backs for counter and floor displays\nMultiple substrate options\nFast prototyping from dieline to sample",
+    products: "Fold Lines, Easel Backs, Custom Converting",
+    cta_label: "Discuss Your Requirements",
+    cta_href: "/contact",
+    hidden: "false",
+  },
+  {
+    id: "interior",
+    icon: "Paintbrush",
+    name: "Interior Design & Architecture",
+    tagline: "Archival boards for gallery and architectural presentations",
+    image: "/images/products/diy-art.jpg",
+    description:
+      "Interior designers, architects, and gallery professionals need matboards and presentation materials that meet museum-grade preservation standards. Our acid-free, archival-quality products protect artwork for decades.",
+    needs:
+      "Museum-grade acid-free matboards\nPremium 8-ply options for added depth\nCustom color matching for brand consistency\nArchival framing backs for long-term preservation\nSmall-batch custom orders",
+    products: "Matboards, Framing Backs",
+    cta_label: "Discuss Your Requirements",
+    cta_href: "/contact",
+    hidden: "false",
+  },
+];
+
+const productSectionFields: Field[] = [
+  { key: "eyebrow", label: "Eyebrow", type: "text", default: "Product Detail" },
+  { key: "title", label: "Title", type: "text", default: "Built for production work" },
+  {
+    key: "body",
+    label: "Body",
+    type: "textarea",
+    default:
+      "A focused look at the materials, production details, and order options available for this product line.",
+  },
+  { key: "image", label: "Image", type: "image", default: "/images/products/board-stack.jpg" },
+  {
+    key: "bullets",
+    label: "Bullet Points",
+    type: "repeater",
+    itemLabel: "Bullet",
+    subFields: [{ key: "label", label: "Text", type: "text" }],
+    defaultItems: [
+      { label: "Custom sizes and materials available" },
+      { label: "Production-ready consistency for repeat orders" },
+      { label: "Quote support for volume and contract work" },
+    ],
+  },
+];
+
+const productCardFields: Field[] = [
+  { key: "eyebrow", label: "Eyebrow", type: "text", default: "Capabilities" },
+  { key: "title", label: "Title", type: "text", default: "Configurable options" },
+  {
+    key: "items",
+    label: "Cards",
+    type: "repeater",
+    itemLabel: "Card",
+    subFields: [
+      { key: "title", label: "Title", type: "text" },
+      { key: "description", label: "Description", type: "textarea" },
+      { key: "image", label: "Image", type: "image" },
+      { key: "hidden", label: "Hide Card", type: "checkbox" },
+    ],
+    defaultItems: [
+      {
+        title: "Custom configurations",
+        description: "Choose the format, material, finish, and packing style that fits your order.",
+        image: "/images/products/consumer-display.jpg",
+        hidden: "false",
+      },
+      {
+        title: "Repeatable quality",
+        description: "Built for consistent results across short runs, volume orders, and recurring programs.",
+        image: "/images/framing/frame-samples.jpg",
+        hidden: "false",
+      },
+      {
+        title: "Production support",
+        description: "Our team can help translate requirements into manufacturable specifications.",
+        image: "/images/home/stacked-boards.jpg",
+        hidden: "false",
+      },
+    ],
+  },
+];
+
+const productSpecFields: Field[] = [
+  { key: "title", label: "Title", type: "text", default: "Specifications" },
+  {
+    key: "items",
+    label: "Specification Rows",
+    type: "repeater",
+    itemLabel: "Spec",
+    subFields: [
+      { key: "label", label: "Label", type: "text" },
+      { key: "value", label: "Value", type: "text" },
+      { key: "hidden", label: "Hide Row", type: "checkbox" },
+    ],
+    defaultItems: [
+      { label: "Material", value: "Paperboard, SBS, chipboard, poly board, and custom substrates", hidden: "false" },
+      { label: "Sizes", value: "Standard and custom sizes available", hidden: "false" },
+      { label: "Packing", value: "Bulk, carton packed, shrink wrapped, or retail ready", hidden: "false" },
+    ],
+  },
+];
+
+const productCtaFields: Field[] = [
+  { key: "title", label: "Title", type: "text", default: "Need this product quoted?" },
+  {
+    key: "body",
+    label: "Body",
+    type: "textarea",
+    default: "Send the basics and our team will respond with pricing, lead time, and specification recommendations.",
+  },
+  { key: "primary_label", label: "Primary Button Label", type: "text", default: "Request a Quote" },
+  { key: "primary_href", label: "Primary Button URL", type: "text", default: "/contact" },
+  { key: "primary_hidden", label: "Hide Primary Button", type: "checkbox", default: "false" },
+  { key: "secondary_label", label: "Secondary Button Label", type: "text", default: "View Industries" },
+  { key: "secondary_href", label: "Secondary Button URL", type: "text", default: "/industries" },
+  { key: "secondary_hidden", label: "Hide Secondary Button", type: "checkbox", default: "false" },
+  { key: "image", label: "Image", type: "image", default: "/images/framing/gallery-frame.jpg" },
+];
+
+const legalContentFields: Field[] = [
+  {
+    key: "items",
+    label: "Legal Sections",
+    type: "repeater",
+    itemLabel: "Section",
+    helper: "Each item renders as a heading and body block. Add, remove, hide, and reorder freely.",
+    subFields: [
+      { key: "title", label: "Heading", type: "text" },
+      { key: "body", label: "Body", type: "textarea", helper: "Use one or more paragraphs. Blank lines are preserved." },
+      { key: "hidden", label: "Hide Section", type: "checkbox" },
+    ],
+    defaultItems: [],
+  },
+];
 
 // Registry: pages and editable sections. Defaults here mirror the live rendered copy
 // so the admin editor always opens with current content pre-filled for editing.
@@ -456,24 +685,75 @@ export const CMS_SCHEMA: Record<
       hero: {
         label: "Header",
         fields: [
+          { key: "breadcrumb", label: "Breadcrumb Label", type: "text", default: "Contact & RFQ" },
           {
             key: "title",
             label: "Title",
             type: "text",
-            default: "Let's Build Something Together",
+            default: "Request a Quote",
           },
           {
             key: "subtitle",
             label: "Subtitle",
             type: "textarea",
             default:
-              "Tell us about your project. We'll have a detailed quote and spec sheet back to you within 24 hours.",
+              "Answer a few questions about what you need and we'll send you a detailed quote within 24 hours.",
           },
+        ],
+      },
+      form: {
+        label: "Quote Form",
+        fields: [
+          { key: "step_1_title", label: "Step 1 Title", type: "text", default: "What product are you interested in?" },
+          { key: "step_1_body", label: "Step 1 Body", type: "textarea", default: "Select the product category that best matches your needs." },
+          {
+            key: "products",
+            label: "Product Options",
+            type: "repeater",
+            itemLabel: "Product",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "hidden", label: "Hide Option", type: "checkbox" },
+            ],
+            defaultItems: contactProductOptions,
+          },
+          { key: "step_2_title", label: "Step 2 Title", type: "text", default: "Tell us about your requirements" },
+          { key: "step_2_body", label: "Step 2 Body", type: "textarea", default: "Help us understand your industry and volume so we can provide the most accurate quote." },
+          {
+            key: "industries",
+            label: "Industry Options",
+            type: "repeater",
+            itemLabel: "Industry",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "hidden", label: "Hide Option", type: "checkbox" },
+            ],
+            defaultItems: contactIndustryOptions,
+          },
+          {
+            key: "quantities",
+            label: "Quantity Options",
+            type: "repeater",
+            itemLabel: "Quantity",
+            subFields: [
+              { key: "label", label: "Label", type: "text" },
+              { key: "hidden", label: "Hide Option", type: "checkbox" },
+            ],
+            defaultItems: contactQuantityOptions,
+          },
+          { key: "custom_size_label", label: "Custom Size Label", type: "text", default: "Any size, spec, or deadline notes?" },
+          { key: "step_3_title", label: "Step 3 Title", type: "text", default: "How can we reach you?" },
+          { key: "step_3_body", label: "Step 3 Body", type: "textarea", default: "Share your contact details and anything else we should know." },
+          { key: "continue_label", label: "Continue Button", type: "text", default: "Continue" },
+          { key: "back_label", label: "Back Button", type: "text", default: "Back" },
+          { key: "submit_label", label: "Submit Button", type: "text", default: "Send Inquiry" },
         ],
       },
       sidebar: {
         label: "Sidebar Contact Info",
         fields: [
+          { key: "title", label: "Sidebar Title", type: "text", default: "Prefer to talk now?" },
+          { key: "body", label: "Sidebar Body", type: "textarea", default: "Call or email our team directly. We can help turn dimensions, sketches, or sample photos into a manufacturable quote." },
           {
             key: "phone",
             label: "Phone",
@@ -504,6 +784,36 @@ export const CMS_SCHEMA: Record<
             type: "text",
             default: "19733578111",
           },
+          {
+            key: "expectations",
+            label: "What Happens Next",
+            type: "repeater",
+            itemLabel: "Expectation",
+            subFields: [
+              { key: "label", label: "Text", type: "text" },
+              { key: "hidden", label: "Hide Item", type: "checkbox" },
+            ],
+            defaultItems: [
+              { label: "A real production specialist reviews your request.", hidden: "false" },
+              { label: "We confirm materials, quantities, and timing.", hidden: "false" },
+              { label: "You receive quote details and next steps.", hidden: "false" },
+            ],
+          },
+        ],
+      },
+      success: {
+        label: "Success Message",
+        fields: [
+          { key: "title", label: "Title", type: "text", default: "Inquiry Sent" },
+          {
+            key: "body",
+            label: "Body",
+            type: "textarea",
+            default:
+              "Thanks - we've received your inquiry. Our team typically responds within 24 hours with a detailed quote and specification recommendations.",
+          },
+          { key: "cta_label", label: "Button Label", type: "text", default: "Back to Home" },
+          { key: "cta_href", label: "Button URL", type: "text", default: "/" },
         ],
       },
     },
@@ -644,6 +954,49 @@ export const CMS_SCHEMA: Record<
           },
         ],
       },
+      industries_list: {
+        label: "Industry Sections",
+        fields: [
+          {
+            key: "items",
+            label: "Industries",
+            type: "repeater",
+            itemLabel: "Industry",
+            helper: "Add, remove, hide, and reorder industry blocks shown on the page.",
+            subFields: [
+              { key: "id", label: "Anchor ID", type: "text" },
+              { key: "icon", label: "Icon", type: "text", helper: "Use Monitor, Frame, Package, or Paintbrush." },
+              { key: "name", label: "Name", type: "text" },
+              { key: "tagline", label: "Tagline", type: "text" },
+              { key: "image", label: "Image", type: "image" },
+              { key: "description", label: "Description", type: "textarea" },
+              { key: "needs", label: "Needs List", type: "textarea", helper: "One item per line." },
+              { key: "products", label: "Product Badges", type: "text", helper: "Comma-separated." },
+              { key: "cta_label", label: "Button Label", type: "text" },
+              { key: "cta_href", label: "Button URL", type: "text" },
+              { key: "hidden", label: "Hide Industry", type: "checkbox" },
+            ],
+            defaultItems: defaultIndustries,
+          },
+        ],
+      },
+      cta: {
+        label: "Final CTA",
+        fields: [
+          { key: "title", label: "Title", type: "text", default: "Don't See Your Industry?" },
+          {
+            key: "body",
+            label: "Body",
+            type: "textarea",
+            default:
+              "If you need precision board products, cut, scored, laminated, or finished, there's a good chance we can help.",
+          },
+          { key: "button_label", label: "Button Label", type: "text", default: "Contact Our Team" },
+          { key: "button_href", label: "Button URL", type: "text", default: "/contact" },
+          { key: "button_hidden", label: "Hide Button", type: "checkbox", default: "false" },
+          { key: "image", label: "Image", type: "image", default: "/images/framing/gallery-frame.jpg" },
+        ],
+      },
     },
   },
   product_easel: {
@@ -677,13 +1030,40 @@ export const CMS_SCHEMA: Record<
             type: "text",
             default: "Get a Quote",
           },
+          { key: "cta_primary_href", label: "Primary CTA URL", type: "text", default: "/contact" },
+          { key: "cta_primary_hidden", label: "Hide Primary CTA", type: "checkbox", default: "false" },
           {
             key: "cta_secondary",
             label: "Secondary CTA Label",
             type: "text",
             default: "View Specifications",
           },
+          { key: "cta_secondary_href", label: "Secondary CTA URL", type: "text", default: "#specifications" },
+          { key: "cta_secondary_hidden", label: "Hide Secondary CTA", type: "checkbox", default: "false" },
+          {
+            key: "video_url",
+            label: "Hero Video",
+            type: "video",
+            default: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9bc1465082997b529c7b2/download.mp4",
+          },
+          { key: "poster_url", label: "Fallback Image", type: "image", default: "https://ik.imagekit.io/l7qlh4sga/DSC04967-Enhanced-NR.png?updatedAt=1777114588032" },
         ],
+      },
+      overview: {
+        label: "Overview",
+        fields: productSectionFields,
+      },
+      capabilities: {
+        label: "Product Cards",
+        fields: productCardFields,
+      },
+      specifications: {
+        label: "Specifications",
+        fields: productSpecFields,
+      },
+      cta: {
+        label: "Final CTA",
+        fields: productCtaFields,
       },
     },
   },
@@ -724,7 +1104,35 @@ export const CMS_SCHEMA: Record<
             type: "text",
             default: "Get a Quote",
           },
+          { key: "cta_primary_href", label: "Primary CTA URL", type: "text", default: "/contact" },
+          { key: "cta_primary_hidden", label: "Hide Primary CTA", type: "checkbox", default: "false" },
+          { key: "cta_secondary", label: "Secondary CTA Label", type: "text", default: "View Specifications" },
+          { key: "cta_secondary_href", label: "Secondary CTA URL", type: "text", default: "#specifications" },
+          { key: "cta_secondary_hidden", label: "Hide Secondary CTA", type: "checkbox", default: "false" },
+          {
+            key: "video_url",
+            label: "Hero Video",
+            type: "video",
+            default: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4",
+          },
+          { key: "poster_url", label: "Fallback Image", type: "image", default: "/images/products/board-stack.jpg" },
         ],
+      },
+      overview: {
+        label: "Overview",
+        fields: productSectionFields,
+      },
+      capabilities: {
+        label: "Product Cards",
+        fields: productCardFields,
+      },
+      specifications: {
+        label: "Specifications",
+        fields: productSpecFields,
+      },
+      cta: {
+        label: "Final CTA",
+        fields: productCtaFields,
       },
     },
   },
@@ -765,7 +1173,35 @@ export const CMS_SCHEMA: Record<
             type: "text",
             default: "Get a Quote",
           },
+          { key: "cta_primary_href", label: "Primary CTA URL", type: "text", default: "/contact" },
+          { key: "cta_primary_hidden", label: "Hide Primary CTA", type: "checkbox", default: "false" },
+          { key: "cta_secondary", label: "Secondary CTA Label", type: "text", default: "View Specifications" },
+          { key: "cta_secondary_href", label: "Secondary CTA URL", type: "text", default: "#specifications" },
+          { key: "cta_secondary_hidden", label: "Hide Secondary CTA", type: "checkbox", default: "false" },
+          {
+            key: "video_url",
+            label: "Hero Video",
+            type: "video",
+            default: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4",
+          },
+          { key: "poster_url", label: "Fallback Image", type: "image", default: "/images/framing/frame-samples.jpg" },
         ],
+      },
+      overview: {
+        label: "Overview",
+        fields: productSectionFields,
+      },
+      capabilities: {
+        label: "Product Cards",
+        fields: productCardFields,
+      },
+      specifications: {
+        label: "Specifications",
+        fields: productSpecFields,
+      },
+      cta: {
+        label: "Final CTA",
+        fields: productCtaFields,
       },
     },
   },
@@ -806,7 +1242,31 @@ export const CMS_SCHEMA: Record<
             type: "text",
             default: "Get a Quote",
           },
+          { key: "cta_primary_href", label: "Primary CTA URL", type: "text", default: "/contact" },
+          { key: "cta_primary_hidden", label: "Hide Primary CTA", type: "checkbox", default: "false" },
+          { key: "cta_secondary", label: "Secondary CTA Label", type: "text", default: "Browse Colors" },
+          { key: "cta_secondary_href", label: "Secondary CTA URL", type: "text", default: "#primary-colors" },
+          { key: "cta_secondary_hidden", label: "Hide Secondary CTA", type: "checkbox", default: "false" },
+          {
+            key: "video_url",
+            label: "Hero Video",
+            type: "video",
+            default: "https://video.gumlet.io/69f9bb7465082997b529b9bf/69f9c26865082997b52a6d6a/download.mp4",
+          },
+          { key: "poster_url", label: "Fallback Image", type: "image", default: "/images/products/matboard-display.jpg" },
         ],
+      },
+      overview: {
+        label: "Overview",
+        fields: productSectionFields,
+      },
+      capabilities: {
+        label: "Product Cards",
+        fields: productCardFields,
+      },
+      specifications: {
+        label: "Specifications",
+        fields: productSpecFields,
       },
       primary_colors: {
         label: "Primary Colors (cards)",
@@ -909,6 +1369,164 @@ export const CMS_SCHEMA: Record<
               { name: "Espresso Suede", code: "#S80", hex: "#2E1B12", size: "32x40", ply: "4-ply Suede", description: "Dark espresso brown suede." },
             ],
           },
+        ],
+      },
+      cta: {
+        label: "Final CTA",
+        fields: productCtaFields,
+      },
+    },
+  },
+  privacy: {
+    label: "Privacy Policy",
+    sections: {
+      hero: {
+        label: "Hero Section",
+        fields: [
+          { key: "breadcrumb", label: "Breadcrumb Label", type: "text", default: "Privacy Policy" },
+          { key: "title", label: "Title", type: "text", default: "Privacy Policy" },
+          {
+            key: "subtitle",
+            label: "Subtitle",
+            type: "textarea",
+            default:
+              "How Flech Paper Products collects, uses, and protects information submitted through this website.",
+          },
+          { key: "updated_label", label: "Updated Label", type: "text", default: "Last updated" },
+          { key: "updated_date", label: "Updated Date", type: "text", default: "May 14, 2026" },
+        ],
+      },
+      content: {
+        label: "Policy Content",
+        fields: [
+          {
+            ...legalContentFields[0],
+            defaultItems: [
+              {
+                title: "Information We Collect",
+                body:
+                  "We collect information you submit through quote, contact, and administrative forms, including name, company, email, phone number, project details, product interests, industry, quantity, and any files or notes you provide.",
+                hidden: "false",
+              },
+              {
+                title: "How We Use Information",
+                body:
+                  "We use submitted information to respond to inquiries, prepare quotes, provide customer support, improve our website, analyze demand for product lines, and maintain business records.",
+                hidden: "false",
+              },
+              {
+                title: "Analytics and Site Activity",
+                body:
+                  "The website may record visit activity, referral source, device information, and page interactions to help us understand how visitors use the site and improve the experience.",
+                hidden: "false",
+              },
+              {
+                title: "Sharing Information",
+                body:
+                  "We do not sell personal information. We may share information with service providers that help operate the website, process inquiries, host data, or deliver email notifications, and where required by law.",
+                hidden: "false",
+              },
+              {
+                title: "Data Retention",
+                body:
+                  "We keep business inquiry records for as long as needed to support customer communication, sales operations, legal obligations, and internal reporting.",
+                hidden: "false",
+              },
+              {
+                title: "Contact",
+                body:
+                  "For privacy questions, contact Flech Paper Products at info@flech.com or by phone at (973) 357-8111.",
+                hidden: "false",
+              },
+            ],
+          },
+        ],
+      },
+      cta: {
+        label: "Contact CTA",
+        fields: [
+          { key: "title", label: "Title", type: "text", default: "Questions about your information?" },
+          { key: "body", label: "Body", type: "textarea", default: "Contact our team and we will help with privacy or data questions related to your inquiry." },
+          { key: "button_label", label: "Button Label", type: "text", default: "Contact Flech" },
+          { key: "button_href", label: "Button URL", type: "text", default: "/contact" },
+          { key: "button_hidden", label: "Hide Button", type: "checkbox", default: "false" },
+        ],
+      },
+    },
+  },
+  terms: {
+    label: "Terms of Service",
+    sections: {
+      hero: {
+        label: "Hero Section",
+        fields: [
+          { key: "breadcrumb", label: "Breadcrumb Label", type: "text", default: "Terms of Service" },
+          { key: "title", label: "Title", type: "text", default: "Terms of Service" },
+          {
+            key: "subtitle",
+            label: "Subtitle",
+            type: "textarea",
+            default:
+              "Terms governing use of the Flech Paper Products website and digital inquiry forms.",
+          },
+          { key: "updated_label", label: "Updated Label", type: "text", default: "Last updated" },
+          { key: "updated_date", label: "Updated Date", type: "text", default: "May 14, 2026" },
+        ],
+      },
+      content: {
+        label: "Terms Content",
+        fields: [
+          {
+            ...legalContentFields[0],
+            defaultItems: [
+              {
+                title: "Website Use",
+                body:
+                  "You may use this website to learn about Flech Paper Products, review product information, and submit business inquiries. You agree not to misuse the website, interfere with its operation, or submit unlawful or misleading content.",
+                hidden: "false",
+              },
+              {
+                title: "Quotes and Product Information",
+                body:
+                  "Website content is provided for general information. Product availability, specifications, pricing, lead times, and order terms are confirmed separately through written communication with Flech Paper Products.",
+                hidden: "false",
+              },
+              {
+                title: "Submitted Information",
+                body:
+                  "When you submit forms, you confirm that the information is accurate and that Flech Paper Products may contact you about your inquiry.",
+                hidden: "false",
+              },
+              {
+                title: "Intellectual Property",
+                body:
+                  "Website text, images, branding, product descriptions, and interface content are owned by Flech Paper Products or its licensors and may not be copied or reused without permission.",
+                hidden: "false",
+              },
+              {
+                title: "No Warranty",
+                body:
+                  "The website is provided as available. We work to keep information accurate, but we do not guarantee that the website will always be uninterrupted, error-free, or complete.",
+                hidden: "false",
+              },
+              {
+                title: "Contact",
+                body:
+                  "For questions about these terms, contact Flech Paper Products at info@flech.com or by phone at (973) 357-8111.",
+                hidden: "false",
+              },
+            ],
+          },
+        ],
+      },
+      cta: {
+        label: "Contact CTA",
+        fields: [
+          { key: "title", label: "Title", type: "text", default: "Need clarification?" },
+          { key: "body", label: "Body", type: "textarea", default: "Contact our team with questions about website use, quotes, or order terms." },
+          { key: "button_label", label: "Button Label", type: "text", default: "Contact Flech" },
+          { key: "button_href", label: "Button URL", type: "text", default: "/contact" },
+          { key: "button_hidden", label: "Hide Button", type: "checkbox", default: "false" },
         ],
       },
     },
@@ -1252,6 +1870,10 @@ export function previewUrlForPage(page: string): string {
       return "/products/framing-backs";
     case "product_matboards":
       return "/products/matboards";
+    case "privacy":
+      return "/privacy";
+    case "terms":
+      return "/terms";
     case "global":
       return "/";
     default:
