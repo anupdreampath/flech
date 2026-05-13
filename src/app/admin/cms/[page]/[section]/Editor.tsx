@@ -21,7 +21,21 @@ export function ContentEditor({
   fields: Field[];
   initial: Record<string, string>;
 }) {
-  const [values, setValues] = useState<Record<string, string>>(initial);
+  const [values, setValues] = useState<Record<string, string>>(() =>
+    fields.reduce<Record<string, string>>(
+      (acc, field) => {
+        if (
+          (field.type === "image" || field.type === "video") &&
+          !acc[field.key] &&
+          field.default
+        ) {
+          acc[field.key] = field.default;
+        }
+        return acc;
+      },
+      { ...initial }
+    )
+  );
   const [saving, setSaving] = useState(false);
   const [saved, setSaved] = useState(false);
 
@@ -71,12 +85,14 @@ export function ContentEditor({
               value={values[f.key]}
               onChange={(url) => set(f.key, url)}
               kind="image"
+              variant="light"
             />
           ) : f.type === "video" ? (
             <CloudinaryUpload
               value={values[f.key]}
               onChange={(url) => set(f.key, url)}
               kind="video"
+              variant="light"
             />
           ) : f.type === "repeater" ? (
             <RepeaterField
@@ -254,12 +270,14 @@ function RepeaterField({
                       value={item[sf.key]}
                       onChange={(url) => update(i, sf.key, url)}
                       kind="image"
+                      variant="light"
                     />
                   ) : sf.type === "video" ? (
                     <CloudinaryUpload
                       value={item[sf.key]}
                       onChange={(url) => update(i, sf.key, url)}
                       kind="video"
+                      variant="light"
                     />
                   ) : sf.type === "checkbox" ? (
                     <label className="flex items-center gap-2 text-xs text-slate-700">

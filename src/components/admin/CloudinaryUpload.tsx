@@ -15,22 +15,28 @@ declare global {
 }
 
 type Kind = "image" | "video";
+type Variant = "dark" | "light";
 
 export function CloudinaryUpload({
   value,
   onChange,
   className = "",
   kind = "image",
+  variant = "dark",
 }: {
   value?: string;
   onChange: (url: string) => void;
   className?: string;
   kind?: Kind;
+  variant?: Variant;
 }) {
   const widgetRef = useRef<{ open: () => void } | null>(null);
   const [ready, setReady] = useState(
     () => typeof window !== "undefined" && Boolean(window.cloudinary)
   );
+  const missingConfig =
+    !process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME ||
+    !process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET;
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -44,6 +50,7 @@ export function CloudinaryUpload({
 
   useEffect(() => {
     if (!ready || !window.cloudinary) return;
+    if (missingConfig) return;
     widgetRef.current = window.cloudinary.createUploadWidget(
       {
         cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME,
@@ -61,9 +68,21 @@ export function CloudinaryUpload({
         }
       }
     );
-  }, [ready, onChange, kind]);
+  }, [ready, onChange, kind, missingConfig]);
 
   const Icon = kind === "video" ? Film : ImagePlus;
+  const inputClass =
+    variant === "light"
+      ? "flex-1 px-3 py-2 text-sm bg-white border border-slate-300 rounded-md text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-[#1A1A2E]/10 focus:border-[#1A1A2E]"
+      : "flex-1 px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-sm text-white focus:outline-none focus:border-accent";
+  const buttonClass =
+    variant === "light"
+      ? "inline-flex items-center gap-2 bg-[#1A1A2E] hover:bg-[#0f0f1f] disabled:opacity-50 text-white px-3 py-2 text-xs font-semibold rounded-md"
+      : "inline-flex items-center gap-2 bg-accent hover:bg-accent-dark disabled:opacity-50 text-white px-3 py-2 text-xs font-semibold rounded-sm";
+  const previewClass =
+    variant === "light"
+      ? "w-full max-w-xs h-32 object-cover rounded-md border border-slate-200 bg-slate-50"
+      : "w-full max-w-xs h-32 object-cover rounded-md border border-white/10";
 
   return (
     <div className={className}>
@@ -76,13 +95,13 @@ export function CloudinaryUpload({
               autoPlay
               loop
               playsInline
-              className="w-full max-w-xs h-32 object-cover rounded-md border border-white/10 bg-black"
+              className={`${previewClass} bg-black`}
             />
           ) : (
             <img
               src={value}
               alt=""
-              className="w-full max-w-xs h-32 object-cover rounded-md border border-white/10"
+              className={previewClass}
             />
           )}
         </div>
@@ -92,19 +111,30 @@ export function CloudinaryUpload({
           type="text"
           value={value || ""}
           onChange={(e) => onChange(e.target.value)}
-          placeholder={kind === "video" ? "https://…/video.mp4 or upload" : "https://… or upload"}
-          className="flex-1 px-3 py-2 text-sm bg-white/5 border border-white/10 rounded-sm text-white focus:outline-none focus:border-accent"
+          placeholder={kind === "video" ? "https://.../video.mp4 or upload" : "https://... or upload"}
+          className={inputClass}
         />
         <button
           type="button"
           onClick={() => widgetRef.current?.open()}
-          disabled={!ready}
-          className="inline-flex items-center gap-2 bg-accent hover:bg-accent-dark disabled:opacity-50 text-white px-3 py-2 text-xs font-semibold rounded-sm"
+          disabled={!ready || missingConfig}
+          className={buttonClass}
         >
           <Icon className="w-4 h-4" />
           Upload
         </button>
       </div>
+      {missingConfig && (
+        <p
+          className={
+            variant === "light"
+              ? "mt-2 text-xs text-amber-700"
+              : "mt-2 text-xs text-amber-300"
+          }
+        >
+          Set NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME and NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET to enable uploads.
+        </p>
+      )}
     </div>
   );
 }
