@@ -290,17 +290,11 @@ export default async function RootLayout({
       className={`${playfair.variable} ${inter.variable}`}
       suppressHydrationWarning
     >
-      <head>
-        <link key="preconnect-gumlet" rel="preconnect" href="https://video.gumlet.io" crossOrigin="" />
-        <link key="dns-imagekit" rel="dns-prefetch" href="https://ik.imagekit.io" />
-        <link key="dns-cloudinary" rel="dns-prefetch" href="https://res.cloudinary.com" />
+      <body className="min-h-dvh flex flex-col bg-paper-white text-foreground font-sans antialiased">
         <script
-          key="organization-json-ld"
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationLd) }}
         />
-      </head>
-      <body className="min-h-dvh flex flex-col bg-paper-white text-foreground font-sans antialiased">
         <Suspense fallback={null}>
           <AnalyticsScripts
             gaId={analytics.ga_id}

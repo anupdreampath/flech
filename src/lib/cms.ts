@@ -1562,6 +1562,98 @@ export const CMS_SCHEMA: Record<
       },
     },
   },
+  admin_login: {
+    label: "Admin Sign In",
+    sections: {
+      brand_panel: {
+        label: "Brand Panel",
+        fields: [
+          { key: "logo_letter", label: "Logo Letter", type: "text", default: "F" },
+          { key: "eyebrow", label: "Eyebrow", type: "text", default: "Flech" },
+          {
+            key: "console_name",
+            label: "Console Name",
+            type: "text",
+            default: "Admin Console",
+          },
+          {
+            key: "title",
+            label: "Panel Title",
+            type: "textarea",
+            default: "Operate the Flech digital surface from a single console.",
+          },
+          {
+            key: "body",
+            label: "Panel Body",
+            type: "textarea",
+            default:
+              "Manage inbound enquiries, content, blogs, and visitor analytics for every Flech product line.",
+          },
+          {
+            key: "copyright",
+            label: "Copyright Text",
+            type: "text",
+            default: "© Flech Manufacturing",
+          },
+        ],
+      },
+      form: {
+        label: "Sign In Form",
+        fields: [
+          { key: "title", label: "Title", type: "text", default: "Sign in to Admin" },
+          {
+            key: "subtitle",
+            label: "Subtitle",
+            type: "textarea",
+            default: "Use your administrator credentials to continue.",
+          },
+          { key: "email_label", label: "Email Label", type: "text", default: "Email" },
+          {
+            key: "password_label",
+            label: "Password Label",
+            type: "text",
+            default: "Password",
+          },
+          {
+            key: "button_label",
+            label: "Button Label",
+            type: "text",
+            default: "Sign in",
+          },
+          {
+            key: "button_loading_label",
+            label: "Loading Button Label",
+            type: "text",
+            default: "Signing in…",
+          },
+          {
+            key: "forgot_label",
+            label: "Forgot Password Link",
+            type: "text",
+            default: "Forgot password?",
+          },
+          {
+            key: "footer_note",
+            label: "Footer Note",
+            type: "text",
+            default: "Authorized personnel only · Sessions are audited.",
+          },
+          {
+            key: "error_invalid",
+            label: "Invalid Login Error",
+            type: "text",
+            default: "Invalid email or password.",
+          },
+          {
+            key: "error_missing",
+            label: "Missing Fields Error",
+            type: "text",
+            default: "Please enter both email and password.",
+          },
+        ],
+      },
+    },
+  },
   global: {
     label: "Global (Nav/Footer)",
     sections: {
@@ -1905,6 +1997,8 @@ export function previewUrlForPage(page: string): string {
       return "/privacy";
     case "terms":
       return "/terms";
+    case "admin_login":
+      return "/admin/login";
     case "global":
       return "/";
     default:
