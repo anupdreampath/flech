@@ -246,6 +246,33 @@ const productSpecFields: Field[] = [
   },
 ];
 
+const catalogFilterFields: Field[] = [
+  { key: "eyebrow", label: "Eyebrow", type: "text", default: "Catalog" },
+  { key: "title", label: "Title", type: "text", default: "Color Cards" },
+  { key: "intro", label: "Intro Text", type: "textarea", default: "" },
+  { key: "filter_title", label: "Filter Panel Title", type: "text", default: "Filter colors" },
+  { key: "mobile_filter_label", label: "Mobile Filter Button", type: "text", default: "Filters" },
+  { key: "search_placeholder", label: "Search Placeholder", type: "text", default: "Search by name or code..." },
+  { key: "size_filter_label", label: "Size Filter Label", type: "text", default: "Sheet Size" },
+  { key: "ply_filter_label", label: "Ply Filter Label", type: "text", default: "Ply / Caliper" },
+  { key: "tag_filter_label", label: "Badge Filter Label", type: "text", default: "Badges" },
+  { key: "empty_text", label: "Empty State Text", type: "text", default: "No colors match the current filters." },
+  { key: "clear_label", label: "Clear Button Label", type: "text", default: "Clear filters" },
+];
+
+const colorCardSubFields: SubField[] = [
+  { key: "name", label: "Name", type: "text" },
+  { key: "code", label: "Code", type: "text" },
+  { key: "hex", label: "Color (HEX)", type: "text", helper: "Used as the swatch background. e.g. #F8F8F4" },
+  { key: "gradient", label: "Gradient CSS (optional)", type: "text", helper: "Overrides HEX. Example: linear-gradient(135deg, #000000, #2A2A2A)" },
+  { key: "image", label: "Swatch Image (optional)", type: "image", helper: "If uploaded, this image replaces the flat color block on the left." },
+  { key: "size", label: "Sheet Size", type: "text" },
+  { key: "ply", label: "Ply / Caliper", type: "text" },
+  { key: "tags", label: "Extra Badges", type: "text", helper: "Card-specific badges. Comma-separated, e.g. Acid-Free, Bevel-Cut, Archival" },
+  { key: "description", label: "Description", type: "textarea" },
+  { key: "hidden", label: "Hide Card", type: "checkbox" },
+];
+
 const productCtaFields: Field[] = [
   { key: "title", label: "Title", type: "text", default: "Need this product quoted?" },
   {
@@ -1092,6 +1119,71 @@ export const CMS_SCHEMA: Record<
         label: "Specifications",
         fields: productSpecFields,
       },
+      easel_styles: {
+        label: "Easel Back Style Cards",
+        fields: [
+          ...catalogFilterFields.map((field) => {
+            const defaults: Record<string, string> = {
+              eyebrow: "Easel Back Finishes",
+              title: "Black easel back styles",
+              intro: "Three black finish options for clean display support, from simple flat black to subtle grey-black variation.",
+              filter_title: "Filter styles",
+              mobile_filter_label: "Filters",
+              search_placeholder: "Search by style or code...",
+              size_filter_label: "Format",
+              ply_filter_label: "Finish",
+              tag_filter_label: "Badges",
+              empty_text: "No styles match the current filters.",
+              clear_label: "Clear filters",
+            };
+            return { ...field, default: defaults[field.key] ?? field.default };
+          }),
+          {
+            key: "colors",
+            label: "Style Cards",
+            type: "repeater",
+            itemLabel: "Style",
+            helper:
+              "Same card system as matboards, managed fully from the visual editor. Use only black/grey HEX values or gradients for this section.",
+            subFields: colorCardSubFields,
+            defaultItems: [
+              {
+                name: "Simple Black",
+                code: "#EB-01",
+                hex: "#050505",
+                gradient: "",
+                size: "Standard",
+                ply: "Flat Black",
+                tags: "Simple",
+                description: "A clean, solid black easel back finish for standard display work.",
+                hidden: "false",
+              },
+              {
+                name: "Black Gradient",
+                code: "#EB-02",
+                hex: "#000000",
+                gradient: "linear-gradient(135deg, #000000 0%, #171717 48%, #2C2C2C 100%)",
+                size: "Standard",
+                ply: "Gradient Black",
+                tags: "Gradient",
+                description: "A subtle three-stop black gradient for a richer swatch presentation.",
+                hidden: "false",
+              },
+              {
+                name: "Soft Grey Black",
+                code: "#EB-03",
+                hex: "#2B2B2B",
+                gradient: "",
+                size: "Standard",
+                ply: "Grey Black",
+                tags: "Slightly Grey",
+                description: "A slightly greyed black option for softer contrast on display products.",
+                hidden: "false",
+              },
+            ],
+          },
+        ],
+      },
       cta: {
         label: "Final CTA",
         fields: productCtaFields,
@@ -1302,6 +1394,13 @@ export const CMS_SCHEMA: Record<
       primary_colors: {
         label: "Primary Colors (cards)",
         fields: [
+          ...catalogFilterFields.map((field) => {
+            const defaults: Record<string, string> = {
+              eyebrow: "Matboard Catalog",
+              title: "Primary Colors",
+            };
+            return { ...field, default: defaults[field.key] ?? field.default };
+          }),
           {
             key: "colors",
             label: "Color Cards",
@@ -1309,16 +1408,7 @@ export const CMS_SCHEMA: Record<
             itemLabel: "Color",
             helper:
               "Each card displays an image on the left and the name, code, size, ply, and a short description on the right. Add, remove, and reorder freely.",
-            subFields: [
-              { key: "name", label: "Name", type: "text" },
-              { key: "code", label: "Code", type: "text" },
-              { key: "hex", label: "Color (HEX)", type: "text", helper: "Used as the swatch background. e.g. #F8F8F4" },
-              { key: "image", label: "Swatch Image (optional)", type: "image", helper: "If uploaded, this image replaces the flat color block on the left." },
-              { key: "size", label: "Sheet Size", type: "text" },
-              { key: "ply", label: "Ply / Caliper", type: "text" },
-              { key: "tags", label: "Extra Badges", type: "text", helper: "Optional. Comma-separated, e.g. Acid-Free, Bevel-Cut, Archival" },
-              { key: "description", label: "Description", type: "textarea" },
-            ],
+            subFields: colorCardSubFields,
             defaultItems: [
               { name: "Tablet White", code: "#101", hex: "#F8F8F4", size: "32x40", ply: "4-ply White Core", description: "Bright neutral white. Our most-ordered shade for gallery framing." },
               { name: "Snow", code: "#108", hex: "#F4F6F8", size: "32x40", ply: "4-ply White Core", description: "Cool, clean white with a faint blue undertone." },
@@ -1362,6 +1452,13 @@ export const CMS_SCHEMA: Record<
       premium_colors: {
         label: "Simply Suede & Premium Colors (cards)",
         fields: [
+          ...catalogFilterFields.map((field) => {
+            const defaults: Record<string, string> = {
+              eyebrow: "Matboard Catalog",
+              title: "Simply Suede & Premium Colors",
+            };
+            return { ...field, default: defaults[field.key] ?? field.default };
+          }),
           {
             key: "colors",
             label: "Suede / Premium Cards",
@@ -1369,16 +1466,7 @@ export const CMS_SCHEMA: Record<
             itemLabel: "Color",
             helper:
               "Tactile suede and specialty finishes. Each card shows a flat color swatch on the left and the name, code, size, ply, and description on the right.",
-            subFields: [
-              { key: "name", label: "Name", type: "text" },
-              { key: "code", label: "Code", type: "text" },
-              { key: "hex", label: "Color (HEX)", type: "text", helper: "Used as the swatch background. e.g. #B25C68" },
-              { key: "image", label: "Swatch Image (optional)", type: "image", helper: "If uploaded, this image replaces the flat color block on the left." },
-              { key: "size", label: "Sheet Size", type: "text" },
-              { key: "ply", label: "Ply / Caliper", type: "text" },
-              { key: "tags", label: "Extra Badges", type: "text", helper: "Optional. Comma-separated, e.g. Acid-Free, Bevel-Cut, Archival" },
-              { key: "description", label: "Description", type: "textarea" },
-            ],
+            subFields: colorCardSubFields,
             defaultItems: [
               { name: "Snowflake", code: "#S10", hex: "#F2F2F0", size: "32x40", ply: "4-ply Suede", description: "Clean snow-white suede with a soft tactile surface." },
               { name: "Coconut", code: "#S12", hex: "#EDE8DC", size: "32x40", ply: "4-ply Suede", description: "Warm off-white suede." },

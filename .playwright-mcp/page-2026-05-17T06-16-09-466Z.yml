@@ -1,0 +1,398 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: F
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: Flech
+            - heading "Admin Console" [level=1] [ref=e11]
+        - navigation [ref=e12]:
+          - paragraph [ref=e13]: Workspace
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e15]
+            - text: Dashboard
+          - link "Submissions" [ref=e20] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e21]
+            - text: Submissions
+          - link "Analytics" [ref=e24] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e25]
+            - text: Analytics
+          - link "Visual Editor" [ref=e27] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e28]
+            - text: Visual Editor
+          - link "Email Settings" [ref=e30] [cursor=pointer]:
+            - /url: /admin/email
+            - img [ref=e31]
+            - text: Email Settings
+          - link "Settings" [ref=e34] [cursor=pointer]:
+            - /url: /admin/settings
+            - img [ref=e35]
+            - text: Settings
+          - link "Blogs" [ref=e38] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e39]
+            - text: Blogs
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: "N"
+            - generic [ref=e44]:
+              - paragraph [ref=e45]: nikalp@flech.com
+              - paragraph [ref=e46]: Administrator
+          - button "Sign out" [ref=e47]:
+            - img [ref=e48]
+            - text: Sign out
+      - main [ref=e51]:
+        - generic [ref=e52]:
+          - complementary [ref=e53]:
+            - generic [ref=e54]:
+              - paragraph [ref=e55]: Edit Site
+              - heading "Visual Editor" [level=1] [ref=e56]
+              - paragraph [ref=e57]: Pick a section on the right or from the list below.
+            - generic [ref=e58]:
+              - generic [ref=e59]: Page
+              - combobox [ref=e60]:
+                - option "Home"
+                - option "Contact"
+                - option "About"
+                - option "Industries"
+                - option "Product · Easel Backs"
+                - option "Product · Fold Lines & Dielines"
+                - option "Product · Contract Framing Backs"
+                - option "Product · Matboards" [selected]
+                - option "Privacy Policy"
+                - option "Terms of Service"
+                - option "Admin Sign In"
+                - option "Global (Nav/Footer)"
+            - generic [ref=e61]:
+              - paragraph [ref=e62]: Sections on this page
+              - list [ref=e63]:
+                - listitem [ref=e64]:
+                  - generic [ref=e65]:
+                    - generic [ref=e66]:
+                      - button "Move section up" [disabled] [ref=e67]:
+                        - img [ref=e68]
+                      - button "Move section down" [ref=e70]:
+                        - img [ref=e71]
+                    - button "Hero Section" [ref=e73]:
+                      - generic [ref=e75]: Hero Section
+                      - img [ref=e76]
+                - listitem [ref=e310]:
+                  - generic [ref=e311]:
+                    - generic [ref=e312]:
+                      - button "Move section up" [ref=e313]:
+                        - img [ref=e314]
+                      - button "Move section down" [ref=e316]:
+                        - img [ref=e317]
+                    - button "Overview" [ref=e319]:
+                      - generic [ref=e321]: Overview
+                      - img [ref=e322]
+                - listitem [ref=e324]:
+                  - generic [ref=e325]:
+                    - generic [ref=e326]:
+                      - button "Move section up" [ref=e327]:
+                        - img [ref=e328]
+                      - button "Move section down" [ref=e330]:
+                        - img [ref=e331]
+                    - button "Product Cards" [ref=e333]:
+                      - generic [ref=e335]: Product Cards
+                      - img [ref=e336]
+                - listitem [ref=e366]:
+                  - generic [ref=e367]:
+                    - generic [ref=e368]:
+                      - button "Move section up" [ref=e369]:
+                        - img [ref=e370]
+                      - button "Move section down" [ref=e372]:
+                        - img [ref=e373]
+                    - button "Simply Suede & Premium Colors (cards)" [ref=e375]:
+                      - generic [ref=e377]: Simply Suede & Premium Colors (cards)
+                      - img [ref=e378]
+                - listitem [ref=e338]:
+                  - generic [ref=e339]:
+                    - generic [ref=e340]:
+                      - button "Move section up" [ref=e341]:
+                        - img [ref=e342]
+                      - button "Move section down" [ref=e344]:
+                        - img [ref=e345]
+                    - button "Specifications" [ref=e347]:
+                      - generic [ref=e349]: Specifications
+                      - img [ref=e350]
+                - listitem [ref=e380]:
+                  - generic [ref=e381]:
+                    - generic [ref=e382]:
+                      - button "Move section up" [ref=e383]:
+                        - img [ref=e384]
+                      - button "Move section down" [ref=e386]:
+                        - img [ref=e387]
+                    - button "Primary Colors (cards)" [ref=e389]:
+                      - generic [ref=e391]: Primary Colors (cards)
+                      - img [ref=e392]
+                - listitem [ref=e260]:
+                  - generic [ref=e261]:
+                    - generic [ref=e262]:
+                      - button "Move section up" [ref=e263]:
+                        - img [ref=e264]
+                      - button "Move section down" [disabled] [ref=e266]:
+                        - img [ref=e267]
+                    - button "Final CTA" [ref=e269]:
+                      - generic [ref=e271]: Final CTA
+                      - img [ref=e272]
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - generic [ref=e276]:
+                - button "Desktop" [ref=e277]:
+                  - img [ref=e278]
+                  - text: Desktop
+                - button "Mobile" [ref=e280]:
+                  - img [ref=e281]
+                  - text: Mobile
+              - generic [ref=e283]:
+                - generic [ref=e284]: /products/matboards
+                - button "Reload preview" [ref=e285]:
+                  - img [ref=e286]
+                - link "Open in new tab" [ref=e291] [cursor=pointer]:
+                  - /url: /products/matboards
+                  - img [ref=e292]
+            - generic [ref=e296]:
+              - iframe [ref=e298]:
+                - generic [active] [ref=f12e1]:
+                  - navigation "Main navigation" [ref=f12e2]:
+                    - generic [ref=f12e3]:
+                      - link "Flech Paper Products":
+                        - /url: /
+                        - img "Flech Paper Products"
+                      - generic [ref=f12e4]:
+                        - link "Get a Quote":
+                          - /url: /contact
+                        - button "Open menu":
+                          - img
+                  - main [ref=f12e5]:
+                    - generic [ref=f12e6]:
+                      - generic [ref=f12e10]:
+                        - navigation "Breadcrumb" [ref=f12e11]:
+                          - link "Home":
+                            - /url: /
+                          - img [ref=f12e12]
+                          - link "Products":
+                            - /url: /products
+                          - img [ref=f12e14]
+                          - generic [ref=f12e16]: Easel Backs
+                        - generic [ref=f12e17]:
+                          - generic [ref=f12e18]: Flagship Product
+                          - heading "Easel Backs" [level=1] [ref=f12e19]
+                          - paragraph [ref=f12e20]: The invisible hero behind every freestanding display. Engineered for precise viewing angles, reliable adhesion, and the consistency that lets you promise your clients perfection.
+                          - generic [ref=f12e21]:
+                            - link "Get a Quote":
+                              - /url: /contact
+                              - text: Get a Quote
+                              - img
+                            - link "View Specifications":
+                              - /url: "#specifications"
+                      - generic [ref=f12e24]:
+                        - generic [ref=f12e25]:
+                          - paragraph [ref=f12e26]: Product Detail
+                          - heading "Built for production work" [level=2] [ref=f12e27]
+                          - paragraph [ref=f12e28]: A focused look at the materials, production details, and order options available for this product line.
+                          - generic [ref=f12e29]:
+                            - generic [ref=f12e30]:
+                              - img [ref=f12e31]
+                              - text: Custom sizes and materials available
+                            - generic [ref=f12e33]:
+                              - img [ref=f12e34]
+                              - text: Production-ready consistency for repeat orders
+                            - generic [ref=f12e36]:
+                              - img [ref=f12e37]
+                              - text: Quote support for volume and contract work
+                        - img "Built for production work" [ref=f12e41]
+                      - generic [ref=f12e43]:
+                        - generic [ref=f12e45]:
+                          - paragraph [ref=f12e46]: Capabilities
+                          - heading "Configurable options" [level=2] [ref=f12e47]
+                        - generic [ref=f12e48]:
+                          - article [ref=f12e50]:
+                            - img "Custom configurations" [ref=f12e51]
+                            - generic [ref=f12e52]:
+                              - heading "Custom configurations" [level=3] [ref=f12e53]
+                              - paragraph [ref=f12e54]: Choose the format, material, finish, and packing style that fits your order.
+                          - article [ref=f12e56]:
+                            - img "Repeatable quality" [ref=f12e57]
+                            - generic [ref=f12e58]:
+                              - heading "Repeatable quality" [level=3] [ref=f12e59]
+                              - paragraph [ref=f12e60]: Built for consistent results across short runs, volume orders, and recurring programs.
+                          - article [ref=f12e62]:
+                            - img "Production support" [ref=f12e63]
+                            - generic [ref=f12e64]:
+                              - heading "Production support" [level=3] [ref=f12e65]
+                              - paragraph [ref=f12e66]: Our team can help translate requirements into manufacturable specifications.
+                      - generic [ref=f12e68]:
+                        - heading "Specifications" [level=2] [ref=f12e69]
+                        - generic [ref=f12e70]:
+                          - generic [ref=f12e71]:
+                            - generic [ref=f12e72]: Material
+                            - generic [ref=f12e73]: Paperboard, SBS, chipboard, poly board, and custom substrates
+                          - generic [ref=f12e74]:
+                            - generic [ref=f12e75]: Sizes
+                            - generic [ref=f12e76]: Standard and custom sizes available
+                          - generic [ref=f12e77]:
+                            - generic [ref=f12e78]: Packing
+                            - generic [ref=f12e79]: Bulk, carton packed, shrink wrapped, or retail ready
+                      - generic [ref=f12e81]:
+                        - generic [ref=f12e82]:
+                          - paragraph [ref=f12e83]: Easel Back Finishes
+                          - heading "Black easel back styles" [level=2] [ref=f12e84]
+                          - paragraph [ref=f12e85]: Three black finish options for clean display support, from simple flat black to subtle grey-black variation.
+                        - generic [ref=f12e86]:
+                          - button "Filters 3 / 3":
+                            - generic:
+                              - img
+                              - text: Filters
+                            - generic: 3 / 3
+                          - generic [ref=f12e88]:
+                            - generic [ref=f12e90]:
+                              - generic "Simple Black" [ref=f12e91]
+                              - generic [ref=f12e92]:
+                                - generic [ref=f12e93]:
+                                  - heading "Simple Black" [level=4] [ref=f12e94]
+                                  - generic [ref=f12e95]: "#EB-01"
+                                - generic [ref=f12e96]:
+                                  - generic [ref=f12e97]: Standard
+                                  - generic [ref=f12e98]: Flat Black
+                                  - generic [ref=f12e99]: Simple
+                                - paragraph [ref=f12e100]: A clean, solid black easel back finish for standard display work.
+                            - generic [ref=f12e102]:
+                              - generic "Black Gradient" [ref=f12e103]
+                              - generic [ref=f12e104]:
+                                - generic [ref=f12e105]:
+                                  - heading "Black Gradient" [level=4] [ref=f12e106]
+                                  - generic [ref=f12e107]: "#EB-02"
+                                - generic [ref=f12e108]:
+                                  - generic [ref=f12e109]: Standard
+                                  - generic [ref=f12e110]: Gradient Black
+                                  - generic [ref=f12e111]: Gradient
+                                - paragraph [ref=f12e112]: A subtle three-stop black gradient for a richer swatch presentation.
+                            - generic [ref=f12e114]:
+                              - generic "Soft Grey Black" [ref=f12e115]
+                              - generic [ref=f12e116]:
+                                - generic [ref=f12e117]:
+                                  - heading "Soft Grey Black" [level=4] [ref=f12e118]
+                                  - generic [ref=f12e119]: "#EB-03"
+                                - generic [ref=f12e120]:
+                                  - generic [ref=f12e121]: Standard
+                                  - generic [ref=f12e122]: Grey Black
+                                  - generic [ref=f12e123]: Slightly Grey
+                                - paragraph [ref=f12e124]: A slightly greyed black option for softer contrast on display products.
+                      - generic [ref=f12e129]:
+                        - heading "Need this product quoted?" [level=2] [ref=f12e130]
+                        - paragraph [ref=f12e131]: Send the basics and our team will respond with pricing, lead time, and specification recommendations.
+                        - generic [ref=f12e132]:
+                          - link "Request a Quote":
+                            - /url: /contact
+                            - text: Request a Quote
+                            - img
+                          - link "View Industries":
+                            - /url: /industries
+                  - contentinfo [ref=f12e133]:
+                    - generic [ref=f12e135]:
+                      - generic [ref=f12e136]:
+                        - img "Flech Paper Products" [ref=f12e138]
+                        - paragraph [ref=f12e139]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                        - generic [ref=f12e140]:
+                          - link "(973) 357-8111":
+                            - /url: tel:+19733578111
+                            - img
+                            - text: (973) 357-8111
+                          - link "info@flech.com":
+                            - /url: mailto:info@flech.com
+                            - img
+                            - text: info@flech.com
+                          - generic [ref=f12e141]:
+                            - img [ref=f12e142]
+                            - generic [ref=f12e145]:
+                              - text: Paterson, NJ
+                              - text: United States
+                      - generic [ref=f12e146]:
+                        - heading "Products" [level=3] [ref=f12e147]
+                        - list [ref=f12e148]:
+                          - listitem [ref=f12e149]:
+                            - link "Easel Backs":
+                              - /url: /products/easel-backs
+                              - text: Easel Backs
+                              - img
+                          - listitem [ref=f12e150]:
+                            - link "Fold Lines & Dielines":
+                              - /url: /products/fold-lines
+                              - text: Fold Lines & Dielines
+                              - img
+                          - listitem [ref=f12e151]:
+                            - link "Contract Framing Backs":
+                              - /url: /products/framing-backs
+                              - text: Contract Framing Backs
+                              - img
+                          - listitem [ref=f12e152]:
+                            - link "Matboards":
+                              - /url: /products/matboards
+                              - text: Matboards
+                              - img
+                      - generic [ref=f12e153]:
+                        - heading "Company" [level=3] [ref=f12e154]
+                        - list [ref=f12e155]:
+                          - listitem [ref=f12e156]:
+                            - link "About Flech":
+                              - /url: /about
+                              - text: About Flech
+                              - img
+                          - listitem [ref=f12e157]:
+                            - link "Industries We Serve":
+                              - /url: /industries
+                              - text: Industries We Serve
+                              - img
+                          - listitem [ref=f12e158]:
+                            - link "Contact & RFQ":
+                              - /url: /contact
+                              - text: Contact & RFQ
+                              - img
+                        - heading "Industries" [level=3] [ref=f12e159]
+                        - list [ref=f12e160]:
+                          - listitem [ref=f12e161]:
+                            - link "Sign & Display":
+                              - /url: /industries#signage
+                          - listitem [ref=f12e162]:
+                            - link "Wholesale Framing":
+                              - /url: /industries#framing
+                          - listitem [ref=f12e163]:
+                            - link "Packaging & POP":
+                              - /url: /industries#packaging
+                          - listitem [ref=f12e164]:
+                            - link "Interior Design":
+                              - /url: /industries#interior
+                      - generic [ref=f12e165]:
+                        - heading "Get Started" [level=3] [ref=f12e166]
+                        - paragraph [ref=f12e167]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                        - link "Get a Quote":
+                          - /url: /contact
+                          - text: Get a Quote
+                          - img
+                        - generic [ref=f12e168]:
+                          - paragraph [ref=f12e169]: Certifications
+                          - paragraph [ref=f12e170]:
+                            - text: ISO 9001 Certified
+                            - text: FSC Chain of Custody
+                            - text: Acid-Free & Archival
+                    - generic [ref=f12e172]:
+                      - paragraph [ref=f12e173]: © 2026 Flech Paper Products. All rights reserved.
+                      - generic [ref=f12e174]:
+                        - link "Privacy Policy":
+                          - /url: /privacy
+                        - link "Terms of Service":
+                          - /url: /terms
+                  - button "Open Next.js Dev Tools" [ref=f12e180] [cursor=pointer]:
+                    - img [ref=f12e181]
+                  - alert [ref=f12e184]
+              - paragraph [ref=e299]: "Tip: hover anything in the preview to outline it, click to open the section editor on the left."
+  - button "Open Next.js Dev Tools" [ref=e305] [cursor=pointer]:
+    - img [ref=e306]
+  - alert [ref=e309]

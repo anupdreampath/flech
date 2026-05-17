@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight, Check, ChevronRight } from "lucide-react";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/AnimatedSection";
 import { LazyVideo } from "@/components/LazyVideo";
-import { ColorCatalog, type ColorCard } from "./matboards/ColorCatalog";
+import { ColorCatalog, type ColorCard, type ColorCatalogLabels } from "./matboards/ColorCatalog";
 
 type SectionContent = Record<string, unknown>;
 type PageContent = Record<string, SectionContent>;
@@ -28,12 +28,25 @@ function parseItems<T extends object>(raw: unknown, fallback: T[] = []): T[] {
   }
 }
 
-function orderedKeys(content: PageContent, preferred: string[]) {
-  const layout = text(content.__layout?.order);
-  const saved = layout
+function parseLayoutOrder(raw: unknown): string[] {
+  const value = text(raw);
+  if (!value) return [];
+  try {
+    const parsed = JSON.parse(value);
+    if (Array.isArray(parsed)) {
+      return parsed.filter((item): item is string => typeof item === "string");
+    }
+  } catch {
+    // Older layout values were comma-separated strings.
+  }
+  return value
     .split(",")
     .map((key) => key.trim())
     .filter(Boolean);
+}
+
+function orderedKeys(content: PageContent, preferred: string[]) {
+  const saved = parseLayoutOrder(content.__layout?.order);
   return [...saved.filter((key) => preferred.includes(key)), ...preferred.filter((key) => !saved.includes(key))];
 }
 
@@ -57,13 +70,15 @@ export function ProductCmsPage({
     "overview",
     "capabilities",
     "specifications",
+    "easel_styles",
     "primary_colors",
     "premium_colors",
     "cta",
   ]);
 
   const renderSection = (key: string) => {
-    const section = content[key] || {};
+    const section = content[key];
+    if (!section) return null;
     if (isHidden(section._hidden)) return null;
 
     if (key === "hero") {
@@ -201,17 +216,41 @@ export function ProductCmsPage({
       );
     }
 
-    if (key === "primary_colors" || key === "premium_colors") {
-      const colors = parseItems<ColorCard & Record<string, string>>(section.colors);
-      const title = key === "primary_colors" ? "Primary Colors" : "Simply Suede & Premium Colors";
+    if (key === "primary_colors" || key === "premium_colors" || key === "easel_styles") {
+      const colors = parseItems<ColorCard & Record<string, string>>(section.colors).filter(
+        (item) => !isHidden(item.hidden)
+      );
+      const fallbackTitle =
+        key === "primary_colors"
+          ? "Primary Colors"
+          : key === "premium_colors"
+            ? "Simply Suede & Premium Colors"
+            : "Easel Back Black Styles";
+      const labels: ColorCatalogLabels = {
+        filterTitle: text(section.filter_title, "Filter colors"),
+        mobileFilterLabel: text(section.mobile_filter_label, "Filters"),
+        searchPlaceholder: text(section.search_placeholder, "Search by name or code..."),
+        sizeFilterLabel: text(section.size_filter_label, "Sheet Size"),
+        plyFilterLabel: text(section.ply_filter_label, "Ply / Caliper"),
+        tagFilterLabel: text(section.tag_filter_label, "Badges"),
+        emptyText: text(section.empty_text, "No colors match the current filters."),
+        clearLabel: text(section.clear_label, "Clear filters"),
+      };
       return (
         <section key={key} id={key.replace("_", "-")} className="bg-warm-white py-24 sm:py-32">
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-10">
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-3">Matboard Catalog</p>
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-charcoal">{title}</h2>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent mb-3">
+                {text(section.eyebrow, key === "easel_styles" ? "Easel Back Finishes" : "Matboard Catalog")}
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-charcoal">
+                {text(section.title, fallbackTitle)}
+              </h2>
+              {text(section.intro) && (
+                <p className="mt-4 max-w-2xl text-muted leading-relaxed">{text(section.intro)}</p>
+              )}
             </div>
-            <ColorCatalog colors={colors} idPrefix={key} />
+            <ColorCatalog colors={colors} idPrefix={key} labels={labels} />
           </div>
         </section>
       );

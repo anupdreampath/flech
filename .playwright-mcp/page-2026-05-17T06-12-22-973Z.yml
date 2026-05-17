@@ -1,0 +1,615 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - generic [ref=e7]:
+        - generic [ref=e8]: F
+        - generic [ref=e9]:
+          - paragraph [ref=e10]: Flech
+          - heading "Admin Console" [level=1] [ref=e11]
+      - navigation [ref=e12]:
+        - paragraph [ref=e13]: Workspace
+        - link "Dashboard" [ref=e14] [cursor=pointer]:
+          - /url: /admin
+          - img [ref=e15]
+          - text: Dashboard
+        - link "Submissions" [ref=e20] [cursor=pointer]:
+          - /url: /admin/submissions
+          - img [ref=e21]
+          - text: Submissions
+        - link "Analytics" [ref=e24] [cursor=pointer]:
+          - /url: /admin/analytics
+          - img [ref=e25]
+          - text: Analytics
+        - link "Visual Editor" [ref=e27] [cursor=pointer]:
+          - /url: /admin/cms
+          - img [ref=e28]
+          - text: Visual Editor
+        - link "Email Settings" [ref=e30] [cursor=pointer]:
+          - /url: /admin/email
+          - img [ref=e31]
+          - text: Email Settings
+        - link "Settings" [ref=e34] [cursor=pointer]:
+          - /url: /admin/settings
+          - img [ref=e35]
+          - text: Settings
+        - link "Blogs" [ref=e38] [cursor=pointer]:
+          - /url: /admin/blogs
+          - img [ref=e39]
+          - text: Blogs
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: "N"
+          - generic [ref=e44]:
+            - paragraph [ref=e45]: nikalp@flech.com
+            - paragraph [ref=e46]: Administrator
+        - button "Sign out" [ref=e47]:
+          - img [ref=e48]
+          - text: Sign out
+    - main [ref=e51]:
+      - generic [ref=e52]:
+        - complementary [ref=e53]:
+          - generic [ref=e54]:
+            - paragraph [ref=e55]: Edit Site
+            - heading "Visual Editor" [level=1] [ref=e56]
+            - paragraph [ref=e57]: Pick a section on the right or from the list below.
+          - generic [ref=e58]:
+            - generic [ref=e59]: Page
+            - combobox [ref=e60]:
+              - option "Home"
+              - option "Contact"
+              - option "About"
+              - option "Industries"
+              - option "Product · Easel Backs" [selected]
+              - option "Product · Fold Lines & Dielines"
+              - option "Product · Contract Framing Backs"
+              - option "Product · Matboards"
+              - option "Privacy Policy"
+              - option "Terms of Service"
+              - option "Admin Sign In"
+              - option "Global (Nav/Footer)"
+          - generic [ref=e61]:
+            - paragraph [ref=e62]: Sections on this page
+            - list [ref=e63]:
+              - listitem [ref=e64]:
+                - generic [ref=e65]:
+                  - generic [ref=e66]:
+                    - button "Move section up" [disabled] [ref=e67]:
+                      - img [ref=e68]
+                    - button "Move section down" [ref=e70]:
+                      - img [ref=e71]
+                  - button "Hero Section" [ref=e73]:
+                    - generic [ref=e75]: Hero Section
+                    - img [ref=e76]
+              - listitem [ref=e78]:
+                - generic [ref=e79]:
+                  - generic [ref=e80]:
+                    - button "Move section up" [ref=e81]:
+                      - img [ref=e82]
+                    - button "Move section down" [ref=e84]:
+                      - img [ref=e85]
+                  - button "Products Heading" [ref=e87]:
+                    - generic [ref=e89]: Products Heading
+                    - img [ref=e90]
+              - listitem [ref=e92]:
+                - generic [ref=e93]:
+                  - generic [ref=e94]:
+                    - button "Move section up" [ref=e95]:
+                      - img [ref=e96]
+                    - button "Move section down" [ref=e98]:
+                      - img [ref=e99]
+                  - button "Why Flech Heading" [ref=e101]:
+                    - generic [ref=e103]: Why Flech Heading
+                    - img [ref=e104]
+              - listitem [ref=e106]:
+                - generic [ref=e107]:
+                  - generic [ref=e108]:
+                    - button "Move section up" [ref=e109]:
+                      - img [ref=e110]
+                    - button "Move section down" [ref=e112]:
+                      - img [ref=e113]
+                  - button "Stats Bar (4 items)" [ref=e115]:
+                    - generic [ref=e117]: Stats Bar (4 items)
+                    - img [ref=e118]
+              - listitem [ref=e120]:
+                - generic [ref=e121]:
+                  - generic [ref=e122]:
+                    - button "Move section up" [ref=e123]:
+                      - img [ref=e124]
+                    - button "Move section down" [ref=e126]:
+                      - img [ref=e127]
+                  - button "Products (4 cards)" [ref=e129]:
+                    - generic [ref=e131]: Products (4 cards)
+                    - img [ref=e132]
+              - listitem [ref=e134]:
+                - generic [ref=e135]:
+                  - generic [ref=e136]:
+                    - button "Move section up" [ref=e137]:
+                      - img [ref=e138]
+                    - button "Move section down" [ref=e140]:
+                      - img [ref=e141]
+                  - button "Why Flech · Cards (6)" [ref=e143]:
+                    - generic [ref=e145]: Why Flech · Cards (6)
+                    - img [ref=e146]
+              - listitem [ref=e148]:
+                - generic [ref=e149]:
+                  - generic [ref=e150]:
+                    - button "Move section up" [ref=e151]:
+                      - img [ref=e152]
+                    - button "Move section down" [ref=e154]:
+                      - img [ref=e155]
+                  - button "Industries Preview · Heading" [ref=e157]:
+                    - generic [ref=e159]: Industries Preview · Heading
+                    - img [ref=e160]
+              - listitem [ref=e162]:
+                - generic [ref=e163]:
+                  - generic [ref=e164]:
+                    - button "Move section up" [ref=e165]:
+                      - img [ref=e166]
+                    - button "Move section down" [ref=e168]:
+                      - img [ref=e169]
+                  - button "Industries Preview (4 cards)" [ref=e171]:
+                    - generic [ref=e173]: Industries Preview (4 cards)
+                    - img [ref=e174]
+              - listitem [ref=e176]:
+                - generic [ref=e177]:
+                  - generic [ref=e178]:
+                    - button "Move section up" [ref=e179]:
+                      - img [ref=e180]
+                    - button "Move section down" [ref=e182]:
+                      - img [ref=e183]
+                  - button "How We Work · Heading" [ref=e185]:
+                    - generic [ref=e187]: How We Work · Heading
+                    - img [ref=e188]
+              - listitem [ref=e190]:
+                - generic [ref=e191]:
+                  - generic [ref=e192]:
+                    - button "Move section up" [ref=e193]:
+                      - img [ref=e194]
+                    - button "Move section down" [ref=e196]:
+                      - img [ref=e197]
+                  - button "How We Work · Steps (4)" [ref=e199]:
+                    - generic [ref=e201]: How We Work · Steps (4)
+                    - img [ref=e202]
+              - listitem [ref=e204]:
+                - generic [ref=e205]:
+                  - generic [ref=e206]:
+                    - button "Move section up" [ref=e207]:
+                      - img [ref=e208]
+                    - button "Move section down" [ref=e210]:
+                      - img [ref=e211]
+                  - button "Testimonials · Heading" [ref=e213]:
+                    - generic [ref=e215]: Testimonials · Heading
+                    - img [ref=e216]
+              - listitem [ref=e218]:
+                - generic [ref=e219]:
+                  - generic [ref=e220]:
+                    - button "Move section up" [ref=e221]:
+                      - img [ref=e222]
+                    - button "Move section down" [ref=e224]:
+                      - img [ref=e225]
+                  - button "Testimonials (4)" [ref=e227]:
+                    - generic [ref=e229]: Testimonials (4)
+                    - img [ref=e230]
+              - listitem [ref=e232]:
+                - generic [ref=e233]:
+                  - generic [ref=e234]:
+                    - button "Move section up" [ref=e235]:
+                      - img [ref=e236]
+                    - button "Move section down" [ref=e238]:
+                      - img [ref=e239]
+                  - button "Factory Video Grid" [ref=e241]:
+                    - generic [ref=e243]: Factory Video Grid
+                    - img [ref=e244]
+              - listitem [ref=e246]:
+                - generic [ref=e247]:
+                  - generic [ref=e248]:
+                    - button "Move section up" [ref=e249]:
+                      - img [ref=e250]
+                    - button "Move section down" [ref=e252]:
+                      - img [ref=e253]
+                  - button "Scrolling Gallery Strip" [ref=e255]:
+                    - generic [ref=e257]: Scrolling Gallery Strip
+                    - img [ref=e258]
+              - listitem [ref=e260]:
+                - generic [ref=e261]:
+                  - generic [ref=e262]:
+                    - button "Move section up" [ref=e263]:
+                      - img [ref=e264]
+                    - button "Move section down" [disabled] [ref=e266]:
+                      - img [ref=e267]
+                  - button "Final CTA" [ref=e269]:
+                    - generic [ref=e271]: Final CTA
+                    - img [ref=e272]
+        - generic [ref=e274]:
+          - generic [ref=e275]:
+            - generic [ref=e276]:
+              - button "Desktop" [ref=e277]:
+                - img [ref=e278]
+                - text: Desktop
+              - button "Mobile" [ref=e280]:
+                - img [ref=e281]
+                - text: Mobile
+            - generic [ref=e283]:
+              - generic [ref=e284]: /
+              - button "Reload preview" [active] [ref=e285]:
+                - img [ref=e286]
+              - link "Open in new tab" [ref=e291] [cursor=pointer]:
+                - /url: /
+                - img [ref=e292]
+          - generic [ref=e296]:
+            - iframe [ref=e298]:
+              - generic [active] [ref=f3e1]:
+                - navigation "Main navigation" [ref=f3e2]:
+                  - generic [ref=f3e3]:
+                    - link "Flech Paper Products" [ref=f3e4] [cursor=pointer]:
+                      - /url: /
+                      - img "Flech Paper Products" [ref=f3e5]
+                    - generic [ref=f3e6]:
+                      - link "Get a Quote" [ref=f3e7] [cursor=pointer]:
+                        - /url: /contact
+                      - button "Open menu" [ref=f3e8] [cursor=pointer]:
+                        - img [ref=f3e9]
+                - main [ref=f3e10]:
+                  - generic [ref=f3e12]:
+                    - generic [ref=f3e17]:
+                      - generic [ref=f3e18]: Family-Owned Manufacturer, Paterson, NJ Since 1999
+                      - heading "The Backbone of" [level=1] [ref=f3e20]:
+                        - text: The Backbone of
+                        - generic [ref=f3e22]: "|"
+                      - paragraph [ref=f3e23]: From the easel back that holds your frame upright to the matboard that frames your art, Flech manufactures the precision board products that the framing, sign, and display industries depend on.
+                      - link "Request a Quote" [ref=f3e25] [cursor=pointer]:
+                        - /url: /contact
+                        - text: Request a Quote
+                        - img [ref=f3e26]
+                    - generic [ref=f3e33]:
+                      - generic [ref=f3e35]:
+                        - img [ref=f3e37]
+                        - generic [ref=f3e40]:
+                          - paragraph [ref=f3e41]: 25+
+                          - paragraph [ref=f3e42]: Years Manufacturing
+                      - generic [ref=f3e44]:
+                        - img [ref=f3e46]
+                        - generic [ref=f3e50]:
+                          - paragraph [ref=f3e51]: 1000+
+                          - paragraph [ref=f3e52]: Custom Orders / Year
+                      - generic [ref=f3e54]:
+                        - img [ref=f3e56]
+                        - generic [ref=f3e61]:
+                          - paragraph [ref=f3e62]: 600+
+                          - paragraph [ref=f3e63]: B2B Clients Served
+                      - generic [ref=f3e65]:
+                        - img [ref=f3e67]
+                        - generic [ref=f3e69]:
+                          - paragraph [ref=f3e70]: 100%
+                          - paragraph [ref=f3e71]: Made in USA
+                    - generic [ref=f3e73]:
+                      - generic [ref=f3e75]:
+                        - generic [ref=f3e76]:
+                          - paragraph [ref=f3e77]: Our Product Lines
+                          - heading "Four Pillars of Precision" [level=2] [ref=f3e78]
+                        - link "View all products" [ref=f3e79] [cursor=pointer]:
+                          - /url: /products/easel-backs
+                          - text: View all products
+                          - img [ref=f3e80]
+                      - generic [ref=f3e83]:
+                        - link "Easel Backs Easel Backs Flagship Our Flagship Product Single-wing and double-wing display stands with self-stick adhesive for frames, signs, and POP displays. Explore Product" [ref=f3e86] [cursor=pointer]:
+                          - /url: /products/easel-backs
+                          - img "Easel Backs" [ref=f3e88]
+                          - generic [ref=f3e90]:
+                            - img [ref=f3e92]
+                            - generic [ref=f3e102]:
+                              - heading "Easel Backs" [level=3] [ref=f3e103]
+                              - generic [ref=f3e104]: Flagship
+                            - paragraph [ref=f3e105]: Our Flagship Product
+                            - paragraph [ref=f3e106]: Single-wing and double-wing display stands with self-stick adhesive for frames, signs, and POP displays.
+                            - generic [ref=f3e107]:
+                              - text: Explore Product
+                              - img [ref=f3e108]
+                        - link "Fold Lines & Dielines Fold Lines & Dielines Precision Hinges Pre-creased score lines that bend accurately without cracking. The foundation of every reliable display. Explore Product" [ref=f3e112] [cursor=pointer]:
+                          - /url: /products/fold-lines
+                          - img "Fold Lines & Dielines" [ref=f3e114]
+                          - generic [ref=f3e116]:
+                            - img [ref=f3e118]
+                            - heading "Fold Lines & Dielines" [level=3] [ref=f3e125]
+                            - paragraph [ref=f3e126]: Precision Hinges
+                            - paragraph [ref=f3e127]: Pre-creased score lines that bend accurately without cracking. The foundation of every reliable display.
+                            - generic [ref=f3e128]:
+                              - text: Explore Product
+                              - img [ref=f3e129]
+                        - link "Contract Framing Backs Contract Framing Backs Protection & Support High-volume standardized backing boards for commercial framing operations. Consistent quality, every sheet. Explore Product" [ref=f3e133] [cursor=pointer]:
+                          - /url: /products/framing-backs
+                          - img "Contract Framing Backs" [ref=f3e135]
+                          - generic [ref=f3e137]:
+                            - img [ref=f3e139]
+                            - heading "Contract Framing Backs" [level=3] [ref=f3e141]
+                            - paragraph [ref=f3e142]: Protection & Support
+                            - paragraph [ref=f3e143]: High-volume standardized backing boards for commercial framing operations. Consistent quality, every sheet.
+                            - generic [ref=f3e144]:
+                              - text: Explore Product
+                              - img [ref=f3e145]
+                        - link "Matboards Matboards Decorative & Archival Bevel-cut decorative borders in acid-free, archival quality. 50+ colors with white, cream, or black core. Explore Product" [ref=f3e149] [cursor=pointer]:
+                          - /url: /products/matboards
+                          - img "Matboards" [ref=f3e151]
+                          - generic [ref=f3e153]:
+                            - img [ref=f3e155]
+                            - heading "Matboards" [level=3] [ref=f3e162]
+                            - paragraph [ref=f3e163]: Decorative & Archival
+                            - paragraph [ref=f3e164]: Bevel-cut decorative borders in acid-free, archival quality. 50+ colors with white, cream, or black core.
+                            - generic [ref=f3e165]:
+                              - text: Explore Product
+                              - img [ref=f3e166]
+                    - generic [ref=f3e171]:
+                      - generic [ref=f3e173]:
+                        - paragraph [ref=f3e174]: Why Flech
+                        - heading "Built Different, Not Just Better" [level=2] [ref=f3e175]
+                        - paragraph [ref=f3e176]: Anyone can cut board. The difference is precision, material science, and 25 years of knowing what works.
+                      - generic [ref=f3e177]:
+                        - generic [ref=f3e180]:
+                          - img "Precision Manufacturing" [ref=f3e182]
+                          - generic [ref=f3e184]:
+                            - img [ref=f3e186]
+                            - heading "Precision Manufacturing" [level=3] [ref=f3e192]
+                            - paragraph [ref=f3e193]: "CNC equipment ensures ±0.005\" tolerances. Consistency from piece #1 to piece #50,000."
+                        - generic [ref=f3e196]:
+                          - img "Material Expertise" [ref=f3e198]
+                          - generic [ref=f3e200]:
+                            - img [ref=f3e202]
+                            - heading "Material Expertise" [level=3] [ref=f3e204]
+                            - paragraph [ref=f3e205]: 25 years working with SBS, pulp, chip, and poly boards. We know which substrate works for your job.
+                        - generic [ref=f3e208]:
+                          - img "Vertically Integrated" [ref=f3e210]
+                          - generic [ref=f3e212]:
+                            - img [ref=f3e214]
+                            - heading "Vertically Integrated" [level=3] [ref=f3e216]
+                            - paragraph [ref=f3e217]: Die-cutting, laminating, scoring, finishing, all under one roof in Paterson, NJ. No middlemen.
+                        - generic [ref=f3e220]:
+                          - img "Custom Is Standard" [ref=f3e222]
+                          - generic [ref=f3e224]:
+                            - img [ref=f3e226]
+                            - heading "Custom Is Standard" [level=3] [ref=f3e229]
+                            - paragraph [ref=f3e230]: Custom sizes, angles, adhesives. We don't charge extra for thinking. We engineer solutions.
+                        - generic [ref=f3e233]:
+                          - img "Reliable Fulfillment" [ref=f3e235]
+                          - generic [ref=f3e237]:
+                            - img [ref=f3e239]
+                            - heading "Reliable Fulfillment" [level=3] [ref=f3e244]
+                            - paragraph [ref=f3e245]: Drop-shipping, just-in-time delivery, and inventory programs. When you commit, we commit.
+                        - generic [ref=f3e248]:
+                          - img "Industry Knowledge" [ref=f3e250]
+                          - generic [ref=f3e252]:
+                            - img [ref=f3e254]
+                            - heading "Industry Knowledge" [level=3] [ref=f3e259]
+                            - paragraph [ref=f3e260]: We serve sign, display, framing, POP, and packaging professionals. We've solved your constraints before.
+                    - generic [ref=f3e262]:
+                      - heading "Inside the Factory" [level=2] [ref=f3e263]
+                      - paragraph [ref=f3e264]: A closer look at the machinery, precision, and people behind every product we ship.
+                    - generic [ref=f3e287]:
+                      - generic [ref=f3e289]:
+                        - paragraph [ref=f3e290]: Industries We Serve
+                        - heading "Your Industry, Our Expertise" [level=2] [ref=f3e291]
+                      - generic [ref=f3e292]:
+                        - generic [ref=f3e295] [cursor=pointer]:
+                          - img "Sign & Display" [ref=f3e296]
+                          - generic [ref=f3e298]:
+                            - heading "Sign & Display" [level=3] [ref=f3e299]
+                            - paragraph [ref=f3e300]: Easel backs and display boards for retail, trade shows, and POP.
+                        - generic [ref=f3e303] [cursor=pointer]:
+                          - img "Wholesale Framing" [ref=f3e304]
+                          - generic [ref=f3e306]:
+                            - heading "Wholesale Framing" [level=3] [ref=f3e307]
+                            - paragraph [ref=f3e308]: Matboards, framing backs, and easel stands for commercial operations.
+                        - generic [ref=f3e311] [cursor=pointer]:
+                          - img "Packaging & POP" [ref=f3e312]
+                          - generic [ref=f3e314]:
+                            - heading "Packaging & POP" [level=3] [ref=f3e315]
+                            - paragraph [ref=f3e316]: Custom die-cut boards for product packaging and retail displays.
+                        - generic [ref=f3e319] [cursor=pointer]:
+                          - img "Interior Design" [ref=f3e320]
+                          - generic [ref=f3e322]:
+                            - heading "Interior Design" [level=3] [ref=f3e323]
+                            - paragraph [ref=f3e324]: Archival matboards and specialty boards for gallery installations.
+                    - generic [ref=f3e326]:
+                      - generic [ref=f3e328]:
+                        - paragraph [ref=f3e329]: How We Work
+                        - heading "From Spec to Shipment" [level=2] [ref=f3e330]
+                      - generic [ref=f3e331]:
+                        - generic [ref=f3e334]:
+                          - generic [ref=f3e335]: "01"
+                          - generic [ref=f3e336]:
+                            - generic [ref=f3e337]: Step 01
+                            - heading "Consult" [level=3] [ref=f3e338]
+                            - paragraph [ref=f3e339]: Tell us what you need. Upload dielines or artwork if you have them.
+                        - generic [ref=f3e342]:
+                          - generic [ref=f3e343]: "02"
+                          - generic [ref=f3e344]:
+                            - generic [ref=f3e345]: Step 02
+                            - heading "Engineer" [level=3] [ref=f3e346]
+                            - paragraph [ref=f3e347]: We recommend substrate, adhesive, and finishing for your application.
+                        - generic [ref=f3e350]:
+                          - generic [ref=f3e351]: "03"
+                          - generic [ref=f3e352]:
+                            - generic [ref=f3e353]: Step 03
+                            - heading "Manufacture" [level=3] [ref=f3e354]
+                            - paragraph [ref=f3e355]: CNC die-cutting, scoring, laminating, quality inspected at every stage.
+                        - generic [ref=f3e358]:
+                          - generic [ref=f3e359]: "04"
+                          - generic [ref=f3e360]:
+                            - generic [ref=f3e361]: Step 04
+                            - heading "Deliver" [level=3] [ref=f3e362]
+                            - paragraph [ref=f3e363]: On-time to your door or direct to your client. Drop-shipping available.
+                    - generic [ref=f3e367]:
+                      - generic [ref=f3e369]:
+                        - paragraph [ref=f3e370]: Client Stories
+                        - heading "Trusted by Industry Leaders" [level=2] [ref=f3e371]
+                        - paragraph [ref=f3e372]: 600+ B2B partners rely on Flech for precision manufacturing. Here's what they say.
+                      - generic [ref=f3e373]:
+                        - generic [ref=f3e376]:
+                          - img [ref=f3e379]
+                          - generic [ref=f3e382]:
+                            - generic [ref=f3e383]:
+                              - img [ref=f3e384]
+                              - img [ref=f3e386]
+                              - img [ref=f3e388]
+                              - img [ref=f3e390]
+                              - img [ref=f3e392]
+                            - blockquote [ref=f3e394]: “Flech has been our go-to for easel backs for over a decade. The consistency in quality and the ability to get custom sizes without minimums is unmatched in the industry.”
+                            - generic [ref=f3e395]:
+                              - generic [ref=f3e397]: MC
+                              - generic [ref=f3e398]:
+                                - paragraph [ref=f3e399]: Marcus Chen
+                                - paragraph [ref=f3e400]: Operations Director, FrameCraft Wholesale
+                        - generic [ref=f3e403]:
+                          - img [ref=f3e406]
+                          - generic [ref=f3e409]:
+                            - generic [ref=f3e410]:
+                              - img [ref=f3e411]
+                              - img [ref=f3e413]
+                              - img [ref=f3e415]
+                              - img [ref=f3e417]
+                              - img [ref=f3e419]
+                            - blockquote [ref=f3e421]: “We switched to Flech for all our matboard needs and saw an immediate 15% reduction in waste. Their precision cutting is exactly what high-volume operations need.”
+                            - generic [ref=f3e422]:
+                              - generic [ref=f3e424]: SW
+                              - generic [ref=f3e425]:
+                                - paragraph [ref=f3e426]: Sarah Williams
+                                - paragraph [ref=f3e427]: Production Manager, Gallery Direct
+                        - generic [ref=f3e430]:
+                          - img [ref=f3e433]
+                          - generic [ref=f3e436]:
+                            - generic [ref=f3e437]:
+                              - img [ref=f3e438]
+                              - img [ref=f3e440]
+                              - img [ref=f3e442]
+                              - img [ref=f3e444]
+                              - img [ref=f3e446]
+                            - blockquote [ref=f3e448]: “The custom die-line engineering saved us weeks on our last POP display rollout. Flech doesn't just manufacture—they solve problems.”
+                            - generic [ref=f3e449]:
+                              - generic [ref=f3e451]: DP
+                              - generic [ref=f3e452]:
+                                - paragraph [ref=f3e453]: David Park
+                                - paragraph [ref=f3e454]: Creative Director, Retail Concepts Inc
+                        - generic [ref=f3e457]:
+                          - img [ref=f3e460]
+                          - generic [ref=f3e463]:
+                            - generic [ref=f3e464]:
+                              - img [ref=f3e465]
+                              - img [ref=f3e467]
+                              - img [ref=f3e469]
+                              - img [ref=f3e471]
+                              - img [ref=f3e473]
+                            - blockquote [ref=f3e475]: “Fast turnaround, competitive pricing, and the rare ability to handle both small custom runs and bulk orders with equal precision. A true manufacturing partner.”
+                            - generic [ref=f3e476]:
+                              - generic [ref=f3e478]: JT
+                              - generic [ref=f3e479]:
+                                - paragraph [ref=f3e480]: Jennifer Torres
+                                - paragraph [ref=f3e481]: Procurement Lead, SignMax Solutions
+                      - generic [ref=f3e483]:
+                        - generic [ref=f3e484]: ISO 9001 Certified
+                        - generic [ref=f3e486]: 25+ Years Experience
+                        - generic [ref=f3e488]: 100% Made in USA
+                    - generic [ref=f3e495]:
+                      - paragraph [ref=f3e496]: Get Started
+                      - heading "Ready to Build Something?" [level=2] [ref=f3e497]
+                      - paragraph [ref=f3e498]: Whether you need 100 easel backs or 100,000, tell us what you need and we'll have a quote to you within 24 hours.
+                      - generic [ref=f3e499]:
+                        - link "Request a Quote" [ref=f3e500] [cursor=pointer]:
+                          - /url: /contact
+                          - text: Request a Quote
+                          - img [ref=f3e501]
+                        - link "Request Samples" [ref=f3e503] [cursor=pointer]:
+                          - /url: /contact
+                - contentinfo [ref=f3e504]:
+                  - generic [ref=f3e506]:
+                    - generic [ref=f3e507]:
+                      - img "Flech Paper Products" [ref=f3e509]
+                      - paragraph [ref=f3e510]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                      - generic [ref=f3e511]:
+                        - link "(973) 357-8111" [ref=f3e512] [cursor=pointer]:
+                          - /url: tel:+19733578111
+                          - img [ref=f3e513]
+                          - text: (973) 357-8111
+                        - link "info@flech.com" [ref=f3e515] [cursor=pointer]:
+                          - /url: mailto:info@flech.com
+                          - img [ref=f3e516]
+                          - text: info@flech.com
+                        - generic [ref=f3e519]:
+                          - img [ref=f3e520]
+                          - generic [ref=f3e523]:
+                            - text: Paterson, NJ
+                            - text: United States
+                    - generic [ref=f3e524]:
+                      - heading "Products" [level=3] [ref=f3e525]
+                      - list [ref=f3e526]:
+                        - listitem [ref=f3e527]:
+                          - link "Easel Backs" [ref=f3e528] [cursor=pointer]:
+                            - /url: /products/easel-backs
+                            - text: Easel Backs
+                            - img [ref=f3e529]
+                        - listitem [ref=f3e532]:
+                          - link "Fold Lines & Dielines" [ref=f3e533] [cursor=pointer]:
+                            - /url: /products/fold-lines
+                            - text: Fold Lines & Dielines
+                            - img [ref=f3e534]
+                        - listitem [ref=f3e537]:
+                          - link "Contract Framing Backs" [ref=f3e538] [cursor=pointer]:
+                            - /url: /products/framing-backs
+                            - text: Contract Framing Backs
+                            - img [ref=f3e539]
+                        - listitem [ref=f3e542]:
+                          - link "Matboards" [ref=f3e543] [cursor=pointer]:
+                            - /url: /products/matboards
+                            - text: Matboards
+                            - img [ref=f3e544]
+                    - generic [ref=f3e547]:
+                      - heading "Company" [level=3] [ref=f3e548]
+                      - list [ref=f3e549]:
+                        - listitem [ref=f3e550]:
+                          - link "About Flech" [ref=f3e551] [cursor=pointer]:
+                            - /url: /about
+                            - text: About Flech
+                            - img [ref=f3e552]
+                        - listitem [ref=f3e555]:
+                          - link "Industries We Serve" [ref=f3e556] [cursor=pointer]:
+                            - /url: /industries
+                            - text: Industries We Serve
+                            - img [ref=f3e557]
+                        - listitem [ref=f3e560]:
+                          - link "Contact & RFQ" [ref=f3e561] [cursor=pointer]:
+                            - /url: /contact
+                            - text: Contact & RFQ
+                            - img [ref=f3e562]
+                      - heading "Industries" [level=3] [ref=f3e565]
+                      - list [ref=f3e566]:
+                        - listitem [ref=f3e567]:
+                          - link "Sign & Display" [ref=f3e568] [cursor=pointer]:
+                            - /url: /industries#signage
+                        - listitem [ref=f3e569]:
+                          - link "Wholesale Framing" [ref=f3e570] [cursor=pointer]:
+                            - /url: /industries#framing
+                        - listitem [ref=f3e571]:
+                          - link "Packaging & POP" [ref=f3e572] [cursor=pointer]:
+                            - /url: /industries#packaging
+                        - listitem [ref=f3e573]:
+                          - link "Interior Design" [ref=f3e574] [cursor=pointer]:
+                            - /url: /industries#interior
+                    - generic [ref=f3e575]:
+                      - heading "Get Started" [level=3] [ref=f3e576]
+                      - paragraph [ref=f3e577]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                      - link "Get a Quote" [ref=f3e578] [cursor=pointer]:
+                        - /url: /contact
+                        - text: Get a Quote
+                        - img [ref=f3e579]
+                      - generic [ref=f3e582]:
+                        - paragraph [ref=f3e583]: Certifications
+                        - paragraph [ref=f3e584]:
+                          - text: ISO 9001 Certified
+                          - text: FSC Chain of Custody
+                          - text: Acid-Free & Archival
+                  - generic [ref=f3e586]:
+                    - paragraph [ref=f3e587]: © 2026 Flech Paper Products. All rights reserved.
+                    - generic [ref=f3e588]:
+                      - link "Privacy Policy" [ref=f3e589] [cursor=pointer]:
+                        - /url: /privacy
+                      - link "Terms of Service" [ref=f3e590] [cursor=pointer]:
+                        - /url: /terms
+            - paragraph [ref=e299]: "Tip: hover anything in the preview to outline it, click to open the section editor on the left."

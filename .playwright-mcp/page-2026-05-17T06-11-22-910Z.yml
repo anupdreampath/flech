@@ -1,0 +1,25 @@
+- main [ref=e2]:
+  - generic [ref=e4]:
+    - complementary [ref=e5]:
+      - generic [ref=e8]:
+        - generic [ref=e9]: F
+        - generic [ref=e10]:
+          - paragraph [ref=e11]: Flech
+          - paragraph [ref=e12]: Admin Console
+      - generic [ref=e13]:
+        - heading "Operate the Flech digital surface from a single console." [level=2] [ref=e14]
+        - paragraph [ref=e15]: Manage inbound enquiries, content, blogs, and visitor analytics for every Flech product line.
+      - generic [ref=e16]: © Flech Manufacturing
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - img [ref=e21]
+        - heading "Sign in to Admin" [level=1] [ref=e24]
+        - paragraph [ref=e25]: Use your administrator credentials to continue.
+      - generic [ref=e26]: Email
+      - textbox [ref=e27]: admin+20260517@flech.com
+      - generic [ref=e28]: Password
+      - textbox [active] [ref=e29]
+      - button "Sign in" [ref=e30]
+      - link "Forgot password?" [ref=e31] [cursor=pointer]:
+        - /url: /admin/forgot-password
+      - paragraph [ref=e32]: Authorized personnel only · Sessions are audited.

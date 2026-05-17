@@ -1,0 +1,1796 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - complementary [ref=e5]:
+        - generic [ref=e7]:
+          - generic [ref=e8]: F
+          - generic [ref=e9]:
+            - paragraph [ref=e10]: Flech
+            - heading "Admin Console" [level=1] [ref=e11]
+        - navigation [ref=e12]:
+          - paragraph [ref=e13]: Workspace
+          - link "Dashboard" [ref=e14] [cursor=pointer]:
+            - /url: /admin
+            - img [ref=e15]
+            - text: Dashboard
+          - link "Submissions" [ref=e20] [cursor=pointer]:
+            - /url: /admin/submissions
+            - img [ref=e21]
+            - text: Submissions
+          - link "Analytics" [ref=e24] [cursor=pointer]:
+            - /url: /admin/analytics
+            - img [ref=e25]
+            - text: Analytics
+          - link "Visual Editor" [ref=e27] [cursor=pointer]:
+            - /url: /admin/cms
+            - img [ref=e28]
+            - text: Visual Editor
+          - link "Email Settings" [ref=e30] [cursor=pointer]:
+            - /url: /admin/email
+            - img [ref=e31]
+            - text: Email Settings
+          - link "Settings" [ref=e34] [cursor=pointer]:
+            - /url: /admin/settings
+            - img [ref=e35]
+            - text: Settings
+          - link "Blogs" [ref=e38] [cursor=pointer]:
+            - /url: /admin/blogs
+            - img [ref=e39]
+            - text: Blogs
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - generic [ref=e43]: "N"
+            - generic [ref=e44]:
+              - paragraph [ref=e45]: nikalp@flech.com
+              - paragraph [ref=e46]: Administrator
+          - button "Sign out" [ref=e47]:
+            - img [ref=e48]
+            - text: Sign out
+      - main [ref=e51]:
+        - generic [ref=e52]:
+          - complementary [ref=e53]:
+            - generic [ref=e54]:
+              - button "Back to sections" [ref=e394]:
+                - img [ref=e395]
+                - text: Back to sections
+              - paragraph [ref=e397]: Product · Matboards
+              - heading "Primary Colors (cards)" [level=2] [ref=e398]
+              - paragraph [ref=e399]: primary_colors
+            - generic [ref=e400]:
+              - generic [ref=e401]:
+                - generic [ref=e402]: Remove this section from the website
+                - paragraph [ref=e403]: This hides the section in public pages and keeps its content saved so it can be restored later.
+                - generic [ref=e404]:
+                  - checkbox "Remove this section from the website" [ref=e405]
+                  - generic [ref=e406]: Remove this section from the website
+              - generic [ref=e407]:
+                - generic [ref=e408]: Eyebrow
+                - textbox [ref=e409]: Matboard Catalog
+              - generic [ref=e410]:
+                - generic [ref=e411]: Title
+                - textbox [ref=e412]: Primary Colors
+              - generic [ref=e413]:
+                - generic [ref=e414]: Intro Text
+                - textbox [ref=e415]
+              - generic [ref=e416]:
+                - generic [ref=e417]: Filter Panel Title
+                - textbox [ref=e418]: Filter colors
+              - generic [ref=e419]:
+                - generic [ref=e420]: Mobile Filter Button
+                - textbox [ref=e421]: Filters
+              - generic [ref=e422]:
+                - generic [ref=e423]: Search Placeholder
+                - textbox [ref=e424]: Search by name or code...
+              - generic [ref=e425]:
+                - generic [ref=e426]: Size Filter Label
+                - textbox [ref=e427]: Sheet Size
+              - generic [ref=e428]:
+                - generic [ref=e429]: Ply Filter Label
+                - textbox [ref=e430]: Ply / Caliper
+              - generic [ref=e431]:
+                - generic [ref=e432]: Badge Filter Label
+                - textbox [ref=e433]: Badges
+              - generic [ref=e434]:
+                - generic [ref=e435]: Empty State Text
+                - textbox [ref=e436]: No colors match the current filters.
+              - generic [ref=e437]:
+                - generic [ref=e438]: Clear Button Label
+                - textbox [ref=e439]: Clear filters
+              - generic [ref=e441]:
+                - generic [ref=e442]:
+                  - generic [ref=e443]:
+                    - paragraph [ref=e444]: Color Cards
+                    - paragraph [ref=e445]: Each card displays an image on the left and the name, code, size, ply, and a short description on the right. Add, remove, and reorder freely.
+                  - generic [ref=e446]: 23 Colors
+                - generic [ref=e447]:
+                  - generic [ref=e448]:
+                    - generic [ref=e449]:
+                      - paragraph [ref=e450]: "Color #1 · Tablet White"
+                      - generic [ref=e451]:
+                        - button "Move up" [disabled] [ref=e452]:
+                          - img [ref=e453]
+                        - button "Move down" [ref=e455]:
+                          - img [ref=e456]
+                        - button "Remove" [ref=e458]:
+                          - img [ref=e459]
+                    - generic [ref=e462]:
+                      - generic [ref=e463]:
+                        - generic [ref=e464]: Name
+                        - textbox [ref=e465]: Tablet White
+                      - generic [ref=e466]:
+                        - generic [ref=e467]: Code
+                        - textbox [ref=e468]: "#101"
+                      - generic [ref=e469]:
+                        - generic [ref=e470]: Color (HEX)
+                        - textbox [ref=e471]: "#F8F8F4"
+                      - generic [ref=e472]:
+                        - generic [ref=e473]: Gradient CSS (optional)
+                        - textbox [ref=e474]
+                      - generic [ref=e475]:
+                        - generic [ref=e476]: Swatch Image (optional)
+                        - generic [ref=e478]:
+                          - textbox "https://... or upload" [ref=e479]
+                          - button "Upload" [ref=e480]:
+                            - img [ref=e481]
+                            - text: Upload
+                      - generic [ref=e485]:
+                        - generic [ref=e486]: Sheet Size
+                        - textbox [ref=e487]: 32x40
+                      - generic [ref=e488]:
+                        - generic [ref=e489]: Ply / Caliper
+                        - textbox [ref=e490]: 4-ply White Core
+                      - generic [ref=e491]:
+                        - generic [ref=e492]: Extra Badges
+                        - textbox [ref=e493]: Cream Core, White Core
+                      - generic [ref=e494]:
+                        - generic [ref=e495]: Description
+                        - textbox [ref=e496]: Bright neutral white. Our most-ordered shade for gallery framing.
+                      - generic [ref=e497]:
+                        - generic [ref=e498]: Hide Card
+                        - generic [ref=e499]:
+                          - checkbox "Enabled" [ref=e500]
+                          - text: Enabled
+                  - generic [ref=e501]:
+                    - generic [ref=e502]:
+                      - paragraph [ref=e503]: "Color #2 · Snow"
+                      - generic [ref=e504]:
+                        - button "Move up" [ref=e505]:
+                          - img [ref=e506]
+                        - button "Move down" [ref=e508]:
+                          - img [ref=e509]
+                        - button "Remove" [ref=e511]:
+                          - img [ref=e512]
+                    - generic [ref=e515]:
+                      - generic [ref=e516]:
+                        - generic [ref=e517]: Name
+                        - textbox [ref=e518]: Snow
+                      - generic [ref=e519]:
+                        - generic [ref=e520]: Code
+                        - textbox [ref=e521]: "#108"
+                      - generic [ref=e522]:
+                        - generic [ref=e523]: Color (HEX)
+                        - textbox [ref=e524]: "#F4F6F8"
+                      - generic [ref=e525]:
+                        - generic [ref=e526]: Gradient CSS (optional)
+                        - textbox [ref=e527]
+                      - generic [ref=e528]:
+                        - generic [ref=e529]: Swatch Image (optional)
+                        - generic [ref=e531]:
+                          - textbox "https://... or upload" [ref=e532]
+                          - button "Upload" [ref=e533]:
+                            - img [ref=e534]
+                            - text: Upload
+                      - generic [ref=e538]:
+                        - generic [ref=e539]: Sheet Size
+                        - textbox [ref=e540]: 32x40
+                      - generic [ref=e541]:
+                        - generic [ref=e542]: Ply / Caliper
+                        - textbox [ref=e543]: 4-ply White Core
+                      - generic [ref=e544]:
+                        - generic [ref=e545]: Extra Badges
+                        - textbox [ref=e546]
+                      - generic [ref=e547]:
+                        - generic [ref=e548]: Description
+                        - textbox [ref=e549]: Cool, clean white with a faint blue undertone.
+                      - generic [ref=e550]:
+                        - generic [ref=e551]: Hide Card
+                        - generic [ref=e552]:
+                          - checkbox "Enabled" [ref=e553]
+                          - text: Enabled
+                  - generic [ref=e554]:
+                    - generic [ref=e555]:
+                      - paragraph [ref=e556]: "Color #3 · Woven White"
+                      - generic [ref=e557]:
+                        - button "Move up" [ref=e558]:
+                          - img [ref=e559]
+                        - button "Move down" [ref=e561]:
+                          - img [ref=e562]
+                        - button "Remove" [ref=e564]:
+                          - img [ref=e565]
+                    - generic [ref=e568]:
+                      - generic [ref=e569]:
+                        - generic [ref=e570]: Name
+                        - textbox [ref=e571]: Woven White
+                      - generic [ref=e572]:
+                        - generic [ref=e573]: Code
+                        - textbox [ref=e574]: "#106"
+                      - generic [ref=e575]:
+                        - generic [ref=e576]: Color (HEX)
+                        - textbox [ref=e577]: "#F1EBE0"
+                      - generic [ref=e578]:
+                        - generic [ref=e579]: Gradient CSS (optional)
+                        - textbox [ref=e580]
+                      - generic [ref=e581]:
+                        - generic [ref=e582]: Swatch Image (optional)
+                        - generic [ref=e584]:
+                          - textbox "https://... or upload" [ref=e585]
+                          - button "Upload" [ref=e586]:
+                            - img [ref=e587]
+                            - text: Upload
+                      - generic [ref=e591]:
+                        - generic [ref=e592]: Sheet Size
+                        - textbox [ref=e593]: 32x40
+                      - generic [ref=e594]:
+                        - generic [ref=e595]: Ply / Caliper
+                        - textbox [ref=e596]: 4-ply White Core
+                      - generic [ref=e597]:
+                        - generic [ref=e598]: Extra Badges
+                        - textbox [ref=e599]
+                      - generic [ref=e600]:
+                        - generic [ref=e601]: Description
+                        - textbox [ref=e602]: Soft white with a subtle textured surface.
+                      - generic [ref=e603]:
+                        - generic [ref=e604]: Hide Card
+                        - generic [ref=e605]:
+                          - checkbox "Enabled" [ref=e606]
+                          - text: Enabled
+                  - generic [ref=e607]:
+                    - generic [ref=e608]:
+                      - paragraph [ref=e609]: "Color #4 · Buttermilk"
+                      - generic [ref=e610]:
+                        - button "Move up" [ref=e611]:
+                          - img [ref=e612]
+                        - button "Move down" [ref=e614]:
+                          - img [ref=e615]
+                        - button "Remove" [ref=e617]:
+                          - img [ref=e618]
+                    - generic [ref=e621]:
+                      - generic [ref=e622]:
+                        - generic [ref=e623]: Name
+                        - textbox [ref=e624]: Buttermilk
+                      - generic [ref=e625]:
+                        - generic [ref=e626]: Code
+                        - textbox [ref=e627]: "#220"
+                      - generic [ref=e628]:
+                        - generic [ref=e629]: Color (HEX)
+                        - textbox [ref=e630]: "#F4ECC9"
+                      - generic [ref=e631]:
+                        - generic [ref=e632]: Gradient CSS (optional)
+                        - textbox [ref=e633]
+                      - generic [ref=e634]:
+                        - generic [ref=e635]: Swatch Image (optional)
+                        - generic [ref=e637]:
+                          - textbox "https://... or upload" [ref=e638]
+                          - button "Upload" [ref=e639]:
+                            - img [ref=e640]
+                            - text: Upload
+                      - generic [ref=e644]:
+                        - generic [ref=e645]: Sheet Size
+                        - textbox [ref=e646]: 32x40
+                      - generic [ref=e647]:
+                        - generic [ref=e648]: Ply / Caliper
+                        - textbox [ref=e649]: 4-ply White Core
+                      - generic [ref=e650]:
+                        - generic [ref=e651]: Extra Badges
+                        - textbox [ref=e652]
+                      - generic [ref=e653]:
+                        - generic [ref=e654]: Description
+                        - textbox [ref=e655]: Warm cream that flatters photographs and prints.
+                      - generic [ref=e656]:
+                        - generic [ref=e657]: Hide Card
+                        - generic [ref=e658]:
+                          - checkbox "Enabled" [ref=e659]
+                          - text: Enabled
+                  - generic [ref=e660]:
+                    - generic [ref=e661]:
+                      - paragraph [ref=e662]: "Color #5 · C-Linen"
+                      - generic [ref=e663]:
+                        - button "Move up" [ref=e664]:
+                          - img [ref=e665]
+                        - button "Move down" [ref=e667]:
+                          - img [ref=e668]
+                        - button "Remove" [ref=e670]:
+                          - img [ref=e671]
+                    - generic [ref=e674]:
+                      - generic [ref=e675]:
+                        - generic [ref=e676]: Name
+                        - textbox [ref=e677]: C-Linen
+                      - generic [ref=e678]:
+                        - generic [ref=e679]: Code
+                        - textbox [ref=e680]: "#102"
+                      - generic [ref=e681]:
+                        - generic [ref=e682]: Color (HEX)
+                        - textbox [ref=e683]: "#ECE6D2"
+                      - generic [ref=e684]:
+                        - generic [ref=e685]: Gradient CSS (optional)
+                        - textbox [ref=e686]
+                      - generic [ref=e687]:
+                        - generic [ref=e688]: Swatch Image (optional)
+                        - generic [ref=e690]:
+                          - textbox "https://... or upload" [ref=e691]
+                          - button "Upload" [ref=e692]:
+                            - img [ref=e693]
+                            - text: Upload
+                      - generic [ref=e697]:
+                        - generic [ref=e698]: Sheet Size
+                        - textbox [ref=e699]: 32x40
+                      - generic [ref=e700]:
+                        - generic [ref=e701]: Ply / Caliper
+                        - textbox [ref=e702]: 4-ply White Core
+                      - generic [ref=e703]:
+                        - generic [ref=e704]: Extra Badges
+                        - textbox [ref=e705]
+                      - generic [ref=e706]:
+                        - generic [ref=e707]: Description
+                        - textbox [ref=e708]: Linen-textured natural shade.
+                      - generic [ref=e709]:
+                        - generic [ref=e710]: Hide Card
+                        - generic [ref=e711]:
+                          - checkbox "Enabled" [ref=e712]
+                          - text: Enabled
+                  - generic [ref=e713]:
+                    - generic [ref=e714]:
+                      - paragraph [ref=e715]: "Color #6 · Buff"
+                      - generic [ref=e716]:
+                        - button "Move up" [ref=e717]:
+                          - img [ref=e718]
+                        - button "Move down" [ref=e720]:
+                          - img [ref=e721]
+                        - button "Remove" [ref=e723]:
+                          - img [ref=e724]
+                    - generic [ref=e727]:
+                      - generic [ref=e728]:
+                        - generic [ref=e729]: Name
+                        - textbox [ref=e730]: Buff
+                      - generic [ref=e731]:
+                        - generic [ref=e732]: Code
+                        - textbox [ref=e733]: "#203"
+                      - generic [ref=e734]:
+                        - generic [ref=e735]: Color (HEX)
+                        - textbox [ref=e736]: "#E0CFA9"
+                      - generic [ref=e737]:
+                        - generic [ref=e738]: Gradient CSS (optional)
+                        - textbox [ref=e739]
+                      - generic [ref=e740]:
+                        - generic [ref=e741]: Swatch Image (optional)
+                        - generic [ref=e743]:
+                          - textbox "https://... or upload" [ref=e744]
+                          - button "Upload" [ref=e745]:
+                            - img [ref=e746]
+                            - text: Upload
+                      - generic [ref=e750]:
+                        - generic [ref=e751]: Sheet Size
+                        - textbox [ref=e752]: 32x40
+                      - generic [ref=e753]:
+                        - generic [ref=e754]: Ply / Caliper
+                        - textbox [ref=e755]: 4-ply White Core
+                      - generic [ref=e756]:
+                        - generic [ref=e757]: Extra Badges
+                        - textbox [ref=e758]
+                      - generic [ref=e759]:
+                        - generic [ref=e760]: Description
+                        - textbox [ref=e761]: Soft, neutral beige.
+                      - generic [ref=e762]:
+                        - generic [ref=e763]: Hide Card
+                        - generic [ref=e764]:
+                          - checkbox "Enabled" [ref=e765]
+                          - text: Enabled
+                  - generic [ref=e766]:
+                    - generic [ref=e767]:
+                      - paragraph [ref=e768]: "Color #7 · Felt Gray"
+                      - generic [ref=e769]:
+                        - button "Move up" [ref=e770]:
+                          - img [ref=e771]
+                        - button "Move down" [ref=e773]:
+                          - img [ref=e774]
+                        - button "Remove" [ref=e776]:
+                          - img [ref=e777]
+                    - generic [ref=e780]:
+                      - generic [ref=e781]:
+                        - generic [ref=e782]: Name
+                        - textbox [ref=e783]: Felt Gray
+                      - generic [ref=e784]:
+                        - generic [ref=e785]: Code
+                        - textbox [ref=e786]: "#211"
+                      - generic [ref=e787]:
+                        - generic [ref=e788]: Color (HEX)
+                        - textbox [ref=e789]: "#98989A"
+                      - generic [ref=e790]:
+                        - generic [ref=e791]: Gradient CSS (optional)
+                        - textbox [ref=e792]
+                      - generic [ref=e793]:
+                        - generic [ref=e794]: Swatch Image (optional)
+                        - generic [ref=e796]:
+                          - textbox "https://... or upload" [ref=e797]
+                          - button "Upload" [ref=e798]:
+                            - img [ref=e799]
+                            - text: Upload
+                      - generic [ref=e803]:
+                        - generic [ref=e804]: Sheet Size
+                        - textbox [ref=e805]: 32x40
+                      - generic [ref=e806]:
+                        - generic [ref=e807]: Ply / Caliper
+                        - textbox [ref=e808]: 4-ply White Core
+                      - generic [ref=e809]:
+                        - generic [ref=e810]: Extra Badges
+                        - textbox [ref=e811]
+                      - generic [ref=e812]:
+                        - generic [ref=e813]: Description
+                        - textbox [ref=e814]: Cool mid-grey for contemporary work.
+                      - generic [ref=e815]:
+                        - generic [ref=e816]: Hide Card
+                        - generic [ref=e817]:
+                          - checkbox "Enabled" [ref=e818]
+                          - text: Enabled
+                  - generic [ref=e819]:
+                    - generic [ref=e820]:
+                      - paragraph [ref=e821]: "Color #8 · Puddy"
+                      - generic [ref=e822]:
+                        - button "Move up" [ref=e823]:
+                          - img [ref=e824]
+                        - button "Move down" [ref=e826]:
+                          - img [ref=e827]
+                        - button "Remove" [ref=e829]:
+                          - img [ref=e830]
+                    - generic [ref=e833]:
+                      - generic [ref=e834]:
+                        - generic [ref=e835]: Name
+                        - textbox [ref=e836]: Puddy
+                      - generic [ref=e837]:
+                        - generic [ref=e838]: Code
+                        - textbox [ref=e839]: "#213"
+                      - generic [ref=e840]:
+                        - generic [ref=e841]: Color (HEX)
+                        - textbox [ref=e842]: "#C7A47B"
+                      - generic [ref=e843]:
+                        - generic [ref=e844]: Gradient CSS (optional)
+                        - textbox [ref=e845]
+                      - generic [ref=e846]:
+                        - generic [ref=e847]: Swatch Image (optional)
+                        - generic [ref=e849]:
+                          - textbox "https://... or upload" [ref=e850]
+                          - button "Upload" [ref=e851]:
+                            - img [ref=e852]
+                            - text: Upload
+                      - generic [ref=e856]:
+                        - generic [ref=e857]: Sheet Size
+                        - textbox [ref=e858]: 32x40
+                      - generic [ref=e859]:
+                        - generic [ref=e860]: Ply / Caliper
+                        - textbox [ref=e861]: 4-ply White Core
+                      - generic [ref=e862]:
+                        - generic [ref=e863]: Extra Badges
+                        - textbox [ref=e864]
+                      - generic [ref=e865]:
+                        - generic [ref=e866]: Description
+                        - textbox [ref=e867]: Toasted neutral with subtle warmth.
+                      - generic [ref=e868]:
+                        - generic [ref=e869]: Hide Card
+                        - generic [ref=e870]:
+                          - checkbox "Enabled" [ref=e871]
+                          - text: Enabled
+                  - generic [ref=e872]:
+                    - generic [ref=e873]:
+                      - paragraph [ref=e874]: "Color #9 · Salsa"
+                      - generic [ref=e875]:
+                        - button "Move up" [ref=e876]:
+                          - img [ref=e877]
+                        - button "Move down" [ref=e879]:
+                          - img [ref=e880]
+                        - button "Remove" [ref=e882]:
+                          - img [ref=e883]
+                    - generic [ref=e886]:
+                      - generic [ref=e887]:
+                        - generic [ref=e888]: Name
+                        - textbox [ref=e889]: Salsa
+                      - generic [ref=e890]:
+                        - generic [ref=e891]: Code
+                        - textbox [ref=e892]: "#601"
+                      - generic [ref=e893]:
+                        - generic [ref=e894]: Color (HEX)
+                        - textbox [ref=e895]: "#A01B26"
+                      - generic [ref=e896]:
+                        - generic [ref=e897]: Gradient CSS (optional)
+                        - textbox [ref=e898]
+                      - generic [ref=e899]:
+                        - generic [ref=e900]: Swatch Image (optional)
+                        - generic [ref=e902]:
+                          - textbox "https://... or upload" [ref=e903]
+                          - button "Upload" [ref=e904]:
+                            - img [ref=e905]
+                            - text: Upload
+                      - generic [ref=e909]:
+                        - generic [ref=e910]: Sheet Size
+                        - textbox [ref=e911]: 32x40
+                      - generic [ref=e912]:
+                        - generic [ref=e913]: Ply / Caliper
+                        - textbox [ref=e914]: 4-ply White Core
+                      - generic [ref=e915]:
+                        - generic [ref=e916]: Extra Badges
+                        - textbox [ref=e917]
+                      - generic [ref=e918]:
+                        - generic [ref=e919]: Description
+                        - textbox [ref=e920]: Deep, saturated red.
+                      - generic [ref=e921]:
+                        - generic [ref=e922]: Hide Card
+                        - generic [ref=e923]:
+                          - checkbox "Enabled" [ref=e924]
+                          - text: Enabled
+                  - generic [ref=e925]:
+                    - generic [ref=e926]:
+                      - paragraph [ref=e927]: "Color #10 · Wine"
+                      - generic [ref=e928]:
+                        - button "Move up" [ref=e929]:
+                          - img [ref=e930]
+                        - button "Move down" [ref=e932]:
+                          - img [ref=e933]
+                        - button "Remove" [ref=e935]:
+                          - img [ref=e936]
+                    - generic [ref=e939]:
+                      - generic [ref=e940]:
+                        - generic [ref=e941]: Name
+                        - textbox [ref=e942]: Wine
+                      - generic [ref=e943]:
+                        - generic [ref=e944]: Code
+                        - textbox [ref=e945]: "#602"
+                      - generic [ref=e946]:
+                        - generic [ref=e947]: Color (HEX)
+                        - textbox [ref=e948]: "#5C161D"
+                      - generic [ref=e949]:
+                        - generic [ref=e950]: Gradient CSS (optional)
+                        - textbox [ref=e951]
+                      - generic [ref=e952]:
+                        - generic [ref=e953]: Swatch Image (optional)
+                        - generic [ref=e955]:
+                          - textbox "https://... or upload" [ref=e956]
+                          - button "Upload" [ref=e957]:
+                            - img [ref=e958]
+                            - text: Upload
+                      - generic [ref=e962]:
+                        - generic [ref=e963]: Sheet Size
+                        - textbox [ref=e964]: 32x40
+                      - generic [ref=e965]:
+                        - generic [ref=e966]: Ply / Caliper
+                        - textbox [ref=e967]: 4-ply White Core
+                      - generic [ref=e968]:
+                        - generic [ref=e969]: Extra Badges
+                        - textbox [ref=e970]
+                      - generic [ref=e971]:
+                        - generic [ref=e972]: Description
+                        - textbox [ref=e973]: Rich oxblood red.
+                      - generic [ref=e974]:
+                        - generic [ref=e975]: Hide Card
+                        - generic [ref=e976]:
+                          - checkbox "Enabled" [ref=e977]
+                          - text: Enabled
+                  - generic [ref=e978]:
+                    - generic [ref=e979]:
+                      - paragraph [ref=e980]: "Color #11 · Tangerine"
+                      - generic [ref=e981]:
+                        - button "Move up" [ref=e982]:
+                          - img [ref=e983]
+                        - button "Move down" [ref=e985]:
+                          - img [ref=e986]
+                        - button "Remove" [ref=e988]:
+                          - img [ref=e989]
+                    - generic [ref=e992]:
+                      - generic [ref=e993]:
+                        - generic [ref=e994]: Name
+                        - textbox [ref=e995]: Tangerine
+                      - generic [ref=e996]:
+                        - generic [ref=e997]: Code
+                        - textbox [ref=e998]: "#561"
+                      - generic [ref=e999]:
+                        - generic [ref=e1000]: Color (HEX)
+                        - textbox [ref=e1001]: "#E07429"
+                      - generic [ref=e1002]:
+                        - generic [ref=e1003]: Gradient CSS (optional)
+                        - textbox [ref=e1004]
+                      - generic [ref=e1005]:
+                        - generic [ref=e1006]: Swatch Image (optional)
+                        - generic [ref=e1008]:
+                          - textbox "https://... or upload" [ref=e1009]
+                          - button "Upload" [ref=e1010]:
+                            - img [ref=e1011]
+                            - text: Upload
+                      - generic [ref=e1015]:
+                        - generic [ref=e1016]: Sheet Size
+                        - textbox [ref=e1017]: 32x40
+                      - generic [ref=e1018]:
+                        - generic [ref=e1019]: Ply / Caliper
+                        - textbox [ref=e1020]: 4-ply White Core
+                      - generic [ref=e1021]:
+                        - generic [ref=e1022]: Extra Badges
+                        - textbox [ref=e1023]
+                      - generic [ref=e1024]:
+                        - generic [ref=e1025]: Description
+                        - textbox [ref=e1026]: Vibrant orange.
+                      - generic [ref=e1027]:
+                        - generic [ref=e1028]: Hide Card
+                        - generic [ref=e1029]:
+                          - checkbox "Enabled" [ref=e1030]
+                          - text: Enabled
+                  - generic [ref=e1031]:
+                    - generic [ref=e1032]:
+                      - paragraph [ref=e1033]: "Color #12 · Lemon"
+                      - generic [ref=e1034]:
+                        - button "Move up" [ref=e1035]:
+                          - img [ref=e1036]
+                        - button "Move down" [ref=e1038]:
+                          - img [ref=e1039]
+                        - button "Remove" [ref=e1041]:
+                          - img [ref=e1042]
+                    - generic [ref=e1045]:
+                      - generic [ref=e1046]:
+                        - generic [ref=e1047]: Name
+                        - textbox [ref=e1048]: Lemon
+                      - generic [ref=e1049]:
+                        - generic [ref=e1050]: Code
+                        - textbox [ref=e1051]: "#306"
+                      - generic [ref=e1052]:
+                        - generic [ref=e1053]: Color (HEX)
+                        - textbox [ref=e1054]: "#F6D955"
+                      - generic [ref=e1055]:
+                        - generic [ref=e1056]: Gradient CSS (optional)
+                        - textbox [ref=e1057]
+                      - generic [ref=e1058]:
+                        - generic [ref=e1059]: Swatch Image (optional)
+                        - generic [ref=e1061]:
+                          - textbox "https://... or upload" [ref=e1062]
+                          - button "Upload" [ref=e1063]:
+                            - img [ref=e1064]
+                            - text: Upload
+                      - generic [ref=e1068]:
+                        - generic [ref=e1069]: Sheet Size
+                        - textbox [ref=e1070]: 32x40
+                      - generic [ref=e1071]:
+                        - generic [ref=e1072]: Ply / Caliper
+                        - textbox [ref=e1073]: 4-ply White Core
+                      - generic [ref=e1074]:
+                        - generic [ref=e1075]: Extra Badges
+                        - textbox [ref=e1076]
+                      - generic [ref=e1077]:
+                        - generic [ref=e1078]: Description
+                        - textbox [ref=e1079]: Bright sunny yellow.
+                      - generic [ref=e1080]:
+                        - generic [ref=e1081]: Hide Card
+                        - generic [ref=e1082]:
+                          - checkbox "Enabled" [ref=e1083]
+                          - text: Enabled
+                  - generic [ref=e1084]:
+                    - generic [ref=e1085]:
+                      - paragraph [ref=e1086]: "Color #13 · Olive"
+                      - generic [ref=e1087]:
+                        - button "Move up" [ref=e1088]:
+                          - img [ref=e1089]
+                        - button "Move down" [ref=e1091]:
+                          - img [ref=e1092]
+                        - button "Remove" [ref=e1094]:
+                          - img [ref=e1095]
+                    - generic [ref=e1098]:
+                      - generic [ref=e1099]:
+                        - generic [ref=e1100]: Name
+                        - textbox [ref=e1101]: Olive
+                      - generic [ref=e1102]:
+                        - generic [ref=e1103]: Code
+                        - textbox [ref=e1104]: "#404"
+                      - generic [ref=e1105]:
+                        - generic [ref=e1106]: Color (HEX)
+                        - textbox [ref=e1107]: "#6E6A2D"
+                      - generic [ref=e1108]:
+                        - generic [ref=e1109]: Gradient CSS (optional)
+                        - textbox [ref=e1110]
+                      - generic [ref=e1111]:
+                        - generic [ref=e1112]: Swatch Image (optional)
+                        - generic [ref=e1114]:
+                          - textbox "https://... or upload" [ref=e1115]
+                          - button "Upload" [ref=e1116]:
+                            - img [ref=e1117]
+                            - text: Upload
+                      - generic [ref=e1121]:
+                        - generic [ref=e1122]: Sheet Size
+                        - textbox [ref=e1123]: 32x40
+                      - generic [ref=e1124]:
+                        - generic [ref=e1125]: Ply / Caliper
+                        - textbox [ref=e1126]: 4-ply White Core
+                      - generic [ref=e1127]:
+                        - generic [ref=e1128]: Extra Badges
+                        - textbox [ref=e1129]
+                      - generic [ref=e1130]:
+                        - generic [ref=e1131]: Description
+                        - textbox [ref=e1132]: Earthy olive green.
+                      - generic [ref=e1133]:
+                        - generic [ref=e1134]: Hide Card
+                        - generic [ref=e1135]:
+                          - checkbox "Enabled" [ref=e1136]
+                          - text: Enabled
+                  - generic [ref=e1137]:
+                    - generic [ref=e1138]:
+                      - paragraph [ref=e1139]: "Color #14 · Evergreen"
+                      - generic [ref=e1140]:
+                        - button "Move up" [ref=e1141]:
+                          - img [ref=e1142]
+                        - button "Move down" [ref=e1144]:
+                          - img [ref=e1145]
+                        - button "Remove" [ref=e1147]:
+                          - img [ref=e1148]
+                    - generic [ref=e1151]:
+                      - generic [ref=e1152]:
+                        - generic [ref=e1153]: Name
+                        - textbox [ref=e1154]: Evergreen
+                      - generic [ref=e1155]:
+                        - generic [ref=e1156]: Code
+                        - textbox [ref=e1157]: "#405"
+                      - generic [ref=e1158]:
+                        - generic [ref=e1159]: Color (HEX)
+                        - textbox [ref=e1160]: "#1F4D34"
+                      - generic [ref=e1161]:
+                        - generic [ref=e1162]: Gradient CSS (optional)
+                        - textbox [ref=e1163]
+                      - generic [ref=e1164]:
+                        - generic [ref=e1165]: Swatch Image (optional)
+                        - generic [ref=e1167]:
+                          - textbox "https://... or upload" [ref=e1168]
+                          - button "Upload" [ref=e1169]:
+                            - img [ref=e1170]
+                            - text: Upload
+                      - generic [ref=e1174]:
+                        - generic [ref=e1175]: Sheet Size
+                        - textbox [ref=e1176]: 32x40
+                      - generic [ref=e1177]:
+                        - generic [ref=e1178]: Ply / Caliper
+                        - textbox [ref=e1179]: 4-ply White Core
+                      - generic [ref=e1180]:
+                        - generic [ref=e1181]: Extra Badges
+                        - textbox [ref=e1182]
+                      - generic [ref=e1183]:
+                        - generic [ref=e1184]: Description
+                        - textbox [ref=e1185]: Deep forest green.
+                      - generic [ref=e1186]:
+                        - generic [ref=e1187]: Hide Card
+                        - generic [ref=e1188]:
+                          - checkbox "Enabled" [ref=e1189]
+                          - text: Enabled
+                  - generic [ref=e1190]:
+                    - generic [ref=e1191]:
+                      - paragraph [ref=e1192]: "Color #15 · Mocha"
+                      - generic [ref=e1193]:
+                        - button "Move up" [ref=e1194]:
+                          - img [ref=e1195]
+                        - button "Move down" [ref=e1197]:
+                          - img [ref=e1198]
+                        - button "Remove" [ref=e1200]:
+                          - img [ref=e1201]
+                    - generic [ref=e1204]:
+                      - generic [ref=e1205]:
+                        - generic [ref=e1206]: Name
+                        - textbox [ref=e1207]: Mocha
+                      - generic [ref=e1208]:
+                        - generic [ref=e1209]: Code
+                        - textbox [ref=e1210]: "#502"
+                      - generic [ref=e1211]:
+                        - generic [ref=e1212]: Color (HEX)
+                        - textbox [ref=e1213]: "#6B4A30"
+                      - generic [ref=e1214]:
+                        - generic [ref=e1215]: Gradient CSS (optional)
+                        - textbox [ref=e1216]
+                      - generic [ref=e1217]:
+                        - generic [ref=e1218]: Swatch Image (optional)
+                        - generic [ref=e1220]:
+                          - textbox "https://... or upload" [ref=e1221]
+                          - button "Upload" [ref=e1222]:
+                            - img [ref=e1223]
+                            - text: Upload
+                      - generic [ref=e1227]:
+                        - generic [ref=e1228]: Sheet Size
+                        - textbox [ref=e1229]: 32x40
+                      - generic [ref=e1230]:
+                        - generic [ref=e1231]: Ply / Caliper
+                        - textbox [ref=e1232]: 4-ply White Core
+                      - generic [ref=e1233]:
+                        - generic [ref=e1234]: Extra Badges
+                        - textbox [ref=e1235]
+                      - generic [ref=e1236]:
+                        - generic [ref=e1237]: Description
+                        - textbox [ref=e1238]: Warm brown with coffee tones.
+                      - generic [ref=e1239]:
+                        - generic [ref=e1240]: Hide Card
+                        - generic [ref=e1241]:
+                          - checkbox "Enabled" [ref=e1242]
+                          - text: Enabled
+                  - generic [ref=e1243]:
+                    - generic [ref=e1244]:
+                      - paragraph [ref=e1245]: "Color #16 · Espresso"
+                      - generic [ref=e1246]:
+                        - button "Move up" [ref=e1247]:
+                          - img [ref=e1248]
+                        - button "Move down" [ref=e1250]:
+                          - img [ref=e1251]
+                        - button "Remove" [ref=e1253]:
+                          - img [ref=e1254]
+                    - generic [ref=e1257]:
+                      - generic [ref=e1258]:
+                        - generic [ref=e1259]: Name
+                        - textbox [ref=e1260]: Espresso
+                      - generic [ref=e1261]:
+                        - generic [ref=e1262]: Code
+                        - textbox [ref=e1263]: "#505"
+                      - generic [ref=e1264]:
+                        - generic [ref=e1265]: Color (HEX)
+                        - textbox [ref=e1266]: "#3B2418"
+                      - generic [ref=e1267]:
+                        - generic [ref=e1268]: Gradient CSS (optional)
+                        - textbox [ref=e1269]
+                      - generic [ref=e1270]:
+                        - generic [ref=e1271]: Swatch Image (optional)
+                        - generic [ref=e1273]:
+                          - textbox "https://... or upload" [ref=e1274]
+                          - button "Upload" [ref=e1275]:
+                            - img [ref=e1276]
+                            - text: Upload
+                      - generic [ref=e1280]:
+                        - generic [ref=e1281]: Sheet Size
+                        - textbox [ref=e1282]: 32x40
+                      - generic [ref=e1283]:
+                        - generic [ref=e1284]: Ply / Caliper
+                        - textbox [ref=e1285]: 4-ply White Core
+                      - generic [ref=e1286]:
+                        - generic [ref=e1287]: Extra Badges
+                        - textbox [ref=e1288]
+                      - generic [ref=e1289]:
+                        - generic [ref=e1290]: Description
+                        - textbox [ref=e1291]: Dark roast brown.
+                      - generic [ref=e1292]:
+                        - generic [ref=e1293]: Hide Card
+                        - generic [ref=e1294]:
+                          - checkbox "Enabled" [ref=e1295]
+                          - text: Enabled
+                  - generic [ref=e1296]:
+                    - generic [ref=e1297]:
+                      - paragraph [ref=e1298]: "Color #17 · Light Blue"
+                      - generic [ref=e1299]:
+                        - button "Move up" [ref=e1300]:
+                          - img [ref=e1301]
+                        - button "Move down" [ref=e1303]:
+                          - img [ref=e1304]
+                        - button "Remove" [ref=e1306]:
+                          - img [ref=e1307]
+                    - generic [ref=e1310]:
+                      - generic [ref=e1311]:
+                        - generic [ref=e1312]: Name
+                        - textbox [ref=e1313]: Light Blue
+                      - generic [ref=e1314]:
+                        - generic [ref=e1315]: Code
+                        - textbox [ref=e1316]: "#621"
+                      - generic [ref=e1317]:
+                        - generic [ref=e1318]: Color (HEX)
+                        - textbox [ref=e1319]: "#B7CFE3"
+                      - generic [ref=e1320]:
+                        - generic [ref=e1321]: Gradient CSS (optional)
+                        - textbox [ref=e1322]
+                      - generic [ref=e1323]:
+                        - generic [ref=e1324]: Swatch Image (optional)
+                        - generic [ref=e1326]:
+                          - textbox "https://... or upload" [ref=e1327]
+                          - button "Upload" [ref=e1328]:
+                            - img [ref=e1329]
+                            - text: Upload
+                      - generic [ref=e1333]:
+                        - generic [ref=e1334]: Sheet Size
+                        - textbox [ref=e1335]: 32x40
+                      - generic [ref=e1336]:
+                        - generic [ref=e1337]: Ply / Caliper
+                        - textbox [ref=e1338]: 4-ply White Core
+                      - generic [ref=e1339]:
+                        - generic [ref=e1340]: Extra Badges
+                        - textbox [ref=e1341]
+                      - generic [ref=e1342]:
+                        - generic [ref=e1343]: Description
+                        - textbox [ref=e1344]: Soft sky blue.
+                      - generic [ref=e1345]:
+                        - generic [ref=e1346]: Hide Card
+                        - generic [ref=e1347]:
+                          - checkbox "Enabled" [ref=e1348]
+                          - text: Enabled
+                  - generic [ref=e1349]:
+                    - generic [ref=e1350]:
+                      - paragraph [ref=e1351]: "Color #18 · Cobalt"
+                      - generic [ref=e1352]:
+                        - button "Move up" [ref=e1353]:
+                          - img [ref=e1354]
+                        - button "Move down" [ref=e1356]:
+                          - img [ref=e1357]
+                        - button "Remove" [ref=e1359]:
+                          - img [ref=e1360]
+                    - generic [ref=e1363]:
+                      - generic [ref=e1364]:
+                        - generic [ref=e1365]: Name
+                        - textbox [ref=e1366]: Cobalt
+                      - generic [ref=e1367]:
+                        - generic [ref=e1368]: Code
+                        - textbox [ref=e1369]: "#629"
+                      - generic [ref=e1370]:
+                        - generic [ref=e1371]: Color (HEX)
+                        - textbox [ref=e1372]: "#2858A6"
+                      - generic [ref=e1373]:
+                        - generic [ref=e1374]: Gradient CSS (optional)
+                        - textbox [ref=e1375]
+                      - generic [ref=e1376]:
+                        - generic [ref=e1377]: Swatch Image (optional)
+                        - generic [ref=e1379]:
+                          - textbox "https://... or upload" [ref=e1380]
+                          - button "Upload" [ref=e1381]:
+                            - img [ref=e1382]
+                            - text: Upload
+                      - generic [ref=e1386]:
+                        - generic [ref=e1387]: Sheet Size
+                        - textbox [ref=e1388]: 32x40
+                      - generic [ref=e1389]:
+                        - generic [ref=e1390]: Ply / Caliper
+                        - textbox [ref=e1391]: 4-ply White Core
+                      - generic [ref=e1392]:
+                        - generic [ref=e1393]: Extra Badges
+                        - textbox [ref=e1394]
+                      - generic [ref=e1395]:
+                        - generic [ref=e1396]: Description
+                        - textbox [ref=e1397]: Saturated mid-blue.
+                      - generic [ref=e1398]:
+                        - generic [ref=e1399]: Hide Card
+                        - generic [ref=e1400]:
+                          - checkbox "Enabled" [ref=e1401]
+                          - text: Enabled
+                  - generic [ref=e1402]:
+                    - generic [ref=e1403]:
+                      - paragraph [ref=e1404]: "Color #19 · Liberty"
+                      - generic [ref=e1405]:
+                        - button "Move up" [ref=e1406]:
+                          - img [ref=e1407]
+                        - button "Move down" [ref=e1409]:
+                          - img [ref=e1410]
+                        - button "Remove" [ref=e1412]:
+                          - img [ref=e1413]
+                    - generic [ref=e1416]:
+                      - generic [ref=e1417]:
+                        - generic [ref=e1418]: Name
+                        - textbox [ref=e1419]: Liberty
+                      - generic [ref=e1420]:
+                        - generic [ref=e1421]: Code
+                        - textbox [ref=e1422]: "#628"
+                      - generic [ref=e1423]:
+                        - generic [ref=e1424]: Color (HEX)
+                        - textbox [ref=e1425]: "#1A2D60"
+                      - generic [ref=e1426]:
+                        - generic [ref=e1427]: Gradient CSS (optional)
+                        - textbox [ref=e1428]
+                      - generic [ref=e1429]:
+                        - generic [ref=e1430]: Swatch Image (optional)
+                        - generic [ref=e1432]:
+                          - textbox "https://... or upload" [ref=e1433]
+                          - button "Upload" [ref=e1434]:
+                            - img [ref=e1435]
+                            - text: Upload
+                      - generic [ref=e1439]:
+                        - generic [ref=e1440]: Sheet Size
+                        - textbox [ref=e1441]: 32x40
+                      - generic [ref=e1442]:
+                        - generic [ref=e1443]: Ply / Caliper
+                        - textbox [ref=e1444]: 4-ply White Core
+                      - generic [ref=e1445]:
+                        - generic [ref=e1446]: Extra Badges
+                        - textbox [ref=e1447]
+                      - generic [ref=e1448]:
+                        - generic [ref=e1449]: Description
+                        - textbox [ref=e1450]: Patriotic deep blue.
+                      - generic [ref=e1451]:
+                        - generic [ref=e1452]: Hide Card
+                        - generic [ref=e1453]:
+                          - checkbox "Enabled" [ref=e1454]
+                          - text: Enabled
+                  - generic [ref=e1455]:
+                    - generic [ref=e1456]:
+                      - paragraph [ref=e1457]: "Color #20 · Eclipse"
+                      - generic [ref=e1458]:
+                        - button "Move up" [ref=e1459]:
+                          - img [ref=e1460]
+                        - button "Move down" [ref=e1462]:
+                          - img [ref=e1463]
+                        - button "Remove" [ref=e1465]:
+                          - img [ref=e1466]
+                    - generic [ref=e1469]:
+                      - generic [ref=e1470]:
+                        - generic [ref=e1471]: Name
+                        - textbox [ref=e1472]: Eclipse
+                      - generic [ref=e1473]:
+                        - generic [ref=e1474]: Code
+                        - textbox [ref=e1475]: "#626"
+                      - generic [ref=e1476]:
+                        - generic [ref=e1477]: Color (HEX)
+                        - textbox [ref=e1478]: "#15203F"
+                      - generic [ref=e1479]:
+                        - generic [ref=e1480]: Gradient CSS (optional)
+                        - textbox [ref=e1481]
+                      - generic [ref=e1482]:
+                        - generic [ref=e1483]: Swatch Image (optional)
+                        - generic [ref=e1485]:
+                          - textbox "https://... or upload" [ref=e1486]
+                          - button "Upload" [ref=e1487]:
+                            - img [ref=e1488]
+                            - text: Upload
+                      - generic [ref=e1492]:
+                        - generic [ref=e1493]: Sheet Size
+                        - textbox [ref=e1494]: 32x40
+                      - generic [ref=e1495]:
+                        - generic [ref=e1496]: Ply / Caliper
+                        - textbox [ref=e1497]: 4-ply White Core
+                      - generic [ref=e1498]:
+                        - generic [ref=e1499]: Extra Badges
+                        - textbox [ref=e1500]
+                      - generic [ref=e1501]:
+                        - generic [ref=e1502]: Description
+                        - textbox [ref=e1503]: Deep midnight blue.
+                      - generic [ref=e1504]:
+                        - generic [ref=e1505]: Hide Card
+                        - generic [ref=e1506]:
+                          - checkbox "Enabled" [ref=e1507]
+                          - text: Enabled
+                  - generic [ref=e1508]:
+                    - generic [ref=e1509]:
+                      - paragraph [ref=e1510]: "Color #21 · Holy"
+                      - generic [ref=e1511]:
+                        - button "Move up" [ref=e1512]:
+                          - img [ref=e1513]
+                        - button "Move down" [ref=e1515]:
+                          - img [ref=e1516]
+                        - button "Remove" [ref=e1518]:
+                          - img [ref=e1519]
+                    - generic [ref=e1522]:
+                      - generic [ref=e1523]:
+                        - generic [ref=e1524]: Name
+                        - textbox [ref=e1525]: Holy
+                      - generic [ref=e1526]:
+                        - generic [ref=e1527]: Code
+                        - textbox [ref=e1528]: "#650"
+                      - generic [ref=e1529]:
+                        - generic [ref=e1530]: Color (HEX)
+                        - textbox [ref=e1531]: "#4B2A6F"
+                      - generic [ref=e1532]:
+                        - generic [ref=e1533]: Gradient CSS (optional)
+                        - textbox [ref=e1534]
+                      - generic [ref=e1535]:
+                        - generic [ref=e1536]: Swatch Image (optional)
+                        - generic [ref=e1538]:
+                          - textbox "https://... or upload" [ref=e1539]
+                          - button "Upload" [ref=e1540]:
+                            - img [ref=e1541]
+                            - text: Upload
+                      - generic [ref=e1545]:
+                        - generic [ref=e1546]: Sheet Size
+                        - textbox [ref=e1547]: 32x40
+                      - generic [ref=e1548]:
+                        - generic [ref=e1549]: Ply / Caliper
+                        - textbox [ref=e1550]: 4-ply White Core
+                      - generic [ref=e1551]:
+                        - generic [ref=e1552]: Extra Badges
+                        - textbox [ref=e1553]
+                      - generic [ref=e1554]:
+                        - generic [ref=e1555]: Description
+                        - textbox [ref=e1556]: Royal violet.
+                      - generic [ref=e1557]:
+                        - generic [ref=e1558]: Hide Card
+                        - generic [ref=e1559]:
+                          - checkbox "Enabled" [ref=e1560]
+                          - text: Enabled
+                  - generic [ref=e1561]:
+                    - generic [ref=e1562]:
+                      - paragraph [ref=e1563]: "Color #22 · Blackest Black"
+                      - generic [ref=e1564]:
+                        - button "Move up" [ref=e1565]:
+                          - img [ref=e1566]
+                        - button "Move down" [ref=e1568]:
+                          - img [ref=e1569]
+                        - button "Remove" [ref=e1571]:
+                          - img [ref=e1572]
+                    - generic [ref=e1575]:
+                      - generic [ref=e1576]:
+                        - generic [ref=e1577]: Name
+                        - textbox [ref=e1578]: Blackest Black
+                      - generic [ref=e1579]:
+                        - generic [ref=e1580]: Code
+                        - textbox [ref=e1581]: "#701"
+                      - generic [ref=e1582]:
+                        - generic [ref=e1583]: Color (HEX)
+                        - textbox [ref=e1584]: "#0A0A0A"
+                      - generic [ref=e1585]:
+                        - generic [ref=e1586]: Gradient CSS (optional)
+                        - textbox [ref=e1587]
+                      - generic [ref=e1588]:
+                        - generic [ref=e1589]: Swatch Image (optional)
+                        - generic [ref=e1591]:
+                          - textbox "https://... or upload" [ref=e1592]
+                          - button "Upload" [ref=e1593]:
+                            - img [ref=e1594]
+                            - text: Upload
+                      - generic [ref=e1598]:
+                        - generic [ref=e1599]: Sheet Size
+                        - textbox [ref=e1600]: 32x40
+                      - generic [ref=e1601]:
+                        - generic [ref=e1602]: Ply / Caliper
+                        - textbox [ref=e1603]: 4-ply White Core
+                      - generic [ref=e1604]:
+                        - generic [ref=e1605]: Extra Badges
+                        - textbox [ref=e1606]
+                      - generic [ref=e1607]:
+                        - generic [ref=e1608]: Description
+                        - textbox [ref=e1609]: Pure, rich black.
+                      - generic [ref=e1610]:
+                        - generic [ref=e1611]: Hide Card
+                        - generic [ref=e1612]:
+                          - checkbox "Enabled" [ref=e1613]
+                          - text: Enabled
+                  - generic [ref=e1614]:
+                    - generic [ref=e1615]:
+                      - paragraph [ref=e1616]: "Color #23 · Graphite"
+                      - generic [ref=e1617]:
+                        - button "Move up" [ref=e1618]:
+                          - img [ref=e1619]
+                        - button "Move down" [disabled] [ref=e1621]:
+                          - img [ref=e1622]
+                        - button "Remove" [ref=e1624]:
+                          - img [ref=e1625]
+                    - generic [ref=e1628]:
+                      - generic [ref=e1629]:
+                        - generic [ref=e1630]: Name
+                        - textbox [ref=e1631]: Graphite
+                      - generic [ref=e1632]:
+                        - generic [ref=e1633]: Code
+                        - textbox [ref=e1634]: "#712"
+                      - generic [ref=e1635]:
+                        - generic [ref=e1636]: Color (HEX)
+                        - textbox [ref=e1637]: "#4A4A4D"
+                      - generic [ref=e1638]:
+                        - generic [ref=e1639]: Gradient CSS (optional)
+                        - textbox [ref=e1640]
+                      - generic [ref=e1641]:
+                        - generic [ref=e1642]: Swatch Image (optional)
+                        - generic [ref=e1644]:
+                          - textbox "https://... or upload" [ref=e1645]
+                          - button "Upload" [ref=e1646]:
+                            - img [ref=e1647]
+                            - text: Upload
+                      - generic [ref=e1651]:
+                        - generic [ref=e1652]: Sheet Size
+                        - textbox [ref=e1653]: 32x40
+                      - generic [ref=e1654]:
+                        - generic [ref=e1655]: Ply / Caliper
+                        - textbox [ref=e1656]: 4-ply White Core
+                      - generic [ref=e1657]:
+                        - generic [ref=e1658]: Extra Badges
+                        - textbox [ref=e1659]
+                      - generic [ref=e1660]:
+                        - generic [ref=e1661]: Description
+                        - textbox [ref=e1662]: Cool dark grey.
+                      - generic [ref=e1663]:
+                        - generic [ref=e1664]: Hide Card
+                        - generic [ref=e1665]:
+                          - checkbox "Enabled" [ref=e1666]
+                          - text: Enabled
+                - button "Add Color" [ref=e1668]:
+                  - img [ref=e1669]
+                  - text: Add Color
+              - button "Save changes" [ref=e1671]:
+                - img [ref=e1672]
+                - text: Save changes
+          - generic [ref=e274]:
+            - generic [ref=e275]:
+              - generic [ref=e276]:
+                - button "Desktop" [ref=e277]:
+                  - img [ref=e278]
+                  - text: Desktop
+                - button "Mobile" [ref=e280]:
+                  - img [ref=e281]
+                  - text: Mobile
+              - generic [ref=e283]:
+                - generic [ref=e284]: /products/matboards
+                - button "Reload preview" [ref=e285]:
+                  - img [ref=e286]
+                - link "Open in new tab" [ref=e291] [cursor=pointer]:
+                  - /url: /products/matboards
+                  - img [ref=e292]
+            - generic [ref=e296]:
+              - iframe [ref=e298]:
+                - generic [active] [ref=f12e1]:
+                  - navigation "Main navigation" [ref=f12e2]:
+                    - generic [ref=f12e3]:
+                      - link "Flech Paper Products":
+                        - /url: /
+                        - img "Flech Paper Products"
+                      - generic [ref=f12e4]:
+                        - link "Get a Quote":
+                          - /url: /contact
+                        - button "Open menu":
+                          - img
+                  - main [ref=f12e5]:
+                    - generic [ref=f12e6]:
+                      - generic [ref=f12e10]:
+                        - navigation "Breadcrumb" [ref=f12e11]:
+                          - link "Home":
+                            - /url: /
+                          - img [ref=f12e12]
+                          - link "Products":
+                            - /url: /products
+                          - img [ref=f12e14]
+                          - generic [ref=f12e16]: Matboards
+                        - generic [ref=f12e17]:
+                          - generic [ref=f12e18]: Decorative & Archival
+                          - heading "Matboards in 75+ Colors" [level=1] [ref=f12e19]
+                          - paragraph [ref=f12e20]: A full line of matboard in sheets and precut to size. Available in an array of vibrant colors and core boards to fulfill all of your framing needs.
+                          - generic [ref=f12e21]:
+                            - link "Get a Quote":
+                              - /url: /contact
+                              - text: Get a Quote
+                              - img
+                            - link "Browse Colors":
+                              - /url: "#primary-colors"
+                      - generic [ref=f12e24]:
+                        - generic [ref=f12e25]:
+                          - paragraph [ref=f12e26]: Product Detail
+                          - heading "Built for production work" [level=2] [ref=f12e27]
+                          - paragraph [ref=f12e28]: A focused look at the materials, production details, and order options available for this product line.
+                          - generic [ref=f12e29]:
+                            - generic [ref=f12e30]:
+                              - img [ref=f12e31]
+                              - text: Custom sizes and materials available
+                            - generic [ref=f12e33]:
+                              - img [ref=f12e34]
+                              - text: Production-ready consistency for repeat orders
+                            - generic [ref=f12e36]:
+                              - img [ref=f12e37]
+                              - text: Quote support for volume and contract work
+                        - img "Built for production work" [ref=f12e41]
+                      - generic [ref=f12e43]:
+                        - generic [ref=f12e45]:
+                          - paragraph [ref=f12e46]: Capabilities
+                          - heading "Configurable options" [level=2] [ref=f12e47]
+                        - generic [ref=f12e48]:
+                          - article [ref=f12e50]:
+                            - img "Custom configurations" [ref=f12e51]
+                            - generic [ref=f12e52]:
+                              - heading "Custom configurations" [level=3] [ref=f12e53]
+                              - paragraph [ref=f12e54]: Choose the format, material, finish, and packing style that fits your order.
+                          - article [ref=f12e56]:
+                            - img "Repeatable quality" [ref=f12e57]
+                            - generic [ref=f12e58]:
+                              - heading "Repeatable quality" [level=3] [ref=f12e59]
+                              - paragraph [ref=f12e60]: Built for consistent results across short runs, volume orders, and recurring programs.
+                          - article [ref=f12e62]:
+                            - img "Production support" [ref=f12e63]
+                            - generic [ref=f12e64]:
+                              - heading "Production support" [level=3] [ref=f12e65]
+                              - paragraph [ref=f12e66]: Our team can help translate requirements into manufacturable specifications.
+                      - generic [ref=f12e68]:
+                        - generic [ref=f12e69]:
+                          - paragraph [ref=f12e70]: Matboard Catalog
+                          - heading "Simply Suede & Premium Colors" [level=2] [ref=f12e71]
+                        - generic [ref=f12e72]:
+                          - button "Filters 14 / 14":
+                            - generic:
+                              - img
+                              - text: Filters
+                            - generic: 14 / 14
+                          - generic [ref=f12e74]:
+                            - generic [ref=f12e76]:
+                              - generic "Snow" [ref=f12e77]
+                              - generic [ref=f12e78]:
+                                - generic [ref=f12e79]:
+                                  - heading "Snow" [level=4] [ref=f12e80]
+                                  - generic [ref=f12e81]: "#S10"
+                                - generic [ref=f12e82]:
+                                  - generic [ref=f12e83]: 32x40
+                                  - generic [ref=f12e84]: 4-ply Suede
+                                - paragraph [ref=f12e85]: Clean snow-white suede with a soft tactile surface.
+                            - generic [ref=f12e87]:
+                              - generic "Bisque" [ref=f12e88]
+                              - generic [ref=f12e89]:
+                                - generic [ref=f12e90]:
+                                  - heading "Bisque" [level=4] [ref=f12e91]
+                                  - generic [ref=f12e92]: "#S22"
+                                - generic [ref=f12e93]:
+                                  - generic [ref=f12e94]: 32x40
+                                  - generic [ref=f12e95]: 4-ply Suede
+                                - paragraph [ref=f12e96]: Warm sand beige.
+                            - generic [ref=f12e98]:
+                              - generic "Mushroom" [ref=f12e99]
+                              - generic [ref=f12e100]:
+                                - generic [ref=f12e101]:
+                                  - heading "Mushroom" [level=4] [ref=f12e102]
+                                  - generic [ref=f12e103]: "#S25"
+                                - generic [ref=f12e104]:
+                                  - generic [ref=f12e105]: 32x40
+                                  - generic [ref=f12e106]: 4-ply Suede
+                                - paragraph [ref=f12e107]: Earthy mushroom taupe.
+                            - generic [ref=f12e109]:
+                              - generic "Royal" [ref=f12e110]
+                              - generic [ref=f12e111]:
+                                - generic [ref=f12e112]:
+                                  - heading "Royal" [level=4] [ref=f12e113]
+                                  - generic [ref=f12e114]: "#S35"
+                                - generic [ref=f12e115]:
+                                  - generic [ref=f12e116]: 32x40
+                                  - generic [ref=f12e117]: 4-ply Suede
+                                - paragraph [ref=f12e118]: Deep royal blue suede.
+                            - generic [ref=f12e120]:
+                              - generic "Alpine" [ref=f12e121]
+                              - generic [ref=f12e122]:
+                                - generic [ref=f12e123]:
+                                  - heading "Alpine" [level=4] [ref=f12e124]
+                                  - generic [ref=f12e125]: "#S40"
+                                - generic [ref=f12e126]:
+                                  - generic [ref=f12e127]: 32x40
+                                  - generic [ref=f12e128]: 4-ply Suede
+                                - paragraph [ref=f12e129]: Forest alpine green.
+                            - generic [ref=f12e131]:
+                              - generic "Snow" [ref=f12e132]
+                              - generic [ref=f12e133]:
+                                - generic [ref=f12e134]:
+                                  - heading "Snow" [level=4] [ref=f12e135]
+                                  - generic [ref=f12e136]: "#S50"
+                                - generic [ref=f12e137]:
+                                  - generic [ref=f12e138]: 32x40
+                                  - generic [ref=f12e139]: 4-ply Suede
+                                - paragraph [ref=f12e140]: Pure white suede with crisp fibre.
+                            - generic [ref=f12e142]:
+                              - generic "Faux Silver" [ref=f12e143]
+                              - generic [ref=f12e144]:
+                                - generic [ref=f12e145]:
+                                  - heading "Faux Silver" [level=4] [ref=f12e146]
+                                  - generic [ref=f12e147]: "#S972"
+                                - generic [ref=f12e148]:
+                                  - generic [ref=f12e149]: 32x40
+                                  - generic [ref=f12e150]: 4-ply Specialty
+                                - paragraph [ref=f12e151]: Brushed silver metallic finish.
+                            - generic [ref=f12e153]:
+                              - generic "Faux Gold" [ref=f12e154]
+                              - generic [ref=f12e155]:
+                                - generic [ref=f12e156]:
+                                  - heading "Faux Gold" [level=4] [ref=f12e157]
+                                  - generic [ref=f12e158]: "#S971"
+                                - generic [ref=f12e159]:
+                                  - generic [ref=f12e160]: 32x40
+                                  - generic [ref=f12e161]: 4-ply Specialty
+                                - paragraph [ref=f12e162]: Brushed gold metallic finish.
+                            - generic [ref=f12e164]:
+                              - generic "Silver Foil" [ref=f12e165]
+                              - generic [ref=f12e166]:
+                                - generic [ref=f12e167]:
+                                  - heading "Silver Foil" [level=4] [ref=f12e168]
+                                  - generic [ref=f12e169]: "#S973"
+                                - generic [ref=f12e170]:
+                                  - generic [ref=f12e171]: 32x40
+                                  - generic [ref=f12e172]: 4-ply Specialty
+                                - paragraph [ref=f12e173]: Reflective silver foil for premium presentation.
+                            - generic [ref=f12e175]:
+                              - generic "Midnight Suede" [ref=f12e176]
+                              - generic [ref=f12e177]:
+                                - generic [ref=f12e178]:
+                                  - heading "Midnight Suede" [level=4] [ref=f12e179]
+                                  - generic [ref=f12e180]: "#S60"
+                                - generic [ref=f12e181]:
+                                  - generic [ref=f12e182]: 32x40
+                                  - generic [ref=f12e183]: 4-ply Suede
+                                - paragraph [ref=f12e184]: Inky midnight suede.
+                            - generic [ref=f12e186]:
+                              - generic "Deep Red Suede" [ref=f12e187]
+                              - generic [ref=f12e188]:
+                                - generic [ref=f12e189]:
+                                  - heading "Deep Red Suede" [level=4] [ref=f12e190]
+                                  - generic [ref=f12e191]: "#S65"
+                                - generic [ref=f12e192]:
+                                  - generic [ref=f12e193]: 32x40
+                                  - generic [ref=f12e194]: 4-ply Suede
+                                - paragraph [ref=f12e195]: Theatre-curtain deep red.
+                            - generic [ref=f12e197]:
+                              - generic "Forest Suede" [ref=f12e198]
+                              - generic [ref=f12e199]:
+                                - generic [ref=f12e200]:
+                                  - heading "Forest Suede" [level=4] [ref=f12e201]
+                                  - generic [ref=f12e202]: "#S70"
+                                - generic [ref=f12e203]:
+                                  - generic [ref=f12e204]: 32x40
+                                  - generic [ref=f12e205]: 4-ply Suede
+                                - paragraph [ref=f12e206]: Velvety forest green.
+                            - generic [ref=f12e208]:
+                              - generic "Navy Suede" [ref=f12e209]
+                              - generic [ref=f12e210]:
+                                - generic [ref=f12e211]:
+                                  - heading "Navy Suede" [level=4] [ref=f12e212]
+                                  - generic [ref=f12e213]: "#S75"
+                                - generic [ref=f12e214]:
+                                  - generic [ref=f12e215]: 32x40
+                                  - generic [ref=f12e216]: 4-ply Suede
+                                - paragraph [ref=f12e217]: Rich navy with depth.
+                            - generic [ref=f12e219]:
+                              - generic "Espresso Suede" [ref=f12e220]
+                              - generic [ref=f12e221]:
+                                - generic [ref=f12e222]:
+                                  - heading "Espresso Suede" [level=4] [ref=f12e223]
+                                  - generic [ref=f12e224]: "#S80"
+                                - generic [ref=f12e225]:
+                                  - generic [ref=f12e226]: 32x40
+                                  - generic [ref=f12e227]: 4-ply Suede
+                                - paragraph [ref=f12e228]: Dark espresso brown suede.
+                      - generic [ref=f12e230]:
+                        - heading "Specifications" [level=2] [ref=f12e231]
+                        - generic [ref=f12e232]:
+                          - generic [ref=f12e233]:
+                            - generic [ref=f12e234]: Material
+                            - generic [ref=f12e235]: Paperboard, SBS, chipboard, poly board, and custom substrates
+                          - generic [ref=f12e236]:
+                            - generic [ref=f12e237]: Sizes
+                            - generic [ref=f12e238]: Standard and custom sizes available
+                          - generic [ref=f12e239]:
+                            - generic [ref=f12e240]: Packing
+                            - generic [ref=f12e241]: Bulk, carton packed, shrink wrapped, or retail ready
+                      - generic [ref=f12e243]:
+                        - generic [ref=f12e244]:
+                          - paragraph [ref=f12e245]: Matboard Catalog
+                          - heading "Primary Colors" [level=2] [ref=f12e246]
+                        - generic [ref=f12e247]:
+                          - button "Filters 23 / 23":
+                            - generic:
+                              - img
+                              - text: Filters
+                            - generic: 23 / 23
+                          - generic [ref=f12e249]:
+                            - generic [ref=f12e251]:
+                              - generic "Tablet White" [ref=f12e252]
+                              - generic [ref=f12e253]:
+                                - generic [ref=f12e254]:
+                                  - heading "Tablet White" [level=4] [ref=f12e255]
+                                  - generic [ref=f12e256]: "#101"
+                                - generic [ref=f12e257]:
+                                  - generic [ref=f12e258]: 32x40
+                                  - generic [ref=f12e259]: 4-ply White Core
+                                  - generic [ref=f12e260]: Cream Core
+                                  - generic [ref=f12e261]: White Core
+                                - paragraph [ref=f12e262]: Bright neutral white. Our most-ordered shade for gallery framing.
+                            - generic [ref=f12e264]:
+                              - generic "Snow" [ref=f12e265]
+                              - generic [ref=f12e266]:
+                                - generic [ref=f12e267]:
+                                  - heading "Snow" [level=4] [ref=f12e268]
+                                  - generic [ref=f12e269]: "#108"
+                                - generic [ref=f12e270]:
+                                  - generic [ref=f12e271]: 32x40
+                                  - generic [ref=f12e272]: 4-ply White Core
+                                - paragraph [ref=f12e273]: Cool, clean white with a faint blue undertone.
+                            - generic [ref=f12e275]:
+                              - generic "Woven White" [ref=f12e276]
+                              - generic [ref=f12e277]:
+                                - generic [ref=f12e278]:
+                                  - heading "Woven White" [level=4] [ref=f12e279]
+                                  - generic [ref=f12e280]: "#106"
+                                - generic [ref=f12e281]:
+                                  - generic [ref=f12e282]: 32x40
+                                  - generic [ref=f12e283]: 4-ply White Core
+                                - paragraph [ref=f12e284]: Soft white with a subtle textured surface.
+                            - generic [ref=f12e286]:
+                              - generic "Buttermilk" [ref=f12e287]
+                              - generic [ref=f12e288]:
+                                - generic [ref=f12e289]:
+                                  - heading "Buttermilk" [level=4] [ref=f12e290]
+                                  - generic [ref=f12e291]: "#220"
+                                - generic [ref=f12e292]:
+                                  - generic [ref=f12e293]: 32x40
+                                  - generic [ref=f12e294]: 4-ply White Core
+                                - paragraph [ref=f12e295]: Warm cream that flatters photographs and prints.
+                            - generic [ref=f12e297]:
+                              - generic "C-Linen" [ref=f12e298]
+                              - generic [ref=f12e299]:
+                                - generic [ref=f12e300]:
+                                  - heading "C-Linen" [level=4] [ref=f12e301]
+                                  - generic [ref=f12e302]: "#102"
+                                - generic [ref=f12e303]:
+                                  - generic [ref=f12e304]: 32x40
+                                  - generic [ref=f12e305]: 4-ply White Core
+                                - paragraph [ref=f12e306]: Linen-textured natural shade.
+                            - generic [ref=f12e308]:
+                              - generic "Buff" [ref=f12e309]
+                              - generic [ref=f12e310]:
+                                - generic [ref=f12e311]:
+                                  - heading "Buff" [level=4] [ref=f12e312]
+                                  - generic [ref=f12e313]: "#203"
+                                - generic [ref=f12e314]:
+                                  - generic [ref=f12e315]: 32x40
+                                  - generic [ref=f12e316]: 4-ply White Core
+                                - paragraph [ref=f12e317]: Soft, neutral beige.
+                            - generic [ref=f12e319]:
+                              - generic "Felt Gray" [ref=f12e320]
+                              - generic [ref=f12e321]:
+                                - generic [ref=f12e322]:
+                                  - heading "Felt Gray" [level=4] [ref=f12e323]
+                                  - generic [ref=f12e324]: "#211"
+                                - generic [ref=f12e325]:
+                                  - generic [ref=f12e326]: 32x40
+                                  - generic [ref=f12e327]: 4-ply White Core
+                                - paragraph [ref=f12e328]: Cool mid-grey for contemporary work.
+                            - generic [ref=f12e330]:
+                              - generic "Puddy" [ref=f12e331]
+                              - generic [ref=f12e332]:
+                                - generic [ref=f12e333]:
+                                  - heading "Puddy" [level=4] [ref=f12e334]
+                                  - generic [ref=f12e335]: "#213"
+                                - generic [ref=f12e336]:
+                                  - generic [ref=f12e337]: 32x40
+                                  - generic [ref=f12e338]: 4-ply White Core
+                                - paragraph [ref=f12e339]: Toasted neutral with subtle warmth.
+                            - generic [ref=f12e341]:
+                              - generic "Salsa" [ref=f12e342]
+                              - generic [ref=f12e343]:
+                                - generic [ref=f12e344]:
+                                  - heading "Salsa" [level=4] [ref=f12e345]
+                                  - generic [ref=f12e346]: "#601"
+                                - generic [ref=f12e347]:
+                                  - generic [ref=f12e348]: 32x40
+                                  - generic [ref=f12e349]: 4-ply White Core
+                                - paragraph [ref=f12e350]: Deep, saturated red.
+                            - generic [ref=f12e352]:
+                              - generic "Wine" [ref=f12e353]
+                              - generic [ref=f12e354]:
+                                - generic [ref=f12e355]:
+                                  - heading "Wine" [level=4] [ref=f12e356]
+                                  - generic [ref=f12e357]: "#602"
+                                - generic [ref=f12e358]:
+                                  - generic [ref=f12e359]: 32x40
+                                  - generic [ref=f12e360]: 4-ply White Core
+                                - paragraph [ref=f12e361]: Rich oxblood red.
+                            - generic [ref=f12e363]:
+                              - generic "Tangerine" [ref=f12e364]
+                              - generic [ref=f12e365]:
+                                - generic [ref=f12e366]:
+                                  - heading "Tangerine" [level=4] [ref=f12e367]
+                                  - generic [ref=f12e368]: "#561"
+                                - generic [ref=f12e369]:
+                                  - generic [ref=f12e370]: 32x40
+                                  - generic [ref=f12e371]: 4-ply White Core
+                                - paragraph [ref=f12e372]: Vibrant orange.
+                            - generic [ref=f12e374]:
+                              - generic "Lemon" [ref=f12e375]
+                              - generic [ref=f12e376]:
+                                - generic [ref=f12e377]:
+                                  - heading "Lemon" [level=4] [ref=f12e378]
+                                  - generic [ref=f12e379]: "#306"
+                                - generic [ref=f12e380]:
+                                  - generic [ref=f12e381]: 32x40
+                                  - generic [ref=f12e382]: 4-ply White Core
+                                - paragraph [ref=f12e383]: Bright sunny yellow.
+                            - generic [ref=f12e385]:
+                              - generic "Olive" [ref=f12e386]
+                              - generic [ref=f12e387]:
+                                - generic [ref=f12e388]:
+                                  - heading "Olive" [level=4] [ref=f12e389]
+                                  - generic [ref=f12e390]: "#404"
+                                - generic [ref=f12e391]:
+                                  - generic [ref=f12e392]: 32x40
+                                  - generic [ref=f12e393]: 4-ply White Core
+                                - paragraph [ref=f12e394]: Earthy olive green.
+                            - generic [ref=f12e396]:
+                              - generic "Evergreen" [ref=f12e397]
+                              - generic [ref=f12e398]:
+                                - generic [ref=f12e399]:
+                                  - heading "Evergreen" [level=4] [ref=f12e400]
+                                  - generic [ref=f12e401]: "#405"
+                                - generic [ref=f12e402]:
+                                  - generic [ref=f12e403]: 32x40
+                                  - generic [ref=f12e404]: 4-ply White Core
+                                - paragraph [ref=f12e405]: Deep forest green.
+                            - generic [ref=f12e407]:
+                              - generic "Mocha" [ref=f12e408]
+                              - generic [ref=f12e409]:
+                                - generic [ref=f12e410]:
+                                  - heading "Mocha" [level=4] [ref=f12e411]
+                                  - generic [ref=f12e412]: "#502"
+                                - generic [ref=f12e413]:
+                                  - generic [ref=f12e414]: 32x40
+                                  - generic [ref=f12e415]: 4-ply White Core
+                                - paragraph [ref=f12e416]: Warm brown with coffee tones.
+                            - generic [ref=f12e418]:
+                              - generic "Espresso" [ref=f12e419]
+                              - generic [ref=f12e420]:
+                                - generic [ref=f12e421]:
+                                  - heading "Espresso" [level=4] [ref=f12e422]
+                                  - generic [ref=f12e423]: "#505"
+                                - generic [ref=f12e424]:
+                                  - generic [ref=f12e425]: 32x40
+                                  - generic [ref=f12e426]: 4-ply White Core
+                                - paragraph [ref=f12e427]: Dark roast brown.
+                            - generic [ref=f12e429]:
+                              - generic "Light Blue" [ref=f12e430]
+                              - generic [ref=f12e431]:
+                                - generic [ref=f12e432]:
+                                  - heading "Light Blue" [level=4] [ref=f12e433]
+                                  - generic [ref=f12e434]: "#621"
+                                - generic [ref=f12e435]:
+                                  - generic [ref=f12e436]: 32x40
+                                  - generic [ref=f12e437]: 4-ply White Core
+                                - paragraph [ref=f12e438]: Soft sky blue.
+                            - generic [ref=f12e440]:
+                              - generic "Cobalt" [ref=f12e441]
+                              - generic [ref=f12e442]:
+                                - generic [ref=f12e443]:
+                                  - heading "Cobalt" [level=4] [ref=f12e444]
+                                  - generic [ref=f12e445]: "#629"
+                                - generic [ref=f12e446]:
+                                  - generic [ref=f12e447]: 32x40
+                                  - generic [ref=f12e448]: 4-ply White Core
+                                - paragraph [ref=f12e449]: Saturated mid-blue.
+                            - generic [ref=f12e451]:
+                              - generic "Liberty" [ref=f12e452]
+                              - generic [ref=f12e453]:
+                                - generic [ref=f12e454]:
+                                  - heading "Liberty" [level=4] [ref=f12e455]
+                                  - generic [ref=f12e456]: "#628"
+                                - generic [ref=f12e457]:
+                                  - generic [ref=f12e458]: 32x40
+                                  - generic [ref=f12e459]: 4-ply White Core
+                                - paragraph [ref=f12e460]: Patriotic deep blue.
+                            - generic [ref=f12e462]:
+                              - generic "Eclipse" [ref=f12e463]
+                              - generic [ref=f12e464]:
+                                - generic [ref=f12e465]:
+                                  - heading "Eclipse" [level=4] [ref=f12e466]
+                                  - generic [ref=f12e467]: "#626"
+                                - generic [ref=f12e468]:
+                                  - generic [ref=f12e469]: 32x40
+                                  - generic [ref=f12e470]: 4-ply White Core
+                                - paragraph [ref=f12e471]: Deep midnight blue.
+                            - generic [ref=f12e473]:
+                              - generic "Holy" [ref=f12e474]
+                              - generic [ref=f12e475]:
+                                - generic [ref=f12e476]:
+                                  - heading "Holy" [level=4] [ref=f12e477]
+                                  - generic [ref=f12e478]: "#650"
+                                - generic [ref=f12e479]:
+                                  - generic [ref=f12e480]: 32x40
+                                  - generic [ref=f12e481]: 4-ply White Core
+                                - paragraph [ref=f12e482]: Royal violet.
+                            - generic [ref=f12e484]:
+                              - generic "Blackest Black" [ref=f12e485]
+                              - generic [ref=f12e486]:
+                                - generic [ref=f12e487]:
+                                  - heading "Blackest Black" [level=4] [ref=f12e488]
+                                  - generic [ref=f12e489]: "#701"
+                                - generic [ref=f12e490]:
+                                  - generic [ref=f12e491]: 32x40
+                                  - generic [ref=f12e492]: 4-ply White Core
+                                - paragraph [ref=f12e493]: Pure, rich black.
+                            - generic [ref=f12e495]:
+                              - generic "Graphite" [ref=f12e496]
+                              - generic [ref=f12e497]:
+                                - generic [ref=f12e498]:
+                                  - heading "Graphite" [level=4] [ref=f12e499]
+                                  - generic [ref=f12e500]: "#712"
+                                - generic [ref=f12e501]:
+                                  - generic [ref=f12e502]: 32x40
+                                  - generic [ref=f12e503]: 4-ply White Core
+                                - paragraph [ref=f12e504]: Cool dark grey.
+                      - generic [ref=f12e509]:
+                        - heading "Need this product quoted?" [level=2] [ref=f12e510]
+                        - paragraph [ref=f12e511]: Send the basics and our team will respond with pricing, lead time, and specification recommendations.
+                        - generic [ref=f12e512]:
+                          - link "Request a Quote":
+                            - /url: /contact
+                            - text: Request a Quote
+                            - img
+                          - link "View Industries":
+                            - /url: /industries
+                  - contentinfo [ref=f12e513]:
+                    - generic [ref=f12e515]:
+                      - generic [ref=f12e516]:
+                        - img "Flech Paper Products" [ref=f12e518]
+                        - paragraph [ref=f12e519]: Precision board manufacturing since 1999. Specialists in easel backs, matboard, and specialty board products for the framing, sign, and display industries.
+                        - generic [ref=f12e520]:
+                          - link "(973) 357-8111":
+                            - /url: tel:+19733578111
+                            - img
+                            - text: (973) 357-8111
+                          - link "info@flech.com":
+                            - /url: mailto:info@flech.com
+                            - img
+                            - text: info@flech.com
+                          - generic [ref=f12e521]:
+                            - img [ref=f12e522]
+                            - generic [ref=f12e525]:
+                              - text: Paterson, NJ
+                              - text: United States
+                      - generic [ref=f12e526]:
+                        - heading "Products" [level=3] [ref=f12e527]
+                        - list [ref=f12e528]:
+                          - listitem [ref=f12e529]:
+                            - link "Easel Backs":
+                              - /url: /products/easel-backs
+                              - text: Easel Backs
+                              - img
+                          - listitem [ref=f12e530]:
+                            - link "Fold Lines & Dielines":
+                              - /url: /products/fold-lines
+                              - text: Fold Lines & Dielines
+                              - img
+                          - listitem [ref=f12e531]:
+                            - link "Contract Framing Backs":
+                              - /url: /products/framing-backs
+                              - text: Contract Framing Backs
+                              - img
+                          - listitem [ref=f12e532]:
+                            - link "Matboards":
+                              - /url: /products/matboards
+                              - text: Matboards
+                              - img
+                      - generic [ref=f12e533]:
+                        - heading "Company" [level=3] [ref=f12e534]
+                        - list [ref=f12e535]:
+                          - listitem [ref=f12e536]:
+                            - link "About Flech":
+                              - /url: /about
+                              - text: About Flech
+                              - img
+                          - listitem [ref=f12e537]:
+                            - link "Industries We Serve":
+                              - /url: /industries
+                              - text: Industries We Serve
+                              - img
+                          - listitem [ref=f12e538]:
+                            - link "Contact & RFQ":
+                              - /url: /contact
+                              - text: Contact & RFQ
+                              - img
+                        - heading "Industries" [level=3] [ref=f12e539]
+                        - list [ref=f12e540]:
+                          - listitem [ref=f12e541]:
+                            - link "Sign & Display":
+                              - /url: /industries#signage
+                          - listitem [ref=f12e542]:
+                            - link "Wholesale Framing":
+                              - /url: /industries#framing
+                          - listitem [ref=f12e543]:
+                            - link "Packaging & POP":
+                              - /url: /industries#packaging
+                          - listitem [ref=f12e544]:
+                            - link "Interior Design":
+                              - /url: /industries#interior
+                      - generic [ref=f12e545]:
+                        - heading "Get Started" [level=3] [ref=f12e546]
+                        - paragraph [ref=f12e547]: Need custom board solutions? Our team responds within 24 hours with detailed quotes and specifications.
+                        - link "Get a Quote":
+                          - /url: /contact
+                          - text: Get a Quote
+                          - img
+                        - generic [ref=f12e548]:
+                          - paragraph [ref=f12e549]: Certifications
+                          - paragraph [ref=f12e550]:
+                            - text: ISO 9001 Certified
+                            - text: FSC Chain of Custody
+                            - text: Acid-Free & Archival
+                    - generic [ref=f12e552]:
+                      - paragraph [ref=f12e553]: © 2026 Flech Paper Products. All rights reserved.
+                      - generic [ref=f12e554]:
+                        - link "Privacy Policy":
+                          - /url: /privacy
+                        - link "Terms of Service":
+                          - /url: /terms
+                  - button "Open Next.js Dev Tools" [ref=f12e560] [cursor=pointer]:
+                    - img [ref=f12e561]
+                  - alert [ref=f12e564]
+              - paragraph [ref=e299]: "Tip: hover anything in the preview to outline it, click to open the section editor on the left."
+  - button "Open Next.js Dev Tools" [ref=e305] [cursor=pointer]:
+    - img [ref=e306]
+  - alert [ref=e309]

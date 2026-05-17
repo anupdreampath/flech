@@ -36,7 +36,7 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
   const [layoutSaving, setLayoutSaving] = useState(false);
   const pages = useMemo(() => {
     const seen = new Set<string>();
-    return sections
+    return sectionList
       .filter((s) => {
         if (seen.has(s.pageKey)) return false;
         seen.add(s.pageKey);
@@ -47,7 +47,7 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
         label: s.pageLabel,
         url: s.pageUrl,
       }));
-  }, [sections]);
+  }, [sectionList]);
 
   const [activePageKey, setActivePageKey] = useState(pages[0]?.key || "home");
   const [activeSectionKey, setActiveSectionKey] = useState<string | null>(null);
@@ -55,14 +55,13 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
   const [iframeKey, setIframeKey] = useState(0);
   const iframeRef = useRef<HTMLIFrameElement | null>(null);
 
-  const activePage = useMemo(() => {
-    const activePageMeta = pages.find((p) => p.key === activePageKey) || pages[0];
-    if (!activePageMeta) return null;
-    return {
-      ...activePageMeta,
-      sections: sectionList.filter((s) => s.pageKey === activePageMeta.key),
-    };
-  }, [activePageKey, pages, sectionList]);
+  const activePageMeta = pages.find((p) => p.key === activePageKey) || pages[0];
+  const activePage = activePageMeta
+    ? {
+        ...activePageMeta,
+        sections: sectionList.filter((s) => s.pageKey === activePageMeta.key),
+      }
+    : null;
 
   const activeSection =
     activePage?.sections.find((s) => s.sectionKey === activeSectionKey) || null;
@@ -130,11 +129,8 @@ export function VisualStudio({ sections }: { sections: StudioSection[] }) {
   }
 
   // Compose iframe URL: page URL + cmsEdit + cache-buster.
-  const iframeSrc = useMemo(() => {
-    const url = activePage?.url || "/";
-    const sep = url.includes("?") ? "&" : "?";
-    return `${url}${sep}cmsEdit=1&v=${iframeKey}`;
-  }, [activePage, iframeKey]);
+  const activePageUrl = activePage?.url || "/";
+  const iframeSrc = `${activePageUrl}${activePageUrl.includes("?") ? "&" : "?"}cmsEdit=1&v=${iframeKey}`;
 
   const iframeWidth = VIEWPORT_WIDTH[viewport];
 

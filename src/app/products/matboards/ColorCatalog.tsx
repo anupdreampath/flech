@@ -7,11 +7,23 @@ export type ColorCard = {
   name?: string;
   code?: string;
   hex?: string;
+  gradient?: string;
   image?: string;
   size?: string;
   ply?: string;
   tags?: string;
   description?: string;
+};
+
+export type ColorCatalogLabels = {
+  filterTitle?: string;
+  mobileFilterLabel?: string;
+  searchPlaceholder?: string;
+  sizeFilterLabel?: string;
+  plyFilterLabel?: string;
+  tagFilterLabel?: string;
+  emptyText?: string;
+  clearLabel?: string;
 };
 
 function splitTags(raw?: string): string[] {
@@ -42,9 +54,11 @@ function uniqueTags(items: ColorCard[]): string[] {
 export function ColorCatalog({
   colors,
   idPrefix,
+  labels = {},
 }: {
   colors: ColorCard[];
   idPrefix: string;
+  labels?: ColorCatalogLabels;
 }) {
   const sizes = useMemo(() => uniqueValues(colors, "size"), [colors]);
   const plies = useMemo(() => uniqueValues(colors, "ply"), [colors]);
@@ -135,7 +149,7 @@ export function ColorCatalog({
       >
         <span className="inline-flex items-center gap-2">
           <SlidersHorizontal className="w-4 h-4" />
-          Filters
+          {labels.mobileFilterLabel || "Filters"}
           {activeCount > 0 && (
             <span className="ml-1 inline-flex items-center justify-center bg-accent text-white text-[10px] font-semibold rounded-full px-1.5 min-w-[18px] h-[18px]">
               {activeCount}
@@ -153,7 +167,9 @@ export function ColorCatalog({
       >
         <div className="bg-surface border border-border rounded-xl p-5">
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-sm font-semibold text-charcoal">Filter colors</h3>
+            <h3 className="text-sm font-semibold text-charcoal">
+              {labels.filterTitle || "Filter colors"}
+            </h3>
             {activeCount > 0 && (
               <button
                 type="button"
@@ -161,7 +177,7 @@ export function ColorCatalog({
                 className="text-xs text-accent hover:text-accent-dark inline-flex items-center gap-1"
               >
                 <X className="w-3 h-3" />
-                Clear
+                {labels.clearLabel || "Clear"}
               </button>
             )}
           </div>
@@ -173,14 +189,14 @@ export function ColorCatalog({
               type="text"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Search by name or code…"
+              placeholder={labels.searchPlaceholder || "Search by name or code..."}
               className="w-full pl-9 pr-3 py-2 text-sm bg-warm-white border border-border rounded-md text-charcoal placeholder:text-muted focus:outline-none focus:border-accent"
             />
           </div>
 
           {sizes.length > 0 && (
             <FacetGroup
-              title="Sheet Size"
+              title={labels.sizeFilterLabel || "Sheet Size"}
               values={sizes}
               selected={selectedSizes}
               onToggle={(v) => toggle(selectedSizes, v, setSelectedSizes)}
@@ -188,7 +204,7 @@ export function ColorCatalog({
           )}
           {plies.length > 0 && (
             <FacetGroup
-              title="Ply / Caliper"
+              title={labels.plyFilterLabel || "Ply / Caliper"}
               values={plies}
               selected={selectedPlies}
               onToggle={(v) => toggle(selectedPlies, v, setSelectedPlies)}
@@ -196,7 +212,7 @@ export function ColorCatalog({
           )}
           {tags.length > 0 && (
             <FacetGroup
-              title="Badges"
+              title={labels.tagFilterLabel || "Badges"}
               values={tags}
               selected={selectedTags}
               onToggle={(v) => toggle(selectedTags, v, setSelectedTags)}
@@ -215,13 +231,13 @@ export function ColorCatalog({
         {filtered.length === 0 ? (
           <div className="bg-warm-white border border-border rounded-xl p-12 text-center">
             <p className="text-sm text-muted mb-3">
-              No colors match the current filters.
+              {labels.emptyText || "No colors match the current filters."}
             </p>
             <button
               onClick={clearAll}
               className="text-sm font-semibold text-accent hover:text-accent-dark"
             >
-              Clear filters
+              {labels.clearLabel || "Clear filters"}
             </button>
           </div>
         ) : (
@@ -243,7 +259,7 @@ export function ColorCatalog({
                   ) : (
                     <div
                       className="w-32 sm:w-36 shrink-0 border-r border-border"
-                      style={{ backgroundColor: color.hex || "#E5E5E5" }}
+                      style={{ background: color.gradient || color.hex || "#E5E5E5" }}
                       aria-label={color.name || "Color swatch"}
                     />
                   )}
